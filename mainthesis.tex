@@ -1,0 +1,76 @@
+%% For normal draft builds (figs undisplayed hence fast compile)
+%\documentclass[hyperpdf,nobind,draft,oneside]{hepthesis}
+\documentclass[hyperpdf,nobind,draft,twoside]{hepthesis}
+
+%% For short draft builds (breaks citations by necessity)
+%\documentclass[hyperpdf,nobind,draft,hidefrontback]{hepthesis}
+
+%%For Cambridge soft-bound version
+% \documentclass[hyperpdf,bindnopdf]{hepthesis}
+%% For Cambridge hard-bound version (must be one-sided)
+%\documentclass[hyperpdf,oneside]{hepthesis}
+
+%% Load special font packages here if you wish
+%\usepackage{lmodern}
+\usepackage{mathpazo}
+%\usepackage{euler}
+\usepackage[top=40mm,bottom=30mm,inner=25mm,outer=25mm]{geometry}
+
+%% Put package includes etc. into preamble.tex for convenience
+\input{Content/preamble}
+
+%% You can set the line spacing this way
+%\setallspacing{double}
+%% or a section at a time like this
+%\setfrontmatterspacing{double}
+
+
+%% Define the thesis title and author
+\title{Measurement of the inclusive and differential \mFourL cross-section with the \ATLAS detector}
+\author{Dan Ping (Joanna) Huang}
+
+%% Doc-specific PDF metadata
+\makeatletter
+\@ifpackageloaded{hyperref}{%
+\hypersetup{%
+  pdftitle = {Studying B to K pi decays with LHCb},
+  pdfsubject = {Andy Buckley's PhD thesis},
+  pdfkeywords = {LHCb, B, physics, LHC, heavy flavour},
+  pdfauthor = {\textcopyright\ Andy Buckley}
+}}{}
+\makeatother
+
+
+%% Start the document
+\begin{document}
+
+%% Define the un-numbered front matter (cover pages, rubrik and table of contents)
+\begin{frontmatter}
+  \input{Content/frontmatter}
+  \input{Content/glossary}
+\end{frontmatter}
+
+%% Start the content body of the thesis
+\begin{mainmatter}
+  %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
+%   \input{Content/introduction}
+%   \input{Content/mcevgen}
+  \input{Content/fourlepton}
+%   \input{Content/reinterpretation}
+  %% To ignore a specific chapter while working on another, making the build faster, comment it out:
+  %\input{chap4}
+\end{mainmatter}
+
+%% Produce the appendices
+% \begin{appendices}
+%   \input{appendices}
+% \end{appendices}
+
+%% Produce the un-numbered back matter (e.g. colophon,
+%% bibliography, tables of figures etc., index...)
+\begin{backmatter}
+  \input{Content/backmatter}
+\end{backmatter}
+
+%% Close
+\end{document}
