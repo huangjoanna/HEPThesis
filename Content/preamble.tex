@@ -1,8 +1,10 @@
 \usepackage{xspace}
 \usepackage{tikz}
-\usepackage{morefloats,subfig,afterpage}
+\usepackage{morefloats,afterpage}
 \usepackage{mathrsfs} % script font
 \usepackage{verbatim}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage[acronym]{glossaries}
 \makeglossaries
@@ -18,7 +20,7 @@
 \DeclareRobustCommand{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
 \DeclareRobustCommand{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 \DeclareRobustCommand{\info}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
-\DeclareRobustCommand{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\DeclareRobustCommand{\improvement}[2][1=]{\todo[linecolor=purple,backgroundcolor=purple!25,bordercolor=purple,#1]{#2}}
 
 %% Using Babel allows other languages to be used and mixed-in easily
 %\usepackage[ngerman,english]{babel}
