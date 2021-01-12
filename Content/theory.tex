@@ -1,0 +1,105 @@
+%% "When you hear the name the Standard Model it sounds tedious and mundane, it should really be replaced by the Greatest Theory in the History of Human Civilization" - David Tong
+
+\chapter{The Standard Model, and beyond}
+\label{chap:theory}
+
+The Standard Model of particle physics is a rather simplistic name for such a powerful, complex, and beautiful theory. It is the closest theory that exists to a complete description of the universe at the most fundamental level, and is arguably the pinnacle of science. 
+
+The Standard Model is often depicted in diagrams as a tinier version of Mendeleev's Periodic Table of Elements. One such diagram is shown in Figure \ref{fig:SM}. In a nutshell, the particles put forward by the SM are truly elementary particles. Unlike the elements in the Periodic Table which can be further broken down, these elementary particles are (to our knowledge) point-like and contain no internal structure. Each particle has a unique set of properties - quantum numbers - that define it, and split into one of two categories: fermions and bosons. 
+
+\subsubsection{Fermions}
+
+Fermions are half-interger spin particles that are further divided into two groups due to their radically different properties. 
+\section{Gauge fields}
+
+The Standard Model is constructed upon the language of quantum field theory, where every elementary particle is described as quantizations \todo{(pertubations?)} of a quantum field. It describes the strong and electroweak interaction from the $\SUgroup3_C\otimes\SUgroup2_L\otimes\Ugroup1_Y$ symmetry group, each with a conserved quantity (following Noether's theorem) as indicated by the indices. All the interactions of the SM can be derived on the basis that the system is invariant under local gauge transformations. Imposing local gauge invariance under \SUgroup3 and colour charge conservation returns Quantum Chromodynamics (QCD). 
+
+\subsection{Quantum electrodynamics}
+
+The Dirac Lagrangian, written as
+\begin{equation} \label{eq:diracfreelagr}
+    \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi
+\end{equation}
+is invariant under a global gauge transformation $\psi\rightarrow e^{i\theta}\psi$, but not under a local gauge transformation where $\theta$ is a function of $x^{\mu}$. In order for the Lagrangian to be complete an additional term must be added to equation \ref{eq:diracfreelagr}. 
+\begin{equation} \label{eq:diraclagr}
+    \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi-q\bar{\psi}\gamma^{\mu}\psi A_{\mu}
+\end{equation}
+This term introduces a new gauge field $A_{\mu}$, which transforms under local gauge transformations in a way that renders equation \ref{eq:diraclagr} invariant. This is not yet complete, since the new vector field must include it's own "free" term - the Proca Lagrangian
+\begin{equation} \label{eq:proclagr}
+    \Lagrangian=\dfrac{-1}{16\pi}F^{\mu\nu}F_{\mu\nu}+\dfrac{1}{8\pi}\Big(\dfrac{m_Ac}{\hbar}\Big)^2 A^{\nu}A_{\nu}
+\end{equation}
+where it can be seen that the gauge field must be massless, because $A^{\nu}A_{\nu}$ is not invariant under local gauge transformation $A_{\mu}\rightarrow A_{\mu}+\partial \lambda$. Also introduced in equation \ref{eq:proclagr} is the shorthand 
+\begin{equation}
+    F^{\mu\nu}\equiv\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}.
+\end{equation}
+To summarise, in requiring local gauge invariance from the Dirac Lagrangian, a vector field with no mass is introduced. Indeed, this vector field is the field of the massless photon.
+\begin{equation}\label{eq:QEDlagr}
+    \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi+\dfrac{-1}{16\pi}F^{\mu\nu}F_{\mu\nu}-q\bar{\psi}\gamma^{\mu}\psi A_{\mu}
+\end{equation}
+
+Going back to the free Dirac Lagrangian in equation \ref{eq:diracfreelagr}, what if an alternate definition of the derivative, namely 
+\begin{equation}
+    \mathcal{D}_{\mu}\equiv \partial_{\mu}+i\dfrac{q}{\hbar c}A_{\mu}
+\end{equation}
+were to replace $\partial_{\mu}$? Suppose as well that $\mathcal{D}_{\mu}$, hereforth referred to as the covariant derivative, transforms like the field $\psi$ itself:
+\begin{equation}
+    \mathcal{D}_{\mu}\psi\rightarrow e^{i\theta(x_{\mu})}\mathcal{D}_{\mu}\psi .
+\end{equation}
+\todo[inline]{Read more into this, and derive it on paper? A bit confused as to how it works out.}
+It turns out that in doing so, the transformation of of $A_{\mu}$, 
+\begin{equation}
+    A_{\mu}\rightarrow A_{\mu}-\dfrac{\hbar c}{q}\partial_{\mu}\theta
+\end{equation}
+renders the Lagrangian locally invariant. $A_{\mu}$ brings along its own free Lagrangian, however, and the field must be massless to preserve local gauge invariance. All together this give the final Lagragian stated in equation \ref{eq:QEDlagr}, describing the interactions of fermions with charge $q$ (Dirac fields) with photons (Maxwell fields), more commonly known as the Lagrangian for quantum electrodynamics. 
+\subsection{Weak interactions and electroweak unification}
+
+The global gauge transformation $\psi\rightarrow e^{i\theta}\psi$ where $\theta$ is any real number can be though of as a matrix multiplication of the form
+\begin{equation}
+    \psi\rightarrow U\psi
+\end{equation}
+where $U^{\dag}U=1$ and in this case $U=e^{i\theta}$. The group of all possible unitary $1\times1$ matrices is called $\Ugroup{1}$. The same logic was applied in 1954 by Yang and Mills to the \SUgroup{2} group.
+
+\subsection{Quantum chromodynamics}
+
+The coloured quark model dictates that each flavour (six in total) comes in three identical variations. Arbitrarily, colour is used to differentiate between these variations: for each quark flavour, there exists a red, blue, and green version. The quark field in its colour triplet is written in vector notation as
+\begin{equation}
+\psi_q\equiv
+    \begin{pmatrix} 
+        \psi_q^r\\ 
+        \psi_q^b\\
+        \psi_q^g
+    \end{pmatrix}
+,\quad
+\bar{\psi}_q=(\bar{\psi}_q^r,\bar{\psi}_q^b,\bar{\psi}_q^g)
+\end{equation}
+such that the Lagrangian resembles the free Dirac Lagragian,
+\begin{equation} \label{eq:QCDfreelagr}
+    \Lagrangian=i\bar{\psi}_q\gamma^{\mu}\partial_{\mu}\psi_q-m^2\bar{\psi}_q \psi_q.
+\end{equation}
+\todo[inline]{Some stuff to fill in... see page 355-356 of Griffiths}
+
+The Lagrangian must be modified to maintain local gauge invariance under \SUgroup{3} gauge transformations of the form
+\begin{equation}
+    \psi_q\rightarrow S\psi_q=e^{i\lambda_a\theta^a}\psi_q.
+\end{equation}
+As with the case in QED, a covariant derivative is introduced to replace the ordinary derivative:
+\begin{equation}
+    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig_s\lambda_a{G^a_{\mu}}\\
+\end{equation}
+where $\lambda_a$ with $a=1,2,...,8$ are the Gell-Mann $3\times3$ matrices, whose role for \SUgroup{3} is the role Pauli spin matrices play for \SUgroup{2}. For the new gauge fields $G^a$, the transformation rule considering the infinitesimal case is 
+\begin{equation}
+    G^a_{\mu}\rightarrow G^a_{\mu}-\dfrac{1}{g_s}\partial_{\mu}\theta_a-f_{ijk}\theta^jG_{\mu}^k
+\end{equation}
+where $f_{ijk}$ are the structure constants of \SUgroup{3}. 
+
+The modified Lagrangian (with the covariant derivative replacing the derivative) ins locally invariant under \SUgroup{3} transformations, and consequently eight new gauge fields are introduced. Unsurprisingly, these correspond precisely to the eight gluons. Lastly, the Proca-Lagrangian for the gluon fields must be added in. Here it is useful to define
+\begin{equation}
+    G^{\mu\nu}_a \equiv \partial^{\mu}G_a^{\nu}-\partial^{\nu}G_a^{\mu}-g_sf_{ijk}G^{\mu}_jG^{\nu}_k
+\end{equation}
+so that the final Lagrangian describing quantum chromodynamics is
+\begin{equation}
+    \Lagrangian=[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi] - \dfrac{1}{4}G^{\mu\nu}_aG^a_{\mu\nu}-g_s\bar{\psi}\gamma^{\mu}\lambda_a \psi G_{\mu}^a
+\end{equation}
+\section{Spontaneous symmetry breaking}
+
+\section{Higgs sector}
