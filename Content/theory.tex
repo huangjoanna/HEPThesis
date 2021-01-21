@@ -51,13 +51,6 @@ It turns out that in doing so, the transformation of of $A_{\mu}$,
     A_{\mu}\rightarrow A_{\mu}-\dfrac{\hbar c}{q}\partial_{\mu}\theta
 \end{equation}
 renders the Lagrangian locally invariant. $A_{\mu}$ brings along its own free Lagrangian, however, and the field must be massless to preserve local gauge invariance. All together this give the final Lagragian stated in equation \ref{eq:QEDlagr}, describing the interactions of fermions with charge $q$ (Dirac fields) with photons (Maxwell fields), more commonly known as the Lagrangian for quantum electrodynamics. 
-\subsection{Weak interactions and electroweak unification}
-
-The global gauge transformation $\psi\rightarrow e^{i\theta}\psi$ where $\theta$ is any real number can be though of as a matrix multiplication of the form
-\begin{equation}
-    \psi\rightarrow U\psi
-\end{equation}
-where $U^{\dag}U=1$ and in this case $U=e^{i\theta}$. The group of all possible unitary $1\times1$ matrices is called $\Ugroup{1}$. The same logic was applied in 1954 by Yang and Mills to the \SUgroup{2} group.
 
 \subsection{Quantum chromodynamics}
 
@@ -100,6 +93,70 @@ so that the final Lagrangian describing quantum chromodynamics is
 \begin{equation}
     \Lagrangian=[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi] - \dfrac{1}{4}G^{\mu\nu}_aG^a_{\mu\nu}-g_s\bar{\psi}\gamma^{\mu}\lambda_a \psi G_{\mu}^a
 \end{equation}
+
+\subsection{Weak interactions and electroweak unification}
+
+\todo[inline]{In addition to the linked thread: A SU(2) doublet is a pair of states (particles) which can be rotated into each other by SU(2) (gauge) transformations. You have weak isospin (T3) up and down, but you are free to e.g. replace up <-> down everywhere without changing the physics. A singlet has no SU(2) "charge" and it not affected by the transformation. In the SM, left-handed leptons are SU(2) doublets  and right-handed ones SU(2) singlets . In the same way, you have color triplets (quarks), singlets (leptons), and octets (gluons) under SU(3).}
+
+The global gauge transformation $\psi\rightarrow e^{i\theta}\psi$ where $\theta$ is any real number can be though of as a matrix multiplication of the form
+\begin{equation}
+    \psi\rightarrow U\psi
+\end{equation}
+where $U^{\dag}U=1$ and in this case $U=e^{i\theta}$. The group of all possible unitary $1\times1$ matrices is called $\Ugroup{1}$. The same logic was applied in 1954 by Yang and Mills to the \SUgroup{2} group.
+
+% The weak interaction theory is described using the non-abelian\todo{Describe non-abelian} symmetry group SU(2). In analogy with the formalism of QCD the generators of the group give rise to the gauge fields. In QCD there are eight generators, the Gell-Mann matrices, that give rise to the introduction of eight gauge fields identified as gluons. Similarly, in the weak theory there are three generators, the Pauli-spin matrices, that give rise to three gauge fields identified as the Z 0 , W+ and W− vector bosons. According to Noether’s theorem4 , a quantity or current is conserved providing gauge invariance is shown. For example, in QED the electric charge is conserved and in QCD it is colour charge that is conserved. In the case of the weak interaction, the conserved quantity is called weak isopin, T1,2.3.
+
+Experimental observations have shown that weak charged currents couple only to left-handed fermions and right-handed anti-fermions \cite{}\todo{Cite some papers to prove this}.
+\begin{equation}
+    \psi_{L,R}=\dfrac{1}{2}(1\mp \gamma_5)\psi, \quad \bar{\psi}_{L,R}=\bar{\psi}\dfrac{1}{2}(q\pm \gamma_5)
+\end{equation}
+
+Cabbibo-Kobayashi-Maskawa (CKM) matrix
+\begin{equation}
+    \begin{pmatrix}
+        d'\\
+        s'\\
+        b'
+    \end{pmatrix}
+    =
+    \begin{pmatrix} 
+        V_{ud} && V_{us} && V_{ub}\\ 
+        V_{cd} && V_{cs} && V_{cb}\\
+        V_{td} && V_{ts} && V_{tb}
+    \end{pmatrix}
+        \begin{pmatrix}
+        d\\
+        s\\
+        b
+    \end{pmatrix}
+\end{equation}
+
+Hypercharge $Y$, the conserved quantity from the $\Ugroup{1}_Y$ symmetry, is related to the electric charge by
+\begin{equation}
+    Q=T_3+\dfrac{Y}{2}
+\end{equation}
+where $T_3$ is the third component of weak isospin.
+
+Covariant derivative
+\begin{equation}
+    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig'\dfrac{Y}{2}B_{\mu}+ig\dfrac{\sigma_a}{2}W^a_{\mu}
+\end{equation}
+$\sigma_a$ where $a=1,2,3$ are the pauli matrices, the generators of \SUgroup{2}. The Pauli matrices satisfy the condition
+\begin{equation}
+    [\sigma_a,\sigma_b]=2i\epsilon_{abc}\sigma^c.
+\end{equation}
+
+Electroweak Lagrangian?
+\begin{equation}
+    \Lagrangian=\sum^3_{j=1}i\bar{\psi}_j\gamma^{\mu}\mathcal{D}_{\mu}\psi_j-\dfrac{1}{4}B_{\mu\nu}B^{\mu\nu}-\dfrac{1}{4}\sum^3_{a=1}W^a_{\mu\nu}W_a^{\mu\nu}
+\end{equation}
+
+Mixing of the $W^3$ and $B$ states produces a massless linear combination and a massive orthogonal combination. These correspond to the photon and the $Z$ boson, respectively. 
+\begin{equation}
+    A_{\mu}=B_{\mu}\cos\theta_{w}+W^3_{\mu}\sin\theta_w\\
+    Z_{\mu}=-B_{\mu}\sin\theta_{w}+W^3_{\mu}\cos\theta_w
+\end{equation}
+Here $\theta_w$ denotes the Weinberg angle.
 \section{Spontaneous symmetry breaking}
 
 \section{Higgs sector}
