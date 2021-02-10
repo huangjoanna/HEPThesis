@@ -15,6 +15,7 @@ Fermions are half-interger spin particles that are further divided into two grou
 The Standard Model is constructed upon the language of quantum field theory, where every elementary particle is described as quantizations \todo{(pertubations?)} of a quantum field. It describes the strong and electroweak interaction from the $\SUgroup3_C\otimes\SUgroup2_L\otimes\Ugroup1_Y$ symmetry group, each with a conserved quantity (following Noether's theorem) as indicated by the indices. All the interactions of the SM can be derived on the basis that the system is invariant under local gauge transformations. Imposing local gauge invariance under \SUgroup3 and colour charge conservation returns Quantum Chromodynamics (QCD). 
 
 \subsection{Quantum electrodynamics}
+\label{ssec:QED}
 
 The Dirac Lagrangian, written as
 \begin{equation} \label{eq:diracfreelagr}
@@ -106,12 +107,45 @@ where $U^{\dag}U=1$ and in this case $U=e^{i\theta}$. The group of all possible 
 
 % The weak interaction theory is described using the non-abelian\todo{Describe non-abelian} symmetry group SU(2). In analogy with the formalism of QCD the generators of the group give rise to the gauge fields. In QCD there are eight generators, the Gell-Mann matrices, that give rise to the introduction of eight gauge fields identified as gluons. Similarly, in the weak theory there are three generators, the Pauli-spin matrices, that give rise to three gauge fields identified as the Z 0 , W+ and W− vector bosons. According to Noether’s theorem4 , a quantity or current is conserved providing gauge invariance is shown. For example, in QED the electric charge is conserved and in QCD it is colour charge that is conserved. In the case of the weak interaction, the conserved quantity is called weak isopin, T1,2.3.
 
-Experimental observations have shown that weak charged currents couple only to left-handed fermions and right-handed anti-fermions \cite{}\todo{Cite some papers to prove this}.
+Experimental observations have shown that weak charged currents couple only to left-handed fermions and right-handed anti-fermions \cite{}\todo{Cite some papers to prove this}. In order to extract the left- and right-handed components, it is useful to define the projection operators $P_L$ and $P_R$, which act on fermion fields (expressed by Dirac spinors) in the following manner:
 \begin{equation}
-    \psi_{L,R}=\dfrac{1}{2}(1\mp \gamma_5)\psi, \quad \bar{\psi}_{L,R}=\bar{\psi}\dfrac{1}{2}(q\pm \gamma_5)
+    \psi_{L}=P_{L}\psi=\dfrac{1}{2}(1- \gamma_5)\psi,\quad 
+    \psi_{R}=P_{R}\psi=\dfrac{1}{2}(1+ \gamma_5)\psi
 \end{equation}
 
-Cabbibo-Kobayashi-Maskawa (CKM) matrix
+The left-handed and right-handed fermion fields follow different definitions under \SUgroup{2}. The former are arranged as doublets with isospin $I=\frac{1}{2}$, while the latter are singlets with isospin $I=0$. The singlets are consequently unaffected by \SUgroup{2} local gauge transformation.
+\begin{align}\label{eq:SU2doublet}
+    \ell_L & =
+    \begin{pmatrix}
+        \nu_e\\
+        e
+    \end{pmatrix}_L,
+        \begin{pmatrix}
+        \nu_{\mu}\\
+        \mu
+    \end{pmatrix}_L,
+        \begin{pmatrix}
+        \nu_{\tau}\\
+        \tau
+    \end{pmatrix}_L
+    & q_L & =
+    \begin{pmatrix}
+        u\\
+        d'
+    \end{pmatrix}_L,
+    \begin{pmatrix}
+        c\\
+        s'
+    \end{pmatrix}_L,
+    \begin{pmatrix}
+        t\\
+        b'
+    \end{pmatrix}_L\\
+    \ell_R & =e_R, \quad \mu_R, \quad \tau_R
+    \qquad 
+    & q_R & = u_R, \quad d_R, \quad c_R, \quad s_R, \quad t_R, \quad b_R
+\end{align}
+Notice that in equation \ref{eq:SU2doublet} the the down type quark doublet partners are weak eigenstates that can transform into one another through interactions with $W$ bosons \cite{Raby:1997bp}. The weak eigenstates $d'$, $s'$ and $b'$ are related to the mass eigenstates $d$, $s$ and $b$ through a unitary $3\times3$ matrix - the Cabbibo-Kobayashi-Maskawa (CKM) matrix. 
 \begin{equation}
     \begin{pmatrix}
         d'\\
@@ -131,32 +165,196 @@ Cabbibo-Kobayashi-Maskawa (CKM) matrix
     \end{pmatrix}
 \end{equation}
 
-Hypercharge $Y$, the conserved quantity from the $\Ugroup{1}_Y$ symmetry, is related to the electric charge by
+Similar to the QED and QCD case, a covariant derivative $\mathcal{D}_{\mu}$ is defined for the theory to retain its invariance under local gauge transformations:
+\begin{equation}
+    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig\dfrac{\sigma^a}{2}W^a_{\mu}+ig'\dfrac{Y}{2}B_{\mu}
+\end{equation}
+where $g$ and $g'$ represent the weak coupling constants, $\sigma_a$ with $a=1,2,3$ are the pauli matrices (i.e. the generators of \SUgroup{2}), and $Y$ is the weak hypercharge (generator of \Ugroup{1}). $Y$ is the conserved quantity from the $\Ugroup{1}_Y$ symmetry and it is related to the electric charge $Q$ by
 \begin{equation}
     Q=T_3+\dfrac{Y}{2}
 \end{equation}
 where $T_3$ is the third component of weak isospin.
-
-Covariant derivative
-\begin{equation}
-    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig'\dfrac{Y}{2}B_{\mu}+ig\dfrac{\sigma_a}{2}W^a_{\mu}
-\end{equation}
-$\sigma_a$ where $a=1,2,3$ are the pauli matrices, the generators of \SUgroup{2}. The Pauli matrices satisfy the condition
+The Pauli matrices satisfy the condition
 \begin{equation}
     [\sigma_a,\sigma_b]=2i\epsilon_{abc}\sigma^c.
 \end{equation}
 
-Electroweak Lagrangian?
+In defining the covariant derivative, four new massless gauge fields $W^1_{\mu}, W^2_{\mu}, W^3_{\mu}$ and $B_{\mu}$ are introduced. The former corresponds to the three \SUgroup{2}$_L$ generators, while the latter is associated with \Ugroup{1}$_Y$. The mixing of these four fields gives the electroweak bosons $W^+,W^-,Z$ and $\gamma$. The charged bosons $W^+$ and $W^-$ are linear combinations of $W^1_{\mu}$ and $W^2_{\mu}$:
+\begin{align}
+    W^+_{\mu} & =\dfrac{1}{\sqrt{2}}(W_{\mu}^1-iW_{\mu}^2)\\
+    W^-_{\mu} & =\dfrac{1}{\sqrt{2}}(W_{\mu}^1+iW_{\mu}^2).
+\end{align}
+The remaining fields $W_{\mu}^3$ and $B_{\mu}$ combine to form the Z boson and the photon as follows:
+\begin{align}
+    A_{\mu} & =B_{\mu}\cos\theta_{w}+W^3_{\mu}\sin\theta_w\\
+    Z_{\mu} & =-B_{\mu}\sin\theta_{w}+W^3_{\mu}\cos\theta_w
+\end{align}
+where $\theta_w$ denotes the Weinberg angle.
+
+The field strength tensors for \SUgroup{2}$_L$ and \Ugroup{1}$_Y$ are defined as: 
+\begin{align} \label{eq:EWKtensors}
+    W^a_{\mu\nu} & =\partial_{\mu}W^a_{\nu}-\partial_{\nu}W^a_{\mu}-g\epsilon^{abc}W^b_{\mu}W^a_{\nu}\\
+    B_{\mu\nu} & =\partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}
+\end{align}.
+The first line of equation \ref{eq:EWKtensors} is reminiscent of QCD, where last term gives rise to self-couplings of the electroweak gauge bosons. 
+
+The electroweak interaction, invariant under \SUgroup{2}$_L\times$\Ugroup{1}$_Y$ gauge transformations, has the following Lagrangian:
 \begin{equation}
-    \Lagrangian=\sum^3_{j=1}i\bar{\psi}_j\gamma^{\mu}\mathcal{D}_{\mu}\psi_j-\dfrac{1}{4}B_{\mu\nu}B^{\mu\nu}-\dfrac{1}{4}\sum^3_{a=1}W^a_{\mu\nu}W_a^{\mu\nu}
+    \Lagrangian=\sum_{j}i\bar{\psi}_j\gamma^{\mu}\mathcal{D}_{\mu}\psi_j-\dfrac{1}{4}B_{\mu\nu}B^{\mu\nu}-\dfrac{1}{4}W^a_{\mu\nu}W_a^{\mu\nu}
+\end{equation}
+where $j$ iterates over all the fermion fields. The requirement of local gauge invariant led to the construction of this Lagrangian that unifies the electromagnetic and weak interactions, from which the the physical interactions between fermions and the electroweak gauge bosons are correctly reproduced. The electroweak Lagrangian above, however, does not allow for gauge field mass terms. While the photon (and the gluon) is indeed massless, the fermions, $W$, and $Z$ bosons have been experimentally shown to be massive \cite{missing}. This is an inconsistency that urgently needs addressing - luckily, there is a way to reform gauge theory to accommodate massive gauge fields. 
+
+\section{Spontaneous symmetry breaking and the Higgs mechanism} \label{sec:SSBHiggsMechanism}
+\subsection{Spontaneous symmetry breaking}\label{ssec:SSB}
+\subsubsection{Broken discrete symmetry}
+
+The Lagrangian written in the classic form of a kinetic term minus a potential term, is:
+\begin{align}
+    \Lagrangian & = T-V\\
+    \Lagrangian & = \dfrac{1}{2}(\partial_{\mu}\phi)(\partial^{\mu}\phi)-(\dfrac{1}{2}\mu^2\phi^2+\dfrac{1}{4}\lambda\phi^4).
+    \label{eq:ssbLagrangian}
+\end{align}
+For the potential to have a finite minimum, $\lambda$ must be positive. The minimum of the potential $V(\phi)$ occurs at 
+\begin{equation}
+    \phi=\pm\sqrt{\dfrac{-\mu^2}{\lambda}}
+\end{equation}
+A new field can be written as perturbations from the ground states, defined by 
+\begin{equation}
+    \eta\equiv\phi\pm\sqrt{\dfrac{-\mu^2}{\lambda}}.
+\end{equation}
+If the Lagrangian of equation \ref{eq:ssbLagrangian} is rewritten in terms of $\eta$ as
+\begin{equation} \label{eq:ssbReformedLagrangian}
+    \Lagrangian=\dfrac{1}{2}(\partial_{\eta}\phi)(\partial^{\eta}\phi) - \mu^2\eta^2\pm\mu\lambda\eta^3-\dfrac{1}{4}\lambda\eta^4+\dfrac{1}{4}\dfrac{\mu^4}{\lambda}
+\end{equation}
+then the second term resembles a mass term, where the mass of the particle is 
+\begin{equation}
+    m=\sqrt{-2\mu^2}
+\end{equation}
+the third and fourth term of equation \ref{eq:ssbReformedLagrangian} represent triple and quartic couplings, and the last term is an insignificant constant. 
+\missingfigure{Graphs of the potential $V(\phi)$}
+
+\subsubsection{Broken continous symmetry}
+
+The previous section illustrates an example of spontaneous symmetry breaking. The original Lagrangian of equation \ref{eq:ssbLagrangian} is invariant if $phi\rightarrow-\phi$; it is even in $\phi$. In the reformed Lagrangian of equation \ref{eq:ssbReformedLagrangian}, however, this symmetry is broken because it is not even in $\eta$. The breaking is considered spontaneous because no external agent is required; the symmetry simply becomes hidden when selecting a particular ground state (the "vacuum"). In section \ref{sec:SSB} the broken symmetry was a discrete symmetry in context of a read scalar field. This section will apply spontaneous symmetry breaking to a complex scalar field.
+
+Consider the following complex scalar field, written neatly as a combination of two real fields:
+\begin{equation}
+    \phi\equiv\dfrac{1}{\sqrt{2}}(\phi_1+i\phi_2)\\ \label{eq:complexfield}
+    \phi^*\phi=\dfrac{1}{2}(\phi^2_1+\phi^2_2).
+\end{equation}
+The Lagrangian written with respect to the two fields $\phi_1$ and $\phi_2$ is
+\begin{equation}\label{eq:SSBContLagrangian}
+    \Lagrangian=\dfrac{1}{2}(\partial_{\mu}\phi_1)(\partial^{\mu}\phi_1) + \dfrac{1}{2}(\partial_{\mu}\phi_2)(\partial^{\mu}\phi_2) - \Big[\dfrac{1}{2}\mu^2(\phi_1^2+\phi_2^2)+\dfrac{1}{4}\lambda(\phi_1^2+\phi_2^2)^2\Big]
+\end{equation}
+where the terms in the square brackets is the potential energy function $V$. The minima of $V$ is a circle with the equation
+\begin{equation}
+    \phi_1^2+\phi_2^2=\dfrac{-\mu^2}{\lambda}=\nu^2
+\end{equation}
+where $\nu$ corresponds to the ground states. Arbritrarily one can choose
+\begin{equation}
+    \phi_1=\nu,\qquad\phi_2=0
+\end{equation}
+and introduce fluctuations about this vacuum state as new fields
+\begin{align}\label{eq:etaxifields}
+    \eta\equiv\phi_1-\nu,\qquad\xi\equiv\phi_2.
+\end{align}
+
+Now equation \ref{eq:SSBContLagrangian} can be rewritten in terms of $\eta$ and $\xi$:
+\begin{equation}
+    \Lagrangian=\Big[ \dfrac{1}{2}(\partial_{\mu}\eta)(\partial^{\mu}\eta) - \mu^2\eta^2 \Big] 
+    + \Big[ \dfrac{1}{2}(\partial_{\mu}\xi)(\partial^{\mu}\xi) \Big] + \text{higher order terms.}
+\end{equation}
+The first term is the free Lagrangian for the field $\eta$, which includes a mass term, giving $m_{\eta}=\sqrt{2}\mu$. The second term describes field $\xi$, which unlike $\eta$, turns out to be massless. This is Goldstone's theorem - the appearance of a massless spin 0 Goldstone boson is the result of a spontaneous broken continuous global symmetry \cite{Griffiths:2008zz}. 
+
+\subsection{The Higgs mechanism}
+
+The Higgs mechanisms involves spontaneous symmetry breaking of the complex field in equation \ref{eq:complexfield} in a Lagrangian that is locally gauge invariant. Consider the Lagrangian in equation \ref{eq:SSBContLagrangian}: it is invariant under global \Ugroup{1} transformation $\phi\rightarrow e^{iq\theta}\phi$, however not invariant under local \Ugroup{1} gauge transformation $\phi\rightarrow e^{iq\theta(x)}\phi$. In order to impose local gauge invariance, the derivatives must be replaced with the appropriate covariant derivatives
+\begin{equation}
+    \partial_{\mu}\rightarrow\mathcal{D}_{\mu}=\partial_{\mu}+igA_{\mu}
+\end{equation}
+where a new gauge field $A_{\mu}$ is introduced and transforms as
+\begin{equation}
+    A_{\mu}\rightarrow A_{\mu}-\partial_{\mu}\theta(x).
+\end{equation}
+The locally invariant Lagrangian for the complex scalar field $\phi$ becomes
+\begin{equation}\label{eq:Lagrcomplexscalarfield}
+    \Lagrangian=(\covd_{\mu}\phi^*)(\covd^{\mu}\phi)-\mu^2\phi^2-\lambda\phi^4-\dfrac{1}{4}F_{\mu\nu}F^{\mu\nu}
+\end{equation}
+where the additional term is the Proca Lagrangian acccompanying the gauge field. 
+
+As with the previous section, when $\mu^2<0$ in the potential, the choice of a physical degenate vacuum state breaks the symmetry of the Lagrangian. The complex scalar field can be rewritten by substituting equation \ref{eq:etaxifields} into equation \ref{eq:complexfield} to get:
+\begin{equation}\label{eq:complexscalarfieldvev}
+    \phi(x)=\dfrac{1}{\sqrt{2}}\Big[\nu+\eta(x)+i\xi(x)\Big].
+\end{equation}
+The definition above is used to rewrite the Lagrangian on equation \ref{eq:Lagrcomplexscalarfield} as
+\begin{equation}
+    \Lagrangian=\dfrac{1}{2}(\partial_{\mu}\eta)(\partial^{\mu}\eta) - \lambda\nu^2\eta^2
+                + \dfrac{1}{2}(\partial_{\mu}\xi)(\partial^{\mu}\xi) 
+                - \dfrac{1}{4}F_{\mu\nu}F^{\mu\nu} + \dfrac{1}{2}g^2\nu^2A_{\mu}A^{\mu}
+                + g\nu A_{\mu}({\partial^{\mu}\xi})
+                + \text{int. terms}
+\end{equation}
+where the first two terms represent the massive scalar field $\eta$, the third term corresponds to the massless Goldstone boson $\xi$, and the fourth and fifth terms describes the gauge field $A_{\mu}$ which has now acquired a mass. Additional three and four point interactions terms also exist the fields. The is the exact same Lagrangian as equation \ref{eq:Lagrcomplexscalarfield}; $\phi$ has simply been expanded about the vacuum state. The underlying symmetry of the \Ugroup{1} gauge group has consequently been broken.
+
+The final step involves the choice of an appropriate gauge which eliminates the Goldstone field completely from the Lagrangian. This is motivated by the $q\nu A_{\mu}({\partial^{\mu}\xi})$ term, which reads as a coupling between the spin-1 gauge field $A_{\mu}$ and the spin-0 scalar Goldstone field $\xi$, where one field can transform into another. Such bilinear terms indicate that the fundamental fields have been misidentified \cite{Griffiths:2008zz}. The freedom in gauge choice is exploited to set 
+\begin{equation}
+    \theta(x)=-\dfrac{\xi(x)}{g\nu}
+\end{equation}
+which leads the complex scalar field to transform as 
+\begin{equation}
+    \phi(x)\rightarrow e^{-ig\frac{\xi(x)}{g\nu}}\phi(x).
+\end{equation}
+Writing equation \ref{eq:complexscalarfieldvev} to to first order as $\phi\approx\dfrac{1}{\sqrt{2}}\Big[\nu+\eta(x)\Big]e^{i\frac{\xi(x)}{\nu}}$, the gauge transformation on $\phi$ transforms away the Goldstone field completely:
+\begin{equation}
+    \phi(x)\rightarrow e^{-i\frac{\xi(x)}{\nu}} \dfrac{1}{\sqrt{2}}\Big[\nu+\eta(x)\Big]e^{i\frac{\xi(x)}{\nu}}
+    = \dfrac{1}{\sqrt{2}}\Big[\nu+h(x)\Big].
+\end{equation}
+This choice of gauge renders $\phi$ to be entirely real, and is called the unitary gauge. Here the field $\eta(x)$ can be rewritten as $h(x)$, corresponding to none other than the Higgs field. The mass terms for the scalar Higgs field is 
+\begin{equation}
+    m_{\Higgs} = g\nu
+\end{equation}
+and the mass of $A$, the gauge boson associated with the local gauge symmetry, is given by
+\begin{equation}
+    m_A=\sqrt{2\lambda}\nu.
 \end{equation}
 
-Mixing of the $W^3$ and $B$ states produces a massless linear combination and a massive orthogonal combination. These correspond to the photon and the $Z$ boson, respectively. 
-\begin{equation}
-    A_{\mu}=B_{\mu}\cos\theta_{w}+W^3_{\mu}\sin\theta_w\\
-    Z_{\mu}=-B_{\mu}\sin\theta_{w}+W^3_{\mu}\cos\theta_w
-\end{equation}
-Here $\theta_w$ denotes the Weinberg angle.
-\section{Spontaneous symmetry breaking}
+\subsection{The Standard Model Higgs}
 
-\section{Higgs sector}
+This final subsection will apply the Higgs mechanism to the electroweak sector of the Standard Model, with a \Ugroup{1}$_Y\times$\SUgroup{2}$_{L}$ local gauge symmetry. 
+\begin{equation}
+    \phi=
+    \begin{pmatrix}
+         \phi^+ \\
+         \phi^0
+    \end{pmatrix}
+    =\dfrac{1}{\sqrt{2}}
+    \begin{pmatrix}
+         \phi_1+i\phi_2\\
+         \phi_3+i\phi_4
+    \end{pmatrix}
+\end{equation}
+\begin{equation}
+    \dfrac{1}{2}(\phi_{1}^2+\phi_{2}^2+\phi_{3}^2+\phi_{4}^2)=\dfrac{\nu^2}{2}
+\end{equation}
+It is known, however, that the photon is indeed massless and must remain so after symmetry breaking. It is for this reason that only the neutral scalar field $phi^0$ can acquire a non-zero vacuum expectation value \todo{This is REALLY badly worded and makes no sense. Read more into it and reword}.
+\begin{equation}
+    \bra{0}\phi\ket{0}=\dfrac{1}{\sqrt{2}}
+    \begin{pmatrix}
+         0 \\
+         \nu
+    \end{pmatrix}
+\end{equation}
+The Higgs doublet written in the unitary gauge such that the massless Goldstone bosons are "eaten" by the gauge bosons, is
+\begin{equation}
+    \phi(x)=\dfrac{1}{\sqrt{2}}
+    \begin{pmatrix}
+         0\\
+         \nu+h(x)
+    \end{pmatrix}.
+\end{equation}
+
+\begin{align}
+    m_W & =\dfrac{1}{2}g_{W}\nu\\
+    m_Z & =\dfrac{1}{2}\nu\sqrt{g_W^2+g'^2}\\
+    m_A & =0
+\end{align}
