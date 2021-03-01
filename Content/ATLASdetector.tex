@@ -171,3 +171,22 @@ Once the level-1 trigger has accepted an event, it passes the baton onto the sof
 
 % The Fast TracKer (FTK) [8] is a fast hardware-based track trigger system for ATLAS designed to perform a global track reconstruction receiving input from the silicon tracking detectors (part of the Inner Detector, ID) after each L1 trigger (at a rate of up to 100 kHz) and provide full-event track information to the HLT. The FTK aims at improving the efficiency of trigger selections that require tracking information, such as those to identify medium-pT b’s and τ’s, with high background rejection. Both b-tagging and τ identification rely on track information, as the former are characterized by a displaced vertex that can be reconstructed from the tracks in the event, and the latter have significantly less tracks in a smaller cone than standard jets. This is especially important for measurements where b-jets and third generation leptons play a crucial role, such as Higgs coupling measurements or searches for particles predicted by BSM models. In addition to the physics gains, using FTK information in the HLT decision process can improve many trigger algorithms, in particular those relying on isolation variables (lepton triggers) and calorimeter information (jet and E miss T triggers), which are both affected by pile-up effects that be mitigated using FTK tracks
 
+\section{Object reconstruction}
+
+The \ATLAS detector's raw readout signals must be translated into meaningfiul physics information before delivered to analysis teams. The responsibility for this task falls upon the offline reconstruction system, which combines information from all sub-detectors to reconstruct and identify particles with the highest possible efficiency. 
+
+\subsection{Tracks and vertices}
+
+Reconstruction of complex physics objects, such as electrons and muons, begins with the construction of more basic inputs such as tracks, vertices, and calorimeter clusters. 
+Charged particle trajectories are called tracks, and their reconstruction is crucial for many reasons. They are explicit inputs in the identification, reconstruction and isolation of electrons and muons, which is the signal process for the analysis of this thesis. The basic building block of a track is the detection of a signal above threshold, a hit, in the inner tracking detectors. In the pixel detector and semi-conductor tracker, the hits are first assembled into clusters of energy deposits that share common corners and edges, called space points. Tracks are seeded with a triplet of space points, and are extended by matching subsequent pixel and SCT hits using a Kalman filter \cite{ATLAS-CONF-2012-042}. 
+
+When describing a track, five parameters are used: $d_0$ and $z_0$, the transverse and longitudinal impact parameters, $\phi$ and $\theta$, the azimuthal and polar angle, and $q/p$ describing the charge \cite{}. Together these are known as the perigee parameters. The two impact parameters are illustrated in figure \ref{fig:impactparameters}. The transverse $d_0$ is the transverse distance from the primary vertex to the point of closest approach in the $\eta-\phi$ plane, while the $z_0$ is the distance  from the $z-$axis. 
+
+
+
+\subsection{Electron reconstruction}
+
+
+\subsection{Muon reconstruction}
+\cite{ATLAS:2020xtq}
+
