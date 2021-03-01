@@ -167,7 +167,7 @@ Notice that in equation \ref{eq:SU2doublet} the the down type quark doublet part
 
 Similar to the QED and QCD case, a covariant derivative $\mathcal{D}_{\mu}$ is defined for the theory to retain its invariance under local gauge transformations:
 \begin{equation}
-    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig\dfrac{\sigma^a}{2}W^a_{\mu}+ig'\dfrac{Y}{2}B_{\mu}
+    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig_W\dfrac{\sigma^a}{2}W^a_{\mu}+ig'\dfrac{Y}{2}B_{\mu}
 \end{equation}
 where $g$ and $g'$ represent the weak coupling constants, $\sigma_a$ with $a=1,2,3$ are the pauli matrices (i.e. the generators of \SUgroup{2}), and $Y$ is the weak hypercharge (generator of \Ugroup{1}). $Y$ is the conserved quantity from the $\Ugroup{1}_Y$ symmetry and it is related to the electric charge $Q$ by
 \begin{equation}
@@ -320,7 +320,7 @@ and the mass of $A$, the gauge boson associated with the local gauge symmetry, i
 
 \subsection{The Standard Model Higgs}
 
-This final subsection will apply the Higgs mechanism to the electroweak sector of the Standard Model, with a \Ugroup{1}$_Y\times$\SUgroup{2}$_{L}$ local gauge symmetry. 
+This final subsection will apply the Higgs mechanism to the electroweak sector of the Standard Model, with a \SUgroup{2}$_L\times$\Ugroup{1}$_Y$ local gauge symmetry. 
 \begin{equation}
     \phi=
     \begin{pmatrix}
@@ -333,10 +333,13 @@ This final subsection will apply the Higgs mechanism to the electroweak sector o
          \phi_3+i\phi_4
     \end{pmatrix}
 \end{equation}
+\begin{equation} \label{eq:higgsLagr}
+    \Lagrangian=(\covd_{\mu}\phi)(\covd^{\mu}\phi)^{\dagger}-V(\phi^{\dagger}\phi)
+\end{equation}
 \begin{equation}
     \dfrac{1}{2}(\phi_{1}^2+\phi_{2}^2+\phi_{3}^2+\phi_{4}^2)=\dfrac{\nu^2}{2}
 \end{equation}
-It is known, however, that the photon is indeed massless and must remain so after symmetry breaking. It is for this reason that only the neutral scalar field $phi^0$ can acquire a non-zero vacuum expectation value \todo{This is REALLY badly worded and makes no sense. Read more into it and reword}.
+The Lagrangian has an infinite set of ground states, and choosing any particular ground state will break the symmetry. The vacuum state chosen is
 \begin{equation}
     \bra{0}\phi\ket{0}=\dfrac{1}{\sqrt{2}}
     \begin{pmatrix}
@@ -344,17 +347,94 @@ It is known, however, that the photon is indeed massless and must remain so afte
          \nu
     \end{pmatrix}
 \end{equation}
-The Higgs doublet written in the unitary gauge such that the massless Goldstone bosons are "eaten" by the gauge bosons, is
+which keeps the ground state electrically neutral, and consequently the photon massless. Expanding the ground state as before, $\phi$ is redefined as 
 \begin{equation}
-    \phi(x)=\dfrac{1}{\sqrt{2}}
+    \phi(x) = e^{\frac{\xi_a(x)\sigma_a}{2\nu}}\dfrac{1}{\sqrt{2}}
     \begin{pmatrix}
          0\\
          \nu+h(x)
     \end{pmatrix}.
 \end{equation}
+Choosing a unitary gauge, the Higgs double is rewritten such that the massless Goldstone fields are "eaten" by the gauge fields and the dependence on $\xi_a$ is removed.
+\begin{equation} \label{eq:higgsvev}
+    \phi(x)\rightarrow e^{-\frac{\xi^a(x)\sigma^a}{2\nu}}\phi(x)=\dfrac{1}{\sqrt{2}}
+    \begin{pmatrix}
+         0\\
+         \nu+h(x)
+    \end{pmatrix}.
+\end{equation}
+Applying equation \ref{eq:higgsvev} on the kinematic part of the Lagrangian in equation \ref{eq:higgsLagr} and expanding generates the mass terms of the gauge boson fields. In the unitary gauge, $\covd_{\mu}\phi$ is
+\begin{align}
+    \mathcal{D}_{\mu}\phi & = \Big[\partial_{\mu}+ig_W\dfrac{\sigma^a}{2}W^a_{\mu}+ig'\dfrac{Y}{2}B_{\mu}\Big]\phi\\
+        & = \dfrac{1}{\sqrt{2}}
+        \begin{pmatrix}
+             \partial_{\mu} + \dfrac{ig_W}{2}W_{\mu}^3 + \dfrac{ig'}{2}B_{\mu} & \dfrac{ig_W}{2}(W_{\mu}^1-iW_{\mu}^2) \\
+             \dfrac{ig_W}{2}(W_{\mu}^1+iW_{\mu}^2) & \partial_{\mu} - \dfrac{ig_W}{2}W_{\mu}^3 + \dfrac{ig'}{2}B_{\mu}
+        \end{pmatrix}
+        \begin{pmatrix}
+             0 \\
+             \nu+h
+        \end{pmatrix}\\
+        & = \dfrac{1}{\sqrt{2}}
+        \begin{pmatrix}
+             \dfrac{ig_W}{2}(W_{\mu}^1-iW_{\mu}^2)(\nu+h)\\
+             (\partial_{\mu}-\dfrac{ig_W}{2}W_{\mu}^3+\dfrac{ig'}{2}B_{\mu})(\nu+h).
+        \end{pmatrix}
+\end{align}
+The kinetic term $(\covd_{\mu}\phi)(\covd^{\mu}\phi)^{\dagger}$ is
+\begin{align}
+    (\covd_{\mu}\phi)(\covd^{\mu}\phi)^{\dagger} = &  \dfrac{1}{2}(\partial_{\mu}h)(\partial^{\mu}h) + \dfrac{1}{8}g_ W^2(W_{\mu}^1+iW_{\mu}^2)(W^{1\mu}-iW^{2\mu})(\nu+h)^2\\
+    & + \dfrac{1}{8}(g_W W_{\mu}^3 - g'B_{\mu})(g_W W^{3\mu} - g'B^{\mu})(\nu+h)^2
+\end{align}
 
 \begin{align}
     m_W & =\dfrac{1}{2}g_{W}\nu\\
     m_Z & =\dfrac{1}{2}\nu\sqrt{g_W^2+g'^2}\\
-    m_A & =0
+    m_A & =0.
 \end{align}
+The spontaneous breaking of the \Ugroup{1}$_Y\times$\SUgroup{2}$_{L}$ symmetry lets the $W$ and $Z$ bosons acquire mass, while the \Ugroup{1}$_Q$ symmetry remains unbroken thus leaving the photon massless. 
+
+\subsection{Yukawa sector: fermion masses}
+
+The fermionic mass term given by 
+\begin{equation}
+    -m\bar{\psi}\psi=-m(\overline{\psi}_R\psi_L+\psi_R\overline{\psi}_L)
+\end{equation}
+is not invariant under a local gauge transformation due to different transformation properties of its left- and right-handed chiral components. The left-handed states transform as weak isospin doublets under \SUgroup{2}$_L$, while the right-handed states transform as singlets. 
+
+It is possible to add interaction terms between the Higgs field and the fermions to the Lagrangian of equation \ref{eq:higgsLagr} while preserving the \SUgroup{2}$_L\times$\Ugroup{1}$_Y$ symmetry. Starting with leptons, this is done by writing the term
+\begin{equation}
+    \Lagrangian_{\text{Yukawa, }\ell}=-c_{\ell} (\overline{\psi}_R\phi^{\dagger}\psi_L+\psi_R\phi\overline{\psi}_L)
+\end{equation}
+where $c_{\ell}$ is the Yukawa coupling constant between the specified lepton and the Higgs field. Next, the Higgs doublet $\phi$ is replaced with the ground state written in unitary gauge as per equation \ref{eq:higgsvev}, and the Lagrangian becomes
+\begin{align}
+    \Lagrangian_{\text{Yukawa, }\ell} & = -\dfrac{c_{\ell}}{\sqrt{2}}\nu(\overline{\psi}_R\psi_L+\psi_R\overline{\psi}_L) - \dfrac{c_{\ell}}{\sqrt{2}}h(\overline{\psi}_R\psi_L+\psi_R\overline{\psi}_L)\\
+             & = -\dfrac{c_{\ell}}{\sqrt{2}}\nu\overline{\psi}\psi - \dfrac{c_{\ell}}{\sqrt{2}}\overline{\psi}\psi h \\
+             & = -m_{\ell}\overline{\psi}\psi - \dfrac{m_{\ell}}{\nu}\overline{\psi}\psi h.
+\end{align}
+The first term is a mass term for the lepton, and the second term represents the coupling of the lepton to the Higgs boson. 
+
+The same mechanism generates mass for the case of down-type quarks. Up-type quarks require something a little different. The vacuum expectation value for the Higgs doublet is zero in the upper component, and therefore cannot generate mass for the up-type quarks and neutrinos\footnote{The question of neutrino masses will not be address in this thesis.}. Focusing on the case of the up-type quarks $\psi_u$, it is useful to define the conjugate doublet $\phi_C$
+\begin{equation}
+    \phi_C = -i\sigma_2\phi^* = 
+    \begin{pmatrix}
+         -\phi^{0*} \\
+         \phi^-
+    \end{pmatrix}
+    = \dfrac{1}{\sqrt{2}}
+    \begin{pmatrix}
+         -\phi_3+i\phi_4\\
+         \phi_1-i\phi_2
+    \end{pmatrix}.
+\end{equation}
+which transforms exactly like $\phi$. Now a gauge invariant Yukawa term can be written for the quark families as
+\begin{equation}
+    \Lagrangian_{\text{Yukawa, }q}=-c_u (\overline{\psi}_{u,R}\phi_C^{\dagger}\psi_{u,L}+\psi_{u,R}\phi_C\overline{\psi}_{u,L}) - c_d (\overline{\psi}_{d,R}\phi^{\dagger}\psi_{d,L}+\psi_{d,R}\phi\overline{\psi}_{d,L})
+\end{equation}
+which becomes
+\begin{align}
+    \Lagrangian_{\text{Yukawa, }q} & = - \dfrac{c_u}{\sqrt{2}}\nu\overline{\psi}_u\psi_u - \dfrac{c_u}{\sqrt{2}}\overline{\psi}_u\psi_uh - \dfrac{c_d}{\sqrt{2}}\nu\overline{\psi}_d\psi_d - \dfrac{c_d}{\sqrt{2}}\overline{\psi}_d\psi_dh \\
+                & = -m_u\overline{\psi}_u\psi_u - \dfrac{m_u}{\nu}\overline{\psi}_u\psi_u h - m_d\overline{\psi}_d\psi_d - \dfrac{m_d}{\nu}\overline{\psi}_d\psi_d h
+\end{align}
+after spontaneous symmetry breaking.
+The Yukawa constants $c_q, c_{\ell}$ are not predicted by theory, and are assigned values that are consistent with experimental fermion mass measurements. 
