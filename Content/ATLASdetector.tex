@@ -181,10 +181,49 @@ Reconstruction of complex physics objects, such as electrons and muons, begins w
 Charged particle trajectories are called tracks, and their reconstruction is crucial for many reasons. They are explicit inputs in the identification, reconstruction and isolation of electrons and muons, which is the signal process for the analysis of this thesis. The basic building block of a track is the detection of a signal above threshold, a hit, in the inner tracking detectors. In the pixel detector and semi-conductor tracker, the hits are first assembled into clusters of energy deposits that share common corners and edges, called space points. Tracks are seeded with a triplet of space points, and are extended by matching subsequent pixel and SCT hits using a Kalman filter \cite{ATLAS-CONF-2012-042}. 
 
 When describing a track, five parameters are used: $d_0$ and $z_0$, the transverse and longitudinal impact parameters, $\phi$ and $\theta$, the azimuthal and polar angle, and $q/p$ describing the charge \cite{}. Together these are known as the perigee parameters. The two impact parameters are illustrated in figure \ref{fig:impactparameters}. The transverse $d_0$ is the transverse distance from the primary vertex to the point of closest approach in the $\eta-\phi$ plane, while the $z_0$ is the distance  from the $z-$axis. 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/LHC/impact_params.pdf}
+    \caption{Drawn in blue is the particle track, with the transverse and longitudinal impact parameters illustrated on the left and right graph respectively. The primary vertex (P.V.) is defined to be at the origin.}
+    \label{fig:impactparameters}
+\end{figure}
+The momentum can be deduced from the track using the radius of curvature and the solenoid field strength. High momentum particles have less curved trajectories than low momentum particles. The collision vertex is the intersection of multiple particle trajectories at their origin. For vertex finding at least two reconstructed tracks are required as input. The primary vertices are points in space where proton–proton interactions have occurred \cite{ATLAS_primary_vertices}. Track to vertex association is split into two stages: 
+\begin{itemize}
+    \item Vertex finding associates reconstructed tracks to potential vertex candidates
+    \item Vertex fitting is the reconstruction of the vertex position, as well as an estimate on the quality of the fit \cite{Piacquadio_2008}.
+\end{itemize}
+These two steps are often interlaced in the algorithms. With a set of selected tracks and a vertex seed position, an iterative procedure is used to find the best vertex position. After the vertex position is computed, incompatible tracks are removed and regrouped with the non-selected tracks to be used in finding and fitting or another vertex. 
 
+\subsection{Clustering algorithms}
+In the calorimeters, the signals are collected into related clusters. This is done to extract the significant signal coming from the hard scattering process from the noise \cite{Aad_2017_topo_clustering}. In the calorimeters, the noise arises from two main sources: the readout electronics, and pile-up from non-primary interactions \cite{Lampl:1099735}. The clustering algorithms aim to group together the calorimeter cells, in three dimensions, in which incoming particles have deposited their energy. The clustering allows for the computation of the sum of the total energy deposited. Within \ATLAS, there are two clustering algorithms: the sliding-window algorithm, and the topological algorithm. Both are summarised below and are described in detail in reference \cite{Lampl:1099735}. 
 
+\subsubsection{Sliding-window algorithm}
+
+The sliding-window algorithm first divides the $\eta-\phi$ space into a grid. All longitudinal cells' energies in each grid element is summed together to form rectangular prisms called towers. Next, a fixed sized window of $N_{\eta}\times N_{\phi}$ towers is used to scan across the grid in search of a local maximum above a chosen energy threshold. once found, it is used as a seed for the final step; cluster formation. Depending on the hypothesised particle type and the location in the calorimeter, the clusters pre-defined size in $\eta-\phi$ space varies \cite{Lampl:1099735}. Clusters are built by summing the energies of all cells within the defined size.
+
+In cluster formation, the sliding window algorithm can form overlapping clusters if they share common cells. In these cases, the reconstruction algorithm (by default) includes the overlapping cells in both clusters, thus resulting in a double count of the energies of the shared cells. The disadvantage of this approach is that objects can be reconstructed with a larger energy that it had initially, due to the double counting. 
+
+\subsubsection{Topological clustering}
+
+Unlike the sliding-window algorithm, topological clustering results in clusters that have variable cell sizes. The building of clusters starts by examining the cell signal significance $\zeta_{\text{cell}}$, defined as
+\begin{equation}
+    \zeta_{\text{cell}} = \dfrac{E_{\text{cell}}}{\sigma_{\text{noise,cell}}}
+\end{equation}
+where the numerator is the energy deposited in the cell and the denominator is the average expected noise in the cell \cite{Aad_2017_topo_clustering}. In building the topological clusters, three thresholds are defined. The seed threshold $\zeta_{\text{seed}}$, the neighbour threshold $\zeta_{\text{neighbour}}$, and the baseline cell threshold $\zeta_{\text{base}}$. Any cell whose cell significant is above the seed threshold is labelled as a seed cell, and forms a proto-cluster. The seed cells are ranked from high to low based on their $\zeta_{\text{cell}}$ value. From there, neighbouring cells that have not been used as a seed cell are added to the proto-cluster if their energy is above $\zeta_{\text{neighbour}}$, and also added to the neighbour seed list. If a neighbour cell is next to two proto-clusters, then the proto-clusters are merged. If $\zeta_{\text{cell}}$ is below $\zeta_{\text{neighbour}}$ but still above $\zeta_{\text{base}}$, then the cell is added to the nearest neighbouring proto-cluster. After the original seed list is processed, it is discarded and the same procedure is repeated for neighbour seed list. This is done until no cells remain unprocessed. 
+
+The advantage to the topological clustering method, as opposed to the sliding window method, is that it allows for a more organic growth of clusters rather than pre-defining its size and shape. The algorithm is formed so that it closely traces the spatial signal-significance
+patterns generated by particle showers \cite{ATL-PHYS-PUB-2017-022}. Furthermore, topological clustering requires smaller energy loss corrections. It has a very efficient energy resolution and collects more energy on average than sliding window clustering \cite{ATL-PHYS-PUB-2017-022}. It is more complex to implement, however, and due to the dependency on noise levels, uncertainties from the electronics and pile-up directly affect the algorithm's reconstruction efficiency \cite{Lampl:1099735}. 
+
+In reference \cite{ATL-PHYS-PUB-2017-022}, a topological clustering algorithm for electron and photon reconstruction is presented. It is demonstrated that this algorithm improves the energy resolution when compared to the traditional sliding window method. Figure \ref{fig:H4l_topo_cluster} shows the resolution improvements in the \HFourL channel, taken from reference \cite{ATL-PHYS-PUB-2017-022}. The topological cluster approach has a more narrow Higgs peak, and the peak is also closer to the true Higgs mass. After performing a fit with a double Crystal Ball function, the $4e$ channel shows a 5\% improvement in resolution.
+\begin{figure}
+    \centering
+    \includegraphics[width=\mediumfigwidth]{Figures/LHC/H4l_topo_cluster.png}
+    \caption{Simulated 4 lepton invariant mass distributions using the supercluster and sliding window algorithms, in the $4e$ channel.}
+    \label{fig:H4l_topo_cluster}
+\end{figure}
 
 \subsection{Electron reconstruction}
+
 
 
 \subsection{Muon reconstruction}
