@@ -176,6 +176,7 @@ Once the level-1 trigger has accepted an event, it passes the baton onto the sof
 The \ATLAS detector's raw readout signals must be translated into meaningfiul physics information before delivered to analysis teams. The responsibility for this task falls upon the offline reconstruction system, which combines information from all sub-detectors to reconstruct and identify particles with the highest possible efficiency. 
 
 \subsection{Tracks and vertices}
+\label{ssec:tracksandvertices}
 
 Reconstruction of complex physics objects, such as electrons and muons, begins with the construction of more basic inputs such as tracks, vertices, and calorimeter clusters. 
 Charged particle trajectories are called tracks, and their reconstruction is crucial for many reasons. They are explicit inputs in the identification, reconstruction and isolation of electrons and muons, which is the signal process for the analysis of this thesis. The basic building block of a track is the detection of a signal above threshold, a hit, in the inner tracking detectors. In the pixel detector and semi-conductor tracker, the hits are first assembled into clusters of energy deposits that share common corners and edges, called space points. Tracks are seeded with a triplet of space points, and are extended by matching subsequent pixel and SCT hits using a Kalman filter \cite{ATLAS-CONF-2012-042}. 
@@ -195,6 +196,7 @@ The momentum can be deduced from the track using the radius of curvature and the
 These two steps are often interlaced in the algorithms. With a set of selected tracks and a vertex seed position, an iterative procedure is used to find the best vertex position. After the vertex position is computed, incompatible tracks are removed and regrouped with the non-selected tracks to be used in finding and fitting or another vertex. 
 
 \subsection{Clustering algorithms}
+\label{ssec:clusteringalgorithms}
 In the calorimeters, the signals are collected into related clusters. This is done to extract the significant signal coming from the hard scattering process from the noise \cite{Aad_2017_topo_clustering}. In the calorimeters, the noise arises from two main sources: the readout electronics, and pile-up from non-primary interactions \cite{Lampl:1099735}. The clustering algorithms aim to group together the calorimeter cells, in three dimensions, in which incoming particles have deposited their energy. The clustering allows for the computation of the sum of the total energy deposited. Within \ATLAS, there are two clustering algorithms: the sliding-window algorithm, and the topological algorithm. Both are summarised below and are described in detail in reference \cite{Lampl:1099735}. 
 
 \subsubsection{Sliding-window algorithm}
@@ -222,10 +224,65 @@ In reference \cite{ATL-PHYS-PUB-2017-022}, a topological clustering algorithm fo
     \label{fig:H4l_topo_cluster}
 \end{figure}
 
-\subsection{Electron reconstruction}
+\subsection{Electrons}
 
+\subsubsection{Electron reconstruction}
 
+Following track candidate and calorimeter cluster candidate reconstruction as described in sections \ref{ssec:tracksandvertices} and \ref{ssec:clusteringalgorithms} comes the final procedure in electron reconstruction: the matching of a track candidate to a topo-cluster and the finalisation of the cluster size \cite{ATLAS_electron_efficiency_2015-2016}. The algorithm prepares for reconstruction by first selecting the topo-custers and tracks it will use. The tracks are then refitted  using a Gaussian sum filter (GSF) method \cite{ATLAS-CONF-2012-047} to accommodate for the energy loss due to bremsstrahlung radiation, which affects electrons more significantly than muons due to their lighter mass. As an electron loses its energy, its transverse momentum also decreases, and the curvature of its track becomes more prominent. The refit improves electron reconstruction efficiencies by correcting for this effect and improving the track parameters.
 
-\subsection{Muon reconstruction}
+By extrapolating the track from the perigee to the second calorimeter layer and using the track's momentum, re-fitted tracks are matched to topological clusters. Sometimes the momentum of the track is rescaled to match the energy of the cluster, which improves matching accuracy for electron candidates that lose a portion of their energy to bremsstrahlung radiation \cite{ATLAS_electron_efficiency_2015-2017}. In order for a track to match, the requirements $|\Delta\eta|<0.05$ and $-0.10<q\cdot(\phi_{\text{track}}-\phi_{\text{cluster}})<0.05$ must be fulfilled, where $q$ is the charge of the track. The asymmetry of the latter requirement is due to radiated photons which clusters are able to measure, but tracks may miss \cite{ATLAS_electron_efficiency_2015-2017}.
+
+\subsubsection{Electron identification}
+
+Electron identification is done using a likelihood method that takes calorimeter shower shapes, tracking information, and cluster-track matching information as inputs. The advantages of this approach, as opposed to a cut-based approach, are twofold. The first is that a prompt electron may fail to be identified if it does not pass a singular selection criterion for cut-based identification. In a likelihood-based method, however, the electron may still be identified. Secondly, discriminants that are too similar to be used in a cut-based approach (because it would result in drops in efficiency) are easily added to the likelihood-based approach without penalty \cite{ATLAS_electron_efficiency_2015-2016}.
+
+The ATLAS experiment carries out many physics analyses which require different signal efficiencies and background rejection rates. For this reason, the likelihood-based discriminant take on fixed values for discrete working points \cite{ATLAS_electron_efficiency_2015-2016}. These working points are namely Loose, Medium, and Tight, each corresponding to increasingly stringent thresholds. In Run 2, the electron candidates satisfying the tigher criteria are a subset of those satisfying the looser criteria. The efficiencies are 93\%, 88\%, and 80\% for identifying a \unit{40}{\GeV} electron in the loose, medium, and tight working points respectively. The Medium and tight operating points have lower efficiencies and consequently a factor of 2.5 and 5 times higher fake electron rejection rates, respectively. 
+
+For the ATLAS four lepton analysis of this thesis, the Loose identification working point is chosen. In terms of tracking criteria, this requires a minimum of two hits in the pixel detector, and seven total hits in the pixel and SCT combined. The Loose likelihood selection originally made to match and improve the previous ATLAS Multilepton working point, a cut-based selection optimised for the \HFourL analysis \cite{ATLAS_muon_reco_2011}.
+
+\subsubsection{Electron isolation}
+
+Isolation is an important step in distinguishing prompt electrons in signal processes, from misidentified hadrons, semileptonic heavy quark decays, and other such background processes. Signal processes are usually characterised as being well isolated; there is little activity in the surrounding cells of the signal object in the calorimeter and the inner detector alike. In order to quantify the amount of activity surrounding the object of interest, a cone is defined around the electron's trajectory and the signal inside that cone (excluding the electron itself) is summed. There are two types of variables considered for isolation, one that is calorimeter-based and one that is track-based \cite{ATLAS_electron_efficiency_2015-2016}. 
+
+The calorimeter isolation, $E_{\text{T}}^{\text{iso}}$, is the transverse energy sum of topological clusters in a cone around the electron candidate. The value is fully corrected by subtracting the $E_{\text{T}}$ of the underlying event and effects from pile-up \cite{ATLAS_electron_photon_triggers_run2, ATLAS_electron_efficiency_2015-2016}. The track isolation, $p_{\text{T}}^{\text{iso}}$, is similarly obtained by taking the scalar $p_{\text{T}}$ sum of $p_{\text{T}}>1$ GeV tracks that satisfy basic quality requirements in a cone around the electron candidate. To minimise the effects from pile-up, a requirement on the product of the longitudinal impact parameter and the sine of the polar track angle, $|z_0\sin\theta|<3$ mm, is imposed \cite{ATLAS_electron_efficiency_2015-2016}. This requirement selects tracks whose vertex is also the relevant vertex of the process. 
+
+The various working points for track isolation are described in detail in references \cite{ATLAS_electron_efficiency_2015-2016,ATLAS_electron_efficiency_2015-2017}. The leptons in the relevant analysis of this thesis use the FixedCutPflowLoose isolation working point, with $E_{\text{T}}^{\text{iso}}/E_{\text{T}}<0.2$ and $p_{\text{T}}^{\text{iso}}/p_{\text{T}}<0.15$ for electrons. 
+
+\subsection{Muons}
+\subsubsection{Muon reconstruction}
+
+Muons come in various types depending on the what subdetector information was used in reconstruction \cite{ATLAS_muon_reco_2015}. In total there are four classes of muons: combined, segment-tagged, calorimeter-tagged, and extrapolated. Most reconstructed muons are combined muon, indeed, these are the purest of the four identification categories. Combined muons have tracks reconstructed independently in the inner detector and the muon spectrometer, and a global refitting procedure is used to combine the tracks. Segment-tagged (ST) muons are those with a track in the inner detector that is outwards extrapolated to at least one matched track segment in the muon spectrometer. Segmented tracks occur to muons with lower momentum, and in regions of the muon spectrometer with acceptance holes. Calorimeter tagged muons refer to a muon with an identified track in the inner detector that is matched to a MIP-like energy cluster in the calorimeter. Of all the muon types this is the one with the lowest purity. As it does not rely on the muon spectrometer, its role is to recover the coverage gap around $\eta=0$. Lastly, extrapolated muons (synonymously standalone muons) are reconstructed without an inner detector track, and are based only a full muon spectrometer track. These types are mainly used to extend the muon coverage in the high-$\eta$ region where the inner detector has no coverage. 
+
+These four types of muons exists because muons offer an extremely clean signal in the detector, and therefore they can afford to be further categorised. Figure \ref{fig:typesofmuons} illustrates the detector profiles of each type of muon. In the high multiplicity four lepton channel, the signal is particularly sensitive to changes in lepton acceptance. For the $4\mu$ channel (the flavour channel with the highest resolution), the slightest improvement in muon acceptance will cascade into a significant overall acceptance. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\smallfigwidth]{Figures/LHC/muon_types.pdf}
+    \caption{Figure adapted from \cite{Ottersbach:2012mma}}
+    \label{fig:typesofmuons}
+\end{figure}
+
+\subsubsection{Muon identification}
+
+Muon identification is carried out with a cut-based approach \cite{}. The main backgrounds coming from hadron decays (mostly charged pion and kaon decays) are suppressed by applying quality requirements that select for prompt muons with high efficiency that provide robust momentum measurements. 
+
+There are three identification variables used in discriminating a prompt muon from a background muon. These are:
+\begin{itemize}
+    \item the q/p significance, $\dfrac{q/p}{\sigma}$, the absolute value of the difference between the muon's charge to momentum ratio as measured in the inner detector and the muon spectrometer, divided by the total corresponding uncertainties;
+    \item $\rho'=\dfrac{\p_{\text{T}}^{\text{ID}}-\p_{\text{T}}^{\text{MS}}}{\p_{\text{T}}^{\text{CB}}}$, the absolute value of the difference between the transverse momentum measurements in the inner detector and the muon spectrometer, divided by the transverse momentum of the combined track;
+    \item the nomalized $\chi^2$ of the fit of the combined track.
+\end{itemize}
+Together these variables are sensitive in filtering out candidates from charged hadron in-flight decays in the inner detector. These have a topological "kink" that results in a combined track with poor fit quality, and incompatible momentum measurements coming from the inner detector and muon spectrometer. 
+
+Various identification criteria are employed to target the diverse needs of physics analyses. Just like electron identification, the Loose, Medium, and Tight muon identification working points define progressively more restrictive requirements. Unlike the electrons, however, these working points differ not in the thresholds of a likelihood. Rather, they differ in the type of candidate muons permitted and in the requirements on the three variables defined above. 
+
+The Loose identification criteria are chosen for the ATLAS work of this thesis, where all four types of reconstructed muons are used. The calorimeter tagged and segment tagged muons are restricted to a smaller region of $|\eta|<0.1$. This working point is designed to maximise reconstruction efficiency all the while providing good-quality tracks \cite{ATLAS_muon_reco_2016}. They were specifically optimised for an ATLAS Higgs analysis in the four-lepton final state \cite{ATLAS_H4l_2015}.  
+
+\subsubsection{Muon isolation}
+
+Just like electrons, muons have additional isolation requirements imposed to reject background, because muons originating from vector boson decays are often isolated while those originating from semileptonic decays are often embedded in jets. The activity around a muon candidate is therefore measured, in a similar manner  to that of the electrons, by summing a cone of transverse momentum and transverse energy in the tracking detector and calorimeter respectively. 
+
+The tracking isolation is $p_{\text{T}}^{\text{varcone30}}$, defined as the scalar transverse momenta sum of tracks with $p_{\text{T}}>1$ GeV in a cone of size $\Delta R=\text{min}\Big(\frac{10}{p_{\text{T}}^{\mu}},0.3\Big)$ around the muon candidate. The contribution from the muon track itself is subtracted. The variability in cone size is to ameliorate performance for high $p_{\text{T}}$ muons \cite{ATLAS_muon_reco_2016}. Likewise, the calorimeter isolation variable, $E_{\text{T}}^{\text{topocone20}}$, is the sum of the topological energy clusters in a $\Delta R=0.2$ cone around the muon, with the energy deposit of the muon and pile-up effects subtracted. Various definitions for the discriminant variables are used to setup different working points. For the four lepton analysis, the FixedCutLoose working point is chosen, with $p_{\text{T}}^{\text{varcone30}}/p_{\text{T}}^{\mu}<0.15$ and $E_{\text{T}}^{\text{topocone20}}/p_{\text{T}}^{\mu}<0.30$. The details of the various muon isolation working points can be found in reference \cite{ATLAS_muon_reco_2016}.
+
 \cite{ATLAS:2020xtq}
 
