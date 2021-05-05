@@ -1,0 +1,53 @@
+%% m4l motivation
+\section{Motivation for the \mFourL measurement}
+\label{sec:fourlepmotivation}
+
+The four lepton channel is a particularly interesting channel to study as it receives contributions from many physics processes.  
+
+First and foremost, there is the production of a pair of \PZ-bosons via quark-antiquark interactions in \info[]{s-channel not in SM because it includes neutral ZZZ or ZZ\photon vertex} both the \Ptop- and \Pup-channel. The \Ptop-channel diagram is shown in Figure \ref{fig:m4lfeynman:qqZZ}, and represents, by far, \improvement[]{Read more about why the u-channel diagram is not preferred} the largest contribution to the \ZZ production and thus to the \mFourL distribution. At the low mass end where $\mFourL=m_{PZ}$, there is resonant production of a single \PZ boson via the s-channel diagram in Figure \ref{fig:m4lfeynman:singleZ}. At $\mFourL=\unit{180}{\GeV}$ and beyond, the threshold for the on-shell production of two \PZ bosons is reached and results in a peak in the four lepton invariant mass spectrum. 
+
+Second in magnitude is the gluon-induced production of a \PZ boson pair. This occurs via a triangle or box quark loop, which results in a factor $\alpha_s^2$ suppression. It still plays a substantial role, however, because at small $x$\footnote{Here $x$ is the component of the proton's momentum carried by the struck quark. At the \LHC the protons have very high energies; therefore the \LHC can be described as a small $x$ collider \cite{zotov2012small}} gluon-gluon luminosity is higher than the quark-antiquark luminosity \cite{Glover:194539}. The contribution from this process in on the order of ten percent \cite{Becker:2230817}. Finally in the pool of \PZ boson pairs there is a small contribution from decaying Higgs bosons, which themselves are produced also via gluon fusion, as illustrated in Figure \ref{fig:m4lfeynman:ggHZZ}. There is resonant Higgs production at \mFourL=\unit{125}{\GeV}, and a non-resonant enhancement at $\mFourL=m_{\Ptop}=\unit{350}{\GeV}$ from the top quark loop. Beyond \unit{350}{\GeV}, the Higgs-mediated \PZ boson pair production process destructively interferes with continuum production of on-shell \PZ bosons \cite{Campbell_2016}.
+
+The \mFourL distribution can be a useful probe for certain new physics scenarios. Take for example, the high mass tail of the invariant mass spectrum. This region is dependent on the couplings of the Higgs to incoming and outgoing particles while independent of the Higgs boson width \cite{Campbell_2016}, a unique property that can be exploited to derive model-independent limits on the Higgs couplings, and on the \todo{reword, this is copy pasted} contribution of new states in the Higgs to gluon coupling \cite{Cacciapaglia_2014}. It has also been previously exploited to derive model-independent constraints on the Higgs boson width \cite{Caola_2013}. 
+
+%% Secondly, under specific assumptions a class of models exists for which the off-shell coupling measurement together with a measurement of the on-shell signal strength can be re-interpreted in terms of a bound on the total Higgs boson width. In this paper, we provide a first step towards a classification of the models for which a total width measurement is viable and we discuss examples of BSM models for which the off-shell coupling measurement can be important in either constraining or even discovering new physics in the upcoming LHC runs
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/m4l/m4lbreakdown.png}
+    \caption{Breakdown of contributing processes contributing to the \mFourL distribution.}
+    \todo[inline]{Replace and remake with our miniTrees.}
+    \label{fig:m4lbreakdown}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.24\textwidth}
+  \centering
+  \includegraphics[width=.23\textwidth]{Figures/FeynGraphs/qqZZ4l.pdf}
+  \caption{\qqZZ}
+  \label{fig:m4lfeynman:qqZZ}
+\end{subfigure}%
+\begin{subfigure}{.24\textwidth}
+  \centering
+  \includegraphics[width=.23\textwidth]{Figures/FeynGraphs/qqZZ4lrad.pdf}
+  \caption{A subfigure}
+  \label{fig:m4lfeynman:singleZ}
+\end{subfigure}
+\begin{subfigure}{.24\textwidth}
+  \centering
+  \includegraphics[width=.23\textwidth]{Figures/FeynGraphs/ggZZ4lbox.pdf}
+  \caption{A subfigure}
+  \label{fig:m4lfeynman:ggZZ}
+\end{subfigure}
+\begin{subfigure}{.24\textwidth}
+  \centering
+  \includegraphics[width=.23\textwidth]{Figures/FeynGraphs/ggZZ4lhiggs.pdf}
+  \caption{A subfigure}
+  \label{fig:m4lfeynman:ggHZZ}
+\end{subfigure}
+\caption{Feynman diagrams for quark- and gluon-induced \ZZ production. The processes shown are the main contributors.}
+\label{fig:m4lfeynman}
+\end{figure}
+
+% this channel provides a clean leptonic final state resulting in a small instrumental background, where one or more of the reconstructed lepton candidates originate from the misidentification of jet fragments or from nonprompt leptons.

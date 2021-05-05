@@ -1,0 +1,98 @@
+%% Signal definition and event selection
+\section{Signal and fiducial region definition}
+\label{sec:signaldef}
+
+The motivation behind this analysis is to make a measurement as inclusive and as model-independent as possible. Any process leading to a final state of four lepton - made up of two same flavour opposite sign electron or muon pairs - is considered to be part of the signal. Electrons or muons originating from fully leptonic decays of taus are counted towards the signal. 
+
+The fiducial region definition follows closely the acceptance of the detector. Furthermore, by loosening the mass cuts, there is higher event acceptance especially in the low mass regions. Preliminary studies were conducted to investigate the impact of loosening and simplifying the dilepton lower mass cut to \unit{5}{\GeV} and removing the upper mass cut, for example, as opposed to the varying higher cuts in the previous round of the analysis. Unsurprisingly, these result in a higher event yield in both the low and high mass tails of the \mFourL distribution. 
+
+The final state is defined solely in terms of final state particles as opposed to targeting a specific process. Beyond the requirement of two same flavour opposite sign lepton pairs, the measurement is inclusive to additional particles such as additional leptons, jets, and invisible particles. Previous irreducible backgrounds (\VVV, \ttZ) are now considered as part of the signal since they produce four or more prompt leptons.
+
+\missingfigure{Emily plots for loosening mass cuts}
+
+\subsection{Lepton definitions}
+
+For particle physicists, a prompt lepton simply means the lepton did not originate from a hadron. Prompt leptons are further classified into three categories depending on their association with emitted photons. These three categories are:
+\begin{itemize}
+    \item Born leptons: leptons prior to QED Final State Radiation (FSR);
+    \item Bare leptons: leptons after QED FSR;
+    \item Dressed leptons: leptons after QED FSR, that then have the four momenta of nearby radiated photons added to it. 
+\end{itemize}
+The ATLAS detector makes lepton measurements after QED FSR has occurred. It is for this reason that born leptons are not the best choice. It is more realistic to perform measurements involving only final state particles, and objects constructed from final state particles, such as dressed leptons \cite{Kar:ab1be6}. 
+
+\subsubsection{Dressed electrons and bare muons}
+
+In this analysis, a choice of dressing electrons but leaving muons bare was made to closer mimic what is seen by the detector. 
+
+%% Truth isolation
+When selecting leptons in the data, there is a complex isolation criteria applied \todo[]{What is this isolation criteria?}. An emulation of this reconstruction-level criteria is included in the fiducial region definition. Although the particle-level application is a simplification, it nevertheless returns a result that is closer to what is actually measured. The particle-level truth isolation criteria requires the sum of the transverse momentum of all charged particles inside a $\Delta R  = 0.3$ cone of the lepton, divided by transverse momentum of the lepton itself, to be less than 0.16. If any other selected leptons are within the cone, their
+momenta is not included. 
+$$\dfrac{\pt(\Delta R  = 0.3)}{\pt(\text{lepton})}<0.16$$
+\subsection{Fiducial region}
+
+\begin{table}[bp]
+  \begin{tabular}{lllll}
+        & Lepton requirements \\
+        \midrule
+        Electrons & Dressed lepton definition\\
+                & \pt > \unit{5}{\GeV}\\
+                & $|\eta| < 2.47$\\
+        Muons & Bare lepton definition\\
+            & \pt > \unit{7}{\GeV}\\
+            & $|\eta| < 2.7$\\
+        \bottomrule
+        \toprule
+        & Event requirements \\
+        \midrule
+            Four-lepton signature & At least 4 leptons, with 2 Same-Flavour, Opposite-Sign pairs \\
+               Lepton kinematics   &   $\pt > 20 / 10$~\GeV{} for
+                                     leading two leptons \\ [0.3cm]
+              Lepton separation               &   $\Delta R_{ij} > 0.05$ for any leptons \\
+              $J/\psi$-Veto &    $  m_{ij} > 5$~\GeV for all SFOS pairs \\
+              Truth isolation & ptcone30/\pt < 0.16 \\
+  \end{tabular}
+  \caption{Fiducial region definition.}
+  \label{tab:fidregion}
+\end{table}
+
+\missingfigure[]{Dressed electrons, bare muons plot}
+
+\subsection*{Lepton pairing and quadruplet formation} 
+\todo[inline]{Reword this whole subsection!!}
+Events satisfying the requirements described above enter the fiducial region of the measurement. 
+In order to define observables, a unique set of exactly four leptons per event is chosen: 
+\begin{itemize}
+\item First, the SFOS lepton pair with an invariant mass closest to the Z boson mass is selected as the primary pair in the event. 
+\item The remaining SFOS lepton pair closest to the Z boson mass is then referred to as the secondary pair, and completes the quadruplet. 
+\end{itemize}
+In this way, only one quadruplet is defined even in events containing more than four leptons.
+This selection strategy is chosen since it prefers to form pairs that correspond to on-shell Z bosons for the dominant $ZZ$ pair production process, making the pair-level observables based on this definition comparable to such obtained in dedicated $ZZ$ production measurements. This is explored further in Appendix~\ref{app:pairing}. 
+The pair and quadruplet formation does not have any impact on the event selection outcome. 
+
+\section{Measured observables}
+
+The star observable of the analysis is none other than the four lepton invariant mass, \mFourL. It has been measured previously by both the \ATLAS and the \CMS experiment \todo{missing citation} \cite{}. As with the previous round of the analysis, the \mFourL distribution is also measured double-differentially, in slices of the transverse momentum of the four lepton system, the absolute rapidity of the four lepton system, and the flavour channel of the four lepton system. 
+
+New to this round of the analysis is the division of the four lepton invariant mass spectrum into four separate regions, each dominated by a different process. From \unit{60}{\GeV}-\unit{100}{\GeV} resonant single \Z production reigns, similarly the \unit{120}{\GeV}-\unit{130}{\GeV} region is dominated by Higgs production, and the high mass region from \unit{180}{\GeV}-\unit{2000}{\GeV} by on-shell \ZZ production. Lastly to fill the gaps between  \unit{20}{\GeV}-\unit{60}{\GeV}, \unit{100}{\GeV}-\unit{120}{\GeV}, and \unit{130}{\GeV}-\unit{180}{\GeV} is the off-shell \ZZ region. This is summarised in Table \ref{tab:m4lregions}. The following variables are measured double differentially in these four regions:
+
+\begin{itemize}
+    \item Cosine of angle $\theta^{*}$, where $\theta^{*}$ is the angle between the \todo{definitely check this} lepton in the rest frame and the \Z boson in the lab frame. This angle is sensitive to the polarisation of the decaying boson.
+    \item The difference in rapidity between the lepton pairs
+    \item The difference in azimuthal angle between the lepton pairs, and between leading leptons
+    \item The invariant mass of the lepton pairs
+    \item The transverse momentum of the lepton pairs
+\end{itemize}
+
+\begin{table}[bp]
+  \begin{tabular}{lllll}
+        Region & \mFourL interval(s) \\
+        \midrule
+        \ZFourL & \unit{60}{\GeV} < \mFourL < \unit{100}{\GeV} \\
+        \HFourL & \unit{120}{\GeV} < \mFourL < \unit{130}{\GeV} \\
+        On-shell \ZZ & \unit{180}{\GeV} < \mFourL < \unit{2000}{\GeV} \\
+        Off-shell \ZZ & \unit{20}{\GeV} < \mFourL < \unit{60}{\GeV}, \unit{100}{\GeV} < \mFourL < \unit{120}{\GeV}, \\
+          & and \unit{130}{\GeV} < \mFourL < \unit{180}{\GeV}\\
+  \end{tabular}
+  \caption{The four \mFourL regions dominated by the single \Z, Higgs, on-shell and off-shell \ZZ processes.}
+  \label{tab:m4lregions}
+\end{table}

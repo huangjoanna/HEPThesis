@@ -1,0 +1,79 @@
+\section{Event reconstruction and selection}
+\todo[inline]{Change from here on}
+
+
+To define observables in the events selected this way, a quadruplet of baseline leptons is selected. 
+This must consist of two same-flavour opposite-sign(SFOS) pairs, and the combination with lepton pair invariant masses closest to that of the $Z$ boson mass is selected. The lepton pair with invariant mass closest to the $Z$ mass is designated the leading pair, and the sub-leading lepton pair with mass closest to the $Z$ boson mass is then selected from the remaining possibilities.
+
+Finally, the four leptons forming the quadruplet are further categorised, as detailed in Table~\ref{tab:signalLeptons}. 
+Baseline leptons are designated as ``signal'' leptons if they satisfy a range of requirements designed to suppress leptons not originating from the hard scatter as well as misidentifications.
+They are required to be isolated, using the FixedCutPflowLoose working point, which is designed to be robust to pile-up and was found to have the best efficiency over the full invariant mass range, as can be seen in Appendix~\ref{app:iso}. In order to remain sensitive to scenarios where the leptons are highly collimated, i.e. if they are produced by a very boosted particle, contributions from close-by leptons are subtracted from the isolation variables using the 'IsolationCloseByCorrectionTool' CP tool supported by the identification and fake forum before the cuts are applied. In addition, both electrons and muons are required to pass track-to-vertex criteria, with selections on the impact parameter and interaction point. Finally, electrons are required to satisfy the LooseBlayer identification criterion, which adds a requirement on hits in the innermost pixel layer to the Loose working point used to define baseline electrons. 
+\todo[inline]{Change from here up}
+
+ \begin{table}[ht]
+    \centering
+        \begin{tabular}{l | l c }
+            Category & Requirement \\
+            \hline
+            \hline
+            Kinematics & Muons : & $\pt > 5$~\GeV{} \\
+                       &         &  If CaloTag: $> $15~\GeV \\
+                       &         &   $|\eta| < 2.7$  \\[0.2cm]
+                       & Electrons: & $\pt > 7$~\GeV \\
+                       &            & $|\eta| < 2.47$  \\ 
+            \hline
+            Vertex association 
+                       & Both : & $|z_{0}\dot \sin{\theta}| <$0.5~mm \\
+            \hline Identification: 
+                       & Muons: & Loose ID  \\ 
+                       & Electrons: & LooseLH ID  \\
+            \hline
+            Overlap removal: Lepton-favoured \\ 
+        \end{tabular}
+    \caption{Definition of the baseline lepton selection.\label{tab:baselineLeptons}}
+\end{table}  
+          
+\begin{table}[ht]
+    \centering
+        \begin{tabular}{l  c }
+            Input objects &  Baseline electrons and muons that are part of the quadruplet \\ 
+            \hline
+            Isolation  &   FixedCutPflowLoose working point\\ %add more detail here/elsewhere
+                       &   \textit{Contribution from all other baseline leptons is subtracted} \\
+            \hline    
+            Cosmic muon veto & Muons: $|d_{0}| < $1~mm\\
+            \hline
+            Impact Parameter &  Muons: $d_{0}/\sigma_{d_{0}} < $3 \\
+                             &  Electrons: $d_{0}/\sigma_{d_{0}} < $5 \\
+            \hline
+            Stricter Electron ID &  Electrons: LooseBLayerLH ID \\
+        \end{tabular}
+        \caption{Definition of the signal lepton selection.\label{tab:signalLeptons}}
+\end{table}
+
+
+\begin{table}[ht]
+    \centering
+        \begin{tabular}{l | c }
+            Category & Requirement \\
+            \hline
+            Event Preselection & Fire at least one lepton \\
+                                & trigger \\
+                               & $\geq$1 vertex with 2 or more tracks \\[0.2cm]
+            \hline
+               Four-lepton signature & At least 4 leptons ($e,\mu$)    \\ 
+               Lepton kinematics   &   $\pt > 20 / 10$~\GeV{} for
+                                     leading two leptons \\[0.2cm]
+               Lepton separation               &   $\Delta R_{ij} > 0.05$ for any two leptons \\
+              $J/\psi$-Veto &    $  m_{ij} > 5$~\GeV for all SFOS pairs \\
+            \hline 
+               Trigger matching   & Baseline leptons matched to at least one lepton trigger \\[0.2cm] 
+            \hline
+              Quadruplet & At least one quadruplet with 2 Same-Flavour, \\
+              formation & Opposite-Sign (SFOS) pairs \\
+            \hline
+              Quadruplet &  4 signal, 0 non-signal: signal region \\
+              categorisation    &  $\leq 3$ signal, $\geq 1$ non-signal: background control region \\
+        \end{tabular}
+        \caption{Definition of the reconstruction-level selection.\label{tab:eventsel}}
+\end{table}

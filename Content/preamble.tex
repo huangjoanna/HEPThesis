@@ -80,7 +80,6 @@
 \DeclareRobustCommand{\BToKK}{\HepProcess{ \PB \to \PK \PK }\xspace}
 \DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \Ppi }\xspace}
 \DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \Prho }\xspace}
-\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
 \DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
 \DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
 \DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
@@ -88,6 +87,8 @@
 \DeclareRobustCommand{\protonproton}{\Pproton\Pantiproton\xspace}
 \DeclareRobustCommand{\photon}{\gamma}
 \DeclareRobustCommand{\covd}{\mathcal{D}}
+\newcommand{\SMgroup}{\SUgroup{3}$\times $\SUgroup{2}$\times$\Ugroup{1}}
+
 
 %% VLQ
 %% Physics
@@ -96,7 +97,7 @@
 \newcommand{\yoda}{Y\protect\scalebox{0.8}{ODA}\xspace}
 \newcommand{\hepdata}{HEPData\xspace}
 \newcommand{\contur}{\textsc{Contur}\xspace}
-
+\newcommand{\POWHEG}{P\protect\scalebox{0.8}{OWHEG}\xspace}
 
 \newcommand{\pT}{\ensuremath{p_\mathrm{T}}\xspace}
 \newcommand{\MET}{\ensuremath{E_\mathrm{T}^\mathrm{miss}}\xspace}
@@ -122,3 +123,94 @@
 \newcommand{\WZHttt}{\triple{$\tfrac{1}{3}$}{$\tfrac{1}{3}$}{$\tfrac{1}{3}$}}
 \newcommand{\WZHtoo}{\triple{$\tfrac{1}{2}$}{$\tfrac{1}{4}$}{$\tfrac{1}{4}$}}
 \newcommand{\WZHzoo}{\triple{0}{$\tfrac{1}{2}$}{$\tfrac{1}{2}$}}
+
+%%  M4l
+
+%% M4l 
+\newcommand*{\Zp}{\ensuremath{Z^\prime}\xspace}
+\newcommand*{\gp}{\ensuremath{g^\prime}\xspace}
+\newcommand*{\Z}{\ensuremath{Z}\xspace}
+\newcommand*{\W}{\ensuremath{W}\xspace}
+\newcommand*{\V}{\ensuremath{V}\xspace}
+\newcommand*{\VH}{\ensuremath{VH}\xspace}
+\newcommand*{\mFourL}{\ensuremath{m_{4\ell}}}
+\newcommand*{\mll}{\ensuremath{m_{\ell\ell}}}
+\newcommand*{\qqZZ}{\ensuremath{q\bar{q}\to Z^{(*)}Z^{(*)}}\xspace}
+\newcommand*{\qqFourL}{\ensuremath{q\bar{q}\to 4\ell}\xspace}
+\newcommand*{\ggFourL}{\ensuremath{gg\to 4\ell}\xspace}
+\newcommand*{\HZZFourL}{\ensuremath{H\to Z^{(*)}Z^{(*)} \to
+    4\ell}\xspace}
+\newcommand*{\HFourL}{\ensuremath{H\to
+    4\ell}}
+\newcommand*{\ZFourL}{\ensuremath{Z\to 4\ell}\xspace}
+\newcommand*{\ggS}{\ensuremath{gg\left(\to H^{(*)}\right)\to Z^{(*)}Z^{(*)}\to 4\ell}\xspace}
+
+\newcommand*{\mZOne}{\ensuremath{m_{12}}\xspace}
+\newcommand*{\mZTwo}{\ensuremath{m_{34}}\xspace}
+
+\newcommand*{\dPhiPairs}{\ensuremath{|\Delta \phi_{\text{pairs}}|}\xspace}
+\newcommand*{\dPhill}{\ensuremath{|\Delta \phi_{\ell\ell}|}\xspace}
+
+\newcommand*{\thetastar}{\ensuremath{\theta^*}\xspace}
+\newcommand*{\costhetastar}{\ensuremath{\cos\theta^*}}
+\newcommand*{\dYPairs}{\ensuremath{|\Delta y_{\text{pairs}}|}}
+\newcommand*{\ptZOne}{\ensuremath{p_{\mathrm{T},12}}}
+\newcommand*{\ptZTwo}{\ensuremath{p_{\mathrm{T},34}}}
+
+\newcommand*{\yFourL}{\ensuremath{y_{4\ell}}}
+% \newcommand*{\ptFourL}{\ensuremath{\pt^{4\ell}}}
+\newcommand*{\ptFourL}{\ensuremath{p_{\mathrm{T},4\ell}}}
+\def\openloops{\textsc{OpenLoops}}
+\def\nnpdfnnlo{\texttt{NNPDF3.0nnlo}}
+\def\nnpdfnlo{\texttt{NNPDF3.0nlo}}
+\def\pythia{\textsc{Pythia8}}
+\def\ctfourteennnlo{\texttt{CT14nnlo}}
+\def\mmhtnnlo{\texttt{MMHT2014nnlo}}
+\def\powheg{\textsc{Powheg}}
+\def\nnpdftwo{\texttt{NNPDF2.3lo}}
+\def\madgraph{M\textsc{ad}G\textsc{raph}5\_aMC@NLO}
+\newcommand*{\chg}{\ensuremath{c_{HG}}\xspace}
+\newcommand*{\chgtil}{\ensuremath{\tilde{c}_{HG}}\xspace}
+\newcommand*{\chdd}{\ensuremath{c_{HD}}\xspace}
+\newcommand*{\chwb}{\ensuremath{c_{HWB}}\xspace}
+\newcommand*{\chd}{\ensuremath{c_{Hd}}\xspace}
+\newcommand*{\chu}{\ensuremath{c_{Hu}}\xspace}
+\newcommand*{\che}{\ensuremath{c_{He}}\xspace}
+\newcommand*{\chlone}{\ensuremath{c_{Hl}^{(1)}}\xspace}
+\newcommand*{\chlthr}{\ensuremath{c_{Hl}^{(3)}}\xspace}
+\newcommand*{\chqone}{\ensuremath{c_{Hq}^{(1)}}\xspace}
+\newcommand*{\chqthr}{\ensuremath{c_{Hq}^{(3)}}\xspace}
+\newcommand*{\ced}{\ensuremath{c_{ed}}\xspace}
+\newcommand*{\cee}{\ensuremath{c_{ee}}\xspace}
+\newcommand*{\ceu}{\ensuremath{c_{eu}}\xspace}
+\newcommand*{\cld}{\ensuremath{c_{ld}}\xspace}
+\newcommand*{\cle}{\ensuremath{c_{le}}\xspace}
+\newcommand*{\cll}{\ensuremath{c_{ll}}\xspace}
+\newcommand*{\clu}{\ensuremath{c_{lu}}\xspace}
+\newcommand*{\cqe}{\ensuremath{c_{qe}}\xspace}
+\newcommand*{\cllone}{\ensuremath{c_{ll}^{(1)}}\xspace}
+\newcommand*{\cllthr}{\ensuremath{c_{ll}^{(3)}}\xspace}
+\newcommand*{\clqone}{\ensuremath{c_{lq}^{(1)}}\xspace}
+\newcommand*{\clqthr}{\ensuremath{c_{lq}^{(3)}}\xspace}
+\newcommand*{\sigdata}{\ensuremath{\vec\sigma^{\textrm{meas}}}\xspace}
+\newcommand*{\sigpred}{\ensuremath{\vec\sigma^{\textrm{pred}}}\xspace}
+\newcommand*{\sigSM}{\ensuremath{\vec \sigma^{\textrm{SM}}}}
+\newcommand*{\sigSMLO}{\ensuremath{\vec \sigma^{\textrm{LO SM}}}}
+\newcommand*{\sigINT}{\ensuremath{\vec \sigma^{\textrm{INT}}}}
+\newcommand*{\sigQUAD}{\ensuremath{\vec \sigma^{\textrm{BSM}}}}
+\newcommand*{\sina}{\ensuremath{\sin \alpha}}
+\newcommand*{\mht}{\ensuremath{m_{h_2}}}
+\newcommand*{\BF}{\ensuremath{\mathcal{B}_{Z\rightarrow 4\ell}}}
+\newcommand*{\sigMeas}{\ensuremath{\sigma^{\text{meas}}}}
+\newcommand*{\sigPred}{\ensuremath{\sigma^{\text{pred}}_{\text{non-\qqFourL}}}}
+
+\newcommand*{\fnonTau}{\ensuremath{f_{\text{non-}\tau}}}
+\newcommand*{\fZ}{\ensuremath{f_{\text{Z}}}}
+\newcommand*{\sigZ}{\ensuremath{\sigma_{Z}}}
+\newcommand*{\Accep}{\ensuremath{A_{\text{fid}}}}
+\newcommand*{\Pvalue}{The $p$-value is the probability for the
+$\chi^2$, with the number of degrees of
+freedom equal to the number of bins in the distribution,  to have at
+least the observed 
+value, given the SM
+prediction. }

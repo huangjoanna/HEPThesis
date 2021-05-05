@@ -1,0 +1,22 @@
+\section{Background estimation}
+\label{sec:background}
+
+\subsection{Defining leptons}
+
+The four lepton channel is quite the golden channel, as it has a very clean signature with minimal background. In fact, the single dominant background in this analysis is when one or more of the reconstructed leptons in the quadruplet are not real leptons; rather they are misidentified objects in the detector mimicking the same signature \cite{varnes2016poisson}. These "leptons" are non-prompt, and can be referred to as a fake lepton, whereas a lepton produced from the hard scatter is a prompt, real lepton. One source of fake leptons is from hadron decays. In the case of the electron, photon conversion and hadronic jets misidentified due to their large and narrow deposit in the electromagnetic calorimeter can also play a role. In this analysis, around three-quarters of the fakes originate from \Pbottom-hadron decays in \Z plus jets and \Ptop\APtop events. 
+
+The size and behaviour of the fake lepton background - also referred to as the reducible background - are usually estimated using data-driven methods because they are not well modelled by simulation \cite{varnes2016poisson}. One such method is the Fake Factor method. This method depends on two sets of lepton criteria: a tight criteria that selects leptons which make it into the signal region, and a loose criteria that is similar but less restrictive. The leptons selected by the latter are referred to as baseline leptons, and the baseline leptons that additionally pass the tight criteria are the signal leptons. The rest of this section will also touch on baseline-not-signal leptons; these are leptons that pass the "baseline" loose selection, but do not make the "signal" tight selection. 
+
+\subsection{Fake Factor method}
+
+The Fake Factor method relies on the calculation of a fake efficiency, $f$, which is the fraction of fake baseline leptons pass the tight selection criteria and become signal leptons. Because fake leptons not well modelled in simulation, the fake efficiency is calculated in data, in an alternative region of phase space that is enriched with fake leptons. 
+
+Using the Fake Factor $F$, the number of baseline leptons, and the number of real baseline leptons, the number of fake signal leptons can be calculated. Note that the FF method assumes good modelling in the real component of the simulation since $N^{\text{baseline}}_{\text{real}}$ is taken from MC.
+
+$$N_{\text{fake}}^{\text{signal}} = F(N^{\text{baseline}}-N^{\text{baseline}}_{\text{real}})$$
+
+%% Smoothing
+
+Smoothing on the raw output of the reducible background estimate is performed. The raw output, due to low statistics in certain bins, have pronounced, jagged features that resemble resonances. Of course, resonant peaks should not exist. The smoothing procedure is therefore used to obtain a more even shape, minimising the impact of any outlier bins that had a large Fake Factor weight. In order to smooth the distribution, an intermediate, finer binning is assigned to each observable and the background estimate is run. The fine-binned intermediate background distribution is smoothed with Friedman's super smoother. Lastly, the final background estimate is obtained by integrating over the smoothed distribution using the coarser, original binning. A visualisation of the process is shown in Figure \ref{fig:backgroundsmoothing}.
+
+\missingfigure{background smoothing}
