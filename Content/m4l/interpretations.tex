@@ -38,7 +38,7 @@ with the quoted statistical, systematic, theoretical, luminosity, and combined u
 
 \subsection{EFT couplings}
 
-A simple example of an effective field theory (EFT) is the Fermi theory of beta decay. In this theory postulated in 1933, the neutron decay occurs in a point-like manner to an electron, a proton, and a neutrino. In the underlying model (the SM), the "point" is characterised by the emission of a \W boson by a down quark which then transforms into an up quark. The \W boson decays to an electron and a neutrino. The Fermi theory effective Lagrangian describing this interaction contains $G_{\text{F}}$, the Fermi constant. $G_{\text{F}}$ is proportional to the ratio of the weak coupling constant to the mass of the \W boson. This was only discovered later on, however, and at the time knowing only the Fermi constant was a sufficient way to model the process. The \W boson has a mass that is an order of magnitude higher than the typical energy of $\beta$ decays, and has been integrated out in the Fermi theory. This is said to be an effective field theory calculation, which is consistent way to describe a higher-order process so long as the energy scale $E$ of the process is small compared to the energy scale $\Lambda$ of the mediating heavy state \cite{De_Simone_2016}. The scale hierarchy $E \ll \Lambda$ is a fundamental property of an EFT \cite{Brehmer2016}.
+A simple example of an effective field theory (EFT) is the Fermi theory of beta decay. In this theory postulated in 1933, the neutron decay occurs in a point-like manner to an electron, a proton, and a neutrino. In the underlying model (the SM), the "point" is characterized by the emission of a \W boson by a down quark which then transforms into an up quark. The \W boson decays to an electron and a neutrino. The Fermi theory effective Lagrangian describing this interaction contains $G_{\text{F}}$, the Fermi constant. $G_{\text{F}}$ is proportional to the ratio of the weak coupling constant to the mass of the \W boson. This was only discovered later on, however, and at the time knowing only the Fermi constant was a sufficient way to model the process. The \W boson has a mass that is an order of magnitude higher than the typical energy of $\beta$ decays, and has been integrated out in the Fermi theory. This is said to be an effective field theory calculation, which is consistent way to describe a higher-order process so long as the energy scale $E$ of the process is small compared to the energy scale $\Lambda$ of the mediating heavy state \cite{De_Simone_2016}. The scale hierarchy $E \ll \Lambda$ is a fundamental property of an EFT \cite{Brehmer2016}.
 
 The Standard Model in the Effective Field Theory approach, often abbreviated as SMEFT, is an expansion of the Standard Model Lagrangian that introduces higher dimension operators suppressed by powers of $\Lambda$. The suppression increases by $\Lambda^1$ for each successive increase in dimension. $\Lambda$ represents the mass scale of BSM particles, and for the EFT to hold its validity the processes probed should be lower than $\Lambda$. The theory is required to contain the Standard Model gauge groups, and at low energies it must reduce to the Standard Model. The Standard Model Lagrangian contains operators of dimension-four, so the expansion for the SMEFT Lagrangian starts at dimension-five and is written as
 \begin{equation}
@@ -88,7 +88,7 @@ Following equation \ref{eq:EFTamplitude}, the cross-section prediction can also 
 \begin{equation} \label{eq:SMEFTXS}
  \sigma(c_i)= \sigma_{\text{SM}} + \frac{\sigma_{\text{SM}}}{\sigma_{\text{SM(LO)}}}(c_i \sigma_{\text{INT}} + c^2_i \sigma_{d=6}).
 \end{equation}
-The SM prediction $\sigma_{SM}$ is the same one described in section \ref{sec:montecarlopred} using \SHERPA to simulate the \qqFourL process. The predictions for the interaction and BSM term are obtained using the \SMEFTsim \todo{define SMEFTsim command} package \cite{SMEFTsim}. There is an additional factor multiplied: the ratio of the best SM prediction to the leading order SM prediction. This corrects the BSM prediciton for higher order effects, under the assumption that said effects are the same for BSM contributions as they are for SM contributions. 
+The SM prediction $\sigma_{SM}$ is the same one described in section \ref{sec:montecarlopred} using \SHERPA to simulate the \qqFourL process. The predictions for the interaction and BSM term are obtained using the \SMEFTsim \todo{define SMEFTsim command} package \cite{SMEFTsim}. There is an additional factor multiplied: the ratio of the best SM prediction to the leading order SM prediction. This corrects the BSM prediction for higher order effects, under the assumption that said effects are the same for BSM contributions as they are for SM contributions. 
 The limits on the Wilson coefficients are set using a profile likelihood method as described at the beginning of this section \ref{sec:interpretations}. 
 
 To test a hypothesized value of $c$, it is useful to write the the profile likelihood ratio:
@@ -111,6 +111,51 @@ A screening procedure is used to identify the subset of the EFT parameters which
 \end{itemize}
 
 \subsubsection{Limits}
+Figure \ref{fig:EFTlinear} and Table \ref{tab:eft-linear} present the limits using the linear-only model, and Figure \ref{fig:EFTfull} and Table \ref{tab:eft} show the limits using the full model. Also shown in the tables is the most sensitive observable that is used to set the limit.
+
+With the two sets of results, a comparison is made to interpret the similarities and differences. Overall, the coefficients can be grouped into four categories:
+\begin{enumerate}
+    \item \chdd, \chwb, \che, \chlone, \chqthr{}, \chlthr{} and \cllone{} have very similar limits in the linear and full model. There is a negligible contribution from the quadratic term, and whether or not it's included does not affect the end result. 
+    \item \chqone{} and \clqthr{} which have slightly lower upper and lower limits  due to the small positive contributions from the quadratic term which enhances the linear contribution at positive values of the coefficient, and lessens at negative values.
+    \item \chg{} and \chu have a double maxima in the likelihood scan when using the full model with the quadratic term, thus resulting in a less stringent limit than the linear-only model.
+    \item the remaining eleven coefficients receive non-negligible contributions from the quadratic term, and therefore have more stringent limits when using the full-model. In particular, \chgtil{} receives zero contribution from the linear term.
+\end{enumerate}
+The improvement seen in the limits in the last category when using the full-model including quadratic terms of order $\Lambda^{-4}$ indicate that dimension-eight terms may have non-negligible effects.
+%% ---------- REWORD!!!! --------
+\todo[inline]{Reword next two paragraphs.}
+In general the observed limits are compatible with the expected
+limits.
+One  exception is  the observed lower limit on \clqone{}, which is significantly less stringent than
+the expected limit for the results using linear-only terms.  This is an artifact of the simple model of the scale uncertainty affecting
+the EFT prediction.
+In general, for a large EFT signal that is incompatible with the data,
+the EFT scale uncertainty's nuisance parameter is pulled in order to
+bring the prediction closer to the observation. The nuisance parameter's constraint term 
+penalizes this behaviour in the likelihood.
+However, for large negative values of \clqone{} the size and shape of
+the scale uncertainty's effect on the signal prediction
+are related in a way that produces a prediction precisely imitating the
+statistical fluctuations in the measured cross-section, increasing the likelihood.
+This leads to a larger than expected observed lower limit on \clqone.
+
+Limits have already been placed on \chg, \chgtil{} and \chwb{}, in
+a measurement of the
+\HFourL{} cross-section~\cite{Aad:2020mkp}. For \chg{}  the limits are
+more stringent
+in the  \HFourL{} cross-section analysis, but for \chgtil{} the limits are very similar,
+with this paper providing slightly tighter constraints. For
+\chwb{} the constraints from this paper are significantly more
+stringent
+with $[ -0.20, 0.21]$ expected and $[-0.29,0.13]$ observed compared
+to $[-1.09,0.99]$ expected and $[-1.06,0.99]$ observed in the
+\HFourL{} cross-section paper.
+The improvement can be understood as being due to the fact that changes in
+\chwb{}  affect the entire \mFourL{} spectrum, not just the region
+close to  \mH{}. 
+Limits on the coefficients affecting the $Z\to \ell\ell$ vertex have been obtained 
+previously from a global fit to LEP and LHC data~\cite{Ellis:2018gqa}, and are generally 
+one or two orders of magnitude more stringent than the limits in this paper.
+%% ---------- END REWORD!!!! --------
 
 \begin{table}[t]
   \centering
@@ -206,6 +251,20 @@ Coefficient & Observable  & 95\% CL Expected [\TeV$^{-2}$] &   95\% CL Observed 
    \end{tabular}
 \end{table}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/EFTLimits_linonly_MVozak.pdf}
+    \caption{Linear only EFT limits.}
+    \label{fig:EFTlinear}
+\end{figure} 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/EFTLimits_MVozak.pdf}
+    \caption{Full EFT limits.}
+    \label{fig:EFTfull}
+\end{figure}
+
 \subsection{Limits on B-L model}
 
 In the theoretical community, several new physics scenarios have been postulated in which the gauge symmetry of the Standard Model are extended via \Ugroup{1} gauge symmetries beyond \Ugroup{1}$_Y$ \cite{}. This class of models is strongly reinforced by the observation of neutrino oscillations, evidence that neutrinos have non-zero mass. They predict three additional SM singlet fermions which are accounted for by right-handed neutrinos, thus enabling the seesaw mechanism of neutrino mass generation. 
@@ -227,9 +286,25 @@ An alternate test statistic $\Tilde{q}$ for upper limits is defined using the li
     \end{cases}
     \label{eq:lambda_qtilde}
 \end{equation}
-Here the parameter $\mu$ dictates the strength of the BSM signal process. $\mu = 0$ and $\mu = 1$ correspond to the background-only hypothesis and the nominal signal hypothesis respectively \cite{m4l2021_paper}. The reason for setting qµ = 0
-for ˆµ > µ is that when setting an upper limit, one would not regard data with ˆµ > µ as
-representing less compatibility with µ than the data obtained, and therefore this is not taken
-as part of the rejection region of the test. From the definition of the test statistic one sees that
-higher values of qµ represent greater incompatibility between the data and the hypothesized
-value of µ
+Here the parameter $\mu$ dictates the strength of the BSM signal process. $\mu = 0$ and $\mu = 1$ correspond to the background-only hypothesis and the nominal signal hypothesis respectively \cite{m4l2021_paper}. The reason for setting $\tilde{q} = 0$ for $\hat{\mu} > \mu$ is that when setting an upper limit, an excess in data (corresponding to large r $\hat{\mu}$) should not be used to reject a signal model with lower yield (lower $\mu$). $\tilde{q}$ is interpreted as an upper
+exclusion limit on the parameter of interest at a certain CL, usually set to 95\%, based on the CLs prescription \cite{CLs_technique} \todo{Maybe say more about p-value to CL?}. 
+
+The exclusion contour in the plane of $\sin\alpha-m_{h_2}$ is depicted in Figure \ref{fig:BLcontour}, where the variable providing the best expected sensitivity to set the limit. An alternate version using only the inclusive \mFourL distribution to set the limit is shown in Figure \ref{fig:BLcontourm4l}. Corresponding to Figure \ref{fig:BLcontour}, the colour map of Figure \ref{fig:BLcolourmap} shows the observable used to derive the limits at each point in the parameter space. It is clearly visible that there is a larger excluded region when using the most sensitive observable rather than the \mFourL distribution only. The event kinematics of the BSM model changes as the model parameters change. It is therefore advantageous to exploit various observables accordingly at each model point; ultimately enhancing the sensitivity significantly. This effect is most evident at high $m_{h_2}$, where the expected limit on $\sin\alpha$ strengthens from 0.46 to 0.28. Referring to Figure \ref{fig:BLcolourmap}, the improvements at high $m_{h_2}$ come mainly from the $m_{12}$ distribution. These results demonstrate the power that comes with measuring more variables in regions of phase space. 
+\begin{figure}
+    \centering
+    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_withTheoExcl_m4l.pdf}
+    \caption{B-L contour using m4l only}
+    \label{fig:BLcontourm4l}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_withTheoExcl.pdf}
+    \caption{B-L contur using most sensitive variable.}
+    \label{fig:BLcontour}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_colormap.pdf}
+    \caption{B-L colour map}
+    \label{fig:BLcolourmap}
+\end{figure}

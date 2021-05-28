@@ -20,3 +20,15 @@ $$N_{\text{fake}}^{\text{signal}} = F(N^{\text{baseline}}-N^{\text{baseline}}_{\
 Smoothing on the raw output of the reducible background estimate is performed. The raw output, due to low statistics in certain bins, have pronounced, jagged features that resemble resonances. Of course, resonant peaks should not exist. The smoothing procedure is therefore used to obtain a more even shape, minimising the impact of any outlier bins that had a large Fake Factor weight. In order to smooth the distribution, an intermediate, finer binning is assigned to each observable and the background estimate is run. The fine-binned intermediate background distribution is smoothed with Friedman's super smoother. Lastly, the final background estimate is obtained by integrating over the smoothed distribution using the coarser, original binning. A visualisation of the process is shown in Figure \ref{fig:backgroundsmoothing}.
 
 \missingfigure{background smoothing}
+
+\subsection{Fake background uncertainties}
+\label{ssec:fakeuncertainty}
+
+In the fake-factor background estimate, there are five sources of uncertainty considered, as depicted in Figure \ref{fig:fakeuncertainty}: 
+\begin{enumerate}
+    \item Dominant in the low- and high-mass tails where \mFourL < 150 GeV and \mFourL > 350 GeV is the statistical uncertainty of the number of events with in the control region (denoted "CR Stat"). This is propagated through the measurement via the bootstrap method.
+    \item The dominant uncertainty in the mid-range region 150 < \mFourL < 350 GeV are the theory uncertainties associated with the subtraction of prompt-leptons in the control region. These come primarily from QCD scale variations in $WZ$ events. It is denoted as "FF Sys" in Figure \ref{fig:fakeuncertainty}. 
+    \item A smaller contribution comes from the uncertainties in the Monte-Carlo predictions. This covers the modelling of prompt baseline-not-signal leptons, which get subtracted from the background estimation. This is shown under "Modelling" in Figure \ref{fig:fakeuncertainty}. 
+    \item Fourth is the statistical uncertainty in the control region data used for the calculation of the fake factor. This contribution labelled as "FF Stat" and is subdominant. 
+    \item Lastly there is a very small uncertainty from the arbitrary choice of number of intermediate bins used in the background smoothing procedure, labelled "Smoothing". It is accounted for by comparing the nominal prediction using 500 bins with alternate predictions using 250 or 1000 bins. 
+\end{enumerate}

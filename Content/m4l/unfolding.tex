@@ -21,7 +21,7 @@ Unfolding in particle physics can be more generally referred to as a deconvoluti
 \begin{equation} \label{eq:unfintegral}
     T(x)=\int S(x,y)D(y)dy
 \end{equation}
-Due to the discretized nature of histograms, the unfolding problem can be stated as a matrix equation:
+Due to the discretised nature of histograms, the unfolding problem can be stated as a matrix equation:
 \begin{equation} \label{eq:unfmatrix}
     x_i=S_{ij}y_j
 \end{equation}
@@ -114,8 +114,20 @@ When correcting the data for detector effects, one of the things to take into ac
 
 Figure \ref{fig:preUF} shows the detector yield from simulation with and without the application of the pre-unfolding weights, compared to the particle yield. It is readily apparent that the detector yield comes much closer to the particle yield when pre-unfolding weights are applied. In some cases, the detector yield surpasses the particle yield around the resonance peaks. This is attributed to bin migrations, and has negligible effects on the final unfolded result. Also shown is the efficiency correction with and without the pre-unfolding weights. In general, a significant increase in efficiency throughout the whole \mFourL spectrum, ranging from 10\% at low mass, up to 25\% at high mass. The conclusion drawn from these plots is that a large portion of the event inefficiency can be accounted for using per-lepton corrections, bringing the reconstructed and particle level yield closer to one another, and minimising the correction needed when unfolding.
 
+\subsection{Unfolding iterations optimization}
+\label{ssec:unfoldingiterations}
+With the observable binnings defined and the pre-unfolding weights applied, the next step is to optimize the number of iterations used in the unfolding. As described in Section \ref{ssec:bayesianunfolding}, the iterative Bayesian approach to unfolding uses the Standard Model prediction as an initial prior and therefore has a dependence on it. Fewer numbers of iterations therefore correspond to a larger regularizaton bias on the unfolded result. Contrarily, increasing the number of iterations reduces the bias at the cost of a larger statistical uncertainty and results that are more prone to large bin-to-bin fluctuations. The rest of this section describes the metric used to balance these effects and converge on an optimal number of iterations.
+
+First, one thousand toy distributions are generated from the Standard Model predicted yield at the detector level by drawing random Gaussian distributed values for each bin. Under the assumption that the SM accurately describes the underlying physics, each toy distribution represents a possible observation. The toy distributions are unfolded using the nominal unfolding method (Section \ref{subsec:unfmethod}). The bias of the unfolded toy result is defined using the migration matrix $M$, the unfolded yield of the toy $U_{j}$ , detector-level yield of the toy $R_i$, and the fiducial fraction $f_i$ as:
+\begin{equation*}
+  \text{Bias}_{\text{reco bin }i} = \frac{\sum\limits_{\text{truth bin }j} M_{ij} \times U_{j} - R_{i} \times f_{i} }{R_{i} \times f_{i}},
+\end{equation*}
+The bias significance of the toy is then be calculated in each bin as the ratio of the bias and the estimated statistical uncertainty of the unfolding procedure. This ratio is a comparison of the sizes of the two effects. 
+
+Next, the bias significance of the one thousand toys are combined into a singular root-mean-square value in each bin. As a result, a metric indicating how significant the bias is expected to be across a range of toy datasets assuming an underlying SM physics is created. The number of iterations is chosen to be the smallest possible while maintaining a root-mean-square bias significance of 0.5 or below. This choice corresponds to a factor two suppresion of the bias compared to the statistical uncertainty. For the majority of distributions, three iterations of the unfolding comfortably satisfy this criteria, whilst for \mZOne-\mFourL, \dPhill-\mFourL and \dYPairs-\mFourL two iterations is sufficient. 
+% The bias defined in this way is a measure of to which degree the individual toy is pulled towards the original standard model shape by the regularisation procedure in the unfolding. 
 \subsection{Closure tests}
-\label{sec:closuretests}
+\label{ssec:closuretests}
 \subsubsection{Monte Carlo closure tests}
 
 As detailed in section \ref{subsec:unfmethod}, the unfolding procedure uses a response matrix that has been derived from Standard Model Monte Carlo predictions. A simple test that can be performed to check the validity of the unfolding method is to use the same SM MC prediction at reconstruction level as pseudodata, unfold it, and compare it to the truth level prediction. This is a self-consistency check, and should yield the trivial result that the unfolded pseudodata be identical to the truth distribution. This is the full MC closure test, and acts as a sanity check for the unfolding procedure.
@@ -126,15 +138,16 @@ Another similar validation, the half-half MC closure test, is also performed. Th
 \missingfigure{Show half-half MC closure test}
 
 \subsubsection{Data-driven closure tests}
-\todo[inline]{TO-DO!}
+\label{sssec:datadrivenclosure}
+In order to assess the potential bias in the unfolding method, a data-driven closure test is performed separately for each measured distribution. For this test, a reweighting is conducted on the particle-level MC prediction such that the detector-level prediction represents more accurately the data. The function used for the reweighting is a smoothed function of the data to MC ratio. The reweighted prediction is used as pseudo-data and propagated through the nominal unfolding procedure. The difference between the reweighted particle-level prediction and the unfolded result in each bin is taken to be the systematic uncertainty of the unfolding method. A pictorial description of the process is given in Figure \ref{fig:datadrivenclosure} for the inclusive \mFourL spectrum. The associated systematic uncertainty is below 0.3\% across the full mass range. For the double differential observables, the derived systematic uncertainties averaging much less than 1\% but reaching 3\% in a few bins. Overall, it remains subdominant compared to other sources of uncertainty.
+
+\missingfigure{Show full data-driven closure test}
 
 \subsection{Injection studies}
-\label{subsec:injection}
-
+\label{ssec:injectiontests}
 Section \ref{sec:closuretests} demonstrates that the unfolding procedure has closure when unfolding pseudodata that agree with the Standard Model. Since the SM predictions themselves were used to derive the corrections and matrix used for unfolding, this is the expected case. The shape of real data is unknown, however, and may be different than the Standard Model prediction. Should the \mFourL spectrum be host to contributions that differ from the SM prediction, it is necessary to check that the unfolding procedure is nonetheless able to provide an accurate and unbiased particle-level result. In order to do this a number of injection tests were performed. The first step is to take the nominal SM prediction, and inject some amount of BSM signal into it. The reconstruction level yield of this modified sample is used as pseudodata. It is run through the standard unfolding workflow in entirety, and compared to the particle level yield of the modified sample. Conceptually, this procedure is very similar to that of the Monte Carlo closure tests. 
 
-A number of modifications were made to the nominal SM prediction, one set had the addition of a gluon-gluon fusion produced heavy Higgs boson with a mass of 300, 800, or \unit{1400}{\GeV} with either a narrow width or a width 15\% of its mass, and another set where the heavy Higgs was produced via vector-boson fusion. The \ggZZ process was also modified to have a larger event weight with respect to the SM prediction. These are described in full in Table \ref{tab:injectionsamples}. 
-
+A number of modifications were made to the nominal SM prediction, one set had the addition of a gluon-gluon fusion produced heavy Higgs boson with a mass of 300, 800, or \unit{1400}{\GeV} with either a narrow width or a width 15\% of its mass, and another set where the heavy Higgs was produced via vector-boson fusion. The \ggZZ process was also modified to have a larger event weight with respect to the SM prediction. These are described in full in Table \ref{tab:injectionsamples}. All of the models describe BSM scenarios with extremely large enhancements or resonances. 
 \begin{table}
     \begin{tabular}{lll}
                             & Injection samples & \\
@@ -155,7 +168,6 @@ A number of modifications were made to the nominal SM prediction, one set had th
   \caption{Modifications made to the nominal SM prediction for injection studies.}
   \label{tab:injectionsamples}
 \end{table}
-
 For each of the variations listed in Table \ref{tab:injectionsamples}, a range of cross-sections were injected and then unfolded with and without application of the pre-unfolding weights. In order to carve a more realistic scenario, one of the injected cross-sections for the heavy Higgs samples was set to be just within the two-sigma band of the data uncertainty. This was done by increasing the injected cross-section and calculating the $p$-value between the BSM prediction and the data until a $p$-value smaller than or equal to 0.05 is reached\footnote{This is the $p$-value corresponding to a two-sigma significance.}.
 
 \missingfigure{Injection test plots, show only two sigma ones}
