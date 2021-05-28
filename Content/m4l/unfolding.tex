@@ -140,13 +140,19 @@ Another similar validation, the half-half MC closure test, is also performed. Th
 \subsubsection{Data-driven closure tests}
 \label{sssec:datadrivenclosure}
 In order to assess the potential bias in the unfolding method, a data-driven closure test is performed separately for each measured distribution. For this test, a reweighting is conducted on the particle-level MC prediction such that the detector-level prediction represents more accurately the data. The function used for the reweighting is a smoothed function of the data to MC ratio. The reweighted prediction is used as pseudo-data and propagated through the nominal unfolding procedure. The difference between the reweighted particle-level prediction and the unfolded result in each bin is taken to be the systematic uncertainty of the unfolding method. A pictorial description of the process is given in Figure \ref{fig:datadrivenclosure} for the inclusive \mFourL spectrum. The associated systematic uncertainty is below 0.3\% across the full mass range. For the double differential observables, the derived systematic uncertainties averaging much less than 1\% but reaching 3\% in a few bins. Overall, it remains subdominant compared to other sources of uncertainty.
-
-\begin{figure}[hp]
-    \centering
-    \subfigure[]{\includegraphics[width = 0.45 \textwidth]{Figures/FeynGraphs/ggZZ4lbox.pdf}igures/DataDriven/RatioM4l.pdf}}
-    \subfigure[]{\includegraphics[width = 0.45 \textwidth]{Figures/DataDriven/FitM4l-Slice0.pdf}}
-    \subfigure[]{\includegraphics[width = 0.45 \textwidth]{Figures/DataDriven/ReweightedM4l.pdf}}
-    \subfigure[]{\includegraphics[width = 0.45 \textwidth]{Figures/DataDriven/UnfoldedM4l.pdf}}
+\begin{figure}[htb!]
+    \begin{subfigure}{.49\textwidth}\centering
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/RatioM4l.pdf}\caption{}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/FitM4l-Slice0.pdf}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/ReweightedM4l.pdf} 
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/UnfoldedM4l.pdf}  
+    \end{subfigure}
     \caption{Step-by-step overview of the data-driven method for $\mFourL$. In (a), the observed data is compared to the nominal SM MC prediction at reconstruction-level. In (b), the reweighting function is obtained via smoothing of the data/MC ratio and is fixed to its last value in the final bins, as shown by the dashed lines. In (c), the truth-reweighted MC is compared to the nominal MC at reconstruction-level, showing, as expected, an improved agreement with the data. In (d), the difference in the ratio from unity is taken as the relative systematic uncertainty. \label{fig:m4ldatadriven}}
 \end{figure}
 
@@ -176,5 +182,9 @@ A number of modifications were made to the nominal SM prediction, one set had th
   \label{tab:injectionsamples}
 \end{table}
 For each of the variations listed in Table \ref{tab:injectionsamples}, a range of cross-sections were injected and then unfolded with and without application of the pre-unfolding weights. In order to carve a more realistic scenario, one of the injected cross-sections for the heavy Higgs samples was set to be just within the two-sigma band of the data uncertainty. This was done by increasing the injected cross-section and calculating the $p$-value between the BSM prediction and the data until a $p$-value smaller than or equal to 0.05 is reached\footnote{This is the $p$-value corresponding to a two-sigma significance.}.
-
-\missingfigure{Injection test plots, show only two sigma ones}
+\begin{figure}
+    \centering
+    \includegraphics{Figures/m4l/InjectionTests/heavyH_unfolded.pdf}
+    \caption{Caption}
+    \label{fig:injectiontest}
+\end{figure}
