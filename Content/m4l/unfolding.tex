@@ -130,9 +130,9 @@ Next, the bias significance of the one thousand toys are combined into a singula
 \label{ssec:closuretests}
 \subsubsection{Monte Carlo closure tests}
 
-As detailed in section \ref{subsec:unfmethod}, the unfolding procedure uses a response matrix that has been derived from Standard Model Monte Carlo predictions. A simple test that can be performed to check the validity of the unfolding method is to use the same SM MC prediction at reconstruction level as pseudodata, unfold it, and compare it to the truth level prediction. This is a self-consistency check, and should yield the trivial result that the unfolded pseudodata be identical to the truth distribution. This is the full MC closure test, and acts as a sanity check for the unfolding procedure.
+As detailed in section \ref{subsec:unfmethod}, the unfolding procedure uses a response matrix that has been derived from Standard Model Monte Carlo predictions. A simple test that can be performed to check the validity of the unfolding method is to use the same SM MC prediction at reconstruction level as pseudo-data, unfold it, and compare it to the truth level prediction. This is a self-consistency check, and should yield the trivial result that the unfolded pseudo-data be identical to the truth distribution. This is the full MC closure test, and acts as a sanity check for the unfolding procedure. The test is shown in Figure \ref{fig:fullmcclosure} for the inclusive \mFourL distribution. Full closure is achieved as the unfolded distribution and the particle-level distribution are identical. This is the case for all other distributions as well.
 
-Another similar validation, the half-half MC closure test, is also performed. This time, the SM samples are divided in two sets A and B based on whether their tagged event number is odd or even. Set A is used to construct the fiducial fraction, reconstruction efficiency, and migration matrix, while set B is used as pseudodata and unfolded with the inputs from the set A. The unfolded distribution of the set B is then compared to the true distribution of the set B.
+Another similar validation, the half MC closure test, is also performed. This time, the SM samples are divided in two sets A and B based on whether their tagged event number is odd or even. Set A is used to construct the fiducial fraction, reconstruction efficiency, and migration matrix, while set B is used as pseudo-data and unfolded with the inputs from the set A. The unfolded distribution of the set B is then compared to the true distribution of the set B. The statistical uncertainties on both sub-samples are evaluated via the bootstrap method \cite{ATLAS_Bootsrap_2021}. Figure \ref{fig:halfmcclosure} shows the test result for the inclusive \mFourL spectrum. For this and all other distributions, closure is generally achieved within the statistical uncertainties in each bin, with no significant discrepancies. 
 
 \missingfigure{Show full MC closure test}
 \missingfigure{Show half-half MC closure test}
@@ -184,7 +184,7 @@ A number of modifications were made to the nominal SM prediction, one set had th
 For each of the variations listed in Table \ref{tab:injectionsamples}, a range of cross-sections were injected and then unfolded with and without application of the pre-unfolding weights. In order to carve a more realistic scenario, one of the injected cross-sections for the heavy Higgs samples was set to be just within the two-sigma band of the data uncertainty. This was done by increasing the injected cross-section and calculating the $p$-value between the BSM prediction and the data until a $p$-value smaller than or equal to 0.05 is reached\footnote{This is the $p$-value corresponding to a two-sigma significance.}.
 \begin{figure}
     \centering
-    \includegraphics{Figures/m4l/InjectionTests/heavyH_unfolded.pdf}
+    \includegraphics[width=.9\linewidth]{Figures/m4l/InjectionTests/injection_300w15_6dot175fb.pdf}
     \caption{Caption}
     \label{fig:injectiontest}
 \end{figure}
