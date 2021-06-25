@@ -99,8 +99,7 @@
 \newcommand{\contur}{\textsc{Contur}\xspace}
 \newcommand{\POWHEG}{P\protect\scalebox{0.8}{OWHEG}\xspace}
 \newcommand{\SHERPA}{S\protect\scalebox{0.8}{HERPA}\xspace}
-
-\newcommand{\pT}{\ensuremath{p_\mathrm{T}}\xspace}
+\newcommand{\feynrules}{F\protect\scalebox{0.8}{EYN}R\protect\scalebox{0.8}{ULES}\xspace}
 \newcommand{\MET}{\ensuremath{E_\mathrm{T}^\mathrm{miss}}\xspace}
 \newcommand{\CLs}{\ensuremath{\mathrm{CL}_\mathrm{s}}\xspace}
 
@@ -144,6 +143,8 @@
 \newcommand*{\HFourL}{\ensuremath{H\to
     4\ell}}
 \newcommand*{\ZFourL}{\ensuremath{Z\to 4\ell}\xspace}
+\newcommand*{\onshellZZ}{\text{on-shell }\ensuremath{ZZ}\xspace}
+\newcommand*{\offshellZZ}{\text{off-shell }\ensuremath{ZZ}\xspace}
 \newcommand*{\ggS}{\ensuremath{gg\left(\to H^{(*)}\right)\to Z^{(*)}Z^{(*)}\to 4\ell}\xspace}
 
 \newcommand*{\mZOne}{\ensuremath{m_{12}}\xspace}
@@ -212,8 +213,6 @@
 \newcommand*{\sigZ}{\ensuremath{\sigma_{Z}}}
 \newcommand*{\Accep}{\ensuremath{A_{\text{fid}}}}
 \newcommand*{\Pvalue}{The $p$-value is the probability for the
-$\chi^2$, with the number of degrees of
-freedom equal to the number of bins in the distribution,  to have at
-least the observed 
-value, given the SM
-prediction. }
+$\chi^2$ to have at least the observed value, assuming the SM prediction. The number of degrees of freedom is the number of bins in the histogram.}
+\newcommand*{\errorbars}{The error bars on the data points give the total uncertainty and the grey hashed band illustrates the contribution from the systematic uncertainty.}
+\newcommand*{\SMpredictions}{The SM predictions use either \SHERPA{} or \POWHEG{} + \pythia{} to model the \qqFourL{} contribution, plotted in red and blue respectively. The uncertainties on the SM predictions are represented by the red and blue hash.}

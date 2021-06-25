@@ -1,36 +1,46 @@
 \section{Event reconstruction and selection}
-\todo[inline]{Change from here on}
+\label{sec:eventselection}
+A critical aspect of any analysis is its event selection. The dominant backgrounds are shaped by the selection choices, and signal sensitivity are enhanced with optimized cuts. The objective of the selection in this analysis is to efficiently identify the four lepton final states while keeping the background at a minimum. This is achieved through a combination of online trigger (described in detail in Section \ref{ssec:ATLAStrigger}) and offline event selection cuts. As with all \ATLAS analysis, basic requirements on the event cleaning are imposed. Only data recorded with stable beam conditions and with all relevant information from sub-detectors present are considered. 
 
+The requirements on event selection are outlined in Tables \ref{tab:baselineLeptons} and \ref{tab:signalLeptons}. The cuts are largely based on the fiducial region definition of Table~\ref{tab:fidregion} combined with the limited acceptance and efficiency of \ATLAS's object reconstruction. This ensures that there is little to no extrapolation into unmeasured regions on phase space when unfolding. 
 
-To define observables in the events selected this way, a quadruplet of baseline leptons is selected. 
-This must consist of two same-flavour opposite-sign(SFOS) pairs, and the combination with lepton pair invariant masses closest to that of the $Z$ boson mass is selected. The lepton pair with invariant mass closest to the $Z$ mass is designated the leading pair, and the sub-leading lepton pair with mass closest to the $Z$ boson mass is then selected from the remaining possibilities.
+First there is the selection of baseline electrons and muons. For both the Loose identification working point is used. For electrons there is a minimum requirement of $p_T>$\unit{7}{\GeV} and $|\eta|>2.7$. For muons it is $p_T>$\unit{5}{\GeV} and $|\eta|>2.47$, and if the muon is a calorimeter-tagged muon there is a more stringent $p_T>$\unit{15}{\GeV} requirement to account for their lower purity. The vertex association requirement ensures that the leptons are associated to the primary vertex in the event. Lastly a lepton-favoured overlap removal is applied to ensure that objects are reconstructed with some distance in between. In the event where a lepton and a jet overlap, priority is given to the lepton. The events that pass these criteria (listed in Table \ref{tab:baselineLeptons}) are classified as baseline leptons.
 
-Finally, the four leptons forming the quadruplet are further categorised, as detailed in Table~\ref{tab:signalLeptons}. 
-Baseline leptons are designated as ``signal'' leptons if they satisfy a range of requirements designed to suppress leptons not originating from the hard scatter as well as misidentifications.
-They are required to be isolated, using the FixedCutPflowLoose working point, which is designed to be robust to pile-up and was found to have the best efficiency over the full invariant mass range, as can be seen in Appendix~\ref{app:iso}. In order to remain sensitive to scenarios where the leptons are highly collimated, i.e. if they are produced by a very boosted particle, contributions from close-by leptons are subtracted from the isolation variables using the 'IsolationCloseByCorrectionTool' CP tool supported by the identification and fake forum before the cuts are applied. In addition, both electrons and muons are required to pass track-to-vertex criteria, with selections on the impact parameter and interaction point. Finally, electrons are required to satisfy the LooseBlayer identification criterion, which adds a requirement on hits in the innermost pixel layer to the Loose working point used to define baseline electrons. 
-\todo[inline]{Change from here up}
+Additional lepton kinematic requirements are imposed on the leptons after overlap removal. The leading and sub-leading lepton must have a transverse momentum higher than \unit{20}{\GeV} and \unit{10}{\GeV} respectively. The minimum separation between leptons is set at $\Delta R=0.05$ in order to suppress contributions from fake leptons \todo{conversion electrons?}. A $J/\psi$ mass cut at \unit{5}{\GeV} is imposed on all same-flavour-opposite-sign lepton pairs. The $\Upsilon$ contribution is very small, and no mass cut is imposed to suppress it. It is instead subtracted alongside the reducible background from the SM predictions prior to unfolding.
 
+Next, a quadruplet is formed from the baseline leptons containing two safe-flavour, opposite-sign (SFOS) lepton pairs. The lepton pair with an invariant mass closest to the \Z mass is the primary pair. Of the remaining leptons, the SFOS pair with an invariant mass closest to the \Z mass is designated as the secondary pair. These are synonymously referred to as the leading and sub-leading lepton pair, respectively. 
+
+The baseline leptons chosen to form the quadruplet undergo a final set of selection cuts outlined in Table~\ref{tab:signalLeptons}. An isolation requirement is imposed to ensure robustness against pile-up. Contributions from other baseline leptons in the vicinity are subtracted from the isolation variables to ensure that the analysis remains sensitive to highly collimated leptons. Background from cosmic-ray muons is suppressed by requiring that a muon's transverse impact parameter $|d_0|<$\unit{1}{\mm}. Each lepton's impact parameter must satisfy a requirement on its significance with respect to the beam line,
+\begin{equation}
+    \text{S}_{d_0}\equiv\dfrac{d_0}{\sigma_{d_0}}
+\end{equation}
+where $d_0$ is the transverse impact parameter and $\sigma_{d_0}$ is the associated uncertainty. $\text{S}_{d_0}$ must be smaller than three for muons, and five for electrons. Finally, electrons are subjected to an additional identification criterion requiring a hit in the innermost pixel layer. LooseBLayer is a variation of the Loose working point. 
+
+Like so, the signal region region used in the measurement is defined as the subset of events where all four baseline leptons pass all the signal lepton cuts. Those with baseline lepton(s) that fail the additional cuts of Table \ref{tab:signalLeptons} are not included in the measurement.
  \begin{table}[ht]
     \centering
-        \begin{tabular}{l | l c }
+        \begin{tabular}{lllll}
             Category & Requirement \\
             \hline
             \hline
-            Kinematics & Muons : & $\pt > 5$~\GeV{} \\
+            Kinematics & Muons : & $p_T > 5$~\GeV{} \\
                        &         &  If CaloTag: $> $15~\GeV \\
                        &         &   $|\eta| < 2.7$  \\[0.2cm]
-                       & Electrons: & $\pt > 7$~\GeV \\
+                       & Electrons: & $p_T > 7$~\GeV \\
                        &            & $|\eta| < 2.47$  \\ 
             \hline
             Vertex association 
-                       & Both : & $|z_{0}\dot \sin{\theta}| <$0.5~mm \\
+                       & Both : & $|z_{0} \sin{\theta}| <$0.5~mm \\
             \hline Identification: 
                        & Muons: & Loose ID  \\ 
                        & Electrons: & LooseLH ID  \\
             \hline
             Overlap removal: Lepton-favoured \\ 
+            \hline
+            Additional kinematics & Leading lepton & $\pt > 20$~\GeV{}\\
+                & Sub-leading lepton & $\pt > 10$~\GeV{}\\
         \end{tabular}
-    \caption{Definition of the baseline lepton selection.\label{tab:baselineLeptons}}
+    \caption{Definition of the baseline lepton event selection. \label{tab:baselineLeptons}}
 \end{table}  
           
 \begin{table}[ht]

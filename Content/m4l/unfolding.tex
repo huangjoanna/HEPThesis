@@ -130,35 +130,43 @@ Next, the bias significance of the one thousand toys are combined into a singula
 \label{ssec:closuretests}
 \subsubsection{Monte Carlo closure tests}
 
-As detailed in section \ref{subsec:unfmethod}, the unfolding procedure uses a response matrix that has been derived from Standard Model Monte Carlo predictions. A simple test that can be performed to check the validity of the unfolding method is to use the same SM MC prediction at reconstruction level as pseudo-data, unfold it, and compare it to the truth level prediction. This is a self-consistency check, and should yield the trivial result that the unfolded pseudo-data be identical to the truth distribution. This is the full MC closure test, and acts as a sanity check for the unfolding procedure. The test is shown in Figure \ref{fig:fullmcclosure} for the inclusive \mFourL distribution. Full closure is achieved as the unfolded distribution and the particle-level distribution are identical. This is the case for all other distributions as well.
+As detailed in Section \ref{subsec:unfmethod}, the unfolding procedure uses a response matrix that has been derived from Standard Model Monte Carlo predictions. A simple test that can be performed to check the validity of the unfolding method is to use the same SM MC prediction at reconstruction level as pseudo-data, unfold it, and compare it to the truth level prediction. This is a self-consistency check, and should yield the trivial result that the unfolded pseudo-data be identical to the truth distribution. This is the full MC closure test, and acts as a sanity check for the unfolding procedure. The test is shown in Figure \ref{fig:fullMCclosure} for the inclusive \mFourL distribution. Full closure is achieved as the unfolded distribution and the particle-level distribution are identical. This is the case for all other distributions as well.
 
-Another similar validation, the half MC closure test, is also performed. This time, the SM samples are divided in two sets A and B based on whether their tagged event number is odd or even. Set A is used to construct the fiducial fraction, reconstruction efficiency, and migration matrix, while set B is used as pseudo-data and unfolded with the inputs from the set A. The unfolded distribution of the set B is then compared to the true distribution of the set B. The statistical uncertainties on both sub-samples are evaluated via the bootstrap method \cite{ATLAS_Bootsrap_2021}. Figure \ref{fig:halfmcclosure} shows the test result for the inclusive \mFourL spectrum. For this and all other distributions, closure is generally achieved within the statistical uncertainties in each bin, with no significant discrepancies. 
+Another similar validation, the half MC closure test, is also performed. This time, the SM samples are divided in two sets A and B based on whether their tagged event number is odd or even. Set A is used to construct the fiducial fraction, reconstruction efficiency, and migration matrix, while set B is used as pseudo-data and unfolded with the inputs from the set A. The unfolded distribution of the set B is then compared to the true distribution of the set B. The statistical uncertainties on both sub-samples are evaluated via the bootstrap method \cite{ATLAS_Bootsrap_2021}. Figure \ref{fig:halfMCclosure} shows the test result for the inclusive \mFourL spectrum. For this and all other distributions, closure is generally achieved within the statistical uncertainties in each bin, with no significant discrepancies. 
 
-\missingfigure{Show full MC closure test}
-\missingfigure{Show half-half MC closure test}
+\begin{figure}
+    \begin{subfigure}{.88\textwidth}\centering
+        \includegraphics[width=0.90\linewidth]{Figures/m4l/MCClosure/FullMCClosure_inclm4l.pdf}\caption{}\label{fig:fullMCclosure}
+    \end{subfigure}
+        \begin{subfigure}{.8\textwidth}\centering
+        \includegraphics[width=0.99\linewidth]{Figures/m4l/MCClosure/HalfMCClosure_inclm4l.pdf}\caption{}\label{fig:halfMCclosure}
+    \end{subfigure}
+    \caption{Caption}
+    \label{fig:MCclosure}
+\end{figure}
 
 \subsubsection{Data-driven closure tests}
 \label{sssec:datadrivenclosure}
-In order to assess the potential bias in the unfolding method, a data-driven closure test is performed separately for each measured distribution. For this test, a reweighting is conducted on the particle-level MC prediction such that the detector-level prediction represents more accurately the data. The function used for the reweighting is a smoothed function of the data to MC ratio. The reweighted prediction is used as pseudo-data and propagated through the nominal unfolding procedure. The difference between the reweighted particle-level prediction and the unfolded result in each bin is taken to be the systematic uncertainty of the unfolding method. A pictorial description of the process is given in Figure \ref{fig:datadrivenclosure} for the inclusive \mFourL spectrum. The associated systematic uncertainty is below 0.3\% across the full mass range. For the double differential observables, the derived systematic uncertainties averaging much less than 1\% but reaching 3\% in a few bins. Overall, it remains subdominant compared to other sources of uncertainty.
+In order to assess the potential bias in the unfolding method, a data-driven closure test is performed separately for each measured distribution. For this test, a reweighting is conducted on the particle-level MC prediction such that the detector-level prediction represents more accurately the data. The function used for the reweighting is a smoothed function of the data to MC ratio. The reweighted prediction is used as pseudo-data and propagated through the nominal unfolding procedure. The difference between the reweighted particle-level prediction and the unfolded result in each bin is taken to be the systematic uncertainty of the unfolding method. A pictorial description of the process is given in Figure \ref{fig:m4ldatadriven} for the inclusive \mFourL spectrum. The associated systematic uncertainty is below 0.3\% across the full mass range. For the double differential observables, the derived systematic uncertainties averaging much less than 1\% but reaching 3\% in a few bins. Overall, it remains subdominant compared to other sources of uncertainty.
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/RatioM4l.pdf}\caption{}
     \end{subfigure}
     \begin{subfigure}{.49\textwidth}\centering
-      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/FitM4l-Slice0.pdf}
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/FitM4l-Slice0.pdf}\caption{}
     \end{subfigure}
     \begin{subfigure}{.49\textwidth}\centering
-      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/ReweightedM4l.pdf} 
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/ReweightedM4l.pdf} \caption{}
     \end{subfigure}
     \begin{subfigure}{.49\textwidth}\centering
-      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/UnfoldedM4l.pdf}  
+      \includegraphics[width=.99\linewidth]{Figures/m4l/DataDriven/UnfoldedM4l.pdf}  \caption{}
     \end{subfigure}
     \caption{Step-by-step overview of the data-driven method for $\mFourL$. In (a), the observed data is compared to the nominal SM MC prediction at reconstruction-level. In (b), the reweighting function is obtained via smoothing of the data/MC ratio and is fixed to its last value in the final bins, as shown by the dashed lines. In (c), the truth-reweighted MC is compared to the nominal MC at reconstruction-level, showing, as expected, an improved agreement with the data. In (d), the difference in the ratio from unity is taken as the relative systematic uncertainty. \label{fig:m4ldatadriven}}
 \end{figure}
 
 \subsection{Injection studies}
 \label{ssec:injectiontests}
-Section \ref{sec:closuretests} demonstrates that the unfolding procedure has closure when unfolding pseudodata that agree with the Standard Model. Since the SM predictions themselves were used to derive the corrections and matrix used for unfolding, this is the expected case. The shape of real data is unknown, however, and may be different than the Standard Model prediction. Should the \mFourL spectrum be host to contributions that differ from the SM prediction, it is necessary to check that the unfolding procedure is nonetheless able to provide an accurate and unbiased particle-level result. In order to do this a number of injection tests were performed. The first step is to take the nominal SM prediction, and inject some amount of BSM signal into it. The reconstruction level yield of this modified sample is used as pseudodata. It is run through the standard unfolding workflow in entirety, and compared to the particle level yield of the modified sample. Conceptually, this procedure is very similar to that of the Monte Carlo closure tests. 
+Section \ref{ssec:closuretests} demonstrates that the unfolding procedure has closure when unfolding pseudo-data that agree with the Standard Model. Since the SM predictions themselves were used to derive the corrections and matrix used for unfolding, this is the expected case. The shape of real data is unknown, however, and may be different than the Standard Model prediction. Should the \mFourL spectrum be host to contributions that differ from the SM prediction, it is necessary to check that the unfolding procedure is nonetheless able to provide an accurate and unbiased particle-level result. In order to do this a number of injection tests were performed. The first step is to take the nominal SM prediction, and inject some amount of BSM signal into it. The reconstruction level yield of this modified sample is used as pseudo-data. It is run through the standard unfolding workflow in entirety, and compared to the particle level yield of the modified sample. Conceptually, this procedure is very similar to that of the Monte Carlo closure tests. 
 
 A number of modifications were made to the nominal SM prediction, one set had the addition of a gluon-gluon fusion produced heavy Higgs boson with a mass of 300, 800, or \unit{1400}{\GeV} with either a narrow width or a width 15\% of its mass, and another set where the heavy Higgs was produced via vector-boson fusion. The \ggZZ process was also modified to have a larger event weight with respect to the SM prediction. These are described in full in Table \ref{tab:injectionsamples}. All of the models describe BSM scenarios with extremely large enhancements or resonances. 
 \begin{table}
@@ -176,15 +184,17 @@ A number of modifications were made to the nominal SM prediction, one set had th
          Vector-boson fusion    & & 800 GeV \\
                                 & & 1400 GeV \\
          \midrule \\
-         \ggZZ enhancement & \\
+         \ggZZ Enhancement & \\
     \end{tabular}
   \caption{Modifications made to the nominal SM prediction for injection studies.}
   \label{tab:injectionsamples}
 \end{table}
-For each of the variations listed in Table \ref{tab:injectionsamples}, a range of cross-sections were injected and then unfolded with and without application of the pre-unfolding weights. In order to carve a more realistic scenario, one of the injected cross-sections for the heavy Higgs samples was set to be just within the two-sigma band of the data uncertainty. This was done by increasing the injected cross-section and calculating the $p$-value between the BSM prediction and the data until a $p$-value smaller than or equal to 0.05 is reached\footnote{This is the $p$-value corresponding to a two-sigma significance.}.
+For each of the variations listed in Table \ref{tab:injectionsamples}, a range of cross-sections were injected and then unfolded with and without application of the pre-unfolding weights. In order to carve a more realistic scenario, one of the injected cross-sections for the heavy Higgs samples was set to be just within the two-sigma band of the data uncertainty. This was done by increasing the injected cross-section and calculating the $p$-value between the BSM prediction and the data until a $p$-value smaller than or equal to 0.05 is reached. This is the $p$-value corresponding to a two-sigma significance.
+
+Figure\ref{fig:injection_300w15_6dot175fb} shows the result of the injection test using a BSM model with a resonance mass of $m_{\mathrm{res}} = 300~\GeV{}$ and width, $\sigma_{\mathrm{res}} = 35 \GeV$, with a cross-section of 6.2~fb. The nominal SM prediction and the modified BSM + SM prediction at particle level are shown (SM truth and BSM truth respectively), along with two unfolded BSM distributions, one with pre-unfolding (pre-UF) weights applied and one without. The lower panel is the ratio of the unfolded BSM distribution to the true BSM distribution and is interpreted as the bias. The bias goes up to 2.2\% without the application of the pre-unfolding weights. With the weights applied, the bias is smaller and remains within a $\pm0.8\%$ range. 
 \begin{figure}
     \centering
     \includegraphics[width=.9\linewidth]{Figures/m4l/InjectionTests/injection_300w15_6dot175fb.pdf}
     \caption{Caption}
-    \label{fig:injectiontest}
+    \label{fig:injection_300w15_6dot175fb}
 \end{figure}

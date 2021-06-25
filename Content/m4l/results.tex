@@ -1,56 +1,15 @@
 \section{Results}
-\label{sec:results}
-\subsection{Measurements}
-\label{ssec:xsecs}
+\label{sec:m4lresults}
+This section presents the results of the inclusive four-lepton analysis published in Reference \cite{m4l2021_paper} by the \ATLAS collaboration. The measured fiducial cross-sections are presented in Table~\ref{tab:fidxs}. The first column shows the cross-section measured in the full fiducial phase space, while the subsequent columns quote the cross-section in the four \mFourL{} regions dominated by \ZFourL{}, \HFourL{}, \onshellZZ{}, or \offshellZZ{} production. The theoretical predictions for the cross-sections in these regions are also provided in the bottom two rows. The two predictions differ in the choice of generator used to simulate the dominant \qqFourL{} process; one uses \SHERPA at NLO accuracy in QCD and the other uses \POWHEG interfaced to \pythia{} normalized to a NNLO prediction. Details of the theoretical predictions can be found in Section~\ref{sec:montecarlopred}.
 
+The associated uncertainties are also presented. For the measured cross-sections, the total combined uncertainty as well as the uncertainties split into three categories (statistical, systematic, or luminosity) are given. For more on the uncertainty breakdown and how they are estimated, see Section \ref{sec:uncertainties}. The data are slightly higher than both predictions in all but the \ZFourL{} region, where it lies between the \SHERPA{} and \POWHEG{} + \pythia{} predicted values. In general, the \SHERPA{} predictions are higher than the \POWHEG{} + \pythia{} predictions, with the \onshellZZ{} region being an exception. Overall, the measured data are in good agreement with both predictions within the quoted uncertainties. The largest differences comes from the \onshellZZ{} region where the data is around one sigma higher than the predicted \SHERPA{} value. 
 
-
-Table~\ref{tab:fidxs} gives the measured cross-sections in the full
-fiducial phase space
-and in the four \mFourL{} regions, each dominated by different
-processes, compared with the
-theoretical predictions described in Section~\ref{sec:theory}. Two
-predictions are shown, one where the \qqFourL{} process is simulated
-with \SHERPA at NLO accuracy in  QCD and one where it is simulated with \POWHEG +
-\pythia{} normalised to a prediction at NNLO accuracy in QCD, as
-described in Section~\ref{sec:theory}. All the other SM processes are the same in the two
-predictions.
-The \SHERPA{} prediction is generally higher than the \POWHEG{} +
-\pythia{} prediction in all but the on-shell  region, where the
-predictions are very close.
-The cross-sections measured in data generally agree with both predictions 
-within the quoted uncertainties.
-The data central values are above the  \POWHEG{} +
-\pythia{} predictions in all regions, and
-in all but the $\Z\rightarrow 4\ell$ region for \SHERPA. In the
-on-shell region the \SHERPA{} prediction
-is a bit more than $1\sigma$ below the data.
-In Ref.~\cite{ATLAS:2020wny} the \HFourL{}  cross-section is measured
-by ATLAS 
-in a fiducial phase space that differs slightly from the \HFourL{} region measured here. 
-The phase space is designed to minimise the contribution
-from non-\HFourL{} processes.
-In the dedicated Higgs measurement the cross-section is 
-found to be slightly below the SM prediction. The dedicated Higgs measurement 
-differs from the present measurement in using a slightly different phase space, in subtracting
-non-Higgs processes using a data-driven approach, and in including a $\sim1\%$ 
-contribution from  Higgs production in association with a $b$-quark pair in the prediction.
-
+% In Ref.~\cite{ATLAS:2020wny} the \HFourL{}  cross-section is measured
+% by ATLAS in a fiducial phase space that differs slightly from the \HFourL{} region measured here. The phase space is designed to minimise the contribution from non-\HFourL{} processes. In the dedicated Higgs measurement the cross-section is found to be slightly below the SM prediction. The dedicated Higgs measurement differs from the present measurement in using a slightly different phase space, in subtracting
+% non-Higgs processes using a data-driven approach, and in including a $\sim1\%$ contribution from  Higgs production in association with a $b$-quark pair in the prediction.
 \begin{table}[t] 
   \centering
-   \caption{Fiducial cross-sections in femtobarns in the full fiducial phase space and in the
-      following regions of
-      $\mFourL$: \ZFourL{}  ($60 < \mFourL < 100$~\GeV), \HFourL{}  ($120 <
-\mFourL < 130$~\GeV), off-shell $\Z\Z$  ($20 <
-\mFourL < 60$~\GeV\ or $100 <
-\mFourL < 120$~\GeV\ or $130 <
-\mFourL < 180$~\GeV) and  on-shell \Z\Z{} ($180 <
-\mFourL < 2000$~\GeV), compared with particle-level predictions and their
-    uncertainties as described in Section~\ref{sec:theory}. Two
-    predictions are shown for the
-    \qqFourL{} process simulated with 
-    \SHERPA{} or with \POWHEG{} + \pythia{}. All other SM processes are the
-    same for the two predictions. \label{tab:fidxs} }
+   \caption{Fiducial cross-sections in the full fiducial phase space and in the \ZFourL{}, \HFourL{}, \onshellZZ{}, and \offshellZZ{} dominated regions in femtobarns. They are compared with two particle-level predictions and their uncertainties where the \qqFourL{} process is simulated with either \SHERPA{} or with \POWHEG{} + \pythia{}. \label{tab:fidxs} }
     \begin{tabular} {c c c c c c }
       \hline
       & \multicolumn{5}{c}{Region} \\
@@ -58,67 +17,34 @@ contribution from  Higgs production in association with a $b$-quark pair in the 
       \hline
       Measured        & 88.9              & 22.1              & 4.76                & 12.4                & 49.3 \\
       fiducial & $\pm$1.1 (stat.\,)    & $\pm$0.7 (stat.\,)    &  $\pm$0.29 (stat.\,)  & $\pm$0.5 (stat.\,)     & $\pm$0.8 (stat.\,) \\
-      cross-section        & $\pm$2.3 (syst.\,)    & $\pm$1.1 (syst.\,)    &   $\pm$0.18 (syst.\,) & $\pm$0.6 (syst.\,)     & $\pm$0.8 (syst.\,) \\
-      $[$fb$]$ 			         & $\pm$1.5 (lumi.)    & $\pm$0.4  (lumi.)  & $\pm$0.08 (lumi.)	   & $\pm$0.2 (lumi.)	   &   $\pm$0.8 (lumi.) \\
+      XS $[$fb$]$     & $\pm$2.3 (syst.\,)    & $\pm$1.1 (syst.\,)    &   $\pm$0.18 (syst.\,) & $\pm$0.6 (syst.\,)     & $\pm$0.8 (syst.\,) \\
+       			         & $\pm$1.5 (lumi.)    & $\pm$0.4  (lumi.)  & $\pm$0.08 (lumi.)	   & $\pm$0.2 (lumi.)	   &   $\pm$0.8 (lumi.) \\
                               & $\pm$3.0 (total\,)   & $\pm$1.3 (total\,)   &   $\pm$0.35  (total\,)   & $\pm$0.8 (total\,)    &   $\pm$1.3 (total\,) \\
       \hline
       \SHERPA{}                            & 86$\pm$5          & 23.6$\pm$1.5      & 4.57$\pm$0.21       & 11.5$\pm$0.7       & 46.0$\pm$2.9 \\
-      \POWHEG + \pythia{}         & 83$\pm$5          & 21.2$\pm$1.3      & 4.38$\pm$0.20       & 10.7$\pm$0.7       & 46.4$\pm$3.0 \\
+      \POWHEG         & 83$\pm$5          & 21.2$\pm$1.3      & 4.38$\pm$0.20       & 10.7$\pm$0.7       & 46.4$\pm$3.0 \\
+      + \pythia{} & & & & & \\
       \hline
    \end{tabular}
 \end{table}
-The differential cross-section as a function of  \mFourL{} is shown in
-Figure~\ref{fig:cross-sec-m4l}, in much
-finer bins than those in Table~\ref{tab:fidxs}.
-The breakdown of the contribution from different SM processes is also
-shown.
-The features seen in the reconstruction-level distribution in
-Figure~\ref{fig:recoresults1} are also
-present here.
-The SM predictions agree well with the measurement within
-uncertainties over the
-entire \mFourL{} spectrum, with the same features seen as in the
-comparisons in Table~\ref{tab:fidxs}.
-For this distribution, and all the others shown below, two $p$-values for the observed data given the predicted SM cross-section
-(using either \SHERPA{} or \POWHEG{} to model the \qqFourL{} contribution) are obtained
-% from the $\chi^2$. This is defined as $\chi^2 = \left[ \sigdata - \sigpred
-% \right] ^T C^{-1} \left[  \sigdata - \sigpred  \right]$, where \sigdata{} and $\sigpred$ are $k$-dimensional vectors from the measured and predicted differential
-% cross-sections of a given observable respectively, and $C$ is the $k\times k$ total covariance
-% matrix defined by the sum of the statistical and systematic
-% covariances in \sigdata{} and \sigpred.
-% The statistical
-% covariance on \sigdata{}  is obtained from the expected number of SM events, as
-described in Section~\ref{sec:unc}.
-The $p$-value is the probability for the
-$\chi^2$, with $k$ degrees of
-freedom,  to have at
-least the observed value.
+Figure \ref{fig:cross-sec-m4l} presents the differential cross-section as a function of \mFourL{}, as well as two predicted SM cross-sections
+where either \SHERPA{} or \POWHEG{} is used to model the \qqFourL{} contribution. The breakdown of the SM processes in the predictions are plotted in colour and stacked. Various features corresponding the different physics processes are visible in this plot. At \mFourL{}=$m_\Z\simeq 91.19$~GeV~\cite{pdg_2021} there is the single resonant \Z peak, and similarly for the \mFourL{}=$m_{H}\simeq125.10$~\cite{pdg_2021} for the Higgs. An enhancement is visible at \mFourL{}=$2m_\Z\simeq 182$~GeV when the on-shell production of two \Z bosons becomes possible. Overall, the SM predictions are in agreement with the measurement within the quoted uncertainties for the entire distribution.
+\todo[inline]{Discuss the dominant stat uncertainty, and other uncertainty sources.}
 
+A $p$-value quantifies the probability of finding the data at least as extreme as the data observed \cite{cowan_munich}, with $n$ degrees of freedom equal to the number of bins. There are two $p$-values shown (one for each SM prediction using either \SHERPA{} or \POWHEG{} to model \qqFourL{}) for the inclusive \mFourL{} of Figure \ref{fig:cross-sec-m4l} and all other distributions. The $p$-value is derived from the $\chi^2$, which is defined as:
+\begin{equation}
+    \chi^2 = \left[ \sigdata - \sigpred \right] ^T C^{-1} \left[  \sigdata - \sigpred  \right]
+\end{equation}
+where \sigdata{} and \sigpred are $n$-dimensional vectors representing the binned measured and predicted differential cross-sections, and $C$ is the $n\times n$ summed total covariance matrix. For the inclusive \mFourL{} distribution, the calculated $p$-value for the data is $p=0.22$ for the \SHERPA{} prediction and $p=0.09$ for the \POWHEG{} prediction, echoing the results in Table \ref{tab:fidxs} where the \SHERPA{} prediction is the higher of the two and the data are higher than both predictions. 
 \begin{figure}[tb]
   \centering
-  \includegraphics[width = 0.85\textwidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_inclm4l.pdf} 
-    \caption{Differential cross-section as a function of \mFourL. The measured data
-  (black points)  are compared with the SM
-  prediction using either \SHERPA{} (red, with red hashed
-  band for the uncertainty) or \POWHEG{} + \pythia{} (blue,
-  with blue hashed band for the uncertainty) to model the \qqFourL{} contribution. The error bars on the data points give the total uncertainty
-  and the grey hashed band gives the systematic uncertainty. The
-  breakdown of the contribution from different SM processes is also
-  shown in successive stacked histograms.
-  The short vertical lines terminating horizontal lines indicate the boundaries of the different
-  \mFourL{} regions in which the other variables are measured.
-  \Pvalue{}
-  The
-  lower panel shows the ratio of the SM predictions to the 
-  data. The $x$-axis is on a linear scale until $\mFourL = 216$~\GeV,
-  where it switches to a logarithmic scale. \label{fig:cross-sec-m4l}}
+  \includegraphics[width = 0.7\textwidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_inclm4l.pdf} 
+    \caption{Differential cross-section as a function of the four-lepton invariant mass \mFourL as measured in data in black. \errorbars{} \SMpredictions{} 
+    The coloured stacked histograms represent the per-process breakdown of the SM prediction. In the lower left corner of the figure, boundary lines are drawn to indicate the four different \mFourL{} regions, each dominated by a different process. \Pvalue{} 
+    The ratio of the \SHERPA{} and \POWHEG{} prediction to the data is shown in the lower panel. The $x$-axis is on a linear scale until $\mFourL = 216$~\GeV, where it switches to a logarithmic scale. \label{fig:cross-sec-m4l}}
 \end{figure}
-In order to study the different \mFourL{} regions in more detail,  Figures~\ref{fig:mz1res} and~\ref{fig:mz2res} 
-show the cross-section versus 
-\mZOne{} and \mZTwo{} respectively in each region.
-In the \HFourL{} region the contribution from Higgs production is
-shown separately.
 
+Figure \ref{fig:m4l_pt4l} shows the differential cross-section as a function of \mFourL{} in five slices of the four-lepton transverse momentum, \ptFourL{}. Likewise in Figure \ref{fig:m4l_y4l} the \mFourL{} spectrum is plotted in five slices of $|\yFourL{}|$, the absolute rapidity of the four-lepton system. Figure \ref{fig:m4l_flavour} contains three subplots of the differential cross-section as a function of \mFourL{} in the $4e, 4\mu$ and $2e2\mu$ flavour channels. There is good agreement between the data and the SM predictions overall for these distributions, however, the \POWHEG{}+\pythia{} prediction in the $100 < \ptFourL{} < 600~\GeV$ slice and the $0.9 < \yFourL{} < 1.2$ slice are below the data, resulting in low $p$-values ($p = 0.008$ and $p = 0.003$ respectively).
 %% m4l vs pt4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
@@ -136,7 +62,7 @@ shown separately.
         \begin{subfigure}{.49\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_m4l_pt4l100-600.pdf}  \caption{$\unit{100}{\GeV} <  \ptFourL  < \unit{60 0}{\GeV}$}\label{fig:sub-fifth}
     \end{subfigure}
-    \caption{Differential cross-section as a function of \mFourL{} in slices of \ptFourL{}. The measured data (black points) are  compared with the SM prediction using either \SHERPA{} (red, with red hashed band for the uncertainty) or \POWHEG{} + \pythia{} (blue, with blue hashed band for the uncertainty) to model the \qqFourL{} contribution. The error bars on the data points give the total uncertainty and the grey hashed band gives the systematic uncertainty. \Pvalue{} The  lower panel shows the ratio of the SM predictions to the data.}
+    \caption{Differential cross-section as a function of \mFourL{} in slices of \ptFourL{}. \errorbars{} \SMpredictions{} \Pvalue{} The ratio of the \SHERPA{} prediction to the data is shown in the lower panel.}
     \label{fig:m4l_pt4l}
 \end{figure}
 
@@ -157,7 +83,7 @@ shown separately.
         \begin{subfigure}{.49\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_m4l_y4l1dot2-2dot5.pdf}  \caption{1.2 < \yFourL{} < 2.5}\label{fig:sub-fifth}
     \end{subfigure}
-    \caption{Differential cross-section as a function of \mFourL{} in slices of \yFourL{}. The measured data (black points) are  compared with the SM prediction using either \SHERPA{} (red, with red hashed band for the uncertainty) or \POWHEG{} + \pythia{} (blue, with blue hashed band for the uncertainty) to model the \qqFourL{} contribution. The error bars on the data points give the total uncertainty and the grey hashed band gives the systematic uncertainty. \Pvalue{} The  lower panel shows the ratio of the SM predictions to the data.}
+    \caption{Differential cross-section as a function of \mFourL{} in slices of \yFourL{}. \errorbars{} \SMpredictions{} \Pvalue{} The ratio of the \SHERPA{} prediction to the data is shown in the lower panel.}
     \label{fig:m4l_y4l}
 \end{figure}
 
@@ -172,10 +98,11 @@ shown separately.
     \begin{subfigure}{.49\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_m4l_event_type2mu2e.pdf}  \caption{$2e2\mu$ channel}\label{fig:sub-third}
     \end{subfigure}
-    \caption{Differential cross-section as a function of \mFourL{} for each lepton flavour channel. The measured data (black points)  are compared with the SM prediction using either \SHERPA{} (red, with red hashed band for the uncertainty) or \POWHEG{} + \pythia{} (blue, with blue hashed band for the uncertainty) to model the \qqFourL{} contribution. The error bars on the data points give the total uncertainty and the grey hashed band gives the systematic uncertainty. \Pvalue{} The lower panel shows the ratio of the SM predictions to the data.  The $x$-axis is on a linear scale until $\mFourL = 225$~\GeV, where it switches to a logarithmic scale.}
+    \caption{Differential cross-section as a function of \mFourL{} for each lepton flavour channel. \errorbars{} \SMpredictions{} \Pvalue{} The ratio of the \SHERPA{} prediction to the data is shown in the lower panel. The $x$-axis is on a linear scale until $\mFourL = 225$~\GeV, where it switches to a logarithmic scale.}
     \label{fig:m4l_flavour}
 \end{figure}
 
+The cross-section as a function of the dilepton mass of the primary and the secondary lepton pair, \mZOne{} and \mZTwo{}, are presented in Figures \ref{fig:m12_m4l} and \ref{fig:m34_m4l} in the different \mFourL{} regions. In the region dominated by Higgs production, the Higgs contribution is drawn separately in blue. For \mZOne{}, a peak is visible at $m_{\Z}$ in all but the \ZFourL{} region. \mZTwo{} on the other hand has the $m_{\Z}$ enhancement only in the \onshellZZ{} region where it is kinematically allowed. The \ZFourL{} and \offshellZZ{} regions of \mZTwo{} are dominated by off-shell \Z boson and photon exchange, while the \HFourL{} region is dominated by off-shell \Z production. There are some low $p$-values for these observables, notably in the \onshellZZ{} region of \mZOne{}, and the \HFourL{} and \offshellZZ{} region of \mZTwo{}. These are attributed to features discussed in Table \ref{tab:fidxs}, paired with statistical fluctuations in the data and differences in modelling between the two generators. 
 %% m12 vs m4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
@@ -201,10 +128,9 @@ shown separately.
       \label{fig:sub-fourth}
     \end{subfigure}
     \caption{Differential cross-section as a function of \mZOne{} in the four
-        \mFourL{} regions. The measured data (black points) are  compared with the SM prediction using either \SHERPA{} (red, with red hashed band for the uncertainty) or \POWHEG{} + \pythia{} (blue, with blue hashed band for the uncertainty) to model the \qqFourL{} contribution. In (b) the contribution from Higgs production is shown in addition to the total SM prediction. The error bars on the data points give the total uncertainty and the grey hashed band gives the systematic uncertainty. \Pvalue{} The  lower panel shows the ratio of the SM predictions to the data.}
+        \mFourL{} regions. \errorbars{} \SMpredictions{} \Pvalue{} The ratio of the \SHERPA{} prediction to the data is shown in the lower panel. In (b) the contribution from Higgs production is shown in addition to the total SM prediction.}
     \label{fig:m12_m4l}
 \end{figure}
-
 %% m34 vs m4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
@@ -224,6 +150,7 @@ shown separately.
     \label{fig:m34_m4l}
 \end{figure}
 
+The transverse momentum of the leading and sub-leading lepton pair in the four \mFourL{} regions are presented in Figures \ref{fig:pt12_m4l} and \ref{fig:pt34_m4l}. In the \onshellZZ{} region for both the spectrum peaks at around \unit{40}{\GeV}. For the other three regions, the peak is approximately \unit{20}{\GeV}. The shapes of all slices for both \ptZOne{} and \ptZTwo{} are similar, with a steady rise to the peak and a slow fall into the high $p_T$ tail.
 %% pt12 vs m4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
@@ -259,9 +186,10 @@ shown separately.
     \end{subfigure}
     \caption{Differential cross-section as a function of \ptZTwo{} in the four
         \mFourL{} regions. The measured data (black points) are  compared with the SM prediction using either \SHERPA{} (red, with red hashed band for the uncertainty) or \POWHEG{} + \pythia{} (blue, with blue hashed band for the uncertainty) to model the \qqFourL{} contribution. The error bars on the data points give the total uncertainty and the grey hashed band gives the systematic uncertainty. \Pvalue{} The  lower panel shows the ratio of the SM predictions to the data.}
-    \label{fig:pt23_m4l}
+    \label{fig:pt34_m4l}
 \end{figure}
 
+The variables \CTSOneTwo{} and \CTSThreeFour{} are sensitive to the polarization of the decaying bosons, and can serve as a probe for new physics \cite{Denner_2020}. For each lepton pair, $\theta^*$ is defined as the angle between the negative lepton in the \Z rest frame and the \Z boson in the lab frame. Figures \ref{fig:cts12_m4l} and \ref{fig:cts34_m4l} show the polarization variables leading and sub-leading lepton pair, \CTSOneTwo{} and \CTSThreeFour{}, in the \mFourL{} regions. There is good agreement between data and prediction for all distributions. 
 %% cosThetaStar1 vs m4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
@@ -300,6 +228,7 @@ shown separately.
     \label{fig:cts34_m4l}
 \end{figure}
 
+The unfolded cross-section in the \mFourL{} regions for the azimuthal angle between the leading and sub-leading leptons of the quadruplet, \dPhill{}, is shown in Figure \ref{fig:dPhill_m4l}. Studied in detail in Reference \cite{Gutschow_2021}, this variable is sensitive to next-to-leading order electroweak corrections on four lepton production. The shape of the distributions in the four regions are largely similar, peaking at \dPhill{}$\approx\pi$ when the leading and sub-leading leptons are in opposite hemispheres. Good agreement with the SM prediction is seen throughout. \todo{Although, in the offshell region the pvalues are <0.05? Discuss?}
 %% deltaPhiLeptons vs m4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering
@@ -319,6 +248,7 @@ shown separately.
     \label{fig:dPhill_m4l}
 \end{figure}
 
+Figures \ref{fig:dPhiPairs_m4l} and \ref{fig:dYPairs_m4l} show the azimuthal angle difference and the rapidity difference between the lepton pairs. In the \offshellZZ{} and \onshellZZ{} region of \dPhiPairs{}, the low $p$-values are mainly driven by statistical fluctuations in the data alongside low SM predictions for \dPhiPairs{}$<\frac{26}{64}\pi$. The \dYPairs{} distributions peak at zero and with a gradual tail to five. In the \onshellZZ{} region of \dYPairs{}, the SM prediction drops to be up to 50\% lower than the data at high values, indicating mis-modelling by the MC generators. 
 %% deltaPhiPairs vs m4l
 \begin{figure}[htb!]
     \begin{subfigure}{.49\textwidth}\centering

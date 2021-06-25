@@ -1,12 +1,12 @@
 %% For normal draft builds (figs undisplayed hence fast compile)
 %\documentclass[hyperpdf,nobind,draft,oneside]{hepthesis}
-% \documentclass[hyperpdf,nobind,draft,twoside]{hepthesis}
+\documentclass[hyperpdf,nobind,draft,twoside]{hepthesis}
 
 %% For short draft builds (breaks citations by necessity)
-%\documentclass[hyperpdf,nobind,draft,hidefrontback]{hepthesis}
+% \documentclass[hyperpdf,nobind,draft,hidefrontback]{hepthesis}
 
 %%For Cambridge soft-bound version
-\documentclass[hyperpdf,bindnopdf]{hepthesis}
+% \documentclass[hyperpdf,bindnopdf]{hepthesis}
 %% For Cambridge hard-bound version (must be one-sided)
 %\documentclass[hyperpdf,oneside]{hepthesis}
 
@@ -14,7 +14,7 @@
 %\usepackage{lmodern}
 \usepackage{mathpazo}
 %\usepackage{euler}
-\usepackage[top=40mm,bottom=30mm,inner=25mm,outer=25mm]{geometry}
+\usepackage[top=35mm,bottom=25mm,inner=25mm,outer=25mm,headsep=7mm]{geometry}
 
 %% Put package includes etc. into preamble.tex for convenience
 \input{Content/preamble}
@@ -57,8 +57,8 @@
 %   \input{Content/theory}
 %   \input{Content/mcevgen}
 %   \input{Content/ATLASdetector}
-  \input{Content/fourlepton}
-%   \input{Content/reinterpretation}
+%   \input{Content/fourlepton}
+  \input{Content/reinterpretation}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}
 \end{mainmatter}
