@@ -155,6 +155,118 @@ this case, the ATLAS exclusion ranges from \SIrange{1310}{1420}{\GeV} over the
 branching ratio half-plane. Here the difference in sensitivity between the ATLAS searches and \contur is nicely seen. From \contur, the exclusion comes primarily from measurements involving top quarks and $W$ bosons~\cite{Aaboud:2017fye,Aaboud:2018eqg,Sirunyan:2018wem,Khachatryan:2016mnb,Sirunyan:2018ptc}. The ATLAS combination limit in mauve on the other hand, has three contributions from searches sensitive to $T$-decay to $Ht$~\cite{HbbSearch,TriLepSearch,HadSearch}, two that target $T$-decay to $Zt$~\cite{ZnunuSearch,ZllSearch}, and only one sensitive in the $W$ channel~\cite{WbSearch}. Again, the measurement sensitivity is quite complementary to the searches.
 
 \subsection{All quark generations}
-Although most searches at \ATLAS and \CMS assume that VLQs couple only to the third-generation quarks, it is not at all the case that mixing with the first- and second-generation quarks are forbidden. They do, however, receive more stringent lower bounds on the overall coupling $\kappa$ from flavour physics~\cite{Buchkremer_2013}. 
+Although most searches at \ATLAS and \CMS assume that VLQs couple only to the third-generation quarks, it is not at all the case that mixing with the first- and second-generation quarks are forbidden. They do, however, receive more stringent lower bounds on the overall coupling $\kappa$ from flavour physics~\cite{Buchkremer_2013}. These bounds come from the LEP measurements of the $Z$ boson's couplings to light quarks, and from other low energy experiments such as the measurement of the weak charge of the Cesium atom (Atom Parity Violation)~\cite{}. These measurements are proportional to the branching fraction to the specific generation, and therefore from it an absolute bound on $\kappa$ can be extracted. For VLQs that couple only to one SM quark generation at a time, these bounds are estimated to be$\kappa<0.07$ and $\kappa=0.2$ for coupling to the first- and second-generation only. Although scenarios with VLQ couplings to all generations is allowed, they suffer from an extra order of magnitude suppression on $\kappa$~\cite{}. 
 
-Pair production sees a suppression from PDF rescaling at high VLQ masses, therefore when $M_Q$ is large enough, single production will dominate~\cite{Panizzi:2014dwa}. 
+At low VLQ masses, the QCD induced pair production mode is dominant. As previously discussed, this is independent of the overall coupling $\kappa$. However, pair production sees a suppression from PDF rescaling at high VLQ masses, therefore when $M_Q$ is large enough, single production becomes dominant~\cite{Panizzi:2014dwa}. This feature is of particular interest when the VLQs couple to first-generation quarks. Since the proton's valence quarks are of the first-generation, production diagrams that involve two incoming initial state quarks will see an enhancement. In particular, the $t-$channel VLQ pair production via the weak interaction (Figure~\ref{}) becomes dominant, and a dependence on $kappa$ comes into play. 
+The rest of this subsection explores the VLQs coupling to each of the SM quark generations independently, in four $\xi_V$ branching fraction scenario indicated by ratios: 
+\begin{itemize}
+	\item{$W:H:Z=0:0:1$ coupling only to the $Z$ boson}
+	\item{$W:H:Z=0:1:0$ coupling only to the Higgs boson}
+	\item{$W:H:Z=1:0:0$ coupling only to the $W$ boson}
+	\item{$W:H:Z=\frac{1}{2}:\frac{1}{4}:\frac{1}{4}$ an admixture of the three bosons}.
+\end{itemize}
+The results are presented as two-dimensional exclusion maps in the plane of $M_Q$ and $\kappa$. Each square on the map represents a scan point for a specific $(M_Q,\kappa)$ combination where a CLs value is calculated by \contur. The colour of the square indicates the dominant analyses pool contributing towards the exclusion. The final state of the \ATLAS analysis present in Section~\ref{sec:m4l} is four leptons, and therefore belongs to the four lepton pool in pink. The solid white line is the exclusion at 95\% CLs, and the dashed at 68\%. 
+
+\subsubsection{Coupling to first-generation quarks}
+
+\begin{figure}[tbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{1Gen/HWZ100/dominantPools0}\label{fig:gen1:001:dom}}
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{1Gen/HWZ001/dominantPools0}\label{fig:gen1:010:dom}} \\
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{1Gen/HWZ010/dominantPools0}\label{fig:gen1:100:dom}}
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{1Gen/HWZ121/dominantPools0}\label{fig:gen1:121:dom}}
+  \vspace*{2ex} \\
+  \begin{tabular}{lll}
+    \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet\\
+    % \swatch{gold}~ATLAS $\gamma$
+    \swatch{darkorange}~ATLAS $\mu\mu$+jet & \swatch{orangered}~ATLAS $ee$+jet & \swatch{orange!60}~ATLAS $\ell\ell$+jet\\
+    % \swatch{orangered!90}~ATLAS $ee$+jet
+    \swatch{silver}~ATLAS jets & \swatch{dimgrey}~CMS jets & \\
+    \swatch{deepskyblue} CMS~$e$+\MET{}+jet & \swatch{magenta} ATLAS~4$\ell$ &
+  \end{tabular}
+  \vspace*{2ex}
+  \caption{Dominant LHC analysis pools contributing to VLQ limit-setting in the
+    $\kappa$ vs VLQ mass plane, where $\kappa$ is the coupling to
+    first-generation SM quarks.  All VLQ ($B, T, X, Y$) masses are set to be
+    degenerate. The disfavoured regions are located above and to the left of the
+    dashed (68\%~CL) and solid (95\%~CL) white contours respectively. The lower
+    bounds in $\kappa$ from non-LHC flavour physics are indicated with the pink
+    horizontal contour. The VLQ branching fractions to \WZH are
+    \protect\subref{fig:gen1:001:dom}~\WZHzzo
+    \protect\subref{fig:gen1:010:dom}~\WZHzoz
+    \protect\subref{fig:gen1:100:dom}~\WZHozz and
+    \protect\subref{fig:gen1:121:dom}~\WZHtoo.}
+  \label{fig:1gen:dom}
+\end{figure}
+
+\subsubsection{Coupling to second-generation quarks}
+
+\begin{figure}[tbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{2Gen/HWZ100/dominantPools0}\label{fig:gen2:001:dom}}
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{2Gen/HWZ001/dominantPools0}\label{fig:gen2:010:dom}} \\
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{2Gen/HWZ010/dominantPools0}\label{fig:gen2:100:dom}}
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{2Gen/HWZ121/dominantPools0}\label{fig:gen2:121:dom}}
+  \vspace*{2ex}
+  \begin{tabular}{llll}
+    \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet\\
+    % \swatch{snow}~ATLAS $t\bar{t}$ hadr &
+    % \swatch{darkorange!90!black}~ATLAS $\mu\mu$+jet
+    \swatch{orangered}~ATLAS $ee$+jet & \swatch{darkorange}~ATLAS $\mu\mu$+jet & \swatch{orange!60}~ATLAS $\ell\ell$+jet\\
+    \swatch{magenta} ATLAS~4$\ell$ & \swatch{silver}~ATLAS jets & \swatch{dimgrey}~CMS jets\\
+    %\swatch{gold}~ATLAS $\gamma$
+  \end{tabular}
+  \vspace*{2ex}
+  \caption{Dominant LHC analysis pools contributing to VLQ limit-setting in the
+    $\kappa$ vs VLQ mass plane, where $\kappa$ is the coupling to
+    second-generation SM quarks.  All VLQ ($B, T, X, Y$) masses are set to be
+    degenerate. The disfavoured regions are located above and to the left of the
+    dashed (68\%~CL) and solid (95\%~CL) white contours respectively. The lower
+    bounds in $\kappa$ from non-LHC flavour physics are indicated with the pink
+    horizontal contour. The VLQ branching fractions to \WZH are
+    \protect\subref{fig:gen2:001:dom}~\WZHzzo
+    \protect\subref{fig:gen2:010:dom}~\WZHzoz
+    \protect\subref{fig:gen2:100:dom}~\WZHozz and
+    \protect\subref{fig:gen2:121:dom}~\WZHtoo.}
+  \label{fig:2gen:dom}
+\end{figure}
+
+\subsubsection{Coupling to third-generation quarks}
+
+\begin{figure}[tbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{3Gen/HWZ100/dominantPools0}\label{fig:gen3:001:dom}}
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{3Gen/HWZ001/dominantPools0}\label{fig:gen3:010:dom}} \\
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{3Gen/HWZ010/dominantPools0}\label{fig:gen3:100:dom}}
+  \subfloat[]{
+    \includegraphics[width=0.45\textwidth]{3Gen/HWZ121/dominantPools0}\label{fig:gen3:121:dom}}
+  \vspace*{2ex}
+  \begin{tabular}{lll}
+    \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet \\
+    \swatch{powderblue} CMS $\ell$+\MET{}+jet & \swatch{darkorange}~ATLAS $\mu\mu$+jet & \swatch{magenta} ATLAS~4$\ell$ \\
+    \swatch{silver}~ATLAS jets & \swatch{dimgrey}~CMS jets & \swatch{snow}~ATLAS $t\bar{t}$ hadronic
+  \end{tabular}
+  \vspace*{2ex}
+  \caption{Dominant LHC analysis pools contributing to VLQ limit-setting in the $\kappa$ vs
+    VLQ mass plane, where $\kappa$ is the coupling to third-generation SM quarks.
+    All VLQ ($B, T, X, Y$) masses are set to be degenerate. The disfavoured regions
+    are located above and to the left of the dashed (68\%~CL)
+    and solid (95\%~CL) white contours respectively. The VLQ branching
+    fractions to \WZH are \protect\subref{fig:gen3:001:dom}~\WZHzzo
+    \protect\subref{fig:gen3:010:dom}~\WZHzoz \protect\subref{fig:gen3:100:dom}~\WZHozz
+    and \protect\subref{fig:gen3:121:dom}~\WZHtoo. %
+  }
+  \label{fig:3gen:dom}
+\end{figure}
+
