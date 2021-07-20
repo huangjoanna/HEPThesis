@@ -1,0 +1,111 @@
+% \documentclass{article}
+% \usepackage[svgnames*]{xcolor}
+
+\definecolor{greenyellow}{HTML}{ADFF2F}
+\definecolor{crimson}{HTML}{DC143C}
+\definecolor{indianred}{HTML}{CD5C5C}
+\definecolor{darkolivegreen}{HTML}{556B2F}
+\definecolor{darkgreen}{HTML}{006400}
+\definecolor{orangered}{HTML}{FF4500}
+\definecolor{goldenrod}{HTML}{DAA520}
+\definecolor{darksalmon}{HTML}{E9967A}
+\definecolor{seagreen}{HTML}{2E8B57}
+\definecolor{wheat}{HTML}{F5DEB3}
+\definecolor{snow}{HTML}{FFFAFA}
+\definecolor{saddlebrown}{HTML}{8B4513}
+\definecolor{gold}{HTML}{FFD700}
+\definecolor{deepskyblue}{HTML}{00BFFF}
+\definecolor{hotpink}{HTML}{FF69B4}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{lightsalmon}{HTML}{FFA07A}
+\definecolor{royalblue}{HTML}{4169E1}
+\definecolor{lightgreen}{HTML}{90EE90}
+\definecolor{dimgrey}{HTML}{696969}
+\definecolor{steelblue}{HTML}{4682B4}
+\definecolor{darkorange}{HTML}{FF8C00}
+\definecolor{powderblue}{HTML}{B0E0E6}
+\definecolor{mediumseagreen}{HTML}{3CB371}
+\definecolor{cornflowerblue}{HTML}{6495ED}
+\definecolor{darkgoldenrod}{HTML}{B8860B}
+\definecolor{cadetblue}{HTML}{5F9EA0}
+\definecolor{firebrick}{HTML}{B22222}
+\definecolor{salmon}{HTML}{FA8072}
+\definecolor{silver}{HTML}{C0C0C0}
+\definecolor{navy}{HTML}{000080}
+
+\usepackage{tikz}
+\newcommand{\swatch}[1]{\tikz[baseline=-0.6ex] \node[fill=#1,shape=rectangle,draw=black,thick,minimum width=5mm,rounded corners=0.5pt](){};}
+
+\endinput
+
+
+\begin{document}
+\begin{tabular}{llll}
+\swatch{cornflowerblue}~ATLAS $WW$ &
+\swatch{navy}~ATLAS $\mu$+MET+jet &
+\swatch{cadetblue}~ATLAS $e$+MET+jet &
+\swatch{dimgrey}~CMS jets \\
+\swatch{silver}~ATLAS jets &
+\swatch{gold}~ATLAS $\gamma$ &
+\swatch{orange}~ATLAS $\ell\ell$+jet &
+\swatch{darkorange}~ATLAS $\mu\mu$+jet \\
+\swatch{orangered}~ATLAS $ee$+jet &
+\swatch{orangered!90}~ATLAS $ee$+jet
+\end{tabular}
+
+\vspace*{2em}
+
+\begin{tabular}{llll}
+\swatch{cornflowerblue}~ATLAS $WW$ &
+\swatch{blue}~ATLAS $\ell$+MET+jet &
+\swatch{cadetblue}~ATLAS $e$+MET+jet &
+\swatch{snow}~ATLAS $t\bar{t}$ hadr \\
+\swatch{darkorange}~ATLAS $\mu\mu$+jet &
+\swatch{orange}~ATLAS $\ell\ell$+jet &
+\swatch{gold}~ATLAS $\gamma$
+\end{tabular}
+
+\vspace*{2em}
+
+\begin{tabular}{lll}
+\swatch{cornflowerblue}~ATLAS $WW$ &
+\swatch{navy}~ATLAS $\mu$+MET+jet &
+\swatch{cadetblue}~ATLAS $e$+MET+jet \\
+\swatch{darkorange}~ATLAS $\mu\mu$+jet &
+\swatch{dimgrey}~CMS jets &
+\swatch{snow}~ATLAS $t\bar{t}$ hadr
+\end{tabular}
+
+
+\swatch{darkolivegreen} ATLAS\_13\_HMDY\\
+\swatch{crimson} ATLAS\_3L\\
+\swatch{magenta} ATLAS\_4L\\
+\swatch{tomato} ATLAS\_7\_DY\\
+\swatch{mediumseagreen} ATLAS\_7\_LL\_GAMMA\\
+\swatch{lightgreen} ATLAS\_7\_LMET\_GAMMA\\
+\swatch{crimson} ATLAS\_8\_HMDY\_LL\\
+\swatch{greenyellow} ATLAS\_8\_MM\_GAMMA\\
+\swatch{darkgoldenrod} ATLAS\_GAMMA\_MET\\
+\swatch{blue} ATLAS\_LMETJET\\
+\swatch{green} ATLAS\_METJET\\
+\swatch{snow} ATLAS\_TTHAD\\
+\swatch{firebrick} ATLAS\_ZZ\\
+\swatch{seagreen} CMS\_13\_HMDY\\
+\swatch{saddlebrown} CMS\_3L\\
+\swatch{hotpink} CMS\_4L\\
+\swatch{lightsalmon} CMS\_EEJET\\
+\swatch{deepskyblue} CMS\_EMETJET\\
+\swatch{yellow} ATLAS\_GAMMA\\
+\swatch{goldenrod} CMS\_GAMMA\_MET\\
+\swatch{salmon} CMS\_LLJET\\
+\swatch{powderblue} CMS\_LMETJET\\
+\swatch{darkgreen} CMS\_METJET\\
+\swatch{steelblue} CMS\_MMETJET\\
+\swatch{darksalmon} CMS\_MMJET\\
+\swatch{wheat} CMS\_TTHAD\\
+\swatch{royalblue} CMS\_WW\\
+\swatch{indianred} CMS\_ZZ\\
+\swatch{brown} LHCB\_7\_LLJET\\
+\swatch{white} other\\
+
+\end{document}
