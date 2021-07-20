@@ -314,19 +314,31 @@ It is important to highlight here the impact of analyses publishing bin-correlat
 \subsection{Role of the \ATLAS \mFourL{} measurement}
 Assuming a $\xi_Z=1$ branching fraction, the production of a vector-like $B$ or $T$ quark at the \LHC is characterized by final states with high \pT $Z$ bosons. In the case where there are two $Z$ bosons involved that both decay into charged leptons, the result is a four lepton final state made up of two same flavour, opposite sign, lepton pairs. All pair production modes can contribute to the four lepton signature since $BB$ and $TT$ decay to $ZtZt$ and $ZbZb$ respectively. Single production can also result in a four lepton final state, if the VLQ is produced in association with a $Z$ boson (Figure~\ref{fig:feyndiags:QV1} and~\ref{fig:feyndiags:QV2}). The \ATLAS \mFourL{}measurement presented in Chapter~\ref{chap:fourlepton} falls into this final state and therefore is sensitive to the production of VLQs in the $Z$ only scenario. This section explores the role that the full Run II \mFourL{} measurement plays in constraining VLQs. The results presented in the previous sections were made with \contur version 1.2.2 and \rivet 3.1.1 prior to the publication of the four lepton analysis. In this section the $Z$ only configuration scans are remade using \contur 2.1.x and \rivet 3.1.4 \todo{Differences?}, which includes the newly published four lepton measurement~\cite{m4l2021_paper}. 
 
+Figure~\ref{fig:vlq:newm4l} shows the new \contur scans in the $\xi_Z=1$ $Z$ only configuration for VLQs coupling to the first-, second-, and third-generation SM quarks. These scans are replicated in the same model parameter space as that of Figure~\ref{fig:gen1:010:dom}, Figure~\ref{fig:gen2:010:dom} and Figure~\ref{fig:gen3:010:dom}, and uses the \ATLAS full Run II \mFourL{} measurement (and other new measurements) in calculating the excluded region. Looking at Figure~\ref{fig:gen1:001:newm4l} for coupling to the first-generation quarks, the limits as well as the most sensitivity analyses pools are similar to that of Figure~\ref{fig:gen1:010:dom}, with some minor differences. First, the white exclusion contour at 95\% is more stringent, extending to lower values of $\kappa$. Second, there is the appearance of the sand-coloured \CMS $ee$+jet and \CMS $\mu\mu+$jet at high mass, as well as a slightly more prominent \ATLAS $4\ell$ in pink. 
+
+For the second-generation quarks shown in Figure~\ref{fig:gen2:001:newm4l} it is a similar story, although the effects are more prominent. Beyond $M_Q=$\unit{1500}{\GeV}, it is the \CMS $Z+$jets pool that dominates rather than the \ATLAS $Z+$jet, this is due to the addition of two CMS analyses~\cite{Sirunyan:2019bzr,Sirunyan:2018cpw}. The four lepton pool, which was not visible in the \contur 1.2.2 scan of Figure~\ref{fig:gen2:010:dom}, now makes an appearance at low $\kappa$ between \unit{1000}{\GeV}-\unit{1250}{\GeV}. Overall, the \contur limit is more stringent. In the high mass region in particular, the increased sensitivity results in a more visible dependence on $\kappa$. 
+
+Lastly, Figure~\ref{fig:gen3:100:newm4l} is for VLQs that interact only with third-generation quarks. Here the dominant final state pool for the majority of scan points is still \ATLAS $WW$~\footnote{Due to plotting script modifications, \ATLAS $WW$ is turquoise in this plot, and sky blue in Figure~\ref{fig:gen2:010:dom}}. At VLQ masses between \unit{650}{\GeV}-\unit{1100}{\GeV}, there is a notable pink patch that was not visible prior. This is attributed to the addition of the four lepton measurement presented in Chapter~\ref{chap:fourlepton}, whose increase statistics and widened acceptance has boosted the four lepton pool to be the one providing the most sensitivity at those points. 
+
 \begin{figure}[tbp]
   \centering
   \subfloat[]{
-    \includegraphics[width=0.55\textwidth]{Figures/VLQ/}\label{fig:gen3:001:dom}}\\
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/newm4l/1genWHZ001.pdf}\label{fig:gen1:001:newm4l}}\\
   \subfloat[]{
-    \includegraphics[width=0.55\textwidth]{Figures/VLQ/3Gen/HWZ001/dominantPools0}\label{fig:gen3:010:dom}} \\
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/newm4l/2genWHZ001.pdf}\label{fig:gen2:010:newm4l}} \\
   \subfloat[]{
-    \includegraphics[width=0.55\textwidth]{Figures/VLQ/3Gen/HWZ010/dominantPools0}\label{fig:gen3:100:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/newm4l/3genWHZ001.pdf}\label{fig:gen3:100:newm4l}}
   \vspace*{2ex}
-  \begin{tabular}{lll}
-    \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet \\
-    \swatch{powderblue} CMS $\ell$+\MET{}+jet & \swatch{darkorange}~ATLAS $\mu\mu$+jet & \swatch{magenta} ATLAS~4$\ell$ \\
-    \swatch{silver}~ATLAS jets & \swatch{dimgrey}~CMS jets & \swatch{snow}~ATLAS $t\bar{t}$ hadronic
+  \begin{tabular}{llll}
+        \swatch{navy}~ATLAS $\mu$+\MET{}+jet &
+        \swatch{magenta}~ATLAS 4$\ell$ &
+        \swatch{lightsalmon}~CMS $ee$+jet \\
+        \swatch{darksalmon}~CMS $\mu\mu$+jet &
+        \swatch{darkorange}~ATLAS $\mu\mu$+jet &
+        \swatch{orangered}~ATLAS $ee$+jet \\
+        \swatch{turquoise}~ATLAS $WW$ &
+        \swatch{silver}~ATLAS jets &
+        \swatch{cadetblue}~ATLAS $e$+\MET{}+jet & 
   \end{tabular}
   \vspace*{2ex}
   \caption{Dominant LHC analysis pools contributing to VLQ limit-setting in the $\kappa$ vs
@@ -334,9 +346,16 @@ Assuming a $\xi_Z=1$ branching fraction, the production of a vector-like $B$ or 
     All VLQ ($B, T, X, Y$) masses are set to be degenerate. The disfavoured regions
     are located above and to the left of the dashed (68\%~CL)
     and solid (95\%~CL) white contours respectively. The VLQ branching
-    fractions to \WZH are \protect\subref{fig:gen3:001:dom}~\WZHzzo
-    \protect\subref{fig:gen3:010:dom}~\WZHzoz \protect\subref{fig:gen3:100:dom}~\WZHozz
-    and \protect\subref{fig:gen3:121:dom}~\WZHtoo. %
+    fraction to \WZH is~\WZHzoz. Plots are made with \contur 2.1.x and \rivet 3.1.4. %
   }
-  \label{fig:3gen:dom}
+  \label{fig:vlq:newm4l}
+\end{figure}
+
+\begin{figure}[htb!]
+    \begin{subfigure}{.45\textwidth}\centering
+      \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_m4l_event_type4mu.pdf}\caption{$4\mu$ channel}\label{fig:sub-first}
+    \end{subfigure}
+    \begin{subfigure}{.45\textwidth}\centering
+      \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldedResults/linlog_Unfolded_Data_m4l_event_type4e.pdf} \caption{$4e$ channel}\label{fig:sub-second}
+    \end{subfigure}
 \end{figure}
