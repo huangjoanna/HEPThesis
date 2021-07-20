@@ -135,8 +135,8 @@ Figures~\ref{fig:feyndiags}(\subref*{fig:feyndiags:Qq1}--\subref*{fig:feyndiags:
 Typically, searches conducted by the \ATLAS and \CMS experiments focus on the $T$ and $B$ vector-like quarks that couple only with the third generation SM quarks. In this sub-section the same assumption are made in order to compare the exclusions from \LHC results to exclusions computed by \contur. The $B$ and $T$ quarks are studied separately with all other VLQs decoupled from the SM. The possible decay channels are $b + Z$, $b + H$ and $t + W$ for the $B$ quark, and similarly $t + Z$, $t + H$ and $b = W$ for the $T$. Both \ATLAS and \CMS have conducted searches targeting specific final states~\todo{Provide some paper citations?}. \ATLAS published a combination limit from multiple searches of pair-produced VLQs in Reference~\cite{ATLAS_VLQ_combination}, and similarly from \CMS in Reference~\cite{Sirunyan_2018}. The \ATLAS results presents the exclusion limits in a two-dimensional parameter space of the VLQ branching ratios which is easily mimicked by \contur.
 \begin{figure}[tbp]
     \vspace{-0.4cm}
-    \subfloat[]{\includegraphics[width=0.45\textwidth]{B/1200/combinedOverlay}\label{fig:BTonlyB}}
-    \subfloat[]{\includegraphics[width=0.45\textwidth]{T/1350/combinedOverlay}\label{fig:BTonlyT}}
+    \subfloat[]{\includegraphics[width=0.45\textwidth]{Figures/VLQ/B/1200/combinedOverlay}\label{fig:BTonlyB}}
+    \subfloat[]{\includegraphics[width=0.45\textwidth]{Figures/VLQ/T/1350/combinedOverlay}\label{fig:BTonlyT}}
     \caption{Sensitivity of LHC measurements to
     \protect\subref{fig:BTonlyB}~$B$-production for $M_B = \SI{1200}{\GeV}$ and
     \protect\subref{fig:BTonlyT}~$T$-production for $M_T = \SI{1350}{\GeV}$.
@@ -147,7 +147,7 @@ Typically, searches conducted by the \ATLAS and \CMS experiments focus on the $T
     \label{fig:BTonly}
 \end{figure}
 
-Figures~\ref{fig:BTonlyB} and~\ref{fig:BTonlyT} show the results of the \contur scan in the triangular plane of the branching ratios to the weak bosons, for $M_B = \SI{1200}{\GeV}$ and $M_T = \SI{1350}{\GeV}$ respectively. It is assumed that the sum of the branching ratios to the $W$, $Z$, and Higgs bosons is equal to one. On the $x$-axis is the BR to $W$'s $\xi^W$, and on the $y$-axis is $\xi^H$. The branching ratio to $Z$ bosons, therefore, is $1-\xi^W-\xi^H$. The shaded purple region shows the excluded phase-space at 95\% confidence level (CL) by \ATLAS. 
+Figures~\ref{fig:BTonlyB} and~\ref{fig:BTonlyT} show the results of the \contur scan in the triangular plane of the branching ratios to the weak bosons, for $M_B = \unit{1200}{\GeV}$ and $M_T = \unit{1350}{\GeV}$ respectively. It is assumed that the sum of the branching ratios to the $W$, $Z$, and Higgs bosons is equal to one. On the $x$-axis is the BR to $W$'s $\xi^W$, and on the $y$-axis is $\xi^H$. The branching ratio to $Z$ bosons, therefore, is $1-\xi^W-\xi^H$. The shaded purple region shows the excluded phase-space at 95\% confidence level (CL) by \ATLAS. 
 
 Looking first at Figure~\ref{fig:BTonlyB} for the VLB, the excluded region from \contur is in the $Z$ corner of the branching ratio triangle and comes mainly from $Z+$jet measurements~\cite{Aad:2015auj,Aaboud:2017hox,Aaboud:2017hbk,Aaboud:2019jcc}. tHE \ATLAS limit in mauve, on the other hand, receives contributions from four main searches: one each targeting the $Z$ and $H$ decay channels~\cite{ZllSearch,HadSearch}, and the remaining two target $B$-decay to $Wt$~\cite{WtSearch,TriLepSearch}. As a result, the sensitivity for $BR(B\rightarrow tW)$ is high, thus leading to a strong exclusion at the bottom-right corner of the triangle. The excluded regions from \contur and \ATLAS are somewhat complementary. 
 
@@ -171,13 +171,13 @@ The results are presented as two-dimensional exclusion maps in the plane of $M_Q
 \begin{figure}[tbp]
   \centering
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{1Gen/HWZ100/dominantPools0}\label{fig:gen1:001:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/1Gen/HWZ100/dominantPools0}\label{fig:gen1:001:dom}}
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{1Gen/HWZ001/dominantPools0}\label{fig:gen1:010:dom}} \\
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/1Gen/HWZ001/dominantPools0}\label{fig:gen1:010:dom}} \\
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{1Gen/HWZ010/dominantPools0}\label{fig:gen1:100:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/1Gen/HWZ010/dominantPools0}\label{fig:gen1:100:dom}}
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{1Gen/HWZ121/dominantPools0}\label{fig:gen1:121:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/1Gen/HWZ121/dominantPools0}\label{fig:gen1:121:dom}}
   \vspace*{2ex} \\
   \begin{tabular}{lll}
     \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet\\
@@ -212,13 +212,13 @@ The colouring of the plot indicates the dominant analyses contributing to the ex
   \hspace*{-3.5em}%
   \mbox{%
     \subfloat[]{
-      \includegraphics[width=0.36\textwidth]{1Gen/HWZ010/Rivet/0105/d75-x01-y01}\label{fig:gen1:wjjscan:a}}
+      \includegraphics[width=0.36\textwidth]{Figures/VLQ/1Gen/HWZ010/Rivet/0105/d75-x01-y01}\label{fig:gen1:wjjscan:a}}
     \quad
     \subfloat[]{
-      \includegraphics[width=0.36\textwidth]{1Gen/HWZ010/Rivet/0152/d75-x01-y01}\label{fig:gen1:wjjscan:b}}
+      \includegraphics[width=0.36\textwidth]{Figures/VLQ/1Gen/HWZ010/Rivet/0152/d75-x01-y01}\label{fig:gen1:wjjscan:b}}
     \quad
     \subfloat[]{
-      \includegraphics[width=0.36\textwidth]{1Gen/HWZ010/Rivet/0257/d75-x01-y01}\label{fig:gen1:wjjscan:c}}
+      \includegraphics[width=0.36\textwidth]{Figures/VLQ/1Gen/HWZ010/Rivet/0257/d75-x01-y01}\label{fig:gen1:wjjscan:c}}
     }
     \caption{ATLAS \SI{8}{\TeV} $Wjj$ forward-lepton control region leading-jet
       \pT distributions at three points on the 95\% exclusion contour for
@@ -232,8 +232,7 @@ The colouring of the plot indicates the dominant analyses contributing to the ex
       In the lower insets, the ratio is shown and the yellow band indicates the significance, taking into
       account the statistical and systematic uncertainties on the data. The legend gives the exclusion
       (i.e. one minus the $p$-value)  for that histogram after fitting nuisance parameters for the correlated
-      systematic uncertainties.
-}
+      systematic uncertainties.}
   \label{fig:gen1:wjjscan}
 \end{figure}
 
@@ -245,13 +244,13 @@ The $Z$+jets analyses are driving the exclusion in the $Z$ configuration, and th
 \begin{figure}[tbp]
   \centering
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{2Gen/HWZ100/dominantPools0}\label{fig:gen2:001:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/2Gen/HWZ100/dominantPools0}\label{fig:gen2:001:dom}}
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{2Gen/HWZ001/dominantPools0}\label{fig:gen2:010:dom}} \\
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/2Gen/HWZ001/dominantPools0}\label{fig:gen2:010:dom}} \\
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{2Gen/HWZ010/dominantPools0}\label{fig:gen2:100:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/2Gen/HWZ010/dominantPools0}\label{fig:gen2:100:dom}}
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{2Gen/HWZ121/dominantPools0}\label{fig:gen2:121:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/2Gen/HWZ121/dominantPools0}\label{fig:gen2:121:dom}}
   \vspace*{2ex}
   \begin{tabular}{llll}
     \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet\\
@@ -286,13 +285,13 @@ It is important to highlight here the impact of analyses publishing bin-correlat
 \begin{figure}[tbp]
   \centering
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{3Gen/HWZ100/dominantPools0}\label{fig:gen3:001:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/3Gen/HWZ100/dominantPools0}\label{fig:gen3:001:dom}}
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{3Gen/HWZ001/dominantPools0}\label{fig:gen3:010:dom}} \\
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/3Gen/HWZ001/dominantPools0}\label{fig:gen3:010:dom}} \\
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{3Gen/HWZ010/dominantPools0}\label{fig:gen3:100:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/3Gen/HWZ010/dominantPools0}\label{fig:gen3:100:dom}}
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{3Gen/HWZ121/dominantPools0}\label{fig:gen3:121:dom}}
+    \includegraphics[width=0.45\textwidth]{Figures/VLQ/3Gen/HWZ121/dominantPools0}\label{fig:gen3:121:dom}}
   \vspace*{2ex}
   \begin{tabular}{lll}
     \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet \\
@@ -312,3 +311,32 @@ It is important to highlight here the impact of analyses publishing bin-correlat
   \label{fig:3gen:dom}
 \end{figure}
 
+\subsection{Role of the \ATLAS \mFourL{} measurement}
+Assuming a $\xi_Z=1$ branching fraction, the production of a vector-like $B$ or $T$ quark at the \LHC is characterized by final states with high \pT $Z$ bosons. In the case where there are two $Z$ bosons involved that both decay into charged leptons, the result is a four lepton final state made up of two same flavour, opposite sign, lepton pairs. All pair production modes can contribute to the four lepton signature since $BB$ and $TT$ decay to $ZtZt$ and $ZbZb$ respectively. Single production can also result in a four lepton final state, if the VLQ is produced in association with a $Z$ boson (Figure~\ref{fig:feyndiags:QV1} and~\ref{fig:feyndiags:QV2}). The \ATLAS \mFourL{}measurement presented in Chapter~\ref{chap:fourlepton} falls into this final state and therefore is sensitive to the production of VLQs in the $Z$ only scenario. This section explores the role that the full Run II \mFourL{} measurement plays in constraining VLQs. The results presented in the previous sections were made with \contur version 1.2.2 and \rivet 3.1.1 prior to the publication of the four lepton analysis. In this section the $Z$ only configuration scans are remade using \contur 2.1.x and \rivet 3.1.4 \todo{Differences?}, which includes the newly published four lepton measurement~\cite{m4l2021_paper}. 
+
+\begin{figure}[tbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.55\textwidth]{Figures/VLQ/3Gen/HWZ100/dominantPools0}\label{fig:gen3:001:dom}}\\
+  \subfloat[]{
+    \includegraphics[width=0.55\textwidth]{Figures/VLQ/3Gen/HWZ001/dominantPools0}\label{fig:gen3:010:dom}} \\
+  \subfloat[]{
+    \includegraphics[width=0.55\textwidth]{Figures/VLQ/3Gen/HWZ010/dominantPools0}\label{fig:gen3:100:dom}}
+  \vspace*{2ex}
+  \begin{tabular}{lll}
+    \swatch{cornflowerblue}~ATLAS $WW$ & \swatch{navy}~ATLAS $\mu$+\MET{}+jet & \swatch{cadetblue}~ATLAS $e$+\MET{}+jet \\
+    \swatch{powderblue} CMS $\ell$+\MET{}+jet & \swatch{darkorange}~ATLAS $\mu\mu$+jet & \swatch{magenta} ATLAS~4$\ell$ \\
+    \swatch{silver}~ATLAS jets & \swatch{dimgrey}~CMS jets & \swatch{snow}~ATLAS $t\bar{t}$ hadronic
+  \end{tabular}
+  \vspace*{2ex}
+  \caption{Dominant LHC analysis pools contributing to VLQ limit-setting in the $\kappa$ vs
+    VLQ mass plane, where $\kappa$ is the coupling to third-generation SM quarks.
+    All VLQ ($B, T, X, Y$) masses are set to be degenerate. The disfavoured regions
+    are located above and to the left of the dashed (68\%~CL)
+    and solid (95\%~CL) white contours respectively. The VLQ branching
+    fractions to \WZH are \protect\subref{fig:gen3:001:dom}~\WZHzzo
+    \protect\subref{fig:gen3:010:dom}~\WZHzoz \protect\subref{fig:gen3:100:dom}~\WZHozz
+    and \protect\subref{fig:gen3:121:dom}~\WZHtoo. %
+  }
+  \label{fig:3gen:dom}
+\end{figure}
