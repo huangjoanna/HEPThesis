@@ -56,18 +56,18 @@
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
 %  \input{Content/introduction}
 %   \input{Content/theory}
-%   \input{Content/mcevgen}
 %   \input{Content/ATLASdetector}
-%   \input{Content/fourlepton}
+  \input{Content/fourlepton}
   \input{Content/reinterpretation}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}
 \end{mainmatter}
 
 %% Produce the appendices
-% \begin{appendices}
-%   \input{appendices}
-% \end{appendices}
+\begin{appendices}
+  \input{Content/mcevgen}
+  \input{Content/m4l/unfoldingplots}
+\end{appendices}
 
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
