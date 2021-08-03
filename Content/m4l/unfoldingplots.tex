@@ -1,4 +1,5 @@
 \chapter{Unfolding inputs and studies}
+\label{app:moreunf}
 Figures~\ref{fig:pt4lunf}-\ref{fig:dphiunf} show the predicted detector-level and particle-level yields, as well as the reconstruction efficiency, the fiducial purity (equivalent to the diagonal elements of the migration matrices) and the fiducial fraction for each bin of each distribution, after the pre-unfolding weights are applied. Note, that the yields are normalized by bin width to show clearly that the number of events per bin satisfy the criteria we required, but this can lead to the distributions looking jumpy.
 
 Figures~\ref{fig:pt4lmat}-\ref{fig:dphimat} show the migration matrices for each slice of all 2D distributions, and also the migration matrices across the slices in each distribution. They are separated purely for legibility, and the elements are normalized across the entire matrix in all cases. 
@@ -10,14 +11,13 @@ Figures~\ref{fig:pt4lclos}-\ref{fig:dphiclos} show the results of unfolding the 
 Figures~\ref{fig:pt4lhalf}-\ref{fig:dphihalf} show the results of splitting the MC randomly into two subsets, unfolding one and validating it against the other. The bins of all distributions generally close within the uncertainties, which are produced by bootstrapping on both halves of the MC. 
 
 %%inclusive vs m4l
-\begin{figure}[htb!]
+\begin{figure}[tbp]
     \begin{subfigure}{.99\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldingStudies/v014_inputs/inclusive_vs_m4linputs.pdf}  
-      \caption{In the left-hand panel, the number of predicted events passing the reconstruction- and fiducial- level selections are displayed as the detector yield and particle yield, respectively. They are given as a function of the four \mFourL regions: single Z, Higgs,  offshell ZZ, and onshell ZZ in that order. The right-hand panel shows the efficiency, fiducial purity and fiducial fraction in each of the same \mFourL regions.n}
-      \label{fig:inclvm4lunf}
     \end{subfigure}
+    \caption{In the left-hand panel, the number of predicted events passing the reconstruction- and fiducial- level selections are displayed as the detector yield and particle yield, respectively. They are given as a function of the four \mFourL regions: single Z, Higgs,  offshell ZZ, and onshell ZZ in that order. The right-hand panel shows the efficiency, fiducial purity and fiducial fraction in each of the same \mFourL regions.}
+    \label{fig:inclvm4lunf}
 \end{figure}
-
 %%double differentials
 \begin{figure}[htb]
     \begin{subfigure}{.99\textwidth}\centering

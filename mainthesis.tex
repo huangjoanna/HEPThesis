@@ -1,13 +1,13 @@
 \batchmode
 %% For normal draft builds (figs undisplayed hence fast compile)
 %\documentclass[hyperpdf,nobind,draft,oneside]{hepthesis}
-\documentclass[hyperpdf,nobind,draft,twoside]{hepthesis}
+% \documentclass[hyperpdf,nobind,draft,twoside]{hepthesis}
 
 %% For short draft builds (breaks citations by necessity)
 % \documentclass[hyperpdf,nobind,draft,hidefrontback]{hepthesis}
 
 %%For Cambridge soft-bound version
-% \documentclass[hyperpdf,bindnopdf]{hepthesis}
+\documentclass[hyperpdf,bindnopdf]{hepthesis}
 %% For Cambridge hard-bound version (must be one-sided)
 %\documentclass[hyperpdf,oneside]{hepthesis}
 
@@ -21,13 +21,13 @@
 \input{Content/preamble}
 
 %% You can set the line spacing this way
-%\setallspacing{double}
+% \setallspacing{double}
 %% or a section at a time like this
 %\setfrontmatterspacing{double}
 
 
 %% Define the thesis title and author
-\title{Measurement of the inclusive and differential \mFourL cross-section with the \ATLAS detector}
+\title{Differential cross-section measurements for four-lepton production and associated reinterpretations for new physics}
 \author{Dan Ping (Joanna) Huang}
 
 %% Doc-specific PDF metadata
@@ -44,7 +44,6 @@
 
 %% Start the document
 \begin{document}
-
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
 \begin{frontmatter}
   \input{Content/frontmatter}
@@ -54,20 +53,20 @@
 %% Start the content body of the thesis
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
-%  \input{Content/introduction}
-%   \input{Content/theory}
-%   \input{Content/ATLASdetector}
+    \input{Content/introduction}
+  \input{Content/theory}
+  \input{Content/ATLASdetector}
   \input{Content/fourlepton}
-%   \input{Content/reinterpretation}
+  \input{Content/reinterpretation}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}
 \end{mainmatter}
 
-%% Produce the appendices
-% \begin{appendices}
-%   \input{Content/mcevgen}
-%   \input{Content/m4l/unfoldingplots}
-% \end{appendices}
+% Produce the appendices
+\begin{appendices}
+  \input{Content/mcevgen}
+  \input{Content/m4l/unfoldingplots}
+\end{appendices}
 
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
