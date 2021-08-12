@@ -9,6 +9,21 @@ A very crucial part of any ATLAS analysis is background modelling. The productio
 
 This multi-jet merging technique was recently implemented into \code{Herwig}. However, the generator and specific processes must be validated before samples can be mass produced for ATLAS use. Validation is often done with the help of measurements of V + jets production. In particular, the leptonic decay channels (via electrons or muons and their respective neutrinos) have a clean experimental signature, making them ideal for such studies. This report focuses on the production of V + jets using \code{Herwig}'s new next-to-leading order multi-jet merging algorithm.
 
+\section{Standard Model Predictions with \textsc{Herwig 7}}
+
+The work detailed in this chapter contributes towards the ATLAS author qualification task. The main goal of the task is to validate vector boson production in association with jets in the \textsc{Herwig 7} event generator, with multi-jet merging at next-to-leading order (NLO) accuracy. Multileg merging at the NLO QCD level is a new feature of the 7.1 release. Other added functionalities of \textsc{Herwig 7} (such as phase-space biasing and batch parallelization) are also explored and their usage documented. 
+
+\section{The \textsc{Herwig} Event Generator}
+\label{SM:herwig}
+
+\noindent \textsc{Herwig 7} is a multi-purpose event generator for high energy physics. It is able to provide full simulations of lepton-lepton, hadron-hadron, and lepton-hadron scattering in one package. The generator also places an emphasis on precision simulation of parton showers \cite{herwig-manual}. The latest version replaces the two prior predecessors, \textsc{HERWIG 6.x} and \textsc{Herwig++ 2.x}, providing extended and improved physics predictions. In particular, the new version features built-in next-to-leading order hard process calculations for nearly all Standard Model processes.  The innovation behind Herwig++ is described in detail in \cite{herwig-manual}, and the release  note for \textsc{Herwig 7.0} can be found in \cite{H70-release-note}. 
+
+\subsection{The \textsc{Matchbox} Framework}
+\noindent
+Efforts in \textsc{Herwig 7} are built upon the previously developed \textsc{Matchbox} framework \cite{H70-release-note}, the extension of which facilitates automated setup of all processes. The blueprint of the \textsc{Matchbox} modules follows the structure of QCD cross sections calculated according to the subtraction formalism, with radiative corrections and at next-to-leading order accuracy. Two different parton-shower algorithms are provided: an angular-ordered shower and a dipole shower. \textsc{Matchbox} also incorporates two fully automated matching algorithms, one that is \textsc{MC@NLO}-like and another that is \textsc{POWHEG}-like (these are referred to as subtractive and ive matching respectively). The motivation behind the latter algorithm was to develop an alternative to \textsc{MC@NLO} that does not introduce negative event weights. More details of the matching algorithms are given in section \ref{SM:merging}.
+
+\textsc{Matchbox} provides built-in amplitudes for a limited number of processes, although the majority of Standard Model processes will require a plug-in to an external matrix element provider. The \textsc{Herwig 7} interface currently supports \textsc{GoSam}, \textsc{MadGraph}, \textsc{NJet}, \textsc{OpenLoops}, and \textsc{VBFNLO}. Unless otherwise stated, the work in this report has used \textsc{MadGraph} and \textsc{OpenLoops} as plug-ins for the tree-level and one-loop amplitudes respectively. 
+
 \section{Comparing Herwig 7 Standalone and in Athena}
 \noindent
 Within ATLAS, almost all production workflow (event generation, simulation, event reconstruction, etc.) is done within Athena, the ATLAS python-based software framework. In order to ensure that running \code{Herwig 7} within the Athena interface does not introduce errors, a few validation runs were done to cross-check between \code{Herwig 7} standalone and Athena. 

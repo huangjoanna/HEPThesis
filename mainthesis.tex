@@ -34,10 +34,10 @@
 \makeatletter
 \@ifpackageloaded{hyperref}{%
 \hypersetup{%
-  pdftitle = {Studying B to K pi decays with LHCb},
-  pdfsubject = {Andy Buckley's PhD thesis},
-  pdfkeywords = {LHCb, B, physics, LHC, heavy flavour},
-  pdfauthor = {\textcopyright\ Andy Buckley}
+  pdftitle = {Differential cross-section measurements for four-lepton production and associated reinterpretations for new physics},
+  pdfsubject = {Joanna Huang's PhD Thesis},
+  pdfkeywords = {ATLAS, LHC, CERN, physics},
+  pdfauthor = {\textcopyright\ Joanna Huang}
 }}{}
 \makeatother
 
@@ -53,20 +53,22 @@
 %% Start the content body of the thesis
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
-%   \input{Content/introduction}
-%   \input{Content/theory}
-%   \input{Content/ATLASdetector}
+   \input{Content/introduction}
+   \input{Content/theory}
+   \input{Content/ATLASdetector}
   \input{Content/fourlepton}
-%   \input{Content/reinterpretation}
+   \input{Content/reinterpretation}
+   \input{Content/conclusion}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}
 \end{mainmatter}
 
 % Produce the appendices
-% \begin{appendices}
-%   \input{Content/mcevgen}
-%   \input{Content/m4l/unfoldingplots}
-% \end{appendices}
+\begin{appendices}
+%      \input{Content/appendices}
+      \input{Content/mcevgen}
+      \input{Content/m4l/unfoldingplots}
+\end{appendices}
 
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)

@@ -1,0 +1,199 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: mainthesis.aux
+White space in argument---line 543 of file mainthesis.aux
+ : \citation{3
+ :             missing citations}
+I'm skipping whatever remains of this command
+White space in argument---line 544 of file mainthesis.aux
+ : \citation{missing
+ :                   citation}
+I'm skipping whatever remains of this command
+The style file: unsrt.bst
+Database file #1: mythesis.bib
+Warning--I'm ignoring Aad:2014tca's extra "author" field
+--line 2660 of file mythesis.bib
+Warning--I'm ignoring Aad:2015rka's extra "author" field
+--line 2934 of file mythesis.bib
+Warning--entry type for "Lampl:923625" isn't style-file defined
+--line 4697 of file mythesis.bib
+You're missing a field name---line 5260 of file mythesis.bib
+ : 
+ : %      note   = "CERN-TH-2017-232, ZU-TH-30-17",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 5295 of file mythesis.bib
+ : 
+ : %      note   = "CERN-TH-2018-127",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 5931 of file mythesis.bib
+ : @article{Maguire:2017ypu
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6191 of file mythesis.bib
+ : @article{Buckley:2010ar
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6225 of file mythesis.bib
+ : @article{Bahr:2008pv
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6256 of file mythesis.bib
+ : @article{Degrande:2011ua
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6275 of file mythesis.bib
+ : @article{Alwall:2014hca
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7581 of file mythesis.bib
+ : @article{Alloul:2013bka
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8687 of file mythesis.bib
+ : @article{Aaboud:2018pii
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8790 of file mythesis.bib
+ : @article{ALEPH:2005ab
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8803 of file mythesis.bib
+ : @article{HbbSearch
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8816 of file mythesis.bib
+ : @article{WbSearch
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8829 of file mythesis.bib
+ : @article{WtSearch
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8842 of file mythesis.bib
+ : @article{ZnunuSearch
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8855 of file mythesis.bib
+ : @article{ZllSearch
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8868 of file mythesis.bib
+ : @article{HadSearch
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8881 of file mythesis.bib
+ : @article{TriLepSearch
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8894 of file mythesis.bib
+ : @article{Abdallah:2020pec
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9032 of file mythesis.bib
+ : @article{Sjostrand:2014zea
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "missing"
+Warning--I didn't find a database entry for "?"
+Warning--I didn't find a database entry for "ATLAS:2020xtq"
+Warning--I didn't find a database entry for "m4l_internalnote"
+Warning--I didn't find a database entry for "Bothmann:2019yzt"
+Warning--I didn't find a database entry for "Schumann:2007mg"
+Warning--I didn't find a database entry for "Hoeche:2012yf"
+Warning--I didn't find a database entry for "Hoeche:2009r"
+Warning--I didn't find a database entry for "STDM-2012-23"
+Warning--I didn't find a database entry for "deFlorian:2016spz"
+Warning--I didn't find a database entry for "Butterworth:2015oua"
+Warning--I didn't find a database entry for "Hamilton:2013fea"
+Warning--I didn't find a database entry for "Hamilton:2015nsa"
+Warning--I didn't find a database entry for "Nason:2004rx"
+Warning--I didn't find a database entry for "Frixione:2007vw"
+Warning--I didn't find a database entry for "Anastasiou:2016cez"
+Warning--I didn't find a database entry for "Anastasiou:2015ema"
+Warning--I didn't find a database entry for "Dulat:2018rbf"
+Warning--I didn't find a database entry for "Harlander:2009mq"
+Warning--I didn't find a database entry for "Harlander:2009bw"
+Warning--I didn't find a database entry for "Harlander:2009my"
+Warning--I didn't find a database entry for "Pak:2009dg"
+Warning--I didn't find a database entry for "Actis:2008ug"
+Warning--I didn't find a database entry for "Actis:2008ts"
+Warning--I didn't find a database entry for "Bonetti:2018ukf"
+Warning--I didn't find a database entry for "Ciccolini:2007jr"
+Warning--I didn't find a database entry for "Ciccolini:2007ec"
+Warning--I didn't find a database entry for "Bolzoni:2010xr"
+Warning--I didn't find a database entry for "Ciccolini:2003jy"
+Warning--I didn't find a database entry for "Brein:2003wg"
+Warning--I didn't find a database entry for "Brein:2011vx"
+Warning--I didn't find a database entry for "Denner:2014cla"
+Warning--I didn't find a database entry for "Brein:2012ne"
+Warning--I didn't find a database entry for "HIGG-2016-22"
+Warning--I didn't find a database entry for "ATLAS_Bootsrap_2021"
+Warning--I didn't find a database entry for "m4l_internal_note"
+Warning--I didn't find a database entry for "gcowan"
+Warning--I didn't find a database entry for "Aad:2020mkp"
+Warning--I didn't find a database entry for "Ellis:2018gqa"
+Warning--I didn't find a database entry for "Sirunyan:2019bzr"
+Warning--I didn't find a database entry for "Sirunyan:2018cpw"
+Warning--I didn't find a database entry for "herwig-manual"
+Warning--I didn't find a database entry for "H70-release-note"
+Warning--empty publisher in Griffiths:2008zz
+Warning--empty institution in Capeans:1291633
+Warning--empty author in CERN-LHCC-2017-005
+Too many commas in name 1 of "A Artamonov, D Bailey, G Belanger, et al." for entry Artamonov_2008
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Daniel S. Levin, Nir Amram, Robert Ball, et al." for entry LEVIN2008347
+while executing---line 944 of file unsrt.bst
+Warning--empty year in Etzion
+Warning--empty author in ATLAS-CONF-2012-042
+Warning--empty author in ATL-PHYS-PUB-2017-022
+Warning--empty author in ATLAS-CONF-2012-047
+Warning--empty journal in Grazzini:2017mhc
+Warning--empty journal in Kallweit:2018nyv
+Warning--empty author in ATLAS_Bootstrap_2021
+Warning--empty author in ATLAS-2019-Luminosity
+Warning--empty journal in Abdallah:2020pec
+You've used 121 entries,
+            1791 wiz_defined-function locations,
+            1179 strings with 26445 characters,
+and the built_in function-call counts, 23014 in all, are:
+= -- 1867
+> -- 1141
+< -- 9
++ -- 443
+- -- 322
+* -- 1653
+:= -- 3938
+add.period$ -- 354
+call.type$ -- 121
+change.case$ -- 121
+chr.to.int$ -- 0
+cite$ -- 133
+duplicate$ -- 976
+empty$ -- 2263
+format.name$ -- 322
+if$ -- 4946
+int.to.chr$ -- 0
+int.to.str$ -- 121
+missing$ -- 97
+newline$ -- 598
+num.names$ -- 115
+pop$ -- 226
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 404
+stack$ -- 0
+substring$ -- 1107
+swap$ -- 115
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 12
+while$ -- 180
+width$ -- 124
+write$ -- 1296
+(There were 23 error messages)
