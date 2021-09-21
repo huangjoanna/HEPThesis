@@ -27,7 +27,7 @@
 
 
 %% Define the thesis title and author
-\title{Differential cross-section measurements for four-lepton production and associated reinterpretations for new physics}
+\title{Differential cross-section measurements for four-lepton production and implications for new physics}
 \author{Dan Ping (Joanna) Huang}
 
 %% Doc-specific PDF metadata
@@ -37,7 +37,7 @@
   pdftitle = {Differential cross-section measurements for four-lepton production and associated reinterpretations for new physics},
   pdfsubject = {Joanna Huang's PhD Thesis},
   pdfkeywords = {ATLAS, LHC, CERN, physics},
-  pdfauthor = {\textcopyright\ Joanna Huang}
+  pdfauthor = {\textcopyright\ Dan Ping Joanna Huang}
 }}{}
 \makeatother
 
@@ -45,19 +45,19 @@
 %% Start the document
 \begin{document}
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
-\begin{frontmatter}
-  \input{Content/frontmatter}
-  \input{Content/glossary}
-\end{frontmatter}
+% \begin{frontmatter}
+%   \input{Content/frontmatter}
+%   \input{Content/glossary}
+% \end{frontmatter}
 
 %% Start the content body of the thesis
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
 %   \input{Content/introduction}
-%   \input{Content/theory}
+  \input{Content/theory}
 %   \input{Content/ATLASdetector}
-  \input{Content/fourlepton}
-  \input{Content/reinterpretation}
+%   \input{Content/fourlepton}
+%   \input{Content/reinterpretation}
 %   \input{Content/conclusion}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}
@@ -72,9 +72,9 @@
 
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
-\begin{backmatter}
-  \input{Content/backmatter}
-\end{backmatter}
+% \begin{backmatter}
+%   \input{Content/backmatter}
+% \end{backmatter}
 
 %% Close
 \end{document}
