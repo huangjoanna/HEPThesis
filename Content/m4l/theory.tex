@@ -1,7 +1,7 @@
 %% Theoretical predictions 
-\section{Data and Monte Carlo predictions}
+\section{Monte Carlo predictions}
 \label{sec:montecarlopred}
-Monte Carlo simulations are used to model the signal processes at detector-level and particle-level for this analysis, and to construct the response matrices that correct the data for detector effects. This section provides a description of the event samples that are used for this analysis in the standard description of the ATLAS collaboration. The general principles of Monte Carlo event generators are discussed briefly in Appendix \ref{chap:mcevgen}.
+Monte Carlo simulations are used to model the signal processes at detector-level and particle-level for this analysis, and to construct the response matrices that correct the data for detector effects. This section provides a description of the event samples that are used for this analysis in the standard description of the ATLAS collaboration. \todo[inline]{Add MCEG section if time permits??} %The general principles of Monte Carlo event generators are discussed briefly in Appendix \ref{chap:mcevgen}.
 
 \subsection{\qqFourL}
 The dominant \qqFourL process is simulated using the \SHERPA {2.2.2} event generator~\cite{Bothmann:2019yzt} with the \nnpdfnnlo{} set of PDFs~\cite{Ball:2014uwa}. The matrix elements are calculated at next-to-leading order accuracy for final states with zero and one jet, and at leading order accuracy for two- and three-jet final states. The different parton multiplicities are merged together and matched to the \SHERPA parton shower model based on the Catani-Seymour dipole factorization~\cite{Gleisberg:2008fv,Schumann:2007mg} using the MEPS@NLO prescription~\cite{Hoeche:2011fd,Hoeche:2012yf,Catani:2001cc,Hoeche:2009r}. A dedicated set of tuned parton-shower parameters developed by the \SHERPA authors are used. 

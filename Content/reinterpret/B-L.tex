@@ -3,12 +3,11 @@
 The focus of this section is on the limits set on a gauged $B-L$ model. This model is interpreted by the \ATLAS \mFourL{} measurement of Chapter~\ref{chap:fourlepton}. As a complementary further studies are conducted to investigate how the \mFourL{} measurement may be easily re-interpreted using the \contur machinery. Both sets of limits (\ATLAS and \contur) are presented, with a particular focus on the role the \mFourL{} measurement plays. 
 
 \subsection{About the model}
-Since gauge symmetry has been a huge success in describing the SM, a way of incorporating new physics can be through the extension of its gauge symmetry. In the theoretical community, several new physics scenarios have been postulated in which the gauge symmetry of the Standard Model are extended via \Ugroup{1} gauge symmetries beyond \Ugroup{1}$_Y$ \cite{}. This class of models is strongly reinforced by the observation of neutrino oscillations, evidence that neutrinos have non-zero mass. They predict three additional SM singlet fermions which are accounted for by right-handed neutrinos, thus enabling the seesaw mechanism of neutrino mass generation. 
+Since gauge symmetry has been a huge success in describing the SM, a way of incorporating new physics can be through the extension of its gauge symmetry. In the theoretical community, several new physics scenarios have been postulated in which the gauge symmetry of the Standard Model are extended via \Ugroup{1} gauge symmetries beyond \Ugroup{1}$_Y$ \cite{}~\todo{citations}. This class of models is strongly reinforced by the observation of neutrino oscillations, evidence that neutrinos have non-zero mass. They predict three additional SM singlet fermions which are accounted for by right-handed neutrinos, thus enabling the seesaw mechanism of neutrino mass generation. 
 
 In this section, the model is based on the gauge group \SUgroup{3}$_C\times$\SUgroup{2}$_L\times$\Ugroup{1}$_Y\times$\Ugroup{1}$_{B-L}$, where an additional \BLgroup{} symmetry group representing the global Baryon-number-minus-Lepton-number symmetry. The symmetry is spontaneously broken by an extra SM singlet scalar (the heavy Higgs $h_2$). Three SM singlet fermions are also introduced (the right-handed neutrinos) for the cancellation of gauge anomalies\info[]{cancel anomalies which can in turn be implemented in a see-saw mechanism to generate the light SM neutrino masses}, along with an extra gauge boson $Z'$. The $Z'$ couples to the SM via $g'$, and the heavy Higgs $h_2$ mixes with the SM Higgs with mixing angle $\alpha$. The introduction of these new particles may have a non-negligible impact on the phenomenology of the SM, and may manifest themselves in measurements taken at the LHC. 
 
-The constraints from \LHC measurements on this model are studied in detail using the \contur machinery in Reference~\cite{BLcontur}. The paper showed that \ATLAS measurements with a four-lepton final state provided significant constraints on certain regions of parameter space. In context of the model, contributions to the spectrum may come from the production of multiple $Z'$, the production of $h_2$ via gluon-gluon fusion which decays via $h_2\rightarrow Z'Z'$ or $h_2\rightarrow ZZ$, or the SM Higgs decaying to a pair of $Z'$. In the study, five well-motivated scenarios are considered: three target the vector boson sector, and two target the scalar sector. In all five, the sterile neutrino sector is set as identically. All scenarios are described in Section 3.4 of Reference~\cite{BLcontur}. The rest of this section will focus only on scenarios C and E. In the former, $M_{h_2}$, $\sin\alpha$, and $M_{Z'}$ are set to be constants while the scan is performed in the $M_{Z'}$ versus $g'_1$ plane. In the latter, $M_{Z'}$, $g'_1$, and $M_{N_i}$ are set to be constants while the scan is performed in the $M_{h_2}-\sin \alpha$ plane. The parameters for both are summarized in Table~\ref{tab:BL}. 
-
+The constraints from \LHC measurements on this model are studied in detail using the \contur machinery in Reference~\cite{BLcontur}. The paper showed that \ATLAS measurements with a four-lepton final state provided significant constraints on certain regions of parameter space. In context of the model, contributions to the spectrum may come from the production of multiple $Z'$, the production of $h_2$ via gluon-gluon fusion which decays via $h_2\rightarrow Z'Z'$ or $h_2\rightarrow ZZ$, or the SM Higgs decaying to a pair of $Z'$. In the study, five well-motivated scenarios are considered: three target the vector boson sector, and two target the scalar sector. In all five, the sterile neutrino sector is set as identically. All scenarios are described in Section 3.4 of Reference~\cite{BLcontur}. The rest of this section will focus only on scenarios C and E, as they are found to contribute to a four-lepton final state in the studies of Reference~\cite{BLcontur}. In the former, $M_{h_2}$, $\sin\alpha$, and $M_{Z'}$ are set to be constants while the scan is performed in the $M_{Z'}$ versus $g'_1$ plane. In the latter, $M_{Z'}$, $g'_1$, and $M_{N_i}$ are set to be constants while the scan is performed in the $M_{h_2}-\sin \alpha$ plane. The parameters for both are summarized in Table~\ref{tab:BL}. 
 \begin{table}[tb]
     \centering
     \begin{tabular}{llllll}
@@ -24,7 +23,7 @@ The constraints from \LHC measurements on this model are studied in detail using
 
 \subsection{\ATLAS limit from the \mFourL{} analysis}
 \label{ssec:BL:ATLAS}
-One sensitivity scan published in Reference~\cite{BLcontur} is repeated as an interpretation example in the \ATLAS \mFourL{} analysis, in the plane of the sine of the mixing angle $\alpha$ and the mass of the exotic Higgs boson $m_{h_{\text{2}}}$. The new gauge boson $Z'$ is assumed to have a mass of 35 GeV, and weakly coupled to the SM with $g'=10^{-3}$. 
+One sensitivity scan published in Reference~\cite{BLcontur} is repeated as an interpretation example in the \ATLAS \mFourL{} analysis, in the plane of the sine of the mixing angle $\alpha$ and the mass of the exotic Higgs boson $m_{h_{\text{2}}}$. The new gauge boson $Z'$ is assumed to have a mass of 35~\GeV, and weakly coupled to the SM with $g'=10^{-3}$. 
 
 An alternate test statistic $\Tilde{q}$ for upper limits is defined using the likelihood function of equation \ref{eq:likelihood} as
 \begin{equation}
@@ -43,19 +42,19 @@ The exclusion contour in the plane of $\sin\alpha-m_{h_2}$ is depicted in Figure
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_withTheoExcl_m4l.pdf}
-    \caption{B-L contour using m4l only}
+    \caption{ATLAS result from the \mFourL{} measurement. Limits set on the B-L model using only the inclusive \mFourL{} variable. This figure is from Reference~\cite{m4l2021_paper}.}
     \label{fig:BLcontourm4l}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_withTheoExcl.pdf}
-    \caption{B-L contur using most sensitive variable.}
+    \caption{ATLAS result from the \mFourL{} measurement. Limits set on the B-L model using the most sensitive variable. This figure is from Reference~\cite{m4l2021_paper}.}
     \label{fig:BLcontour}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_colormap.pdf}
-    \caption{B-L colour map}
+    \caption{ATLAS result from the \mFourL{} measurement. This colour map shows the B-L model space and the most sensitive variable at each point. This figure is from Reference~\cite{m4l2021_paper}.}
     \label{fig:BLcolourmap}
 \end{figure}
 
@@ -63,10 +62,10 @@ The exclusion contour in the plane of $\sin\alpha-m_{h_2}$ is depicted in Figure
 Figure~\ref{fig:BL:E:paper} shows the exclusion contours from Reference~\cite{BLcontur} for Scenario E in the $M_{h_2}-\sin\alpha$ plane. In this scenario, the $Z'$ is light enough such that $h_2 \rightarrow Z'Z'$ is an allowed decay channel. The excluded regions at 95\% CL and 68\% CL are indicated by the yellow-shaded and green-shaded areas respectively. The upper right portion of the plot is excluded by the perturbativity requirement that the model must be stable up to at least \unit{10}{\TeV}, and to a greater extent, by precise measurements of the $W$ boson mass~\cite{BLcontur}. The \contur excluded region provides some additional sensitivity in the low $M_{h_2}$ region. The \unit{7}{\TeV} and \unit{8}{\TeV} four-lepton measurements have shown to be important in constraining the the small $M_{Z'}$, $g'>10^{-3}$ region, where the $h_2$ decays dominantly to $Z'$ pairs, and the branching fractions for $Z'\rightarrow\mu^+\mu^-$ and $Z'\rightarrow e^+e^-$ are both $\sim20$\%~\cite{BLcontur}. Bearing all this in mind, it is sensible to expect that new measurements in the four-lepton final state should affect the exclusion in the region.
 \begin{figure}[tb]
   \centering
+     \subfloat[]{
+    \includegraphics[width=0.55\textwidth]{Figures/BL/BL-dominantPools0.pdf}\label{fig:BL:E:dom}}\\
     \subfloat[]{
     \includegraphics[width=0.55\textwidth]{Figures/BL/BL_CaseE_paper.png}\label{fig:BL:E:paper}}\\
-    \subfloat[]{
-    \includegraphics[width=0.55\textwidth]{Figures/BL/BL-dominantPools0.pdf}\label{fig:BL:E:dom}}\\
   \vspace*{2ex}
   \begin{tabular}{lll}
         \swatch{turquoise}~ATLAS $WW$ & \swatch{darkorange}~ATLAS $\mu\mu$+jet & \swatch{lightsalmon}~CMS $ee$+jet \\
@@ -121,9 +120,9 @@ In Scenario C, the effects of the Higgs mixing and the second Higgs mass eigenst
 \begin{figure}[tb]
   \centering
     \subfloat[]{
-    \includegraphics[width=0.55\textwidth]{Figures/BL/BL_CaseC_paper.png}\label{fig:BL:C:paper}}\\
-    \subfloat[]{
     \includegraphics[width=0.55\textwidth]{Figures/BL/BL-C-dominantPools0.pdf}\label{fig:BL:C:dom}}\\
+    \subfloat[]{
+    \includegraphics[width=0.55\textwidth]{Figures/BL/BL_CaseC_paper.png}\label{fig:BL:C:paper}}\\
   \vspace*{2ex}
     \begin{tabular}{llll}
         \swatch{tomato}~ATLAS low-mass Drell-Yan &

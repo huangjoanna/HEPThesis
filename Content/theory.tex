@@ -3,11 +3,17 @@
 \chapter{The Standard Model}
 \label{chap:theory}
 
-The Standard Model of particle physics is a rather simplistic name for such a powerful theory. It is the closest theory that exists to a complete description of the universe at the most fundamental level, and is arguably the pinnacle of science. 
+The Standard Model (SM) of particle physics is a rather simplistic name for such a powerful theory. It is the closest theory that exists to a complete description of the universe at the most fundamental level, and is arguably the pinnacle of science. In this chapter, the aim is to provide a a brief overview of the SM, relying on the derivations of Reference~\cite{Griffiths:2008zz}. For a more comprehensive description, one may refer to the above reference.
 
-The Standard Model is often depicted in diagrams as a tinier version of Mendeleev's Periodic Table of Elements. One such diagram is shown in Figure \ref{fig:SM} \todo{Make own version of SM diagram}. In a nutshell, the particles put forward by the SM are truly elementary particles. Unlike the elements in the Periodic Table which can be further broken down, these elementary particles are (to our knowledge) point-like and contain no internal structure. Each particle has a unique set of properties - quantum numbers - that define it, and split into one of two categories: fermions and bosons. 
+\section{Particle content}
 
-\include{Content/SM_tikz}%\subsubsection{Fermions}
+The Standard Model is often depicted in compact diagrams similar to that of Mendeleev's Periodic Table of Elements. One such diagram is shown in Figure \ref{fig:SM}. In a nutshell, the particles put forward by the SM are truly elementary particles. Unlike the elements in the Periodic Table which can be further broken down, these elementary particles are (to our knowledge) point-like and contain no internal structure. Each particle has a unique set of properties - quantum numbers - that define it, and split into one of two categories: fermions and bosons. 
+
+Fermions are half-integer spin particles, and are usually thought of as matter particles. Each fermion has an anti-particle, with an identical mass but opposite electric charge. They are further classified as either leptons or quarks. Leptons are either negatively charged (-1), or neutral. The latter are referred to as neutrinos, which the SM predicts to be massless. Quarks have an electric charge of either $\frac{2}{3}$ or $\frac{-1}{3}$, and carry an additional colour charge of either red, blue, or green. The arrangement of fermions in the SM is generational. The first generation is found in everyday matter; for example the proton and neutron are made up of up and down quarks, and the electron which orbit nuclei. The second and third generation leptons have higher masses, but they otherwise behave identically. 
+
+Bosons are integer spin particles that mediate the interactions within the SM. Electromagnetism is arguably the most well-known forces, and is carried by the massless and chargeless photon $\gamma$. Electric charge is conserved during photon-mediated particle interactions, and the photon has infinite range. that Eight gluons mediate the strong force of quantum chromodynamics. They are also massless and electromagnetically neutral, but carry a colour charge. Only quarks are able to interact with gluons, and they can self-interact. Unlike the photon, however, gluons have finite range; as interaction distance increase, the interaction strength decreases. The weak force arises from the exchange of three massive force carriers: two charged $W^{\pm}$ bosons and a neutral $Z$ boson. As its name suggests, the force is relatively weak compared to the EM and strong forces, and is only carried over short ranges. The photon, $W^{\pm}$, and $Z$ bosons are gauge bosons of spin 1. Completing the SM is the spin 0 scalar Higgs boson. The Higgs is electrically neutral, colourless, and massive. It plays a key role in the SM by providing mass to gauge bosons and fermions through electroweak symmetry breaking.
+
+\input{Content/SM_tikz}%\subsubsection{Fermions}
 %
 %Fermions are half-interger spin particles that are further divided into two groups due to their radically different properties. 
 
@@ -108,7 +114,7 @@ where $U^{\dag}U=1$ and in this case $U=e^{i\theta}$. The group of all possible 
 
 % The weak interaction theory is described using the non-abelian\todo{Describe non-abelian} symmetry group SU(2). In analogy with the formalism of QCD the generators of the group give rise to the gauge fields. In QCD there are eight generators, the Gell-Mann matrices, that give rise to the introduction of eight gauge fields identified as gluons. Similarly, in the weak theory there are three generators, the Pauli-spin matrices, that give rise to three gauge fields identified as the Z 0 , W+ and W− vector bosons. According to Noether’s theorem4 , a quantity or current is conserved providing gauge invariance is shown. For example, in QED the electric charge is conserved and in QCD it is colour charge that is conserved. In the case of the weak interaction, the conserved quantity is called weak isopin, T1,2.3.
 
-Experimental observations have shown that weak charged currents couple only to left-handed fermions and right-handed anti-fermions \cite{}\todo{Cite some papers to prove this}. In order to extract the left- and right-handed components, it is useful to define the projection operators $P_L$ and $P_R$, which act on fermion fields (expressed by Dirac spinors) in the following manner:
+Experimental observations have shown that weak charged currents couple only to left-handed fermions and right-handed anti-fermions \cite{Pich:2007vu}. In order to extract the left- and right-handed components, it is useful to define the projection operators $P_L$ and $P_R$, which act on fermion fields (expressed by Dirac spinors) in the following manner:
 \begin{equation}
     \psi_{L}=P_{L}\psi=\dfrac{1}{2}(1- \gamma_5)\psi,\quad 
     \psi_{R}=P_{R}\psi=\dfrac{1}{2}(1+ \gamma_5)\psi
@@ -232,9 +238,8 @@ then the second term resembles a mass term, where the mass of the particle is
     m=\sqrt{-2\mu^2}
 \end{equation}
 the third and fourth term of equation \ref{eq:ssbReformedLagrangian} represent triple and quartic couplings, and the last term is an insignificant constant. 
-\missingfigure{Graphs of the potential $V(\phi)$}
-
-\subsubsection{Broken continous symmetry}
+\input{Content/Higgs-potential_tikz}
+\subsubsection{Broken continuous symmetry}
 
 The previous section illustrates an example of spontaneous symmetry breaking. The original Lagrangian of equation \ref{eq:ssbLagrangian} is invariant if $phi\rightarrow-\phi$; it is even in $\phi$. In the reformed Lagrangian of equation \ref{eq:ssbReformedLagrangian}, however, this symmetry is broken because it is not even in $\eta$. The breaking is considered spontaneous because no external agent is required; the symmetry simply becomes hidden when selecting a particular ground state (the "vacuum"). In section \ref{sec:SSB} the broken symmetry was a discrete symmetry in context of a read scalar field. This section will apply spontaneous symmetry breaking to a complex scalar field.
 

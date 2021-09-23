@@ -8,30 +8,41 @@
 \section{The \LHC}
 \label{sec:LHC}
 
-The massive fruit of labour, decades in the making from the hundreds of institutions which make up CERN, lies hidden 100 meters below the surface of the Switzerland-France border. Sandwiched between Geneva and the Jura Mountains is a 27 km ring of superconducting magnets and radio-frequency (RF) cavities, which bend and accelerate particles to 0.999999991$c$. Mathematically, this is approximately 3 metres per second slower than the speed of light. This remarkable achievement is none other than the Large Hadron Collider (LHC). The LHC lives up to its name; it is the largest machine built by humankind, and unsurprisingly the most powerful high-energy particle collider in the world. The four main interaction points around the ring where particles collide mark the four main experiments: ATLAS, CMS, LHCb, and ALICE. The former two are general purpose detectors with a similar goal: to precisely study the Standard Model and to search for evidence of new physics. The latter two have specialized purposes. LHCb is dedicated to probing physics involving b-hadrons in pp collisions, and ALICE’s aim is to shed light on the physics of the quark-gluon plasma by investigating heavy-ion collisions. 
+The massive fruit of labour, decades in the making from the hundreds of institutions which make up CERN, lies hidden 100 meters below the surface of the Switzerland-France border. Sandwiched between Geneva and the Jura Mountains is a 27 km ring of superconducting magnets and radio-frequency (RF) cavities, which bend and accelerate particles to near light speed $c$. More specifically, it is approximately 3 metres per second slower than the speed of light. This remarkable achievement is none other than the Large Hadron Collider (LHC). The LHC lives up to its name; it is the largest machine built by humankind, and unsurprisingly the most powerful high-energy particle collider in the world. The four main interaction points around the ring where particles collide mark the four main experiments: ATLAS, CMS, LHCb, and ALICE. The former two are general purpose detectors with a similar goal: to precisely study the Standard Model and to search for evidence of new physics. The latter two have specialized purposes. LHCb is dedicated to probing physics involving b-hadrons in pp collisions, and ALICE’s aim is to shed light on the physics of the quark-gluon plasma by investigating heavy-ion collisions. 
 
 Prior to the injection into the LHC, the protons first pass through a series of smaller machines which boost them to higher and higher energy. The first in the chain is LINAC2, a linear accelerator that spouts protons (the source of which is hydrogen atoms with electrons stripped away) at \unit{50}{\MeV}. Next the protons are piped into the Proton Synchrotron Booster, the Proton Synchrotron, and finally into the Super Proton Synchrotron \todo{Give more details about each of these steps}. Through this chain the protons get boosted to \unit{1.4}{\GeV} by the PSB, then further to \unit{25}{\GeV} by the PS, to a final \unit{450}{\GeV} by the SPS before entering the LHC. Inside the pipes of the LHC, the protons take a short 20 minutes to reach \unit{6.5}{\TeV}. 
 
 \begin{figure}
-  \includegraphics[width=\mediumfigwidth]{Figures/LHC/CernAcceleratorComplex.png}
+  \includegraphics[width=0.9\textwidth]{Figures/LHC/CernAcceleratorComplex.png}
   \caption[The \CERN accelerator complex]%
-  {The CERN accelerator complex, where the LHC is the largest ring. The four main collision points corresponding to the main experiments are dotted in yellow.}
+  {The CERN accelerator complex, where the LHC is the largest ring. The four main collision points corresponding to the main experiments are dotted in yellow. This figure is from Ref.~\cite{Mobs:2684277}.}
   \label{fig:CERNComplex}
 \end{figure}
 
 The impressive feat of accelerating particles is made possible through the use of radio-frequency cavities. The idea was first crafted by the young Rolf Wideröe \cite{vretenar2012radio} for his PhD thesis and later caught the eye of the brilliant E. Lawrence, recipient of the Nobel Prize in Physics in 1939 for the invention of the cyclotron. RF cavities are round chambers along the beam. A voltage generator generate a voltage which oscillates at \unit{400}{\mega\hertz}, inducing an electric field inside the RF cavity. As particles pass through they experience the force of the field and are accelerated along the beam pipe. In total the LHC uses 8 RF cavities per beam (so 16 in total), with each cavity capable of delivering a 2 megavolts (MV). Protons travelling through the cavity increase their energy to 14 times the injection amount, from 450 GeV to 6.5 TeV. Once protons get up to speed, a proton that has perfect timing will stay put, while protons that arrive slightly earlier/later will be accelerated/decelerate. The result is a beam of protons sorted into smaller segments of proton bunches. The LHC produces two such proton beams, one circulating clockwise and the other counterclockwise. 
 
 An important key concept in particle physics is luminosity. It is a factor that relates the cross-section to the number of event per second, written as follows:
-$$\luminosity=\dfrac{1}{\sigma}\cdot\dfrac{dN}{dt}$$
+\begin{equation}
+    \luminosity=\dfrac{1}{\sigma}\cdot\dfrac{dN}{dt}
+\end{equation}
 where \luminosity is the luminosity, $N$ is the number of events, and $\sigma$ is the production cross section. The dimension of luminosity is events per unit time and unit area \unit{}{\cm\rpsquared}\unit{}{\second\rp}.
 
 There are two properties used to describe a particle beam: its \todo{write more about this} emittance $\epsilon$, and its $\beta$ function. The emittance can be thought of as the area occupied by the particle beam in the position momentum plane. A lower emittance means the distance between particles and the difference in momentum between the particles are small. The cross sectional sizes of the beam $\sigma_i$ ($i=x,y$) are written as 
-$$\sigma_i=\sqrt{\dfrac{\beta_i\cdot\epsilon_i}{\pi}}$$ The beams are assumed to be Gaussian distributed, meaning that in collisions, the centres of the beams contribute most while the edges have minimal impact. Following this the luminosity is
-$$\luminosity=\dfrac{N_1N_2f_{rev}N_b}{2\pi\Sigma_x\Sigma_y}$$
+\begin{equation}
+    \sigma_i=\sqrt{\dfrac{\beta_i\cdot\epsilon_i}{\pi}}
+\end{equation}
+The beams are assumed to be Gaussian distributed, meaning that in collisions, the centres of the beams contribute most while the edges have minimal impact. Following this the luminosity is
+\begin{equation}
+    \luminosity=\dfrac{N_1N_2f_{rev}N_b}{2\pi\Sigma_x\Sigma_y}
+\end{equation}
 where $N_1$ and $N_2$ are the number of particles for each bunch, $N_b$ is the number of bunches, $f$ is the revolution frequency, and $\Sigma_x,\Sigma_y$ represent the \unsure[]{Read more about this!} convolution of the beam sizes. They can be expressed as
-$$\Sigma_x=\sqrt{\sigma_{x1}^2+\sigma_{x2}^2}, \quad \Sigma_y=\sqrt{\sigma_{y1}^2+\sigma_{y2}^2}.$$
+\begin{equation}
+    \Sigma_x=\sqrt{\sigma_{x1}^2+\sigma_{x2}^2}, \quad \Sigma_y=\sqrt{\sigma_{y1}^2+\sigma_{y2}^2}.
+\end{equation}
 Assuming that the beam sizes are identical and round, $\sigma_{x1}=\sigma_{x2}=\sigma_{y1}=\sigma_{y2}$, and the luminosity becomes
-$$\luminosity=\dfrac{N_1N_2f_{rev}N_b}{4\pi\sigma^2}=\dfrac{N_1N_2f_{rev}N_b\gamma}{4\pi\epsilon_N\beta^*}.$$
+\begin{equation}
+    \luminosity=\dfrac{N_1N_2f_{rev}N_b}{4\pi\sigma^2}=\dfrac{N_1N_2f_{rev}N_b\gamma}{4\pi\epsilon_N\beta^*}.
+\end{equation}
 
 When proton beams cross at the LHC, there are many collisions which occur other than the hard-scatter of interest. While increasing the number of particles per bunch increases the likelihood of a rare interaction, it also increases the pile-up of multiple interactions. Pile-up, denoted as $\mu$, is one of the biggest obstacles for LHC experiments; the more there is, the more difficult it becomes to disentangle the events of interest from the sea of low energy collision. It is, however, an inevitable consequence that accompanies increasing the instantaneous luminosity \todo{Write more about why int. lumi. is wanted to be high}. The contribution to pile-up events can be separated into two main categories: 
 \begin{itemize}
@@ -43,9 +54,9 @@ There are also less-substantial contributions from the cavern background, beam h
 The \LHC was originally designed to reach a peak instantaneous luminosity and average pile-up of \unit{$10^{34}$}{\rpsquare{\cm}\reciprocal{\second}}\todo{Citation?} and $\langle\mu\rangle=19$ respectively. 
 
 \begin{figure}
-  \includegraphics[width=\smallfigwidth]{Figures/LHC/PileUp_2015_2018.pdf}
+  \includegraphics[width=0.7\textwidth]{Figures/LHC/PileUp_2015_2018.pdf}
   \caption[Pile-up distributions.]
-  {The pile-up, $\mu$, is the mean number of collisions per bunch crossing. Shown is the \unit{13}{\TeV} are the pile-up distributions from 2015-2018, where each distribution is luminosity weighted.}
+  {The pile-up, $\mu$, is the mean number of collisions per bunch crossing. Shown is the \unit{13}{\TeV} are the pile-up distributions from 2015-2018, where each distribution is luminosity weighted. This figure is from Ref.~\cite{Boyd:2707815}.}
   \label{fig:Pileup}
 \end{figure}
 
@@ -66,29 +77,23 @@ Both rapidity and pseudorapidity are more commonly used than polar angle $\theta
     \Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}.
 \end{equation}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\smallfigwidth]{Figures/LHC/cms_coordinate_system.png}
-    \caption{Spherical coordinate system used at the LHC.}
-    \todo[inline]{Change to ATLAS}
-    \label{fig:atlascoordinate}
-\end{figure}
-
 The rest of this section will review the three sub-detectors of \ATLAS - the Inner Detector, the Calorimeter, and the Muon Spectrometer - as well as the Magnet System. A cross-sectional diagram illustrating the sub-detector systems is shown in Figure \ref{fig:atlasdetector}. The sub-detectors are made up on a concentric barrels that wrap around the beam pipe, and circular endcaps placed at either end of the barrels. The barrels are designed to detect the particles that travel through the central $|\eta|$ region, and the endcaps broadens the angular coverage for particles whose trajectories run close to parallel to the beam. 
 
-\begin{figure}
+\input{Content/atlas-coord-tikz}
+
+\begin{figure}[htb!]
     \centering
-    \includegraphics[width=\smallfigwidth]{Figures/LHC/ATLASDetector.jpg}
-    \caption{The \ATLAS detector and its sub-componenets.}
+    \includegraphics[width=0.99\textwidth]{Figures/LHC/ATLASDetector.jpg}
+    \caption{The \ATLAS detector and its sub-components. This figure is from Ref.~\cite{Reed:2014}.}
     \label{fig:atlasdetector}
 \end{figure}
 
 \subsection{The Inner Detectors} \label{ssec:ATLASID}
-The Inner Detector (ID) is able to measure the momentum of charged particles passing through it. The trajectories of the charged particles as they cross through are curved by a superconducting solenoid magnet\todo{of what strength?}. The direction of curvature indicates the particle's charge, while the degree of curvature indicates momentum. The Inner Detector is the smallest component of ATLAS, stretching out to a radius of only 1.15 meters, with a total length of 7 meters. The barrel arrangement consists of concentric cylinders wrapped around the beam axis, and the end-cap components are attached as disks normal to the beam axis. The inner detector has three main components: the Pixel Detector, the Semiconductor Tracker (SCT), and the Transition Radiation Tracker (TRT).
+The Inner Detector (ID) is able to measure the momentum of charged particles passing through it. The trajectories of the charged particles as they cross through are curved by a superconducting solenoid magnet with a 2 Tesla magnetic field~\cite{Yamamoto:1999}. The direction of curvature indicates the particle's charge, while the degree of curvature indicates momentum. The Inner Detector is the smallest component of ATLAS, stretching out to a radius of only 1.15 meters, with a total length of 7 meters. The barrel arrangement consists of concentric cylinders wrapped around the beam axis, and the end-cap components are attached as disks normal to the beam axis. The inner detector has three main components: the Pixel Detector, the Semiconductor Tracker (SCT), and the Transition Radiation Tracker (TRT).
 
 \subsubsection{Pixel Detector}
 
-The Pixel Detector is the innermost part of the Inner Detector. It is the part of ATLAS that is closest to the interaction point where particles collide. It was designed with extremely high granularity in mind in order to accurately resolve primary and secondary vertices, determine impact parameter resolution, and identify short-lived particles such as b-hadrons and tau leptons. Prior to Run 2, the pixel detector consisted of three concentric layers in the barrel, and three disks in the end-cap regions. During the long shutdown prior to Run 2, an additional layer called the Insertable B-layer (IBL) \cite{Capeans:1291633} was added to the Pixel Detector closest to the beam pipe, making a total of four layers. The pixel detector are made up of sensor modules, each consisting of 46,080 active silicon pixels measuring 50 micrometers in width ($\phi$ direction) and 400 micrometers in length ($z$ direction). Each module consist of the active sensor medium (in this case silicon), and front-end electronics for readout. In total, the pixel detector hosts an astonishing eighty million readout channels. All together, the pixel detector achieves a resolution of \unit{10}{\micro\meter} in the $\phi$-direction and \unit{115}{\micro\meter} in the $z$-direction \todo{Check these numbers and cite}.
+The Pixel Detector is the innermost part of the Inner Detector. It is the part of ATLAS that is closest to the interaction point where particles collide. It was designed with extremely high granularity in mind in order to accurately resolve primary and secondary vertices, determine impact parameter resolution, and identify short-lived particles such as b-hadrons and tau leptons. Prior to Run 2, the pixel detector consisted of three concentric layers in the barrel, and three disks in the end-cap regions. During the long shutdown prior to Run 2, an additional layer called the Insertable B-layer (IBL)~\cite{Capeans:1291633} was added to the Pixel Detector closest to the beam pipe, making a total of four layers. The pixel detector are made up of sensor modules, each consisting of 46,080 active silicon pixels measuring 50 micrometers in width ($\phi$ direction) and 400 micrometers in length ($z$ direction). Each module consist of the active sensor medium (in this case silicon), and front-end electronics for readout. In total, the pixel detector hosts an astonishing eighty million readout channels. All together, the pixel detector achieves a resolution of \unit{10}{\micro\meter} in the $\phi$-direction and \unit{115}{\micro\meter} in the $z$-direction \todo{Check these numbers and cite}.
 
 \subsubsection{Semi-conductor tracker}
 
@@ -96,30 +101,28 @@ The second layer of the inner detector is the SemiConductor Tracker (SCT), made 
 
 \subsubsection{Transition Radiation Tracker}
 
-The third and outermost layer of the inner detector is the Transition Radiation Tracker (TRT). Unlike the ID and the SCT, it uses a straw drift tube technology, and exploits transition radiation emission for additional particle identification. Each module consists of 4 millimetre diameter straw tubes filled with xenon, carbon dioxide, and oxygen (70\%, 27\%, and 3\%)\cite{Vogel:1537991} bundled together. In order to collect charge from ionisation, a tungsten wire extends axially through the centre of each tube. In the barrel the drift tubes run parallel with the beam axis, and in the endcaps they run radially. In total there are 351,000 readout channels, and the resulting position resolution is weaker than the Pixel Detector or the SCT. The TRT is only capable of performing measurements in the $R-\phi$ coordinate, with a resolution of \unit{170}{\mu\meter} \cite{missing}. 
+The third and outermost layer of the inner detector is the Transition Radiation Tracker (TRT). Unlike the ID and the SCT, it uses a straw drift tube technology, and exploits transition radiation emission for additional particle identification. Each module consists of 4 millimetre diameter straw tubes filled with xenon, carbon dioxide, and oxygen (70\%, 27\%, and 3\%)\cite{Vogel:1537991} bundled together. In order to collect charge from ionisation, a tungsten wire extends axially through the centre of each tube. In the barrel the drift tubes run parallel with the beam axis, and in the endcaps they run radially. In total there are 351,000 readout channels, and the resulting position resolution is weaker than the Pixel Detector or the SCT. The TRT is only capable of performing measurements in the $R-\phi$ coordinate, with a resolution of \unit{130}{\mu\meter}~\cite{Vogel:1537991}. 
 
-Despite the lower resolution and the lack of sensitivity in the z coordinate, the hits in the TRT contribute significantly to momentum resolution due to the a larger number of measurements and an extended measured track length. There are 73 parallel planes of straw-tubes in the barrel and 80 planes in each endcap. Furthermore, the barrel straws are inter-weaved in a matrix of polypropylene fibres, and the endcap disks are wedged in between polypropylene foils, creating numerous material boundaries. As highly relativistic particles pass through the boundaries they emit transition radiation photons; predominantly in the X-ray energy regime \cite{Ginzburg_1996}. These photons are absorbed by the gas mixture inside the tubes, and yield higher signal amplitudes than the signal of hits from minimum-ionizing particles. The energy of the transition radiation photon is strictly proportional to the relativistic factor $\gamma=E/m$ of the incident particle. For a given momentum, it is much higher for electrons than it is for pions or muons, a useful difference that is exploited for particle identification.
+Despite the lower resolution and the lack of sensitivity in the $z$ coordinate, the hits in the TRT contribute significantly to momentum resolution due to the a larger number of measurements and an extended measured track length. There are 73 parallel planes of straw-tubes in the barrel and 80 planes in each endcap. Furthermore, the barrel straws are inter-weaved in a matrix of polypropylene fibres, and the endcap disks are wedged in between polypropylene foils, creating numerous material boundaries. As highly relativistic particles pass through the boundaries they emit transition radiation photons; predominantly in the X-ray energy regime \cite{Ginzburg_1996}. These photons are absorbed by the gas mixture inside the tubes, and yield higher signal amplitudes than the signal of hits from minimum-ionizing particles. The energy of the transition radiation photon is strictly proportional to the relativistic factor $\gamma=E/m$ of the incident particle. For a given momentum, it is much higher for electrons than it is for pions or muons, a useful difference that is exploited for particle identification.
 
 \subsection{Calorimetry}
 Immediately after the particles exit the inner detector, they reach a set of calorimeters whose aim is to measure the particles’ energies by fully absorbing them. In contrast to the Inner Detector, the calorimeters can detect both charged and neutral particles. Neutrinos and muons, however, pass through the calorimeters unaffected as they are minimally ionizing particles (MIPs) at the LHC energy scale. The ATLAS calorimeters use sampling calorimeter technology. This is a design choice where layers of an active sensing material alternate with layers of a dense absorber material. Particles crossing the calorimeters will interact with the absorber medium and lose its energy through interactions. The initial traversing particle eventually creates a cascade of many lower energy particles - a particle shower. The sensitive detector medium sandwiched between will generate a signal proportional to this shower, with readout done through ionization or scintillation. 
 There are two types of particle showers: electromagnetic and hadronic, depending on the nature of the source. Electromagnetic showers are primarily initiated by electrons or photons and develop mainly through Bremsstrahlung ($e\rightarrow\gamma e$) and pair production ($\gamma\rightarrow e^+e^-$), while hadronic interactions are more complex, developing through the strong interaction between the hadrons and the absorber material's nuclei. They differ radically, and thus require separate detector technologies for high-precision detection.  In order to meet these needs, there are two types of calorimeters that are hermetic along the $\phi$ coordinate and cover up to $|\eta| < 4.9$. As depicted in Figure \ref{fig:calorimeters}, these are the electromagnetic and the hadronic calorimeters. 
 
 Forward calorimeter \cite{Artamonov_2008}\todo{?}.
-
 \begin{figure}
     \centering
-    \includegraphics[width=\mediumfigwidth]{Figures/LHC/ATLASCalorimetry.png}
-    \caption{Cross-sectional view of the calorimetry system in the ATLAS detector \cite{Lampl:923625}.}
+    \includegraphics[width=0.99\textwidth]{Figures/LHC/ATLASCalorimetry.png}
+    \caption{Cross-sectional view of the calorimetry system in the ATLAS detector. This figure is from Ref.~\cite{Lampl:923625}.}
     \label{fig:calorimeters}
 \end{figure}
-
 \subsubsection{The Electromagnetic Calorimeter}
-The electromagnetic calorimeter wraps immediately around the inner detector as illustrated in Figure \ref{fig:ECal}. The material used for the active sensing medium is liquid Argon (LAr), chosen for its high intrinsic uniformity, long-term stability of signal response, as well as radiation hardness\cite{?}. Lead plates are used as absorbers, chosen for it's high hadronic interaction length to radiation length ratio. The resulting electromagnetic calorimeter has a total thickness that covers twenty two times the radiation length, which corresponds to less that one hadronic interaction length, preventing hadronic showers from former. The liquid Argon and lead layers and arranged in an accordian-like geometry, ensuring a full azimuthal coverage with minimal gaps in acceptance \todo{Find a figure? Can't seem to visualise how this helps}. The barrel sector consists of three layers of varying granularity and has coverage up to $|\eta| < 1.475$. A sketch of the barrel module is shown in Figure \ref{fig:ECalBarrel}. 
+The electromagnetic calorimeter wraps immediately around the inner detector as illustrated in Figure \ref{fig:ECal}. The material used for the active sensing medium is liquid Argon (LAr), chosen for its high intrinsic uniformity, long-term stability of signal response, as well as radiation hardness~\cite{Zhang_2011}. Lead plates are used as absorbers, chosen for it's high hadronic interaction length to radiation length ratio. The resulting electromagnetic calorimeter has a total thickness that covers twenty two times the radiation length, which corresponds to less that one hadronic interaction length, preventing hadronic showers from former. The liquid Argon and lead layers and arranged in an accordian-like geometry, ensuring a full azimuthal coverage with minimal gaps in acceptance \todo{Find a figure? Can't seem to visualise how this helps}. The barrel sector consists of three layers of varying granularity and has coverage up to $|\eta| < 1.475$. A sketch of the barrel module is shown in Figure~\ref{fig:ECalBarrel}. 
 
 The first layer has a granularity of $\Delta\eta\times\Delta\phi=0.0031\times 0.098$. The high $\Delta\eta$ resolution acts as a powerful discriminator between showers originating from single isolated photons and those originating from multiple photons, from decays of neutral mesons within jets \todo{Read more about this}. The second layer is the thickest of the three, and it absorbs the vast majority of the shower's energy. It has a granularity of $\Delta\eta\times\Delta\phi=0.025\times 0.025$. Lastly, a thinner, lower-granularity final layer with $\Delta\eta\times\Delta\phi=0.05\times 0.025$ is used to estimate the energy that leaks beyond the electromagnetic calorimeter and into the hadronic calorimeter. In order to correct for energy lost by electrons and photons when they interact with the inner detector and magnet, a liquid Argon pre-sampler is installed upstream of the calorimeter. The pre-sampler is one single sensitive layer of liquid Argon and covers the range $|\eta| < 1.8$. The electromagnetic calorimeter end-caps are made up of four wheels; an inner and outer wheel on either side of the interaction point. These are each divided into eight wedge shaped modules and cover the range $1.375 < |\eta| < 3.2$. Like the barrel modules, the end-cal modules consist of three layers of varying granularity.
 
 \subsubsection{The Hadronic Calorimeter}
-Hadrons lose energy by through inelastic interactions with the detector medium, which result in the production of secondary strongly interacting particles, giving rise to hadronic showers\todo{Reword?}. The main purpose of the hadronic calorimetry system is to measure the energy such hadrons. Its performance is essential for precision measurements of jets as well as reconstruction of missing energy \cite{Aaboud:2018scw}. The hadronic calorimeter incorporates modules of varying technologies, the barrel region hosts a tile calorimeter and the end-caps host a liquid-argon hadronic calorimeter. 
+Hadrons lose energy by through inelastic interactions with the detector medium, which result in the production of secondary strongly interacting particles, giving rise to hadronic showers\todo{Reword?}. The main purpose of the hadronic calorimetry system is to measure the energy such hadrons. Its performance is essential for precision measurements of jets as well as reconstruction of missing energy~\cite{Aaboud:2018scw}. The hadronic calorimeter incorporates modules of varying technologies, the barrel region hosts a tile calorimeter and the end-caps host a liquid-argon hadronic calorimeter. 
 
 The Tile Calorimeter, covering the central region of ATLAS, is further separated into two sub-detectors. In the $|\eta| < 1.0$ region there is the hadronic tile barrel, and the extended tile barrel resides between $0.8 < |\eta| < 1.7$. Both regions use alternating tiles of steel absorbers and scintillating sensing elements, arranged parallel to the beam axis. A total of 64 modules wedge together to give full azimuthal angle coverage. In the transverse direction there are three layers of varying granularity. The first and second layers have resolution $0.1 \times 0.1$ in $\Delta\eta\times\Delta\phi$, and the third layer a coarser resolution of $\Delta\eta\times\Delta\phi = 0.2 \time 0.1$. As an ionising particle crosses the scintillating medium, ultraviolet scintillation light is produced. Using wavelength-shifting optical fibers, this light is collected and converted into visible light \todo{Why is it converted to visible light?}. Next it is guided towards photomultiplier tubes at the top of each module, where the optical signal is measured.
 
@@ -139,14 +142,12 @@ The outermost layer of the \ATLAS detector system is the muon spectrometer, whic
 
     %This feature in combination with a highly-quenching gas mixture of n-pentane and CO2 allows fast and safe operation at high particle flux. The signal read from the wires provides a bending direction position measurement with a few-mm accuracy. Copper strips separated from a graphite cathode plane by a flameresistant material layer provide an azimuthal measurement with a similar accuracy. 
 \end{itemize}
-
 \begin{figure}
     \centering
-    \includegraphics[width=\smallfigwidth]{Figures/no-image.png}
-    \caption{The Muon Spectrometer}
+    \includegraphics[width=0.8\textwidth]{Figures/LHC/ATLAS_MS.jpeg}
+    \caption{A section view of the ATLAS Muon Spectrometer and its sub-components. This figure is from Ref.~\cite{ATLAS_MS}}
     \label{fig:muonspectrometer}
 \end{figure}
-
 \subsection{Magnet system}
 
 The ATLAS detector incorporates a powerful magnet system that bends the trajectory of charged particles in order to measure their momentum with high accuracy. The momentum is deduced via the radius of curvature of the tracks seen within the detector systems. A pictorial representation of the ATLAS magnet system is shown in Figure \ref{fig:atlasmagnets}. It is a system comprised of four separate superconducting magnets - one barrel toroid and two endcap toroids incorporated in the muon spectrometer, and one central solenoid surrounding the inner detector. All four magnets are indirectly cooled, through conducting, by circulating helium at 4.5 K in the tubes welded onto the aluminium structure that encloses the coils \cite{828245}. 
@@ -220,12 +221,12 @@ In reference \cite{ATL-PHYS-PUB-2017-022}, a topological clustering algorithm fo
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/LHC/H4l_topo_cluster.png}
-    \caption{Simulated 4 lepton invariant mass distributions using the supercluster and sliding window algorithms, in the $4e$ channel.}
+    \caption{Simulated 4 lepton invariant mass distributions using the supercluster and sliding window algorithms, in the $4e$ channel. This figure is from Ref.~\cite{ATL-PHYS-PUB-2017-022}.}
     \label{fig:H4l_topo_cluster}
 \end{figure}
 
 \subsection{Electrons}
-
+\label{ssec:electronreco}
 \subsubsection{Electron reconstruction}
 
 Following track candidate and calorimeter cluster candidate reconstruction as described in sections \ref{ssec:tracksandvertices} and \ref{ssec:clusteringalgorithms} comes the final procedure in electron reconstruction: the matching of a track candidate to a topo-cluster and the finalisation of the cluster size \cite{ATLAS_electron_efficiency_2015-2016}. The algorithm prepares for reconstruction by first selecting the topo-custers and tracks it will use. The tracks are then refitted  using a Gaussian sum filter (GSF) method \cite{ATLAS-CONF-2012-047} to accommodate for the energy loss due to bremsstrahlung radiation, which affects electrons more significantly than muons due to their lighter mass. As an electron loses its energy, its transverse momentum also decreases, and the curvature of its track becomes more prominent. The refit improves electron reconstruction efficiencies by correcting for this effect and improving the track parameters.
@@ -249,19 +250,18 @@ The calorimeter isolation, $E_{\text{T}}^{\text{iso}}$, is the transverse energy
 The various working points for track isolation are described in detail in references \cite{ATLAS_electron_efficiency_2015-2016,ATLAS_electron_efficiency_2015-2017}. The leptons in the relevant analysis of this thesis use the FixedCutPflowLoose isolation working point, with $E_{\text{T}}^{\text{iso}}/E_{\text{T}}<0.2$ and $p_{\text{T}}^{\text{iso}}/p_{\text{T}}<0.15$ for electrons. 
 
 \subsection{Muons}
+\label{ssec:muonreco}
 \subsubsection{Muon reconstruction}
 
 Muons come in various types depending on the what subdetector information was used in reconstruction \cite{ATLAS_muon_reco_2015}. In total there are four classes of muons: combined, segment-tagged, calorimeter-tagged, and extrapolated. Most reconstructed muons are combined muon, indeed, these are the purest of the four identification categories. Combined muons have tracks reconstructed independently in the inner detector and the muon spectrometer, and a global refitting procedure is used to combine the tracks. Segment-tagged (ST) muons are those with a track in the inner detector that is outwards extrapolated to at least one matched track segment in the muon spectrometer. Segmented tracks occur to muons with lower momentum, and in regions of the muon spectrometer with acceptance holes. Calorimeter tagged muons refer to a muon with an identified track in the inner detector that is matched to a MIP-like energy cluster in the calorimeter. Of all the muon types this is the one with the lowest purity. As it does not rely on the muon spectrometer, its role is to recover the coverage gap around $\eta=0$. Lastly, extrapolated muons (synonymously standalone muons) are reconstructed without an inner detector track, and are based only a full muon spectrometer track. These types are mainly used to extend the muon coverage in the high-$\eta$ region where the inner detector has no coverage. 
 
 These four types of muons exists because muons offer an extremely clean signal in the detector, and therefore they can afford to be further categorised. Figure \ref{fig:typesofmuons} illustrates the detector profiles of each type of muon. In the high multiplicity four lepton channel, the signal is particularly sensitive to changes in lepton acceptance. For the $4\mu$ channel (the flavour channel with the highest resolution), the slightest improvement in muon acceptance will cascade into a significant overall acceptance. 
-
 \begin{figure}
     \centering
-    \includegraphics[width=\smallfigwidth]{Figures/LHC/muon_types.pdf}
-    \caption{Figure adapted from \cite{Ottersbach:2012mma}}
+    \includegraphics[width=0.5\textwidth]{Figures/LHC/muon_types.pdf}
+    \caption{Cross-sectional view of the ATLAS detector and how muon types are identified. The inner black lines represent the inner detector, the yellow is the calorimeter, and the outer blue lines are the muon spectrometer. This figure is adapted from~\cite{Ottersbach:2012mma}.}
     \label{fig:typesofmuons}
 \end{figure}
-
 \subsubsection{Muon identification}
 
 Muon identification is carried out with a cut-based approach \cite{}. The main backgrounds coming from hadron decays (mostly charged pion and kaon decays) are suppressed by applying quality requirements that select for prompt muons with high efficiency that provide robust momentum measurements. 
@@ -284,5 +284,5 @@ Just like electrons, muons have additional isolation requirements imposed to rej
 
 The tracking isolation is $p_{\text{T}}^{\text{varcone30}}$, defined as the scalar transverse momenta sum of tracks with $p_{\text{T}}>1$ GeV in a cone of size $\Delta R=\text{min}\Big(\frac{10}{p_{\text{T}}^{\mu}},0.3\Big)$ around the muon candidate. The contribution from the muon track itself is subtracted. The variability in cone size is to ameliorate performance for high $p_{\text{T}}$ muons \cite{ATLAS_muon_reco_2016}. Likewise, the calorimeter isolation variable, $E_{\text{T}}^{\text{topocone20}}$, is the sum of the topological energy clusters in a $\Delta R=0.2$ cone around the muon, with the energy deposit of the muon and pile-up effects subtracted. Various definitions for the discriminant variables are used to setup different working points. For the four lepton analysis, the FixedCutLoose working point is chosen, with $p_{\text{T}}^{\text{varcone30}}/p_{\text{T}}^{\mu}<0.15$ and $E_{\text{T}}^{\text{topocone20}}/p_{\text{T}}^{\mu}<0.30$. The details of the various muon isolation working points can be found in reference \cite{ATLAS_muon_reco_2016}.
 
-\cite{ATLAS:2020xtq}
+% \cite{ATLAS:2020xtq}
 

@@ -103,21 +103,21 @@ Figure~\ref{fig:inclm4lmat} shows the migration matrix for the inclusive \mFourL
 The remaining plots of the unfolding inputs and migration matrices for all other observables are available in Appendix~\ref{app:moreunf}.
 
 %%incl.m4l
-\begin{figure}[tbp]
+\begin{figure}[tbh!]
     \begin{subfigure}{.99\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/m4l/UnfoldingStudies/v014_inputs/inclm4linputs.pdf}  
     \end{subfigure}
     \caption{In the left-hand panel, the number of predicted events passing the reconstruction- and fiducial- level selections are displayed as the detector yield and particle yield, respectively. They are given as a function of inclusive \mFourL{} bins. The right-hand panel shows the efficiency, fiducial purity and fiducial fraction in each of the same \mFourL{} bins.}
     \label{fig:inclm4lunf}
 \end{figure}
-\begin{figure}[tbp]
+\begin{figure}[tbh!]
   \centering
-  \begin{subfigure}{.65\textwidth}\centering\includegraphics[width = 0.99\textwidth]{Figures/m4l/UnfoldingStudies/v014_matrices/inclm4lMatrix.pdf}\end{subfigure}
+  \begin{subfigure}{.99\textwidth}\centering\includegraphics[width = 0.99\textwidth]{Figures/m4l/UnfoldingStudies/v014_matrices/inclm4lMatrix.pdf}\end{subfigure}
  \caption{Migration matrix for the inclusive \mFourL{} distribution. \label{fig:inclm4lmat}}
 \end{figure}
-\begin{figure}[tbp]
+\begin{figure}[tbh!]
   \centering
-  \begin{subfigure}{.65\textwidth}\centering\includegraphics[width = 0.99\textwidth]{Figures/m4l/UnfoldingStudies/v014_matrices/inclusive_vs_m4lMatrix.pdf}\end{subfigure}
+  \begin{subfigure}{.85\textwidth}\centering\includegraphics[width = 0.99\textwidth]{Figures/m4l/UnfoldingStudies/v014_matrices/inclusive_vs_m4lMatrix.pdf}\end{subfigure}
  \caption{Migration matrices for the four \mFourL{} regions between the slices. \label{fig:inclvm4lmat}}
 \end{figure}
 
@@ -183,7 +183,7 @@ There were a few iterations of the binning that were run with varying criteria, 
 When correcting the data for detector effects, one of the things to take into account is the efficiency correction. Recall from section \ref{subsec:unfmethod} that the efficiency correction is the fraction of reconstructed events that also pass the fiducial selection cuts. A significant contribution to this is the efficiency correction is efficiency in identifying, reconstructing, isolating, and track-to-vertex-association of (TTVA) leptons. These are dependent on lepton kinematics and calculated from Monte Carlo simulation, therefore they may not be accurate if the data differs from the prediction. To correct for this effect, the lepton efficiencies are measured as a function of the lepton transverse momentum (\pT) and pseudorapidity ($\eta$), and the inverse of this is applied as a per-lepton weight in the data. The term coined for this weight is the pre-unfolding weight, and as the name suggests it is applied prior to the unfolding procedure detailed in \ref{subsec:unfmethod}. 
 
 \begin{figure}[htb]
-    \begin{subfigure}{.79\textwidth}\centering
+    \begin{subfigure}{.85\textwidth}\centering
         \includegraphics[width=.99\textwidth]{Figures/m4l/UnfoldingStudies/v014_preUF_compare.pdf}\caption{}
     \end{subfigure}
         \begin{subfigure}{.79\textwidth}\centering
@@ -222,7 +222,7 @@ Another similar validation, the half MC closure test, is also performed. This ti
         \begin{subfigure}{.8\textwidth}\centering
         \includegraphics[width=0.99\linewidth]{Figures/m4l/MCClosure/HalfMCClosure_inclm4l.pdf}\caption{}\label{fig:halfMCclosure}
     \end{subfigure}
-    \caption{Caption}
+    \caption{Monte Carlo closure tests performed on all bins in the inclusive \mFourL{} distribution. The top figure uses the full MC to unfold itself. The bottom figure splits the MC in half, and uses one set to unfold the other. The pink hash in \ref{fig:halfMCclosure} is the MC statistical uncertainty. Closure is achieved in all bins.}
     \label{fig:MCclosure}
 \end{figure}
 
