@@ -1,5 +1,6 @@
 %% Theoretical predictions 
-\section{Overview of Monte Carlo Event Generators}
+\section{Predictions from Monte Carlo Event Generators}
+\subsection{Overview of Monte Carlo Event Generators}
 \label{sec:mceg}
 Monte Carlo Event Generators (MCEG) play an important role in high energy physics. Generators such as \herwig{}~\cite{Bellm:2017bvx}, \pythia{}~\cite{Sjostrand:2006za} and \SHERPA~\cite{Gleisberg:2008ta} amongst others are essential in data analysis. Together with programs that simulate the detector effects, they are used to estimate the signal and background distributions of various processes. This section gives a brief review of how MCEGs simulate proton-proton collisions, drawing from References~\cite{seymour2013monte,hoche2015introduction,pdg_2021}, to which the readers may refer to for for an in-depth review. 
 
@@ -27,10 +28,9 @@ The MCEGs used to simulate four-lepton events for this analysis, along with key 
 \subsubsection{Validation of V+jets production in Herwig7 with NLO multi-jet merging}
 As part of the \ATLAS author qualification task, multi-leg merging at next-to leading order accuracy using the Matchbox framework in \herwig{7} was explored, with a focus on the vector boson plus jets process. Further details of the task and progression can be found on JIRA (\href{https://its.cern.ch/jira/browse/AGENE-1453}{\code{\textcolor{blue}{AGENE-1453}}}), and in the technical report of~\cite{Huang:2676143}.
 
-\section{Monte Carlo samples}
+\subsection{Monte Carlo samples}
 \label{sec:montecarlopred}
 This section provides a description of the event samples that are used for this analysis in the standard description of the ATLAS collaboration. These state-of-the-art predictions used to model the signal processes at detector-level and particle-level for this analysis, and to construct the response matrices that correct the data for detector effects. 
-
 \subsection{\qqFourL}
 The dominant \qqFourL process is simulated using the \SHERPA {2.2.2} event generator~\cite{Bothmann:2019yzt} with the \nnpdfnnlo{} set of PDFs~\cite{Ball:2014uwa}. The matrix elements are calculated at next-to-leading order accuracy for final states with zero and one jet, and at leading order accuracy for two- and three-jet final states. The different parton multiplicities are merged together and matched to the \SHERPA parton shower model based on the Catani-Seymour dipole factorization~\cite{Gleisberg:2008fv,Schumann:2007mg} using the MEPS@NLO prescription~\cite{Hoeche:2011fd,Hoeche:2012yf,Catani:2001cc,Hoeche:2009r}. A dedicated set of tuned parton-shower parameters developed by the \SHERPA authors are used. 
 An alternate sample of the \qqFourL process is generated using  \POWHEGBOX v2~\cite{Alioli:2010xd,Melia:2011tj,Nason:2013ydw}. The sample is generated at NLO accuracy and interfaced to \PYTHIA 8.186 for the simulation of the parton shower, hadronization, and underlying event. The tuning parameters are set according to the AZNLO tune~\cite{STDM-2012-23}. The sample is corrected to higher order effects using a k-factor obtained with \textsc{Matrix} NNLO QCD prediction~\cite{Cascioli:2014yka,Grazzini:2015hta,Grazzini:2017mhc,Kallweit:2018nyv}. The $K$-factor is defined as the ratio of the NNLO cross-section to the NLO cross-section and applied as a function of \mFourL{}. 
