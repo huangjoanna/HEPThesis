@@ -1,5 +1,32 @@
 %% Theoretical predictions 
-\section{Monte Carlo predictions}
+\section{Overview of Monte Carlo Event Generators}
+\label{sec:mceg}
+\todo[inline]{Fix citations}
+Monte Carlo Event Generators (MCEG) play an important role in high energy physics. Generators such as \herwig{}~\cite{Bellm:2017bvx}, \pythia{}~\cite{Sjostrand:2006za} and \SHERPA~\cite{Gleisberg:2008ta} amongst others are essential in data analysis. Together with programs that simulate the detector effects, they are used to estimate the signal and background distributions of various processes. This section gives a brief review of how MCEGs simulate proton-proton collisions, drawing from References~\cite{seymour2013monte,hoche2015introduction,pdg_2021}, to which the readers may refer to for for an in-depth review. 
+
+Protons are composite particles. In order to model how they collide on an event-by-event basis at the LHC, one must model how the partons (valence quarks, sea quarks, and gluons) behave. To achieve this complex goal, the event must be broken up into several phases, each produced via different techniques and occupying a unique region in phase space. QCD is weakly interacting at short distances. Therefore the components of the MCEG dealing with short-distance physics are based on perturbation theory~\cite{pdg}. At larger distances, all soft hadronic phenomena such as hadronization and the formation of the underlying event in hadron collisions cannot be computed from first principles~\cite{pdg}. Instead, one must rely upon other models. This is the general idea behind factorization theorem.
+
+Inside the factorization theorem, an important concept is the Parton Distribution Function (PDF). Written as $f_i(x,\mu_F^2)$, this corresponds to the probability to find a parton of flavour $i$ in the proton as a function of the fraction $x$ of the proton’s momentum carried by the parton and $\mu_F^2$ the energy scale of the hard interaction. $\mu_F^2$ is often referred to as the factorization scale. Since QCD does not predict the parton content of the proton, the shapes of the PDFs are determined by a fit to data from experimental observables in various processes~\cite{placakyte2011parton}.
+
+The event simulation starts at the heart of the collision: the hard scatter. In Figure~\ref{fig:MCEG}, this is the central blob in red. The hard scatter is the one with the largest transfer of energy between the two colliding partons. This is relatively straight-forward to simulate to some fixed order via the matrix element prescription. Nowadays for matrix element calculators, it is standard for most processes to calculate up to Next-to-Leading-Order (NLO), so as to include loop radiative correction. While including higher-order corrections reduces theory uncertainty~\cite{gutschow_lecture}, it is  computationally expensive.
+
+Another important aspect of event generation is the Parton shower, which connects the matrix element to the produced and observed hadrons. These are the squiggly branch structures of Figure~\ref{fig:MCEG}. The parton shower describes what happens to the incoming and outgoing parton of the hard collision~\cite{seymour2013monte}. Since partons are coloured, they behave in a Bremsstrahlung-like fashion and radiate gluons as they move through a collision. Recall from Section~\ref{sec:particlecontent} that gluons can also self interact and emit another gluon, leading to an extended shower of partons that is made up of mostly soft gluons~\cite{seymour2013monte}. The parton shower develops with decreasing values of a parameter that is a
+measure of the hardness of interactions~\cite{Nagy:98014034}. It is an evolution in momentum transfer scale that starts from the hard process and works to lower momentum until a point is reached where perturbation theory breaks down~\cite{seymour2013monte}. 
+
+As the parton shower branches, the QCD force grows until confinement takes over and results in the partons grouping together into colour-singlet hadrons, illustrated in bright green in Figure~\ref{fig:MCEG}. This process is described using hadronization models. The hadrons simulated may not be stable, meaning that they decay inside the detector volume. The decays are modelled inside the simulations using information about hadron lifetime, branching ratios and hadron decay width~\cite{Cabras:2743914}. Of course, aside from the hard collision there are lots of secondary interactions between the proton remnants~\cite{seymoure2013monte}. This is referred to as the underlying event, sketched in purple in Figure~\ref{fig:MCEG}. It produces soft hadrons everywhere in the event, which overlie and contaminate the hard process that was already simulated~\cite{seymour2013monte}.
+
+The MCEGs used to simulate four-lepton events for this analysis, along with key parameters such as PDF set and NLO corrections, are summarized in the next section. The MC samples are used in the design and optimization of the analysis, in evaluating the uncertainties, and in correcting the data from detector inefficiency and resolution effects. 
+
+\info[inline]{Simulating the hard process is relatively straightforward because Parton Distribution Functions (PDFs) describe partons coming into the process and lowest order perturbation theory gives a probabilistic distribution of the outgoing partons.}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.90\textwidth]{Figures/LHC/HocheMCEG_final.pdf}
+    \caption{This is a diagram of a simulated proton-proton collision. The hard collision is shown in the centre in red. In purple is the secondary hard scattering event. The parton shower is drawn in blue. Hadronisation is sketched in light green, and the subsequent hadron decays and final state particles are shown in dark green. Finally, the electromagnetic radiation is presented in yellow. This figure is from Reference~\cite{hoche2015introduction}.}
+    \label{fig:MCEG}
+\end{figure}
+
+\section{Monte Carlo samples}
 \label{sec:montecarlopred}
 Monte Carlo simulations are used to model the signal processes at detector-level and particle-level for this analysis, and to construct the response matrices that correct the data for detector effects. This section provides a description of the event samples that are used for this analysis in the standard description of the ATLAS collaboration. \todo[inline]{Add MCEG section if time permits??} %The general principles of Monte Carlo event generators are discussed briefly in Appendix \ref{chap:mcevgen}.
 
