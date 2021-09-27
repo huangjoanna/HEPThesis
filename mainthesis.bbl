@@ -1,20 +1,66 @@
 \begin{thebibliography}{100}
 
+\bibitem{Griffiths:2008zz}
+David Griffiths.
+\newblock {\em {Introduction to elementary particles}}.
+\newblock 2008.
+
+\bibitem{Galbraith}
+David Galbraith.
+\newblock “standard model tikz diagram.
+\newblock
+  \url{http://davidgalbraith.org/portfolio/ux-standard-model-of-the-standard-model/},
+  2021.
+
+\bibitem{Pich:2007vu}
+Antonio Pich.
+\newblock {The Standard model of electroweak interactions}.
+\newblock In {\em {2006 European School of High-Energy Physics}}, pages 1--49,
+  2007.
+
 \bibitem{Raby:1997bp}
 S.~Raby.
 \newblock {Family mixing and the origin of mass: The difference between weak
   eigenstates and mass eigenstates}.
 \newblock {\em Los Alamos Sci.}, 25:72--77, 1997.
 
-\bibitem{Griffiths:2008zz}
-David Griffiths.
-\newblock {\em {Introduction to elementary particles}}.
-\newblock 2008.
+\bibitem{higgspotential}
+Janosh.
+\newblock The higgs potential tikz diagram.
+
+\bibitem{Mobs:2684277}
+Esma Mobs.
+\newblock {The CERN accelerator complex - 2019. Complexe des accélérateurs du
+  CERN - 2019}.
+\newblock Jul 2019.
+\newblock General Photo.
 
 \bibitem{vretenar2012radio}
 M.~Vretenar.
 \newblock Radio frequency for particle accelerators: evolution and anatomy of a
   technology, 2012.
+
+\bibitem{Boyd:2707815}
+J.T. Boyd.
+\newblock {LHC Run-2 and Future Prospects}.
+\newblock Technical report, Jan 2020.
+\newblock 9 pages, 6 figure, proceedings from lecture given at CERN-JINR ESHEP
+  2019 summer school in St Petersburg, Russia. Submitted for publication in a
+  CERN Yellow Report.
+
+\bibitem{Reed:2014}
+Robert Reed.
+\newblock The upgrade of the atlas tile calorimeter readout electronics for
+  phase ii.
+\newblock {\em Journal of Physics Conference Series 1742-6588}, 623, 12 2014.
+
+\bibitem{Yamamoto:1999}
+Akira Yamamoto, T.~Kondo, Y.~Doi, Yasuhiro Makida, K.~Tanaka, Tomiyoshi
+  Haruyama, H.~Yamaoka, Herman Kate, L.~Bjorset, K.~Wada, S.~Meguro, J.S.H.
+  Ross, and K.D. Smith.
+\newblock Design and development of the atlas central solenoid magnet.
+\newblock {\em Applied Superconductivity, IEEE Transactions on}, 9:852 -- 855,
+  07 1999.
 
 \bibitem{Capeans:1291633}
 M~Capeans, G~Darbo, K~Einsweiller, M~Elsing, T~Flick, M~Garcia-Sciveres,
@@ -44,7 +90,7 @@ A~Abdesselam and T~Akimoto.
 A~Vogel.
 \newblock {ATLAS Transition Radiation Tracker (TRT): Straw Tube Gaseous
   Detectors at High Rates}.
-\newblock Technical Report ATL-INDET-PROC-2013-005, CERN, Geneva, Apr 2013.
+\newblock Technical report, CERN, Geneva, Apr 2013.
 
 \bibitem{Ginzburg_1996}
 Vitalii~L Ginzburg.
@@ -62,6 +108,11 @@ W~Lampl.
 \newblock {Optimizing the Energy Measurement of the ATLAS Electromagnetic
   Calorimeter}, 2006.
 \newblock Presented on 18 Jan 2006.
+
+\bibitem{Zhang_2011}
+Huaqiao~Zhang and.
+\newblock The {ATLAS} liquid argon calorimeter: Overview and performance.
+\newblock {\em Journal of Physics: Conference Series}, 293:012044, apr 2011.
 
 \bibitem{Aaboud:2018scw}
 Morad Aaboud et~al.
@@ -97,6 +148,13 @@ Koichi Nagai.
   Accelerators, Spectrometers, Detectors and Associated Equipment}, 384(1):219
   -- 221, 1996.
 \newblock BEAUTY '96.
+
+\bibitem{ATLAS_MS}
+ATLAS experiment.
+\newblock {Muon Spectrometer}.
+\newblock
+  \url{https://mediaarchive.cern.ch/MediaArchive/Photo/Public/2008/0803017/0803017_01/0803017_01-A4-at-144-dpi.jpg},
+  2021.
 
 \bibitem{828245}
 H.~J. {Herman}.
@@ -145,7 +203,9 @@ W~Lampl, S~Laplace, D~Lelas, P~Loch, H~Ma, S~Menke, S~Rajagopalan, D~Rousseau,
 \bibitem{ATL-PHYS-PUB-2017-022}
 {Electron and photon reconstruction and performance in ATLAS using a dynamical,
   topological cell clustering-based approach}.
-\newblock Technical Report ATL-PHYS-PUB-2017-022, CERN, Geneva, Dec 2017.
+\newblock Technical report, CERN, Geneva, Dec 2017.
+\newblock All figures including auxiliary figures are available at
+  https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2017-022.
 
 \bibitem{ATLAS_electron_efficiency_2015-2016}
 ATLAS Collaboration.
@@ -236,10 +296,50 @@ Fabrizio Caola and Kirill Melnikov.
 \newblock Constraining the higgs boson width withzzproduction at the lhc.
 \newblock {\em Physical Review D}, 88(5), Sep 2013.
 
+\bibitem{Aaboud:2019lxo}
+{ATLAS Collaboration}.
+\newblock {Measurement of the four-lepton invariant mass spectrum in 13 TeV
+  proton-proton collisions with the ATLAS detector}.
+\newblock Technical report, CERN, 2019.
+
+\bibitem{Sirunyan:s10052-018-5567-9}
+Measurements of the $\mathrm {p}\mathrm {p}\rightarrow \mathrm{Z}\mathrm{Z}
+  production cross section and the $\mathrm{Z}\rightarrow 4\ell $ branching
+  fraction, and constraints on anomalous triple gauge couplings at $\sqrt{s} =
+  13\,\text {TeV} $ volume={78}, issn={1434-6052},
+  url={http://dx.doi.org/10.1140/epjc/s10052-018-5567-9},
+  doi={10.1140/epjc/s10052-018-5567-9}, number={2}, journal={The European
+  Physical Journal C}, publisher={Springer Science and Business Media LLC},
+  author={Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Ambrogi, F and
+  Asilar, E. and Bergauer, T. and Brandstetter, J. and Brondolin, E. and
+  Dragicevic, M. and et al.}, year={2018}, month={Feb}.
+
+\bibitem{Aaboud:97.032005}
+M.~Aaboud, G.~Aad, B.~Abbott, O.~Abdinov, B.~Abeloos, S. H. Abidi, O. S.
+  AbouZeid, N. L. Abraham, H.~Abramowicz, H.~Abreu, and et~al.
+\newblock $\mathrm{Z}\mathrm{Z}\rightarrow 4\ell $ cross-section measurements
+  and search for anomalous triple gauge couplings in $\sqrt{s} = 13\,\text
+  {TeV} $ $pp$ collisions with the atlas detector.
+\newblock {\em Physical Review D}, 97(3), Feb 2018.
+
+\bibitem{m4l2021_paper}
+ATLAS Collaboration.
+\newblock Measurements of differential cross-sections in four-lepton events in
+  13 tev proton-proton collisions with the atlas detector, 2021.
+
 \bibitem{Kar:ab1be6}
 Deepak Kar.
 \newblock {\em Experimental Particle Physics}.
 \newblock 2053-2563. IOP Publishing, 2019.
+
+\bibitem{m4l_internalnote}
+Zara~Jane Grout, Maximilian Goblirsch-Kolb, Prajita Bhattarai, Jonathan
+  Butterworth, Louie~Dartmoor Corpe, Dan~Ping Huang, Xiaotian Liu, Emily Nurse,
+  Andrew Pilkington, Zachary~Michael Schillaci, Matous Vozak, Rongkun Wang,
+  Yusheng Wu, Lailin Xu, Johannes~Josef Junggeburth, Zhengguo Zhao, and Bing
+  Zhou.
+\newblock {Unfolded four lepton mass and angular distributions}.
+\newblock Technical report, CERN, Geneva, Dec 2019.
 
 \bibitem{Aad:2014tca}
 Georges Aad et~al.
@@ -254,11 +354,61 @@ Georges Aad et~al.
   $\sqrt{s}=$ 8 TeV with the ATLAS detector}.
 \newblock {\em Phys. Lett.}, B753:552--572, 2016.
 
-\bibitem{Aaboud:2019lxo}
-{ATLAS Collaboration}.
-\newblock {Measurement of the four-lepton invariant mass spectrum in 13 TeV
-  proton-proton collisions with the ATLAS detector}.
-\newblock Technical report, CERN, 2019.
+\bibitem{Bellm:2017bvx}
+Johannes Bellm et~al.
+\newblock {Herwig 7.1 Release Note}.
+\newblock Technical report, Various, 2017.
+
+\bibitem{Sjostrand:2006za}
+Torbjorn Sj{\"o}strand, Stephen Mrenna, and Peter~Z. Skands.
+\newblock {PYTHIA 6.4 physics and manual}.
+\newblock {\em JHEP}, 05:026, 2006.
+
+\bibitem{Gleisberg:2008ta}
+T.~Gleisberg, Stefan. Hoeche, F.~Krauss, M.~Schonherr, S.~Schumann, F.~Siegert,
+  and J.~Winter.
+\newblock {Event generation with SHERPA 1.1}.
+\newblock {\em JHEP}, 02:007, 2009.
+
+\bibitem{seymour2013monte}
+Michael~H. Seymour and Marilyn Marx.
+\newblock Monte carlo event generators, 2013.
+
+\bibitem{hoche2015introduction}
+Stefan Höche.
+\newblock Introduction to parton-shower event generators, 2015.
+
+\bibitem{pdg_2021}
+P.A. Zyla et~al.
+\newblock {Review of Particle Physics}.
+\newblock {\em PTEP}, 2020(8):083C01, 2020.
+
+\bibitem{pdg}
+P.A. Zyla et~al.
+\newblock {Review of Particle Physics}.
+\newblock {\em PTEP}, 2020(8):083C01, 2020.
+
+\bibitem{placakyte2011parton}
+Ringaile Placakyte.
+\newblock Parton distribution functions, 2011.
+
+\bibitem{Nagy:98014034}
+Zolt\'an Nagy and Davison~E. Soper.
+\newblock What is a parton shower?
+\newblock {\em Phys. Rev. D}, 98:014034, Jul 2018.
+
+\bibitem{Cabras:2743914}
+Grazia Cabras.
+\newblock {Measurement of the ZH(H $\rightarrow b\bar{b}$) associated
+  production with Z$\rightarrow \ell^{+}\ell^{-}$ in $pp$ collisions at
+  $\sqrt{s}$=13 TeV with the ATLAS Experiment}, 2019.
+\newblock Presented 27 Mar 2020.
+
+\bibitem{Huang:2676143}
+Dan~Ping Huang.
+\newblock {Validation of V+jets production in Herwig7 with NLO multi-jet
+  merging}.
+\newblock Technical report, CERN, Geneva, Mar 2019.
 
 \bibitem{Ball:2014uwa}
 Richard~D. Ball et~al.
@@ -408,16 +558,6 @@ The~ATLAS Collaboration.
   production in pp collisions at $\sqrt{s}=13$ tev using the atlas detector.
 \newblock {\em Physics Letters B}, 770:473--493, 2017.
 
-\bibitem{m4l2021_paper}
-ATLAS Collaboration.
-\newblock Measurements of differential cross-sections in four-lepton events in
-  13 tev proton-proton collisions with the atlas detector, 2021.
-
-\bibitem{pdg_2021}
-P.A. Zyla et~al.
-\newblock {Review of Particle Physics}.
-\newblock {\em PTEP}, 2020(8):083C01, 2020.
-
 \bibitem{cowan_munich}
 Glenn Cowan.
 \newblock Some statistical tools for particle physics.
@@ -470,16 +610,6 @@ Ilaria Brivio, Yun Jiang, and Michael Trott.
 \newblock The smeftsim package, theory and tools.
 \newblock {\em Journal of High Energy Physics}, 2017(12), Dec 2017.
 
-\bibitem{BLcontur}
-S.~Amrith, J.~M. Butterworth, F.~F. Deppisch, W.~Liu, A.~Varma, and D.~Yallup.
-\newblock Lhc constraints on a b − l gauge model using contur.
-\newblock {\em Journal of High Energy Physics}, 2019(5), May 2019.
-
-\bibitem{CLs_technique}
-Alexander~L. Read.
-\newblock {Presentation of search results: The CL(s) technique}.
-\newblock {\em J. Phys. G}, 28:2693--2704, 2002.
-
 \bibitem{Abdallah:2020pec}
 Waleed Abdallah et~al.
 \newblock {Reinterpretation of LHC Results for New Physics: Status and
@@ -520,6 +650,10 @@ Andy Buckley, Jonathan Butterworth, Leif Lonnblad, David Grellscheid, Hendrik
   Hoeth, et~al.
 \newblock {Rivet user manual}.
 \newblock {\em Comput.Phys.Commun.}, 184:2803--2819, 2013.
+
+\bibitem{Jon_meetings}
+Jon Butterworth.
+\newblock personal communication.
 
 \bibitem{Maguire:2017ypu}
 Eamonn Maguire, Lukas Heinrich, and Graeme Watt.
@@ -672,6 +806,10 @@ A.~M. Sirunyan, A.~Tumasyan, W.~Adam, F.~Ambrogi, E.~Asilar, T.~Bergauer,
   collisions at $ \sqrt{s}=13 $ TeV}.
 \newblock {\em JHEP}, 06:002, 2018.
 
+\bibitem{okada2012lhc}
+Yasuhiro Okada and Luca Panizzi.
+\newblock Lhc signatures of vector-like quarks, 2012.
+
 \bibitem{Panizzi:2014dwa}
 L.~Panizzi.
 \newblock {Vector-like quarks: $t^{\prime}$ and partners}.
@@ -720,6 +858,31 @@ Albert~M. Sirunyan et~al.
   of $ t\overline{t} $ production with additional heavy-flavour jets in
   proton-proton collisions at $ \sqrt{s} $ = 13 TeV with the ATLAS detector}.
 \newblock {\em JHEP}, 04:046, 2019.
+
+\bibitem{Sirunyan:2019bzr}
+A.~M. Sirunyan, A.~Tumasyan, W.~Adam, F.~Ambrogi, T.~Bergauer, J.~Brandstetter,
+  M.~Dragicevic, J.~Erö, A.~Escalante Del~Valle, and et~al.
+\newblock Measurements of differential z boson production cross sections in
+  proton-proton collisions at $$ \sqrt{s} $$ = 13 tev.
+\newblock {\em Journal of High Energy Physics}, 2019(12), Dec 2019.
+
+\bibitem{Sirunyan:2018cpw}
+A.~M. Sirunyan, A.~Tumasyan, W.~Adam, F.~Ambrogi, E.~Asilar, T.~Bergauer,
+  J.~Brandstetter, E.~Brondolin, M.~Dragicevic, and et~al.
+\newblock Measurement of differential cross sections for ${\text {z}}$ boson
+  production in association with jets in proton-proton collisions at $\sqrt{s}
+  = 13\,\text {TeV} $.
+\newblock {\em The European Physical Journal C}, 78(11), Nov 2018.
+
+\bibitem{BLcontur}
+S.~Amrith, J.~M. Butterworth, F.~F. Deppisch, W.~Liu, A.~Varma, and D.~Yallup.
+\newblock Lhc constraints on a b − l gauge model using contur.
+\newblock {\em Journal of High Energy Physics}, 2019(5), May 2019.
+
+\bibitem{CLs_technique}
+Alexander~L. Read.
+\newblock {Presentation of search results: The CL(s) technique}.
+\newblock {\em J. Phys. G}, 28:2693--2704, 2002.
 
 \bibitem{hepthesis}
 Andy Buckley.
