@@ -8,11 +8,12 @@ The Standard Model (SM) of particle physics is a rather simplistic name for such
 \section{Particle content}
 \label{sec:particlecontent}
 
-The Standard Model is often depicted in compact diagrams similar to that of Mendeleev's Periodic Table of Elements. One such diagram is shown in Figure \ref{fig:SM}. In a nutshell, the particles put forward by the SM are truly elementary particles. Unlike the elements in the Periodic Table which can be further broken down, these elementary particles are (to our knowledge) point-like and contain no internal structure. Each particle has a unique set of properties - quantum numbers - that define it, and split into one of two categories: fermions and bosons. 
+The Standard Model is often depicted in compact diagrams similar to that of Mendeleev's Periodic Table of Elements. One such diagram is shown in Figure \ref{fig:SMparticles}. In a nutshell, the particles put forward by the SM are truly elementary particles. Unlike the elements in the Periodic Table which can be further broken down, these elementary particles are (to our knowledge) point-like and contain no internal structure. Each particle has a unique set of properties - quantum numbers - that define it, and split into one of two categories: fermions and bosons. 
 
-Fermions are half-integer spin particles, and are usually thought of as matter particles. Each fermion has an anti-particle, with an identical mass but opposite electric charge. They are further classified as either leptons or quarks. Leptons are either negatively charged (-1), or neutral. The latter are referred to as neutrinos, which the SM predicts to be massless. Quarks have an electric charge of either $\frac{2}{3}$ or $\frac{-1}{3}$, and carry an additional colour charge of either red, blue, or green. The arrangement of fermions in the SM is generational. The first generation is found in everyday matter; for example the proton and neutron are made up of up and down quarks, and the electron which orbit nuclei. The second and third generation leptons have higher masses, but they otherwise behave identically. 
+Fermions are half-integer spin particles, and are usually thought of as matter particles. Each fermion has an anti-particle, with an identical mass but opposite electric charge. They are further classified as either leptons or quarks. Leptons are either negatively charged (-1), or neutral. The latter are referred to as neutrinos, which the SM predicts to be massless. Quarks have an electric charge of either $\frac{2}{3}$ or $-\frac{1}{3}$, and carry an additional colour charge of either red, blue, or green. The arrangement of fermions in the SM is generational. The first generation is found in everyday matter; for example the proton and neutron are made up of up and down quarks, and the electron which orbit nuclei. The second and third generation leptons have higher masses and so have decays open to them, but they otherwise behave identically. 
 
-Bosons are integer spin particles that mediate the interactions within the SM. Electromagnetism is arguably the most well-known forces, and is carried by the massless and chargeless photon $\gamma$. Electric charge is conserved during photon-mediated particle interactions, and the photon has infinite range. that Eight gluons mediate the strong force of quantum chromodynamics. They are also massless and electromagnetically neutral, but carry a colour charge. Only quarks are able to interact with gluons, and they can self-interact. Unlike the photon, however, gluons have finite range; as interaction distance increase, the interaction strength decreases. The weak force arises from the exchange of three massive force carriers: two charged $W^{\pm}$ bosons and a neutral $Z$ boson. As its name suggests, the force is relatively weak compared to the EM and strong forces, and is only carried over short ranges. The photon, $W^{\pm}$, and $Z$ bosons are gauge bosons of spin 1. Completing the SM is the spin 0 scalar Higgs boson. The Higgs is electrically neutral, colourless, and massive. It plays a key role in the SM by providing mass to gauge bosons and fermions through electroweak symmetry breaking.
+Bosons are integer spin particles that mediate the interactions within the SM. Electromagnetism is arguably the most well-known forces, and is carried by the massless and chargeless photon $\gamma$. Electric charge is conserved during photon-mediated particle interactions, and the photon has infinite range. Eight gluons mediate the strong force of quantum chromodynamics. They are also massless and electromagnetically neutral, but carry a colour charge. Only quarks are able to interact with gluons, and unlike photons, gluons interact with each other as well as with quarks. This process is known as gluon self-interaction. The self-interaction leads properties characteristic of the strong interaction: namely asymptotic freedom and confinement. 
+The weak force arises from the exchange of three massive force carriers: two charged $W^{\pm}$ bosons and a neutral $Z$ boson. As its name suggests, the force is relatively weak compared to the EM and strong forces, and is only carried over short ranges. The photon, $W^{\pm}$, and $Z$ bosons are gauge bosons of spin 1. Completing the SM is the spin 0 scalar Higgs boson. The Higgs is electrically neutral, colourless, and massive. It plays a key role in the SM by providing mass to gauge bosons and fermions through electroweak symmetry breaking.
 
 \input{Content/SM_tikz}%\subsubsection{Fermions}
 %
@@ -20,7 +21,7 @@ Bosons are integer spin particles that mediate the interactions within the SM. E
 
 \section{Gauge fields}
 
-The Standard Model is constructed upon the language of quantum field theory, where every elementary particle is described as quantizations \todo{(pertubations?)} of a quantum field. It describes the strong and electroweak interaction from the $\SUgroup3_C\otimes\SUgroup2_L\otimes\Ugroup1_Y$ symmetry group, each with a conserved quantity (following Noether's theorem) as indicated by the indices. All the interactions of the SM can be derived on the basis that the system is invariant under local gauge transformations. Imposing local gauge invariance under \SUgroup{3} and colour charge conservation returns Quantum Chromodynamics (QCD). 
+The Standard Model is constructed upon the language of quantum field theory, where every elementary particle is described as excitations of a quantum field. It describes the strong and electroweak interaction from the $\SUgroup3_C\otimes\SUgroup2_L\otimes\Ugroup1_Y$ symmetry group, each with a conserved quantity (following Noether's theorem~\cite{noether}) as indicated by the indices. All the interactions of the SM can be derived on the basis that the system is invariant under local gauge transformations. Imposing local gauge invariance under \SUgroup{3} and colour charge conservation returns Quantum Chromodynamics (QCD). 
 
 \subsection{Quantum electrodynamics}
 \label{ssec:QED}
@@ -96,18 +97,22 @@ where $f_{ijk}$ are the structure constants of \SUgroup{3}.
 
 The modified Lagrangian (with the covariant derivative replacing the derivative) ins locally invariant under \SUgroup{3} transformations, and consequently eight new gauge fields are introduced. Unsurprisingly, these correspond precisely to the eight gluons. Lastly, the Proca-Lagrangian for the gluon fields must be added in. Here it is useful to define
 \begin{equation}
-    G^{\mu\nu}_a \equiv \partial^{\mu}G_a^{\nu}-\partial^{\nu}G_a^{\mu}-g_sf_{ijk}G^{\mu}_jG^{\nu}_k
+    G^{\mu\nu}_a \equiv \partial^{\mu}G_a^{\nu}-\partial^{\nu}G_a^{\mu}-g_sf_{ijk}G^{\mu}_jG^{\nu}_k,
 \end{equation}
-so that the final Lagrangian describing quantum chromodynamics is
+which looks quite similar to the field strength tensor of QED, except for the vector product of the of the third term. This last term is a characteristic of quantum field theories based on non-Abelian groups; the gauge bosons carry charge and therefore may interact with one another. In the case of QCD the gluons are bicoloured; carrying both a colour and an anticolour. The final Lagrangian describing quantum chromodynamics is then
 \begin{equation}
-    \Lagrangian=[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi] - \dfrac{1}{4}G^{\mu\nu}_aG^a_{\mu\nu}-g_s\bar{\psi}\gamma^{\mu}\lambda_a \psi G_{\mu}^a
+    \Lagrangian=[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi] - \dfrac{1}{4}G^{\mu\nu}_aG^a_{\mu\nu}-g_s\bar{\psi}\gamma^{\mu}\lambda_a \psi G_{\mu}^a.
 \end{equation}
+
+Two important phenomena of QCD are asymptotic freedom and confinement. Asymptotic freedom, describes the behaviour of quarks at high energies or, equivalently, at small distances. In this regime, quarks
+behave as if there were quasi-free particles since the coupling constant $alpha_S$ becomes increasingly
+small. However, at small energies, or large distances, confinement occurs. The strong coupling constant grows continually thereby increasing the attraction among the quarks. Quarks can consequently not exist as coloured free particles but are confined into bound colourless states called hadrons.
 
 \subsection{Weak interactions and electroweak unification}
 
 %\todo[inline]{In addition to the linked thread: A SU(2) doublet is a pair of states (particles) which can be rotated into each other by SU(2) (gauge) transformations. You have weak isospin (T3) up and down, but you are free to e.g. replace up <-> down everywhere without changing the physics. A singlet has no SU(2) "charge" and it not affected by the transformation. In the SM, left-handed leptons are SU(2) doublets  and right-handed ones SU(2) singlets . In the same way, you have color triplets (quarks), singlets (leptons), and octets (gluons) under SU(3).}
 
-The global gauge transformation $\psi\rightarrow e^{i\theta}\psi$ where $\theta$ is any real number can be though of as a matrix multiplication of the form
+The global gauge transformation $\psi\rightarrow e^{i\theta}\psi$ where $\theta$ is any real number can be thought of as a matrix multiplication of the form
 \begin{equation}
     \psi\rightarrow U\psi
 \end{equation}
@@ -210,7 +215,7 @@ The electroweak interaction, invariant under \SUgroup{2}$_L\times$\Ugroup{1}$_Y$
 \begin{equation}
     \Lagrangian=\sum_{j}i\bar{\psi}_j\gamma^{\mu}\mathcal{D}_{\mu}\psi_j-\dfrac{1}{4}B_{\mu\nu}B^{\mu\nu}-\dfrac{1}{4}W^a_{\mu\nu}W_a^{\mu\nu}
 \end{equation}
-where $j$ iterates over all the fermion fields. The requirement of local gauge invariant led to the construction of this Lagrangian that unifies the electromagnetic and weak interactions, from which the the physical interactions between fermions and the electroweak gauge bosons are correctly reproduced. The electroweak Lagrangian above, however, does not allow for gauge field mass terms. While the photon (and the gluon) is indeed massless, the fermions, $W$, and $Z$ bosons have been experimentally shown to be massive \cite{missing}. This is an inconsistency that urgently needs addressing - luckily, there is a way to reform gauge theory to accommodate massive gauge fields. 
+where $j$ iterates over all the fermion fields. The requirement of local gauge invariant led to the construction of this Lagrangian that unifies the electromagnetic and weak interactions, from which the the physical interactions between fermions and the electroweak gauge bosons are correctly reproduced. The electroweak Lagrangian above, however, does not allow for gauge field mass terms. While the photon (and the gluon) is indeed massless, the fermions, $W$, and $Z$ bosons have been experimentally shown to be massive \cite{pdg_2021}. This is an inconsistency that urgently needs addressing - luckily, there is a way to reform gauge theory to accommodate massive gauge fields. 
 
 \section{Spontaneous symmetry breaking and the Higgs mechanism} \label{sec:SSBHiggsMechanism}
 \subsection{Spontaneous symmetry breaking}\label{ssec:SSB}
@@ -242,7 +247,7 @@ the third and fourth term of equation \ref{eq:ssbReformedLagrangian} represent t
 \input{Content/Higgs-potential_tikz}
 \subsubsection{Broken continuous symmetry}
 
-The previous section illustrates an example of spontaneous symmetry breaking. The original Lagrangian of equation \ref{eq:ssbLagrangian} is invariant if $phi\rightarrow-\phi$; it is even in $\phi$. In the reformed Lagrangian of equation \ref{eq:ssbReformedLagrangian}, however, this symmetry is broken because it is not even in $\eta$. The breaking is considered spontaneous because no external agent is required; the symmetry simply becomes hidden when selecting a particular ground state (the "vacuum"). In section \ref{sec:SSB} the broken symmetry was a discrete symmetry in context of a read scalar field. This section will apply spontaneous symmetry breaking to a complex scalar field.
+The previous section illustrates an example of spontaneous symmetry breaking. The original Lagrangian of equation \ref{eq:ssbLagrangian} is invariant if $\phi\rightarrow-\phi$; it is even in $\phi$. In the reformed Lagrangian of equation \ref{eq:ssbReformedLagrangian}, however, this symmetry is broken because it is not even in $\eta$. The breaking is considered spontaneous because no external agent is required; the symmetry simply becomes hidden when selecting a particular ground state (the "vacuum"). In section \ref{ssec:SSB} the broken symmetry was a discrete symmetry in context of a read scalar field. This section will apply spontaneous symmetry breaking to a complex scalar field.
 
 Consider the following complex scalar field, written neatly as a combination of two real fields:
 \begin{equation}
@@ -275,7 +280,7 @@ The first term is the free Lagrangian for the field $\eta$, which includes a mas
 
 \subsection{The Higgs mechanism}
 
-The Higgs mechanisms involves spontaneous symmetry breaking of the complex field in equation \ref{eq:complexfield} in a Lagrangian that is locally gauge invariant. Consider the Lagrangian in equation \ref{eq:SSBContLagrangian}: it is invariant under global \Ugroup{1} transformation $\phi\rightarrow e^{iq\theta}\phi$, however not invariant under local \Ugroup{1} gauge transformation $\phi\rightarrow e^{iq\theta(x)}\phi$. In order to impose local gauge invariance, the derivatives must be replaced with the appropriate covariant derivatives
+The Higgs mechanisms involves spontaneous symmetry breaking of the complex field in equation \ref{eq:complexfield} in a Lagrangian that is locally gauge invariant. Consider the Lagrangian in equation \ref{eq:SSBContLagrangian}: it is invariant under global \Ugroup{1} transformation $\phi\rightarrow e^{iq\theta}\phi$, however not invariant under local \Ugroup{1} gauge transformation $\phi\rightarrow e^{iq\theta(x)}\phi$. In order to impose local gauge invariance, the derivatives must be replaced by the appropriate covariant derivatives
 \begin{equation}
     \partial_{\mu}\rightarrow\mathcal{D}_{\mu}=\partial_{\mu}+igA_{\mu}
 \end{equation}
@@ -362,7 +367,7 @@ which keeps the ground state electrically neutral, and consequently the photon m
          \nu+h(x)
     \end{pmatrix}.
 \end{equation}
-Choosing a unitary gauge, the Higgs double is rewritten such that the massless Goldstone fields are "eaten" by the gauge fields and the dependence on $\xi_a$ is removed.
+Choosing a unitary gauge, the Higgs doublet is rewritten such that the massless Goldstone fields are "eaten" by the gauge fields and the dependence on $\xi_a$ is removed.
 \begin{equation} \label{eq:higgsvev}
     \phi(x)\rightarrow e^{-\frac{\xi^a(x)\sigma^a}{2\nu}}\phi(x)=\dfrac{1}{\sqrt{2}}
     \begin{pmatrix}
