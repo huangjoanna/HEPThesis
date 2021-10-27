@@ -1,14 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2020)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: mainthesis.aux
-White space in argument---line 478 of file mainthesis.aux
- : \citation{3
- :             missing citations}
-I'm skipping whatever remains of this command
-White space in argument---line 479 of file mainthesis.aux
- : \citation{missing
- :                   citation}
-I'm skipping whatever remains of this command
 The style file: unsrt.bst
 Database file #1: mythesis.bib
 I was expecting a `,' or a `}'---line 252 of file mythesis.bib
@@ -17,155 +9,146 @@ I was expecting a `,' or a `}'---line 252 of file mythesis.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "Cabras:2743914" isn't style-file defined
---line 628 of file mythesis.bib
+--line 660 of file mythesis.bib
 Warning--I'm ignoring Aad:2014tca's extra "author" field
---line 2916 of file mythesis.bib
+--line 2948 of file mythesis.bib
 Warning--I'm ignoring Aad:2015rka's extra "author" field
---line 3190 of file mythesis.bib
-I was expecting a `,' or a `}'---line 4622 of file mythesis.bib
+--line 3222 of file mythesis.bib
+I was expecting a `,' or a `}'---line 4683 of file mythesis.bib
  :     
  :     howpublished = {\url{https://phoenix.yizimg.com/321HG/tikz/blob/main/assets/higgs-potential}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 4930 of file mythesis.bib
+Repeated entry---line 4991 of file mythesis.bib
  : @techreport{Vogel:1537991
  :                          ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "Lampl:923625" isn't style-file defined
---line 4972 of file mythesis.bib
-Repeated entry---line 5162 of file mythesis.bib
+--line 5033 of file mythesis.bib
+Repeated entry---line 5223 of file mythesis.bib
  : @techreport{ATL-PHYS-PUB-2017-022
  :                                  ,
 I'm skipping whatever remains of this entry
-You're missing a field name---line 5553 of file mythesis.bib
+You're missing a field name---line 5614 of file mythesis.bib
  : 
  : %      note   = "CERN-TH-2017-232, ZU-TH-30-17",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 5588 of file mythesis.bib
+You're missing a field name---line 5649 of file mythesis.bib
  : 
  : %      note   = "CERN-TH-2018-127",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 6237 of file mythesis.bib
+Repeated entry---line 6450 of file mythesis.bib
  : @article{Maguire:2017ypu
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6497 of file mythesis.bib
+Repeated entry---line 6710 of file mythesis.bib
  : @article{Buckley:2010ar
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6538 of file mythesis.bib
+Repeated entry---line 6751 of file mythesis.bib
  : @article{Bahr:2008pv
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6569 of file mythesis.bib
+Repeated entry---line 6782 of file mythesis.bib
  : @article{Degrande:2011ua
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6588 of file mythesis.bib
+Repeated entry---line 6801 of file mythesis.bib
  : @article{Alwall:2014hca
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7894 of file mythesis.bib
+Repeated entry---line 7314 of file mythesis.bib
+ : @article{Gleisberg:2008fv
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7327 of file mythesis.bib
+ : @article{Hoeche:2011fd
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7359 of file mythesis.bib
+ : @article{Passarino:2013bha
+ :                           ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 7562 of file mythesis.bib
+ : 
+ : %      note           = "[Erratum: Phys. Rev. D 97 (2018) 099906]",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 7604 of file mythesis.bib
+ : @article{deFlorian:2016spz
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7617 of file mythesis.bib
+ : @article{Anastasiou:2016cez
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8463 of file mythesis.bib
  : @article{Alloul:2013bka
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8746 of file mythesis.bib
+Repeated entry---line 9315 of file mythesis.bib
  : @techreport{Bellm:2017bvx
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9010 of file mythesis.bib
+Repeated entry---line 9579 of file mythesis.bib
  : @article{Aaboud:2018pii
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9113 of file mythesis.bib
+Repeated entry---line 9682 of file mythesis.bib
  : @article{ALEPH:2005ab
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9126 of file mythesis.bib
+Repeated entry---line 9695 of file mythesis.bib
  : @article{HbbSearch
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9139 of file mythesis.bib
+Repeated entry---line 9708 of file mythesis.bib
  : @article{WbSearch
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9152 of file mythesis.bib
+Repeated entry---line 9721 of file mythesis.bib
  : @article{WtSearch
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9166 of file mythesis.bib
+Repeated entry---line 9735 of file mythesis.bib
  : @article{ZnunuSearch
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9179 of file mythesis.bib
+Repeated entry---line 9748 of file mythesis.bib
  : @article{ZllSearch
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9192 of file mythesis.bib
+Repeated entry---line 9761 of file mythesis.bib
  : @article{HadSearch
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9205 of file mythesis.bib
+Repeated entry---line 9774 of file mythesis.bib
  : @article{TriLepSearch
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9218 of file mythesis.bib
+Repeated entry---line 9787 of file mythesis.bib
  : @article{Abdallah:2020pec
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9356 of file mythesis.bib
+Repeated entry---line 9925 of file mythesis.bib
  : @article{Sjostrand:2014zea
  :                           ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "missing"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "?"
-Warning--I didn't find a database entry for "gutschow_lecture"
-Warning--I didn't find a database entry for "seymoure2013monte"
-Warning--I didn't find a database entry for "Bothmann:2019yzt"
 Warning--I didn't find a database entry for "Schumann:2007mg"
-Warning--I didn't find a database entry for "Hoeche:2012yf"
 Warning--I didn't find a database entry for "Hoeche:2009r"
-Warning--I didn't find a database entry for "STDM-2012-23"
-Warning--I didn't find a database entry for "deFlorian:2016spz"
 Warning--I didn't find a database entry for "Butterworth:2015oua"
-Warning--I didn't find a database entry for "Hamilton:2013fea"
-Warning--I didn't find a database entry for "Hamilton:2015nsa"
 Warning--I didn't find a database entry for "Nason:2004rx"
 Warning--I didn't find a database entry for "Frixione:2007vw"
-Warning--I didn't find a database entry for "Anastasiou:2016cez"
-Warning--I didn't find a database entry for "Anastasiou:2015ema"
-Warning--I didn't find a database entry for "Dulat:2018rbf"
-Warning--I didn't find a database entry for "Harlander:2009mq"
-Warning--I didn't find a database entry for "Harlander:2009bw"
-Warning--I didn't find a database entry for "Harlander:2009my"
-Warning--I didn't find a database entry for "Pak:2009dg"
-Warning--I didn't find a database entry for "Actis:2008ug"
-Warning--I didn't find a database entry for "Actis:2008ts"
-Warning--I didn't find a database entry for "Bonetti:2018ukf"
-Warning--I didn't find a database entry for "Ciccolini:2007jr"
-Warning--I didn't find a database entry for "Ciccolini:2007ec"
-Warning--I didn't find a database entry for "Bolzoni:2010xr"
 Warning--I didn't find a database entry for "Ciccolini:2003jy"
-Warning--I didn't find a database entry for "Brein:2003wg"
-Warning--I didn't find a database entry for "Brein:2011vx"
-Warning--I didn't find a database entry for "Denner:2014cla"
 Warning--I didn't find a database entry for "Brein:2012ne"
-Warning--I didn't find a database entry for "HIGG-2016-22"
-Warning--I didn't find a database entry for "ATLAS_Bootsrap_2021"
-Warning--I didn't find a database entry for "m4l_internal_note"
-Warning--I didn't find a database entry for "gcowan"
-Warning--I didn't find a database entry for "Aad:2020mkp"
-Warning--I didn't find a database entry for "Ellis:2018gqa"
 Warning--empty publisher in Griffiths:2008zz
 Warning--empty journal in Mobs:2684277
 Warning--empty institution in Boyd:2707815
 Warning--empty institution in Capeans:1291633
 Warning--empty author in CERN-LHCC-2017-005
-Too many commas in name 1 of "A Artamonov, D Bailey, G Belanger, et al." for entry Artamonov_2008
-while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Daniel S. Levin, Nir Amram, Robert Ball, et al." for entry LEVIN2008347
 while executing---line 944 of file unsrt.bst
 Warning--empty year in Etzion
@@ -177,48 +160,50 @@ Warning--empty journal in Sirunyan:s10052-018-5567-9
 Warning--empty year in Sirunyan:s10052-018-5567-9
 Warning--empty journal in Grazzini:2017mhc
 Warning--empty journal in Kallweit:2018nyv
+Warning--empty journal in deFlorian:2016spz
 Warning--empty author in ATLAS_Bootstrap_2021
 Warning--empty author in ATLAS-2019-Luminosity
+Warning--empty author in ATLAS_Bootsrap_2021
 Warning--empty journal in Abdallah:2020pec
-You've used 147 entries,
+You've used 178 entries,
             1791 wiz_defined-function locations,
-            1286 strings with 31225 characters,
-and the built_in function-call counts, 27788 in all, are:
-= -- 2209
-> -- 1461
+            1385 strings with 36325 characters,
+and the built_in function-call counts, 34475 in all, are:
+= -- 2711
+> -- 1918
 < -- 8
-+ -- 563
-- -- 416
-* -- 1954
-:= -- 4770
-add.period$ -- 427
-call.type$ -- 147
-change.case$ -- 152
++ -- 727
+- -- 549
+* -- 2468
+:= -- 5954
+add.period$ -- 521
+call.type$ -- 178
+change.case$ -- 185
 chr.to.int$ -- 0
-cite$ -- 164
-duplicate$ -- 1162
-empty$ -- 2723
-format.name$ -- 416
-if$ -- 5967
+cite$ -- 197
+duplicate$ -- 1418
+empty$ -- 3314
+format.name$ -- 549
+if$ -- 7389
 int.to.chr$ -- 0
-int.to.str$ -- 147
-missing$ -- 110
-newline$ -- 723
-num.names$ -- 140
-pop$ -- 315
+int.to.str$ -- 178
+missing$ -- 136
+newline$ -- 879
+num.names$ -- 170
+pop$ -- 364
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 502
+skip$ -- 600
 stack$ -- 0
-substring$ -- 1225
-swap$ -- 139
+substring$ -- 1524
+swap$ -- 167
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 17
-while$ -- 214
-width$ -- 150
-write$ -- 1558
-(There were 28 error messages)
+warning$ -- 19
+while$ -- 264
+width$ -- 181
+write$ -- 1898
+(There were 31 error messages)
