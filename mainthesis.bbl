@@ -58,8 +58,7 @@ Janosh.
 
 \bibitem{Mobs:2684277}
 Esma Mobs.
-\newblock {The CERN accelerator complex - 2019. Complexe des accélérateurs du
-  CERN - 2019}.
+\newblock {The CERN accelerator complex - 2019.}
 \newblock Jul 2019.
 \newblock General Photo.
 
@@ -82,6 +81,13 @@ E.~Daw.
 \newblock
   \url{http://www.hep.shef.ac.uk/edaw/PHY206/Site/2012_course_files/phy206rlec7.pdf},
   2012.
+
+\bibitem{coordinatesys}
+ETH Zurich.
+\newblock {How to draw diagrams in LaTeX with TikZ}.
+\newblock
+  \url{http://davidgalbraith.org/portfolio/ux-standard-model-of-the-standard-model/},
+  2021.
 
 \bibitem{Reed:2014}
 Robert Reed.
@@ -180,7 +186,7 @@ Koichi Nagai.
 \newblock BEAUTY '96.
 
 \bibitem{ATLAS_MS}
-ATLAS experiment.
+{ATLAS Collaboration}.
 \newblock {Muon Spectrometer}.
 \newblock
   \url{https://mediaarchive.cern.ch/MediaArchive/Photo/Public/2008/0803017/0803017_01/0803017_01-A4-at-144-dpi.jpg},
@@ -191,6 +197,13 @@ H.~J. {Herman}.
 \newblock The superconducting magnet system for the atlas detector at cern.
 \newblock {\em IEEE Transactions on Applied Superconductivity}, 10(1):347--352,
   2000.
+
+\bibitem{atlasmagnet}
+Quantum diaries.
+\newblock Atlas magnets.
+\newblock
+  \url{https://www.quantumdiaries.org/wp-content/uploads/2011/05/exp-magnets.png},
+  2021.
 
 \bibitem{Aad:2716326}
 ATLAS collaboration.
@@ -287,6 +300,12 @@ John Ottersbach.
   production}}.
 \newblock PhD thesis, U. Amsterdam, IHEF, 2012.
 
+\bibitem{ATLAS_muon_reco_2010}
+ATLAS Collaboration.
+\newblock Muon reconstruction efficiency and momentum resolution of the atlas
+  experiment in proton–proton collisions at $\sqrt{s}=7$ s = 7  tev in 2010.
+\newblock {\em The European Physical Journal C}, 74(9), Sep 2014.
+
 \bibitem{ATLAS_muon_reco_2016}
 ATLAS Collaboration.
 \newblock Muon reconstruction performance of the atlas detector in
@@ -344,17 +363,11 @@ Fabrizio Caola and Kirill Melnikov.
 Measurements of the $\mathrm {p}\mathrm {p}\rightarrow \mathrm{Z}\mathrm{Z}$
   production cross section and the $\mathrm{Z}\rightarrow 4\ell $ branching
   fraction, and constraints on anomalous triple gauge couplings at $\sqrt{s} =
-  13\,\text {TeV} $ volume={78}, issn={1434-6052},
-  url={http://dx.doi.org/10.1140/epjc/s10052-018-5567-9},
-  doi={10.1140/epjc/s10052-018-5567-9}, number={2}, journal={The European
-  Physical Journal C}, publisher={Springer Science and Business Media LLC},
-  author={Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Ambrogi, F and
-  Asilar, E. and Bergauer, T. and Brandstetter, J. and Brondolin, E. and
-  Dragicevic, M. and et al.}, year={2018}, month={Feb}.
+  13\,\text {TeV} $.
 
 \bibitem{Aaboud:97.032005}
-M.~Aaboud, G.~Aad, B.~Abbott, O.~Abdinov, B.~Abeloos, S. H. Abidi, O. S.
-  AbouZeid, N. L. Abraham, H.~Abramowicz, H.~Abreu, and et~al.
+M.~Aaboud, G.~Aad, B.~Abbott, O.~Abdinov, B.~Abeloos, S.H. Abidi, O.S.
+  AbouZeid, N.L. Abraham, H.~Abramowicz, H.~Abreu, and et~al.
 \newblock $\mathrm{Z}\mathrm{Z}\rightarrow 4\ell $ cross-section measurements
   and search for anomalous triple gauge couplings in $\sqrt{s} = 13\,\text
   {TeV} $ $pp$ collisions with the atlas detector.
@@ -530,6 +543,12 @@ D.~de~Florian et~al.
   the Higgs Sector}.
 \newblock 2016.
 
+\bibitem{Butterworth:2015oua}
+Jon Butterworth and Stefano et~al. Carrazza.
+\newblock Pdf4lhc recommendations for lhc run ii.
+\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
+  43(2):023001, Jan 2016.
+
 \bibitem{Hamilton:2013fea}
 Keith Hamilton, Paolo Nason, Emanuele Re, and Giulia Zanderighi.
 \newblock {NNLOPS simulation of Higgs boson production}.
@@ -540,6 +559,18 @@ Keith Hamilton, Paolo Nason, and Giulia Zanderighi.
 \newblock {Finite quark-mass effects in the NNLOPS POWHEG+MiNLO Higgs
   generator}.
 \newblock {\em JHEP}, 05:140, 2015.
+
+\bibitem{Nason:2004rx}
+Paolo Nason.
+\newblock {A new method for combining NLO QCD with shower Monte Carlo
+  algorithms}.
+\newblock {\em JHEP}, 11:040, 2004.
+
+\bibitem{Frixione:2007vw}
+Stefano Frixione, Paolo Nason, and Carlo Oleari.
+\newblock {Matching NLO QCD computations with Parton Shower simulations: the
+  POWHEG method}.
+\newblock {\em JHEP}, 11:070, 2007.
 
 \bibitem{Sjostrand:2014zea}
 Torbj{\"o}rn Sj{\"o}strand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
@@ -632,6 +663,12 @@ Paolo Bolzoni, Fabio Maltoni, Sven-Olaf Moch, and Marco Zaro.
   Next-to-Next-to-Leading Order in QCD}.
 \newblock {\em Phys. Rev. Lett.}, 105:011801, 2010.
 
+\bibitem{Ciccolini:2003jy}
+M.~L. Ciccolini, S.~Dittmaier, and M.~Kr{\"a}mer.
+\newblock {Electroweak radiative corrections to associated $WH$ and $ZH$
+  production at hadron colliders}.
+\newblock {\em Phys. Rev. D}, 68:073003, 2003.
+
 \bibitem{Brein:2003wg}
 Oliver Brein, Abdelhak Djouadi, and Robert Harlander.
 \newblock {NNLO QCD corrections to the Higgs-strahlung processes at hadron
@@ -649,11 +686,15 @@ Ansgar Denner, Stefan Dittmaier, Stefan Kallweit, and Alexander M{\"u}ck.
   fusion and Higgs strahlung at hadron colliders}.
 \newblock {\em Comput. Phys. Commun.}, 195:161--171, 2015.
 
+\bibitem{Brein:2012ne}
+Oliver Brein, Robert~V. Harlander, and Tom J.~E. Zirke.
+\newblock {vh@nnlo -- Higgs Strahlung at hadron colliders}.
+\newblock {\em Comput. Phys. Commun.}, 184:998--1003, 2013.
+
 \bibitem{HIGG-2016-22}
-M.~Aaboud, G.~Aad, B.~Abbott, O.~Abdinov, B.~Abeloos, D.~K. Abhayasinghe, S.~H.
-  Abidi, O.~S. AbouZeid, N.~L. Abraham, and et~al.
-\newblock Search for higgs boson pair production in the \upgamma \upgamma
-  b\overline{b} final state with 13 tev pp collision data collected by the
+ATLAS Collaboration.
+\newblock Search for higgs boson pair production in the $\upgamma \upgamma
+  b\overline{b}$ final state with 13 tev $pp$ collision data collected by the
   atlas experiment.
 \newblock {\em Journal of High Energy Physics}, 2018(11), Nov 2018.
 
@@ -747,8 +788,7 @@ Christian Gütschow and Marek Schönherr.
 \newblock {\em The European Physical Journal C}, 81(1), Jan 2021.
 
 \bibitem{ATLAS_WZXS}
-G.~Aad, B.~Abbott, J.~Abdallah, O.~Abdinov, B.~Abeloos, R.~Aben, O.S. AbouZeid,
-  N.L. Abraham, H.~Abramowicz, H.~Abreu, and et~al.
+ATLAS Collaboration.
 \newblock Measurement of w± and z-boson production cross sections in pp
   collisions at s=13 tev with the atlas detector.
 \newblock {\em Physics Letters B}, 759:601–621, Aug 2016.
@@ -873,15 +913,13 @@ Mathieu Buchkremer, Giacomo Cacciapaglia, Aldo Deandrea, and Luca Panizzi.
 \newblock {\em Nuclear Physics B}, 876(2):376–417, Nov 2013.
 
 \bibitem{ATLAS_VLQ_combination}
-M.~Aaboud, G.~Aad, B.~Abbott, O.~Abdinov, B.~Abeloos, D. K. Abhayasinghe,
-  S. H. Abidi, O. S. AbouZeid, N. L. Abraham, H.~Abramowicz, and et~al.
+{ATLAS Collaboration}.
 \newblock Combination of the searches for pair-produced vectorlike partners of
-  the third-generation quarks at s=13  tev with the atlas detector.
+  the third-generation quarks at $\sqrt{s}=13$~tev with the atlas detector.
 \newblock {\em Physical Review Letters}, 121(21), Nov 2018.
 
 \bibitem{Sirunyan_2018}
-A.~M. Sirunyan, A.~Tumasyan, W.~Adam, F.~Ambrogi, E.~Asilar, T.~Bergauer,
-  J.~Brandstetter, E.~Brondolin, M.~Dragicevic, and et~al.
+{CMS Collaboration}.
 \newblock Search for vector-like t and b quark pairs in final states with
   leptons at $ \sqrt{s}=13 $ tev.
 \newblock {\em Journal of High Energy Physics}, 2018(8), Aug 2018.
@@ -1071,6 +1109,17 @@ A.~M. Sirunyan, A.~Tumasyan, W.~Adam, F.~Ambrogi, E.~Asilar, T.~Bergauer,
   production in association with jets in proton-proton collisions at $\sqrt{s}
   = 13\,\text {TeV} $.
 \newblock {\em The European Physical Journal C}, 78(11), Nov 2018.
+
+\bibitem{Pollard:2017sjg}
+Nicholas Pollard.
+\newblock {\em {B-L and Other $U$(1) Extensions of the Standard Model}}.
+\newblock PhD thesis, UC, Riverside, 2017.
+
+\bibitem{PhysRevD-95-035025}
+Nobuchika Okada and Satomi Okada.
+\newblock ${Z}^{\ensuremath{'}}$-portal right-handed neutrino dark matter in
+  the minimal ${\mathrm{u}(1)}_{X}$ extended standard model.
+\newblock {\em Phys. Rev. D}, 95:035025, Feb 2017.
 
 \bibitem{CLs_technique}
 Alexander~L. Read.
