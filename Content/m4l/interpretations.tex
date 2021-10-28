@@ -88,7 +88,7 @@ Following equation \ref{eq:EFTamplitude}, the cross-section prediction can also 
 \begin{equation} \label{eq:SMEFTXS}
  \sigma(c_i)= \sigma_{\text{SM}} + \frac{\sigma_{\text{SM}}}{\sigma_{\text{SM(LO)}}}(c_i \sigma_{\text{INT}} + c^2_i \sigma_{d=6}).
 \end{equation}
-The SM prediction $\sigma_{SM}$ is the same one described in section \ref{sec:montecarlopred} using \SHERPA to simulate the \qqFourL process. The predictions for the interaction and BSM term are obtained using the \SMEFTsim \todo{define SMEFTsim command} package \cite{SMEFTsim}. There is an additional factor multiplied: the ratio of the best SM prediction to the leading order SM prediction. This corrects the BSM prediction for higher order effects, under the assumption that said effects are the same for BSM contributions as they are for SM contributions. 
+The SM prediction $\sigma_{SM}$ is the same one described in section \ref{sec:montecarlopred} using \SHERPA to simulate the \qqFourL process. The predictions for the interaction and BSM term are obtained using the \textsc{SMEFTsim} \todo{define SMEFTsim command} package~\cite{SMEFTsim}. There is an additional factor multiplied: the ratio of the best SM prediction to the leading order SM prediction. This corrects the BSM prediction for higher order effects, under the assumption that said effects are the same for BSM contributions as they are for SM contributions. 
 The limits on the Wilson coefficients are set using a profile likelihood method as described at the beginning of this section \ref{sec:interpretations}. 
 
 To test a hypothesized value of $c$, it is useful to write the the profile likelihood ratio:
@@ -143,7 +143,7 @@ to $[-1.09,0.99]$ expected and $[-1.06,0.99]$ observed in the
 \HFourL{} analysis.
 The improvement can be understood as being due to the fact that changes in
 \chwb{} affect the entire \mFourL{} spectrum, not just the region
-close to \mH{}~\cite{m4l2021_paper}. 
+close to $m_H$~\cite{m4l2021_paper}. 
 Limits on the coefficients affecting the $Z\to \ell\ell$ vertex have been obtained 
 previously from a global fit to LEP and LHC data~\cite{Ellis:2018gqa}, and are generally 
 one or two orders of magnitude more stringent than the limits presented from Reference~\cite{m4l2021_paper}.
@@ -192,7 +192,7 @@ one or two orders of magnitude more stringent than the limits presented from Ref
      others set to zero. This table is from Ref.~\cite{m4l_internalnote}.\label{tab:eft} }
 \end{table}
 
-\begin{table}[[htb!]
+\begin{table}[htb!]
   \centering
     \begin{tabular} {c r c c }
     \hline 
