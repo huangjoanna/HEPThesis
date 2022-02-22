@@ -10,10 +10,10 @@ The Standard Model (SM) of particle physics is a rather simplistic name for such
 
 The Standard Model is often depicted in compact diagrams similar to that of Mendeleev's Periodic Table of Elements. One such diagram is shown in Figure \ref{fig:SMparticles}. In a nutshell, the particles put forward by the SM are truly elementary particles. Unlike the elements in the Periodic Table which can be further broken down, these elementary particles are (to our knowledge) point-like and contain no internal structure. Each particle has a unique set of properties - quantum numbers - that define it, and split into one of two categories: fermions and bosons. 
 
-Fermions are half-integer spin particles, and are usually thought of as matter particles. Each fermion has an anti-particle, with an identical mass but opposite electric charge. They are further classified as either leptons or quarks. Leptons are either negatively charged (-1), or neutral. The latter are referred to as neutrinos, which the SM predicts to be massless. Quarks have an electric charge of either $\frac{2}{3}$ or $-\frac{1}{3}$, and carry an additional colour charge of either red, blue, or green. The arrangement of fermions in the SM is generational. The first generation is found in everyday matter; for example the proton and neutron are made up of up and down quarks, and the electron which orbit nuclei. The second and third generation leptons have higher masses and so have decays open to them, but they otherwise behave identically. 
+Fermions are half-integer spin particles, and are usually thought of as matter particles. Each fermion has an anti-particle, with an identical mass but opposite electric charge. They are further classified as either leptons or quarks. Leptons are either negatively charged (-1), or neutral. The latter are referred to as neutrinos, which the SM predicts to be massless. Quarks have an electric charge of either $\frac{2}{3}$ or $-\frac{1}{3}$, and carry an additional colour charge of either red, blue, or green. The arrangement of fermions in the SM is generational. The first generation is found in everyday matter. For example the proton and neutron are made up of up and down quarks, and the electron which orbit nuclei. The second and third generation leptons have higher masses and are able to decay to lighter particles, but they otherwise behave identically. 
 
 Bosons are integer spin particles that mediate the interactions within the SM. Electromagnetism is arguably the most well-known forces, and is carried by the massless and chargeless photon $\gamma$. Electric charge is conserved during photon-mediated particle interactions, and the photon has infinite range. Eight gluons mediate the strong force of quantum chromodynamics. They are also massless and electromagnetically neutral, but carry a colour charge. Only quarks are able to interact with gluons, and unlike photons, gluons interact with each other as well as with quarks. This process is known as gluon self-interaction. The self-interaction leads properties characteristic of the strong interaction: namely asymptotic freedom and confinement. 
-The weak force arises from the exchange of three massive force carriers: two charged $W^{\pm}$ bosons and a neutral $Z$ boson. As its name suggests, the force is relatively weak compared to the EM and strong forces, and is only carried over short ranges. The photon, $W^{\pm}$, and $Z$ bosons are gauge bosons of spin 1. Completing the SM is the spin 0 scalar Higgs boson. The Higgs is electrically neutral, colourless, and massive. It plays a key role in the SM by providing mass to gauge bosons and fermions through electroweak symmetry breaking.
+The weak force arises from the exchange of three massive force carriers: two charged $W^{\pm}$ bosons and a neutral $Z$ boson. As its name suggests, the force is relatively weak compared to the EM and strong forces, and is only carried over short ranges. The photon, $W^{\pm}$ bosons, and $Z$ boson are gauge bosons of spin 1. Completing the SM is the spin 0 scalar Higgs boson. The Higgs is electrically neutral, colourless, and massive. It plays a key role in the SM by providing mass to gauge bosons and fermions through electroweak symmetry breaking.
 
 \input{Content/SM_tikz}%\subsubsection{Fermions}
 %
@@ -26,32 +26,33 @@ The Standard Model is constructed upon the language of quantum field theory, whe
 \subsection{Quantum electrodynamics}
 \label{ssec:QED}
 
-The Dirac Lagrangian, written as
+To proceed toward a field theory for electrons and quantization of the Dirac field we wish to find a scalar Lagrangian that yields the Dirac equation. This turns out to be the Dirac Lagrangian, written as
 \begin{equation} \label{eq:diracfreelagr}
     \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi
 \end{equation}
-is invariant under a global gauge transformation $\psi\rightarrow e^{i\theta}\psi$, but not under a local gauge transformation where $\theta$ is a function of $x^{\mu}$. In order for the Lagrangian to be complete an additional term must be added to equation \ref{eq:diracfreelagr}. 
+is invariant under a global gauge transformation $\psi\rightarrow e^{i\theta}\psi$, but not under a local gauge transformation where $\theta$ is a function of $x^{\mu}$. Next, an additional term is be added to equation \ref{eq:diracfreelagr} to introduce a new gauge field $A_{\mu}$. 
 \begin{equation} \label{eq:diraclagr}
     \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi-q\bar{\psi}\gamma^{\mu}\psi A_{\mu}
 \end{equation}
-This term introduces a new gauge field $A_{\mu}$, which transforms under local gauge transformations in a way that renders equation \ref{eq:diraclagr} invariant. This is not yet complete, since the new vector field must include it's own "free" term - the Proca Lagrangian
+This gauge field transforms under local gauge transformations in a way that renders equation \ref{eq:diraclagr} invariant. This is not yet complete, since the new vector field must include it's own "free" term. Since it is a vector field, the Proca Lagrangian is examined
 \begin{equation} \label{eq:proclagr}
-    \Lagrangian=\dfrac{-1}{16\pi}F^{\mu\nu}F_{\mu\nu}+\dfrac{1}{8\pi}\Big(\dfrac{m_Ac}{\hbar}\Big)^2 A^{\nu}A_{\nu}
+    \Lagrangian=\dfrac{-1}{16\pi}F^{\mu\nu}F_{\mu\nu}+\dfrac{1}{8\pi}\Big(\dfrac{m_Ac}{\hbar}\Big)^2 A^{\nu}A_{\nu}.
 \end{equation}
-where it can be seen that the gauge field must be massless, because $A^{\nu}A_{\nu}$ is not invariant under local gauge transformation $A_{\mu}\rightarrow A_{\mu}+\partial \lambda$. Also introduced in equation \ref{eq:proclagr} is the shorthand 
+Here it can be seen that the gauge field must be massless, because $A^{\nu}A_{\nu}$ is not invariant under local gauge transformation $A_{\mu}\rightarrow A_{\mu}+\partial \lambda$. Also introduced in equation \ref{eq:proclagr} is the shorthand 
 \begin{equation}
     F^{\mu\nu}\equiv\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}.
 \end{equation}
-To summarise, in requiring local gauge invariance from the Dirac Lagrangian, a vector field with no mass is introduced. Indeed, this vector field is the field of the massless photon.
+To summarize, in requiring local gauge invariance from the Dirac Lagrangian, a new vector field with no mass is introduced. In imposing local gauge invariance, the Lagrangian becomes
 \begin{equation}\label{eq:QEDlagr}
-    \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi+\dfrac{-1}{16\pi}F^{\mu\nu}F_{\mu\nu}-q\bar{\psi}\gamma^{\mu}\psi A_{\mu}
+    \Lagrangian=i\hbar c\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-mc^2\bar{\psi}\psi+\dfrac{-1}{16\pi}F^{\mu\nu}F_{\mu\nu}-q\bar{\psi}\gamma^{\mu}\psi A_{\mu}.
 \end{equation}
+The transformation rule of the new vector field corresponds to that of the field of the massless photon, and the Maxwell equations may be derived from this Lagrangian.
 
 Going back to the free Dirac Lagrangian in equation \ref{eq:diracfreelagr}, what if an alternate definition of the derivative, namely 
 \begin{equation}
     \mathcal{D}_{\mu}\equiv \partial_{\mu}+i\dfrac{q}{\hbar c}A_{\mu}
 \end{equation}
-were to replace $\partial_{\mu}$? Suppose as well that $\mathcal{D}_{\mu}$, hereforth referred to as the covariant derivative, transforms like the field $\psi$ itself:
+were to replace $\partial_{\mu}$? This is a practical definition that absorbs the gauge-fixing interaction term into the derivative itself. Suppose as well that $\mathcal{D}_{\mu}$, hereforth referred to as the covariant derivative, transforms like the field $\psi$ itself:
 \begin{equation}
     \mathcal{D}_{\mu}\psi\rightarrow e^{i\theta(x_{\mu})}\mathcal{D}_{\mu}\psi .
 \end{equation}
@@ -64,7 +65,7 @@ renders the Lagrangian locally invariant. $A_{\mu}$ brings along its own free La
 
 \subsection{Quantum chromodynamics}
 
-The coloured quark model dictates that each flavour (six in total) comes in three identical variations. Arbitrarily, colour is used to differentiate between these variations: for each quark flavour, there exists a red, blue, and green version. The quark field in its colour triplet is written in vector notation as
+The coloured quark model dictates that each flavour (six in total) comes in three variations. Arbitrarily, a conserved colour charge is used to differentiate between these variations: for each quark flavour, there exists a red, blue, and green version. The quark field in its colour triplet is written in vector notation as
 \begin{equation}
 \psi_q\equiv
     \begin{pmatrix} 
@@ -81,31 +82,31 @@ such that the Lagrangian resembles the free Dirac Lagragian,
 \end{equation}
 \todo[inline]{Some stuff to fill in... see page 355-356 of Griffiths}
 
-The Lagrangian must be modified to maintain local gauge invariance under \SUgroup{3} gauge transformations of the form
+In order to maintain local gauge invariance under \SUgroup{3} gauge transformations of the form
 \begin{equation}
-    \psi_q\rightarrow S\psi_q=e^{i\lambda_a\theta^a}\psi_q.
+    \psi_q\rightarrow S\psi_q=e^{i\lambda_a\theta^a}\psi_q,
 \end{equation}
-As with the case in QED, a covariant derivative is introduced to replace the ordinary derivative:
+the Lagrangian must be modified. As with the case in QED, a covariant derivative is introduced to replace the ordinary derivative:
 \begin{equation}
-    \mathcal{D}_{\mu}\equiv \partial_{\mu}+ig_s\lambda_a{G^a_{\mu}}\\
+    \mathcal{D}_{\mu}\equiv\partial_{\mu}+ig_s\lambda_a{G^a_{\mu}}
 \end{equation}
-where $\lambda_a$ with $a=1,2,...,8$ are the Gell-Mann $3\times3$ matrices, whose role for \SUgroup{3} is the role Pauli spin matrices play for \SUgroup{2}. For the new gauge fields $G^a$, the transformation rule considering the infinitesimal case is 
+where $\lambda_a$ with $a=1,2,...,8$ are the $3\times3$ Gell-Mann matrices, whose role for \SUgroup{3} is analogous to the role Pauli spin matrices play for \SUgroup{2}. For the new gauge fields $G^a$, it will suffice to know the approximate transformation rule. For that the infinitesimal case is considered, where only first-order terms are kept. The transformation rule obtained is
 \begin{equation}
     G^a_{\mu}\rightarrow G^a_{\mu}-\dfrac{1}{g_s}\partial_{\mu}\theta_a-f_{ijk}\theta^jG_{\mu}^k
 \end{equation}
 where $f_{ijk}$ are the structure constants of \SUgroup{3}. 
 
-The modified Lagrangian (with the covariant derivative replacing the derivative) ins locally invariant under \SUgroup{3} transformations, and consequently eight new gauge fields are introduced. Unsurprisingly, these correspond precisely to the eight gluons. Lastly, the Proca-Lagrangian for the gluon fields must be added in. Here it is useful to define
+The modified Lagrangian (with the covariant derivative replacing the derivative) is locally invariant under \SUgroup{3} transformations, and consequently eight new gauge fields are introduced (one for each $\lambda_a$)\footnote{Note that that 3\times3 Hermitian matrices with trace equal to zero is eight dimensional.}. Unsurprisingly, these correspond precisely to the eight gluons. Lastly, the Proca-Lagrangian for the gluon fields must be added in to introduce a mass term. Here it is useful to define
 \begin{equation}
     G^{\mu\nu}_a \equiv \partial^{\mu}G_a^{\nu}-\partial^{\nu}G_a^{\mu}-g_sf_{ijk}G^{\mu}_jG^{\nu}_k,
 \end{equation}
-which looks quite similar to the field strength tensor of QED, except for the vector product of the of the third term. This last term is a characteristic of quantum field theories based on non-Abelian groups; the gauge bosons carry charge and therefore may interact with one another. In the case of QCD the gluons are bicoloured; carrying both a colour and an anticolour. The final Lagrangian describing quantum chromodynamics is then
+which looks quite similar to the field strength tensor of QED, except for the vector product of the third term. This last term is a characteristic of quantum field theories based on non-Abelian groups; the gauge bosons carry charge and therefore may interact with one another. In the case of QCD the gluons are bicoloured; carrying both a colour and an anticolour. The final Lagrangian describing quantum chromodynamics is then
 \begin{equation}
     \Lagrangian=[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi-m\bar{\psi}\psi] - \dfrac{1}{4}G^{\mu\nu}_aG^a_{\mu\nu}-g_s\bar{\psi}\gamma^{\mu}\lambda_a \psi G_{\mu}^a.
 \end{equation}
 
-Two important phenomena of QCD are asymptotic freedom and confinement. Asymptotic freedom, describes the behaviour of quarks at high energies or, equivalently, at small distances. In this regime, quarks
-behave as if there were quasi-free particles since the coupling constant $alpha_S$ becomes increasingly
+Two important features of QCD are asymptotic freedom and confinement. Asymptotic freedom, describes the behaviour of quarks at high energies or, equivalently, at small distances. In this regime, quarks
+behave as if there were quasi-free particles since the coupling constant $\alpha_S$ becomes increasingly
 small. However, at small energies, or large distances, confinement occurs. The strong coupling constant grows continually thereby increasing the attraction among the quarks. Quarks can consequently not exist as coloured free particles but are confined into bound colourless states called hadrons.
 
 \subsection{Weak interactions and electroweak unification}
@@ -207,15 +208,15 @@ where $\theta_w$ denotes the Weinberg angle.
 The field strength tensors for \SUgroup{2}$_L$ and \Ugroup{1}$_Y$ are defined as: 
 \begin{align} \label{eq:EWKtensors}
     W^a_{\mu\nu} & =\partial_{\mu}W^a_{\nu}-\partial_{\nu}W^a_{\mu}-g\epsilon^{abc}W^b_{\mu}W^a_{\nu}\\
-    B_{\mu\nu} & =\partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}
-\end{align}.
+    B_{\mu\nu} & =\partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}.
+\end{align}
 The first line of equation \ref{eq:EWKtensors} is reminiscent of QCD, where last term gives rise to self-couplings of the electroweak gauge bosons. 
 
 The electroweak interaction, invariant under \SUgroup{2}$_L\times$\Ugroup{1}$_Y$ gauge transformations, has the following Lagrangian:
 \begin{equation}
     \Lagrangian=\sum_{j}i\bar{\psi}_j\gamma^{\mu}\mathcal{D}_{\mu}\psi_j-\dfrac{1}{4}B_{\mu\nu}B^{\mu\nu}-\dfrac{1}{4}W^a_{\mu\nu}W_a^{\mu\nu}
 \end{equation}
-where $j$ iterates over all the fermion fields. The requirement of local gauge invariant led to the construction of this Lagrangian that unifies the electromagnetic and weak interactions, from which the the physical interactions between fermions and the electroweak gauge bosons are correctly reproduced. The electroweak Lagrangian above, however, does not allow for gauge field mass terms. While the photon (and the gluon) is indeed massless, the fermions, $W$, and $Z$ bosons have been experimentally shown to be massive \cite{pdg_2021}. This is an inconsistency that urgently needs addressing - luckily, there is a way to reform gauge theory to accommodate massive gauge fields. 
+where $j$ iterates over all the fermion fields. The requirement of local gauge invariant led to the construction of this Lagrangian that unifies the electromagnetic and weak interactions, from which the the physical interactions between fermions and the electroweak gauge bosons are correctly reproduced. The electroweak Lagrangian above, however, does not allow for gauge field mass terms. While the photon (and the gluon) is indeed massless, the fermions, $W$, and $Z$ bosons have been experimentally shown to be massive \cite{pdg_2021}. So, the question arises as to whether there is a way to address this issue in gauge theory such that massive gauge fields can be accommodated. The answer is yes, and it lies in the subtle procedure of exploiting spontaneous symmetry-breaking and the Higgs mechanism.
 
 \section{Spontaneous symmetry breaking and the Higgs mechanism} \label{sec:SSBHiggsMechanism}
 \subsection{Spontaneous symmetry breaking}\label{ssec:SSB}
@@ -229,8 +230,9 @@ The Lagrangian written in the classic form of a kinetic term minus a potential t
 \end{align}
 For the potential to have a finite minimum, $\lambda$ must be positive. The minimum of the potential $V(\phi)$ occurs at 
 \begin{equation}
-    \phi=\pm\sqrt{\dfrac{-\mu^2}{\lambda}}
+    \phi=\pm\sqrt{\dfrac{-\mu^2}{\lambda}}.
 \end{equation}
+This potential is illustrated in Figure~\ref{fig:Higgspotential}.
 A new field can be written as perturbations from the ground states, defined by 
 \begin{equation}
     \eta\equiv\phi\pm\sqrt{\dfrac{-\mu^2}{\lambda}}.
@@ -247,7 +249,7 @@ the third and fourth term of equation \ref{eq:ssbReformedLagrangian} represent t
 \input{Content/Higgs-potential_tikz}
 \subsubsection{Broken continuous symmetry}
 
-The previous section illustrates an example of spontaneous symmetry breaking. The original Lagrangian of equation \ref{eq:ssbLagrangian} is invariant if $\phi\rightarrow-\phi$; it is even in $\phi$. In the reformed Lagrangian of equation \ref{eq:ssbReformedLagrangian}, however, this symmetry is broken because it is not even in $\eta$. The breaking is considered spontaneous because no external agent is required; the symmetry simply becomes hidden when selecting a particular ground state (the "vacuum"). In section \ref{ssec:SSB} the broken symmetry was a discrete symmetry in context of a read scalar field. This section will apply spontaneous symmetry breaking to a complex scalar field.
+The previous section illustrates an example of spontaneous symmetry breaking. The original Lagrangian of equation \ref{eq:ssbLagrangian} is invariant if $\phi\rightarrow-\phi$; it is even in $\phi$. In the reformed Lagrangian of equation \ref{eq:ssbReformedLagrangian}, however, this symmetry is broken because it is not even in $\eta$. The breaking is considered spontaneous because no external agent is required; the symmetry simply becomes hidden when selecting a particular ground state (the "vacuum"). In section \ref{ssec:SSB} the broken symmetry was a discrete symmetry in context of a real scalar field. This section will apply spontaneous symmetry breaking to a complex scalar field.
 
 Consider the following complex scalar field, written neatly as a combination of two real fields:
 \begin{equation}
@@ -262,7 +264,7 @@ where the terms in the square brackets is the potential energy function $V$. The
 \begin{equation}
     \phi_1^2+\phi_2^2=\dfrac{-\mu^2}{\lambda}=\nu^2
 \end{equation}
-where $\nu$ corresponds to the ground states. Arbritrarily one can choose
+where $\nu$ corresponds to the ground states. Arbitrarily one can choose
 \begin{equation}
     \phi_1=\nu,\qquad\phi_2=0
 \end{equation}
@@ -276,7 +278,7 @@ Now equation \ref{eq:SSBContLagrangian} can be rewritten in terms of $\eta$ and 
     \Lagrangian=\Big[ \dfrac{1}{2}(\partial_{\mu}\eta)(\partial^{\mu}\eta) - \mu^2\eta^2 \Big] 
     + \Big[ \dfrac{1}{2}(\partial_{\mu}\xi)(\partial^{\mu}\xi) \Big] + \text{higher order terms.}
 \end{equation}
-The first term is the free Lagrangian for the field $\eta$, which includes a mass term, giving $m_{\eta}=\sqrt{2}\mu$. The second term describes field $\xi$, which unlike $\eta$, turns out to be massless. This is Goldstone's theorem - the appearance of a massless spin 0 Goldstone boson is the result of a spontaneous broken continuous global symmetry \cite{Griffiths:2008zz}. 
+The first term is the free Lagrangian for the field $\eta$, which includes a mass term, giving $m_{\eta}=\sqrt{2}\mu$. The second term describes field $\xi$, which unlike $\eta$, turns out to be massless. This is Goldstone's theorem - the appearance of a massless spin-0 Goldstone boson is the result of a spontaneous broken continuous global symmetry \cite{Griffiths:2008zz}. 
 
 \subsection{The Higgs mechanism}
 
@@ -300,17 +302,17 @@ As with the previous section, when $\mu^2<0$ in the potential, the choice of a p
 \end{equation}
 The definition above is used to rewrite the Lagrangian on equation \ref{eq:Lagrcomplexscalarfield} as
 \begin{equation}
-    \Lagrangian=\dfrac{1}{2}(\partial_{\mu}\eta)(\partial^{\mu}\eta) - \lambda\nu^2\eta^2
+    \Lagrangian= & \dfrac{1}{2}(\partial_{\mu}\eta)(\partial^{\mu}\eta) - \lambda\nu^2\eta^2
                 + \dfrac{1}{2}(\partial_{\mu}\xi)(\partial^{\mu}\xi) 
                 - \dfrac{1}{4}F_{\mu\nu}F^{\mu\nu} + \dfrac{1}{2}g^2\nu^2A_{\mu}A^{\mu}
-                + g\nu A_{\mu}({\partial^{\mu}\xi})
-                + \text{int. terms}
+                \nonumber \\
+                & + g\nu A_{\mu}({\partial^{\mu}\xi}) + \text{interaction terms} 
 \end{equation}
 where the first two terms represent the massive scalar field $\eta$, the third term corresponds to the massless Goldstone boson $\xi$, and the fourth and fifth terms describes the gauge field $A_{\mu}$ which has now acquired a mass. Additional three and four point interactions terms also exist the fields. The is the exact same Lagrangian as equation \ref{eq:Lagrcomplexscalarfield}; $\phi$ has simply been expanded about the vacuum state. The underlying symmetry of the \Ugroup{1} gauge group has consequently been broken.
 
-The final step involves the choice of an appropriate gauge which eliminates the Goldstone field completely from the Lagrangian. This is motivated by the $q\nu A_{\mu}({\partial^{\mu}\xi})$ term, which reads as a coupling between the spin-1 gauge field $A_{\mu}$ and the spin-0 scalar Goldstone field $\xi$, where one field can transform into another. Such bilinear terms indicate that the fundamental fields have been misidentified \cite{Griffiths:2008zz}. The freedom in gauge choice is exploited to set 
+The final step involves the choice of an appropriate gauge which eliminates the Goldstone field completely from the Lagrangian. This is motivated by the $q\nu A_{\mu}({\partial^{\mu}\xi})$ term, which reads as a coupling between the spin-1 gauge field $A_{\mu}$ and the spin-0 scalar Goldstone field $\xi$, where one field can transform into another. Such bilinear terms indicate that the fundamental fields have been misidentified~\cite{Griffiths:2008zz}. If it is read as an interaction, it leads to a vertex in which $\xi$ transforms into $A_{\mu}$, meaning neither exist independently. This can be resolved by exploiting the freedom in gauge choice and setting 
 \begin{equation}
-    \theta(x)=-\dfrac{\xi(x)}{g\nu}
+    \theta(x)=-\dfrac{\xi(x)}{g\nu},
 \end{equation}
 which leads the complex scalar field to transform as 
 \begin{equation}
@@ -321,7 +323,7 @@ Writing equation \ref{eq:complexscalarfieldvev} to to first order as $\phi\appro
     \phi(x)\rightarrow e^{-i\frac{\xi(x)}{\nu}} \dfrac{1}{\sqrt{2}}\Big[\nu+\eta(x)\Big]e^{i\frac{\xi(x)}{\nu}}
     = \dfrac{1}{\sqrt{2}}\Big[\nu+h(x)\Big].
 \end{equation}
-This choice of gauge renders $\phi$ to be entirely real, and is called the unitary gauge. Here the field $\eta(x)$ can be rewritten as $h(x)$, corresponding to none other than the Higgs field. The mass terms for the scalar Higgs field is 
+This choice of gauge renders $\phi$ to be entirely real, and is called the unitary gauge. Here the field $\eta(x)$ can be rewritten as $h(x)$, corresponding to none other than the Higgs field. The mass term for the scalar Higgs field is 
 \begin{equation}
     m_{H} = g\nu
 \end{equation}
@@ -396,9 +398,9 @@ Applying equation \ref{eq:higgsvev} on the kinematic part of the Lagrangian in e
 The kinetic term $(\covd_{\mu}\phi)(\covd^{\mu}\phi)^{\dagger}$ is
 \begin{align}
     (\covd_{\mu}\phi)(\covd^{\mu}\phi)^{\dagger} = &  \dfrac{1}{2}(\partial_{\mu}h)(\partial^{\mu}h) + \dfrac{1}{8}g_ W^2(W_{\mu}^1+iW_{\mu}^2)(W^{1\mu}-iW^{2\mu})(\nu+h)^2\\
-    & + \dfrac{1}{8}(g_W W_{\mu}^3 - g'B_{\mu})(g_W W^{3\mu} - g'B^{\mu})(\nu+h)^2
+    & + \dfrac{1}{8}(g_W W_{\mu}^3 - g'B_{\mu})(g_W W^{3\mu} - g'B^{\mu})(\nu+h)^2,
 \end{align}
-
+where the terms proportional to $\nu^2$ correspond to the mass terms of the gauge bosons, namely
 \begin{align}
     m_W & =\dfrac{1}{2}g_{W}\nu\\
     m_Z & =\dfrac{1}{2}\nu\sqrt{g_W^2+g'^2}\\
@@ -426,7 +428,7 @@ where $c_{\ell}$ is the Yukawa coupling constant between the specified lepton an
 \end{align}
 The first term is a mass term for the lepton, and the second term represents the coupling of the lepton to the Higgs boson. 
 
-The same mechanism generates mass for the case of down-type quarks. Up-type quarks require something a little different. The vacuum expectation value for the Higgs doublet is zero in the upper component, and therefore cannot generate mass for the up-type quarks and neutrinos\footnote{The question of neutrino masses will not be address in this thesis.}. Focusing on the case of the up-type quarks $\psi_u$, it is useful to define the conjugate doublet $\phi_C$
+The same mechanism generates mass for the case of down-type quarks. Up-type quarks require something a little different. The vacuum expectation value for the Higgs doublet is zero in the upper component, and therefore cannot generate mass for the up-type quarks and neutrinos\footnote{The question of neutrino masses will not be addressed in this thesis.}. Focusing on the case of the up-type quarks $\psi_u$, it is useful to define the conjugate doublet $\phi_C$
 \begin{equation}
     \phi_C = -i\sigma_2\phi^* = 
     \begin{pmatrix}
@@ -450,3 +452,12 @@ which becomes
 \end{align}
 after spontaneous symmetry breaking.
 The Yukawa constants $c_q, c_{\ell}$ are not predicted by theory, and are assigned values that are consistent with experimental fermion mass measurements. 
+
+\section{Measuring the Standard Model}
+
+\textcolor{red}{REPHRASE THIS WHOLE THING!!!}
+Diboson measurements are a crucial pillar of collider physics, complementary to the Higgs and top quark sectors. Measurements of the W and Z bosons are particularly suited for precisions tests of the Standard Model for a variety of reasons, discussed in detail in Ref. [15]. The massive bosons are the most strongly coupled particles to electroweak symmetry breaking, and therefore provide insight into one of the more interesting, though less studied aspects of the theory. Moreover, measurements of the electroweak bosons allow for the direct testing of non-Abelian gauge theories, in a way not possible in QCD given the nature of color confinement. The non-Abelian nature of the electroweak theory gives rise to vector boson self-interactions in the form of triple and quartic gauge boson couplings, which offer an unmatched sensitivity to higher energy physics. Well-known examples of these interactions include the vector boson fusion and vector boson scattering processes. From an experimental standpoint, decays of the electroweak bosons can be reconstructed in a variety of clean final states, particularly those involving leptons. Diboson interactions, that is, those mediated by two massive gauge bosons, are suppressed over single boson interactions, but provide some additional advantages in the search for new physics. The higher energy scale of diboson processes is generally more sensitive to various models of new physics, particularly heavy resonances and effective field theory interpretations. Additionally, the clear signature of, in particular, leptonic decay channels provides excellent discrimination from background sources, allowing for high precision measurements. However, the production of two or more heavy gauge bosons in a collision requires a high energy collider, in the range of several hundred GeV and above. Modern hadron colliders, which are currently capable of reaching energies beyond 10 TeV, therefore offer the ideal ground for studying processes mediated by the exchange of these heavy particles.
+
+3.3 Four-lepton Processes Considering multi-boson processes, the four-lepton decay channel is the cleanest signature available, in which all decay products can be fully reconstructed. The specific signature is that of four prompt leptons consisting of two same-flavor, opposite-charge (SF-OC) lepton pairs. Here, prompt leptons refer to those emanating directly from the hard scatter interaction, in contrast to non-prompt leptons which originate from secondary decays further from the interaction point. The process is typically mediated through the exchange of two intermediary Z-bosons (or photons8 ), each of which decaying to a pair of SF-OC leptons. In this specific decay, the Z-boson, being a neutral gauge boson, must decay into same-flavor, opposite-charge leptons to conserve lepton-number and electric charge, respectively. Within the Standard Model, the charged leptonic Z-boson decay, Z → ` +` −, has a branching fraction of approximately 10%, with equal contributions from each lepton flavor [4]. Therefore, roughly 1 in 100 SM ZZ events will decay to the four-lepton final state.
+
+Considering indirect effects, new physics could enter, more subtly, by means of higher energy processes interfering with SM processes in the production of four-leptons. This interference would manifest itself in the form of slight modifications to SM couplings or deviations in the high energy tails of differential cross-sections. Effective field theory (EFT) interpretations - to be discussed in more detail in Section 22 - provide a robust, model-independent framework for parameterizing such effects, thereby mapping the space of possible new physics contributions. In this regard, the four-lepton signature is an interesting candidate to study because of the large energy scale involved in diboson processes and the precision offered by charged lepton reconstruction. These measurements serve an important role in the pursuit of a global EFT interpretation - where the combination of complementary diboson, Higgs, and top quark measurements across many analyses would improve the search sensitivity over any single analysis. Many hurdles remain towards this goal, though smaller scale combinations, as demonstrated in Ref. [20], have already proved effective.
