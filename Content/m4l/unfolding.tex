@@ -15,9 +15,9 @@ Due to the discretised nature of histograms, the unfolding problem can be stated
 \begin{equation} \label{eq:unfmatrix}
     x_i=S_{ij}y_j
 \end{equation}
-where $R$ represents the a smearing matrix of sorts, \todo{add more}$T$ is the true histogram at particle-level, and $D$ is the reconstructed histogram at detector-level. 
+where $S$ represents the a smearing matrix of sorts, \todo{add more}$x_i$ is the true histogram at particle-level, and $y_i$ is the reconstructed histogram at detector-level. 
 
-For the four-lepton invariant mass analysis, an iterative unfolding method motivated by Bayesian statistics, popularised by Giulio D’Agostini, is chosen. The method iteratively applies the three inputs described above to the measured distributions while using the particle-level SM prediction as a prior.
+For the four-lepton invariant mass analysis, an iterative unfolding method motivated by Bayesian statistics, popularised by Giulio D’Agostini~\cite{DAGOSTINI1995487}, is chosen. The method iteratively applies the three inputs described above to the measured distributions while using the particle-level SM prediction as a prior.
 
 \subsubsection{An iterative Bayesian approach to unfolding}
 \label{ssec:bayesianunfolding}
@@ -43,8 +43,7 @@ Here a parallel can be drawn back to equation \ref{eq:unfmatrix}, where $N(C)={N
 \begin{equation}\label{eq:bayesianunfolding}
     x_i=\sum_{j=1}^n\dfrac{R_{ij}\cdot P(x_i)}{\sum_{k=1}^nR_{kj}\cdot P(x_k)}y_j.
 \end{equation}
-Here the matrix defined as $R_{ij}$ is the called the response matrix. The denominator in the equation is a normalization factor using the y-projection of the matrix. $P(x_i)$ is the prior, which is updated in each iteration with the unfolded true distribution $x_i$, also known as the posterior.
-\todo[inline]{Perhaps mention other unfolding methods and justify choice of this one?}
+Here the matrix defined as $R_{ij}$ is the called the response matrix. The denominator in the equation is a normalization factor using the $y$-projection of the matrix. $P(x_i)$ is the prior, which is updated in each iteration with the unfolded true distribution $x_i$, also known as the posterior.
 
 \subsection{Unfolding inputs}
 Below is a summary of the terminology commonly used inputs in the unfolding procedure. These inputs are generated using the Monte Carlo simulations described in Section~\ref{sec:montecarlopred}. 
@@ -98,7 +97,7 @@ Figure~\ref{fig:inclm4lunf} shows the unfolding inputs for the inclusive \mFourL
    \caption{Efficiency correction and fiducial fraction for the full fiducial phase space and the $\mFourL$ slices, without the pre-unfolding weights applied. The quoted uncertainties take into account the full set of systematics discussed in Section~\ref{sec:uncertainties} \label{tab:fidxsunf-nopreunfold} }
  \end{table}
 
-Figure~\ref{fig:inclm4lmat} shows the migration matrix for the inclusive \mFourL{} distribution. The $x-$axis has the detector-level bins, the $y-$axis has the particle-level bins, and the matrix is normalized to the $y-$axis. The numbers in each square is the percentage probability that an event in particle-level bin $i$ ends up in detector bin $j$. The migration matrix of Figure~\ref{fig:inclm4lmat} is very diagonal. This is a desirable trait in unfolding, as it means the distribution has relatively low amounts of bin-to-bin migrations. Most of the bin migrations are contained within the two neighbouring bins on either of the bin edge.  Similarly in Figure~\ref{fig:inclvm4lmat} there is the migration matrix of the four mass regions dominated by single Z, Higgs,  off-shell ZZ, and on-shell ZZ, in that order. Here the migrations are highest for the off-shell mass slice. This is an expected effect since the off-shell slice consists of three discontinuous mass regions that neighbour all of the three other mass slices. 
+Figure~\ref{fig:inclm4lmat} shows the migration matrix for the inclusive \mFourL{} distribution. The $x-$axis has the detector-level bins, the $y-$axis has the particle-level bins, and the matrix is normalized to the $y-$axis. The numbers in each square is the percentage probability that an event in particle-level bin $i$ ends up in detector bin $j$. The migration matrix of Figure~\ref{fig:inclm4lmat} is very diagonal. This is a desirable trait in unfolding, as it means the distribution has relatively low amounts of bin-to-bin migrations. Most of the bin migrations are contained within the two neighbouring bins on either of the bin edge.  Similarly in Figure~\ref{fig:inclvm4lmat} there is the migration matrix of the four mass regions dominated by single $Z$, Higgs,  off-shell $ZZ$, and on-shell $ZZ$, in that order. Here the migrations are highest for the off-shell mass slice. This is an expected effect since the off-shell slice consists of three discontinuous mass regions that neighbour all of the three other mass slices. 
 
 The remaining plots of the unfolding inputs and migration matrices for all other observables are available in Appendix~\ref{app:moreunf}.
 
@@ -129,7 +128,7 @@ One thousand toy distributions are generated using the detector-level Standard M
 \begin{equation} \label{eq:unfbias}
     \text{Bias}_i=\dfrac{\sum_{j=1}^nM_{ij}\cdot x_j-y_i\cdot f_i}{y_i\cdot f_i},
 \end{equation}
-measures the difference between the product of the migration matrix and the unfolding output, and the product of the detector-level toy and the fiducial fraction. It is an assessment of the strength of the pull that the shape of the SM prior has on the unfolded toy result \todo{Read more about regularization}. Additional, a statistical uncertainty from the unfolding procedure for each individual toy in each bin is quoted. Next, the bias significance\change[]{italics?} per bin is defined as the quotient of the bias and the statistical uncertainty. After sampling over all toys, the root-mean-square (rms) of the bias significance in each bin is calculated. Through the rms bias significance, the size of the bias in comparison to that of the statistical uncertainty is quantified and used as a criterion in determining the number of iterations. The requirement is to use the minimum the number of iterations needed for a bias significant lower than 0.5.
+measures the difference between the product of the migration matrix and the unfolding output, and the product of the detector-level toy and the fiducial fraction. It is an assessment of the strength of the pull that the shape of the SM prior has on the unfolded toy result \todo{Read more about regularization}. Additional, a statistical uncertainty from the unfolding procedure for each individual toy in each bin is quoted. Next, the bias significance\change[]{italics?} per bin is defined as the quotient of the bias and the statistical uncertainty. After sampling over all toys, the root-mean-square (rms) of the bias significance in each bin is calculated. Through the rms bias significance, the size of the bias in comparison to that of the statistical uncertainty is quantified and used as a criterion in determining the number of iterations. The requirement is to use the minimum number of iterations needed for a bias significant lower than 0.5.
 
 For the inclusive \mFourL{} distribution, the minimum number of iterations for which the criterion is met is three. For the majority of the other measured distributions, three iterations of the unfolding are also found to be optimal. Two iterations are found to be sufficient for the following observables: \mZOne-\mFourL, \dPhill-\mFourL, and \dYPairs-\mFourL.
 
@@ -139,14 +138,6 @@ For the inclusive \mFourL{} distribution, the minimum number of iterations for w
 The binnings of the measured distributions were optimized based on two factors: the number of events and the purity of each bin. Here the purity refers to the diagonal of the migration matrix normalised along truth, thus representing the fraction of truth events that end up in the same reconstructed event bin. 
 
 The first iteration of the binnings were run with the nominal criteria. Here, depending on the number of events in the bin, the purity requirement varies. Bins with lower statistics have a high purity requirement to reduce bin-to-bin migrations. The minimum number of events required for each bin is 14. Between 14 and 20 events, the purity was required to be at least 80\%. Between 20 and 25 events the purity must be 70\% or higher. Finally for the higher statistics bins with more than 25 events the purity cut was 60\%. 
-
-The binning algorithm is as follows. For the full \mFourL{} differential mass distribution from \unit{20}{\Gev} - \unit{2000}{\GeV}, the distribution is first split into very fine steps of \unit{1}{\GeV} bins from \unit{20}{\Gev}-\unit{450}{\GeV}. From \unit{450}{\Gev}-\unit{2000}{\GeV} wider steps of \unit{5}{\GeV} bins were used. Due to the fine nature of the bin widths, this initial binning failed to meet any of the binning criteria. Next, the binning algorithm starts from the low mass end and starts to merge adjacent bins together if the criteria were not met. For example, if bin number 1 [20,21]~GeV has > 10 events, the algorithm merges bin number 1 with the next bin. The new bin number 1 is now [20,22]~GeV. Once again, if this bin has > 10 events, it will merge again and become [20,23]~GeV, and so on and so forth until 10 events has been reached. Of course the purity must also pass the required percentage for the number of events in the bin, otherwise further bin merging occurs. The bin edges are first fixed to be symmetric around the resonance masses at 90~GeV and 125~GeV while passing all requirements. Once this is complete, the remaining bins in between the resonances are passed through the same algorithm. The results of the final binning for the \mFourL{} distribution is given in Table~\ref{tab:m4lbin}.
-
-Next there are the \mFourL{} distributions in double differential slices of \ptFourL, \yFourL, and flavour channel. For these distributions, the fine binning is defined as the the binning of the inclusive \mFourL{} differential mass distribution, i.e. the output of the algorithm described in the previous paragraph. Bins are once again checked for number events and purity, and merged as needed. This is implemented so that all \mFourL{} in each of the  \ptFourL, \yFourL, and flavour slices will have bin edges that match with the inclusive distribution. 
-
-For the distributions measured double differentially in the four \mFourL{} regions corresponding to \Z, Higgs, \onshellZZ, and \offshellZZ, the same procedure is followed for binning optimization. Each distribution has a fine binning defined, and the bins are merged from left to right of the x-axis until the criteria are met. For the polarization variables \CTSOneTwo and \CTSThreeFour, an additional requirement for the bins to be symmetric about zero is imposed.
-
-There were a few iterations of the binning that were run with varying criteria, summarized in table \ref{tab:BinningVersions}. The nominal criteria is what is presented in the final version of the analysis. The high statistics criteria was an alternative check used to investigate the effects of bins with low event statistics in the interpretations studies of Section~\ref{sec:interpretations}.
 
 \begin{table}[bp]
   \begin{tabular}{c | ll}
@@ -161,6 +152,8 @@ There were a few iterations of the binning that were run with varying criteria, 
   \caption{Two different versions of binning with varying event count and purity criteria. The nominal version is what is for the unfolded results. The high statistics version is used as a cross-check for interpretation studies.}
   \label{tab:BinningVersions}
 \end{table}
+
+The binning algorithm is as follows. For the full \mFourL{} differential mass distribution from \unit{20}{\Gev} - \unit{2000}{\GeV}, the distribution is first split into very fine steps of \unit{1}{\GeV} bins from \unit{20}{\Gev}-\unit{450}{\GeV}. From \unit{450}{\Gev}-\unit{2000}{\GeV} wider steps of \unit{5}{\GeV} bins were used. Due to the fine nature of the bin widths, this initial binning failed to meet any of the binning criteria. Next, the binning algorithm starts from the low mass end and starts to merge adjacent bins together if the criteria were not met. For example, if bin number 1 [20,21]~GeV has > 10 events, the algorithm merges bin number 1 with the next bin. The new bin number 1 is now [20,22]~GeV. Once again, if this bin has > 10 events, it will merge again and become [20,23]~GeV, and so on and so forth until 10 events has been reached. Of course the purity must also pass the required percentage for the number of events in the bin, otherwise further bin merging occurs. The bin edges are first fixed to be symmetric around the resonance masses at 90~GeV and 125~GeV while passing all requirements. Once this is complete, the remaining bins in between the resonances are passed through the same algorithm. The results of the final binning for the \mFourL{} distribution is given in Table~\ref{tab:m4lbin}.
 
 \begin{table}[ht]  
     \begin{tabular}{ c | l}
@@ -177,12 +170,18 @@ There were a few iterations of the binning that were run with varying criteria, 
     \label{tab:m4lbin}
 \end{table}  
 
+Next there are the \mFourL{} distributions in double differential slices of \ptFourL, \yFourL, and flavour channel. For these distributions, the fine binning is defined as the the binning of the inclusive \mFourL{} differential mass distribution, i.e. the output of the algorithm described in the previous paragraph. Bins are once again checked for number events and purity, and merged as needed. This is implemented so that all \mFourL{} in each of the  \ptFourL, \yFourL, and flavour slices will have bin edges that match with the inclusive distribution. 
+
+For the distributions measured double differentially in the four \mFourL{} regions corresponding to \Z, Higgs, \onshellZZ, and \offshellZZ, the same procedure is followed for binning optimization. Each distribution has a fine binning defined, and the bins are merged from left to right of the x-axis until the criteria are met. For the polarization variables \CTSOneTwo and \CTSThreeFour, an additional requirement for the bins to be symmetric about zero is imposed.
+
+There were a few iterations of the binning that were run with varying criteria, summarized in table \ref{tab:BinningVersions}. The nominal criteria is what is presented in the final version of the analysis. The high statistics criteria was an alternative check used to investigate the effects of bins with low event statistics in the interpretations studies of Section~\ref{sec:interpretations}.
+
 \subsection{Pre-unfolding weights}
 \label{subsec:preuf}
 
 When correcting the data for detector effects, one of the things to take into account is the efficiency correction. Recall from section \ref{subsec:unfmethod} that the efficiency correction is the fraction of reconstructed events that also pass the fiducial selection cuts. A significant contribution to this is the efficiency correction is efficiency in identifying, reconstructing, isolating, and track-to-vertex-association of (TTVA) leptons. These are dependent on lepton kinematics and calculated from Monte Carlo simulation, therefore they may not be accurate if the data differs from the prediction. To correct for this effect, the lepton efficiencies are measured as a function of the lepton transverse momentum (\pT) and pseudorapidity ($\eta$), and the inverse of this is applied as a per-lepton weight in the data. The term coined for this weight is the pre-unfolding weight, and as the name suggests it is applied prior to the unfolding procedure detailed in \ref{subsec:unfmethod}. 
 
-\begin{figure}[htb]
+\begin{figure}[htb!]
     \begin{subfigure}{.85\textwidth}\centering
         \includegraphics[width=.99\textwidth]{Figures/m4l/UnfoldingStudies/v014_preUF_compare.pdf}\caption{}
     \end{subfigure}
@@ -239,9 +238,9 @@ A number of modifications were made to the nominal SM prediction, one set had th
     \begin{tabular}{ll}
         Injected samples \\
         \hline\\
-         Gluon-gluon fusion (Narrow width)   & $m_{\text{res}}=$ 300, 800, 1400 GeV\\
-        Gluon-gluon fusion (15\% width)      & $m_{\text{res}}=$ 300, 800, 1400 GeV \\
-         Vector-boson fusion    & $m_{\text{res}}=$ 300, 800, 1400 GeV \\
+         Gluon-gluon fusion heavy Higgs (Narrow width)   & $m_{\text{res}}=$ 300, 800, 1400 GeV\\
+        Gluon-gluon fusion heavy Higgs (15\% width)      & $m_{\text{res}}=$ 300, 800, 1400 GeV \\
+         Vector-boson fusion heavy Higgs    & $m_{\text{res}}=$ 300, 800, 1400 GeV \\
          \hline \\ 
          \ggZZ Enhancement & $c\times\text{nominal}$, $c$ = 1.1, 1.2, 1.5, 2, 5, 1\\
     \end{tabular}
@@ -250,6 +249,17 @@ A number of modifications were made to the nominal SM prediction, one set had th
 \end{table}
 
 For each of the variations listed in Table \ref{tab:injectionsamples}, a range of cross-sections were injected and then unfolded with and without application of the pre-unfolding weights. In order to carve a more realistic scenario, one of the injected cross-sections for the heavy Higgs samples was set to be just within the two-sigma band of the data uncertainty. This was done by increasing the injected cross-section and calculating the $p$-value between the BSM prediction and the data until a $p$-value smaller than or equal to 0.05 is reached. This is the $p$-value corresponding to a two-sigma significance. The results from the injection tests corresponding to a two-sigma injected amount for all the gluon-gluon fusion BSM samples are shown in Figure~\ref{fig:m4l:injection}. The nominal SM prediction and the modified BSM + SM prediction at particle level are shown (SM truth and BSM truth respectively), along with two unfolded BSM distributions, one with pre-unfolding (pre-UF) weights applied and one without. The lower panel is the ratio of the unfolded BSM distribution to the true BSM distribution and is interpreted as the bias. 
+
+\begin{figure}[htb]
+    \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/6dot175fb_300w15_injection.pdf}\caption{}\label{fig:injection_6dot175fb_300w15}\end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/0dot862fb_800w15_injection.pdf}\caption{}\label{fig:injection_0dot862fb_800w15}\end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/0dot4032fb_1400w15_injection.pdf}\caption{}\label{fig:injection_0dot4032fb_1400w15}\end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/1dot24fb_300NW_injection.pdf}\caption{}l\label{fig:injection_1dot24fb_300NW}\end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/0dot212fb_800NW_injection.pdf}\caption{}\end{subfigure}
+    \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/0dot19fb_1400NW_injection.pdf}\caption{}\label{fig:injection_0dot19fb_1400NW}\end{subfigure}
+    \caption{This figure shows the results of the BSM signal injection studies performed on the \mFourL{} distribution. Six BSM models are considered, with resonance masses at 300~GeV, 800~GeV, and 1400~GeV, and with narrow widths or a width 15\% of the resonance mass. The cross-sections correspond to a $2\sigma$ signal significant with respect to the data uncertainty. Two unfolded distributions are shown with and without pre-unfolding (pre-UF) weights applied. The bottom panel shows the size of the bias.}
+    \label{fig:m4l:injection}
+\end{figure}
 
 Figure~\ref{fig:injection_6dot175fb_300w15} is also published in Reference~\cite{m4l2021_paper}. It shows the result of the injection test using a BSM model with a resonance mass of $m_{\mathrm{res}}=300~GeV{}$ and width 15\% of the mass, with a cross-section of \unit{6.18}{\invfb}. Looking at the ratio panel, the bias goes up to 2.2\% without the application of the pre-unfolding weights (in green). With the weights applied, the bias is smaller and remains within a $\pm0.8\%$ range (in black). The same trend holds true for the rest of the 15\% width samples, see Figures~\ref{fig:injection_0dot862fb_800w15}-\ref{fig:injection_0dot4032fb_1400w15}. Application of the pre-unfolding weights tend to result in a smaller bias, especially for \unit{300}{\GeV} and \unit{800}{\GeV} resonances. For the highest resonance mass at \unit{1400}{\GeV}, the pre-unfolding has a notable effect only in the last \mFourL{} mass bin, where it reduces the bias from 10\% to 4\%.
 
@@ -265,5 +275,5 @@ Lastly, the results from enhancing the \ggZZ component of the SM prediction are 
     \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/0dot212fb_800NW_injection.pdf}\caption{}\end{subfigure}
     \begin{subfigure}{.49\textwidth}\centering\includegraphics[width = 0.95\textwidth]{Figures/m4l/InjectionTests/0dot19fb_1400NW_injection.pdf}\caption{}\label{fig:injection_0dot19fb_1400NW}\end{subfigure}
     \caption{This figure shows the results of the BSM signal injection studies performed on the \mFourL{} distribution. Six BSM models are considered, with resonance masses at 300~GeV, 800~GeV, and 1400~GeV, and with narrow widths or a width 15\% of the resonance mass. The cross-sections correspond to a $2\sigma$ signal significant with respect to the data uncertainty. Two unfolded distributions are shown with and without pre-unfolding (pre-UF) weights applied. The bottom panel shows the size of the bias.}
-    \label{fig:m4l:injection}
+    \label{fig:m4l:injection:ggZZ}
 \end{figure}
