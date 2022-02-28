@@ -35,26 +35,26 @@ An alternate test statistic $\Tilde{q}$ for upper limits is defined using the li
     \end{cases}
     \label{eq:lambda_qtilde}
 \end{equation}
-Here the parameter $\mu$ dictates the strength of the BSM signal process. $\mu = 0$ and $\mu = 1$ correspond to the background-only hypothesis and the nominal signal hypothesis respectively \cite{m4l2021_paper}. The reason for setting $\tilde{q} = 0$ for $\hat{\mu} > \mu$ is that when setting an upper limit, an excess in data (corresponding to large r $\hat{\mu}$) should not be used to reject a signal model with lower yield (lower $\mu$). $\tilde{q}$ is interpreted as an upper
+Here the parameter $\mu$ dictates the strength of the BSM signal process. $\mu = 0$ and $\mu = 1$ correspond to the background-only hypothesis and the nominal signal hypothesis respectively \cite{m4l2021_paper}. The reason for setting $\tilde{q} = 0$ for $\hat{\mu} > \mu$ is that when setting an upper limit, an excess in data (corresponding to larger $\hat{\mu}$) should not be used to reject a signal model with lower yield (lower $\mu$). $\tilde{q}$ is interpreted as an upper
 exclusion limit on the parameter of interest at a certain CL, usually set to 95\%, based on the CLs prescription \cite{CLs_technique} \todo{Maybe say more about p-value to CL?}. 
 
 The exclusion contour in the plane of $\sin\alpha-m_{h_2}$ is depicted in Figure \ref{fig:BLcontour}, where the variable providing the best expected sensitivity to set the limit. An alternate version using only the inclusive \mFourL{} distribution to set the limit is shown in Figure \ref{fig:BLcontourm4l}. Corresponding to Figure \ref{fig:BLcontour}, the colour map of Figure~\ref{fig:BLcolourmap} shows the observable used to derive the limits at each point in the parameter space. It is clearly visible that there is a larger excluded region when using the most sensitive observable rather than the \mFourL{} distribution only. The event kinematics of the BSM model changes as the model parameters change. It is therefore advantageous to exploit various observables accordingly at each model point; ultimately enhancing the sensitivity significantly. This effect is most evident at high $m_{h_2}$, where the expected limit on $\sin\alpha$ strengthens from 0.46 to 0.28. Referring to Figure \ref{fig:BLcolourmap}, the improvements at high $m_{h_2}$ come mainly from the $m_{12}$ distribution. These results demonstrate the power that comes with measuring more variables in regions of phase space. 
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_withTheoExcl_m4l.pdf}
-    \caption{ATLAS result from the \mFourL{} measurement. Limits set on the B-L model using only the inclusive \mFourL{} variable. This figure is from Reference~\cite{m4l2021_paper}.}
+    \caption{ATLAS result from the \mFourL{} measurement. Limits set on the B-L model using only the inclusive \mFourL{} variable. The red line shows the observed exclusion and the solid black line shows the expected exclusion, with the dashed black lines indicating the $\pm 1\sigma$ and $\pm 2\sigma$ uncertainty bands. The region above and to the left of the lines is excluded, up to the grey band, which shows the region $m_{h_2} < 2m_{Z'}$, where the four-lepton final state has no sensitivity. This figure is from Reference~\cite{m4l2021_paper}.}
     \label{fig:BLcontourm4l}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_withTheoExcl.pdf}
-    \caption{ATLAS result from the \mFourL{} measurement. Limits set on the B-L model using the most sensitive variable. This figure is from Reference~\cite{m4l2021_paper}.}
+    \caption{ATLAS result from the \mFourL{} measurement. Limits set on the B-L model using the most sensitive variable. The red line shows the observed exclusion and the solid black line shows the expected exclusion, with the dashed black lines indicating the $\pm 1\sigma$ and $\pm 2\sigma$ uncertainty bands. The region above and to the left of the lines is excluded, up to the grey band, which shows the region $m_{h_2} < 2m_{Z'}$, where the four-lepton final state has no sensitivity. This figure is from Reference~\cite{m4l2021_paper}.}
     \label{fig:BLcontour}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/UpperLimitBandWithContour_2D_colormap.pdf}
-    \caption{ATLAS result from the \mFourL{} measurement. This colour map shows the B-L model space and the most sensitive variable at each point. This figure is from Reference~\cite{m4l2021_paper}.}
+    \caption{ATLAS result from the \mFourL{} measurement. This colour map shows the B-L model space and the most sensitive variable at each point used to set the limit. This figure is from Reference~\cite{m4l2021_paper}.}
     \label{fig:BLcolourmap}
 \end{figure}
 
@@ -81,7 +81,7 @@ Figure~\ref{fig:BL:E:paper} shows the exclusion contours from Reference~\cite{BL
 
 Figure~\ref{fig:BL:E:dom} is a replica of the scan in the same parameter space performed by the author using a newer version of \contur (and \rivet), which includes the \unit{139}{\invfb} four-lepton measurement presented in Chapter~\ref{chap:fourlepton} and published in Reference~\cite{m4l2021_paper}. The excluded region in this plot is to the right and above the solid white line at 95\% (dashed white line is 68\%). The improvement in the limit in comparison to Figure~\ref{fig:BL:E:paper} is clearly visible. The $\sin\alpha > 0.3$ region is largely excluded in the high mass range at 95\%, and nearly the entire plane is disfavoured at 68\%. At around $M_{h_2}=200$~\GeV, \contur is able to rule out a new region of phase space that was previously not excluded. This drastic improvement is attributed nearly single-handedly to the addition of the of the new \mFourL{} measurement in \rivet. This is illustrated in Figure~\ref{fig:BL:4l}, where the $3\sigma$ excluded region (yellow) in the four-lepton pool alone is plotted without (left), and with (right), the new measurement.
 
-The driving force behind the improved sensitivity in the new \mFourL{} analysis, particularly at high $M_{h_2}$, is higher event statistics, finer binning, and the addition of new observables (see Section~\ref{sec:signaldef}). Looking only at the new \mFourL{} analysis, the breakdown of the distribution giving the highest exclusion at each scan point is shown in Figure~\ref{fig:BL:m4l}. At low masses, the \dPhill, \mFourL{} vs flavour, \mFourL{} vs \yFourL, and \ptZOne distributions share the role of being the most dominant. At higher $M_{h_2}$, it is the mass of the first lepton pair \mZOne that is dominant for most parameters. 
+The driving force behind the improved sensitivity in the new \mFourL{} analysis, particularly at high $M_{h_2}$, is higher event statistics, finer binning, and the addition of new observables (see Section~\ref{sec:signaldef}). Looking only at the new \mFourL{} analysis, the breakdown of the distribution giving the highest exclusion at each scan point is shown in Figure~\ref{fig:BL:m4l}. At low masses, the \dPhill, \mFourL{} vs flavour, \mFourL{} vs \yFourL, and \ptZOne{} distributions share the role of being the most dominant. At higher $M_{h_2}$, it is the mass of the first lepton pair \mZOne that is dominant for most parameters. 
 \begin{figure}[tbp]
     \begin{subfigure}{.45\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/BL/BL-ATLAS_13_4LLevels_old.pdf} \caption{}\label{fig:BL:4lold}
@@ -89,7 +89,7 @@ The driving force behind the improved sensitivity in the new \mFourL{} analysis,
         \begin{subfigure}{.45\textwidth}\centering
       \includegraphics[width=.99\linewidth]{Figures/BL/BL-ATLAS_13_4LLevels.pdf}\caption{}\label{fig:BL:4lnew}
     \end{subfigure}
-    \caption{\contur exclusion with and without new four-lepton measurement.}
+    \caption{\contur exclusion (a) without and (b) with the new four-lepton measurement. The disfavoured regions at 95\% CL and 68\% CL are shaded in yellow and green respectively.}
     \label{fig:BL:4l}
 \end{figure}
 \begin{figure}[tbp]
@@ -109,7 +109,7 @@ The driving force behind the improved sensitivity in the new \mFourL{} analysis,
         \swatch{darkviolet}~\mFourL{}  &
         \swatch{darkorange}~\mFourL{} vs \ptFourL \\
     \end{tabular}
-    \caption{The most sensitive distribution from the \ATLAS four-lepton measurement contributing to the limit is indicated in colour.}
+    \caption{The most sensitive distribution from the \ATLAS four-lepton measurement contributing to the limit is indicated in colour for the gauged $B-L$ model in $M_{h_2}$ vs $\sin\alpha$ plane, where $g'_1=0.001$ and $M_{Z'} = 35$~\GeV.}
     \label{fig:BL:m4ldom}
 \end{figure}
 
