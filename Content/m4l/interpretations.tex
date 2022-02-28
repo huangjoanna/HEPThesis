@@ -1,16 +1,16 @@
 \section{Interpretations}
 \label{sec:interpretations}
-As a demonstration of how the data may be re-interpreted, two well-motivated BSM scenarios are selected and the unfolded measurements of Section~\ref{sec:m4lresults} are used to set exclusion limits on the parameter space of both. The first considers the Standard Model in an effective field theory (EFT) framework, and the second is a gauged B-L model that introduces a heavy Higgs and a new gauge boson. The EFT limits are presented in this section, while the $B-L$ limits are presented in Section~\ref{ssec:BL:ATLAS} of Chapter~\ref{chap:reinterpretation}, in conjunction with limits set by the \contur reinterpretation tool. Note that the author did not explicitly work on the interpretation studies within the analysis - all results are credited to relevant members of the analysis team. This section is discussed in detail due to its relevance to the re-interpretation theme.
+As a demonstration of how the data may be re-interpreted, two well-motivated BSM scenarios are selected and the unfolded measurements of Section~\ref{sec:m4lresults} are used to set exclusion limits on the parameter space of both. The first considers the Standard Model in an effective field theory (EFT) framework, and the second is a gauged $B-L$ model that introduces a heavy Higgs and a new gauge boson. The EFT limits are presented in this section, while the $B-L$ limits are presented in Section~\ref{ssec:BL:ATLAS} of Chapter~\ref{chap:reinterpretation}, in conjunction with limits set by the \contur reinterpretation tool. Note that the author did not explicitly work on the interpretation studies within this section - all results are credited to relevant members of the analysis team. This section is discussed in detail due to its relevance to the re-interpretation theme.
 
-Each model has multiple variants which differ in value for some adjustable parameter. This could be, for example, the mass of a new particle or the strength of a new coupling constant These variants can be compared as explanations for the same observed data, and the probability of the variant being true can be calculated. This probability to obtain the exact data observations given the parameters at is known as the likelihood of that variant of the model. The maximum likelihood (ML) estimate is defined as the parameter value at which the likelihood at a maximum. Accordingly, a maximum likelihood estimator (MLE) returns the value of the parameter which, given the data, is most likely. 
+Each model has multiple variants which differ in value for some adjustable parameter. This could be, for example, the mass of a new particle or the strength of a new coupling constant. These variants can be compared as explanations for the same observed data, and the probability of the variant being true can be calculated. The probability to obtain the exact data observations given the parameters is known as the likelihood of that variant of the model. The maximum likelihood (ML) estimate is defined as the parameter value at which the likelihood at a maximum. Accordingly, a maximum likelihood estimator (MLE) returns the value of the parameter which, given the data, is most likely. 
 
 A likelihood function is constructed using only the published results of the measurement and is used to set limits on the BSM models. It has the form
 \begin{equation}\label{eq:likelihood}
     \mathcal{L} = \frac{1}{\sqrt{ \left(2\pi\right)^k | C |}} \exp \left( - \frac{1}{2} \left( \sigdata - \sigpred(\vec{\theta}) \right)^T C^{-1} \left(  \sigdata - \sigpred(\vec{\theta})  \right) \right) \times \prod_{i} \mathcal{G}\left(\theta_{i}, 0, 1\right),
 \end{equation}
-where $C$ is the measurement covariance matrix, and \sigdata and \sigpred $k$-dimensional vectors of the measured and predicted cross-sections respectively. The uncertainties in the BSM prediction are included as Gaussian constrained nuisance parameters $\theta$; meaning the uncertainties come from imperfect knowledge of the model parameters. This approach to calculate the likelihood is much less computationally expensive than an extensive Gaussian model. The total covariance matrix is $C$ is the sum of the statistical and systematics uncertainty matrices and the Standard Model theory uncertainty matrix. For the statistical uncertainty, the predicted uncertainty from the expected Standard Model yield is used instead of what is observed in data. This was the result of a study which showed that the data's downward fluctuations in bins with lower statistics resulted in a biased best fit value as well as non-optimal intervals, and a non-asymptotic test statistic~\cite{m4l_internalnote}. 
+where $C$ is the measurement covariance matrix, and \sigdata and \sigpred $k$-dimensional vectors of the measured and predicted cross-sections respectively. The uncertainties in the BSM prediction are included as Gaussian constrained nuisance parameters $\theta$; meaning the uncertainties come from imperfect knowledge of the model parameters. The total covariance matrix is $C$ is the sum of the statistical and systematics uncertainty matrices and the Standard Model theory uncertainty matrix. For the statistical uncertainty, the predicted uncertainty from the expected Standard Model yield is used instead of what is observed in data. This was the result of a study which showed that the data's downward fluctuations in bins with lower statistics resulted in a biased best fit value as well as non-optimal intervals, and a non-asymptotic test statistic~\cite{m4l_internalnote}. 
 
-For any given point in the BSM parameter space, there may be different effects on various distributions. In order to obtain the most stringent limit, it is necessary to examine the effect on each of the unfolded kinematic observable present in section \ref{sec:m4lresults}. There are a total of twelve observables - those that are measured in slices of another count as one observable with the slices combined. Due to the lack of statistical correlation between the observables, the one providing the best expected sensitivity is used to set the limit \cite{m4l2021_paper}.
+For any given point in the BSM parameter space, there may be different effects on various distributions. In order to obtain the most stringent limit, it is necessary to examine the effect on each of the unfolded kinematic observables presented in section \ref{sec:m4lresults}. There are a total of twelve observables - those that are measured in slices of another count as one observable with the slices combined. Due to the lack of statistical correlation between the observables, the one providing the best expected sensitivity is used to set the limit \cite{m4l2021_paper}.
 
 \subsection{\ZFourL branching fraction}
 The measured cross-section in the single $Z$ region from table \ref{tab:fidxs} is used to extract the single resonant \ZFourL decay branching fraction and the result is compared to previous LHC measurements. For ease of comparison, phase space corrections are applied the branching fraction so it matches that of previous analyses. 
@@ -47,7 +47,7 @@ The Standard Model in the Effective Field Theory approach, often abbreviated as 
 \end{equation}
 where $\Lambda$ is the energy scale at which new physics appears, $\mathcal{O}_i^d$ are operators of dimension-$d$, and $c_i^d$ are the coupling constants for the operators, also called the Wilson coefficients. 
 
-For each dimension, a complete set of operators must be computed for the expansion. Starting with dimension-five operators, S. Weinberg showed in reference \cite{Weinberg_1979} that it violates lepton number. Some decades later, reference \cite{de_Gouv_a_2014} demonstrated that there are no \SMgroup gauge-invariant odd-dimentional operators that preserve both baryon and lepton number \cite{Kobach_2016}. Higher even dimensions are very suppressed by factors of $\Lambda$. It is for these reasons that in the SMEFT framework considered for the four lepton analysis only dimension-six operators are considered. The effective Lagrangian is therefore defined as 
+For each dimension, a complete set of operators must be computed for the expansion. Starting with dimension-five operators, S. Weinberg showed in reference \cite{Weinberg_1979} that it violates lepton number. Some decades later, reference \cite{de_Gouv_a_2014} demonstrated that there are no \SMgroup{} gauge-invariant odd-dimensional operators that preserve both baryon and lepton number \cite{Kobach_2016}. Even higher dimensions are very suppressed by factors of $\Lambda$. It is for these reasons that in the SMEFT framework considered for the four lepton analysis only dimension-six operators are considered. The effective Lagrangian is therefore defined as 
 \begin{equation} \label{eq:SMEFTdim6lagragian}
     \lagrangian_{\text{SMEFT}}=\lagrangian_{\text{SM}} + \sum_{i}\dfrac{C_i^6}{\Lambda^{2}}\mathcal{O}_i^6.
 \end{equation}
@@ -80,11 +80,11 @@ If the effective field theory framework is assessed in context of dimension-six 
     }_{\mathcal{O}(\Lambda^{-4})} +  \ldots . 
   \end{aligned}
 \end{equation}
-The Wilson coefficients here are written in their raw form with the exponential of $\Lambda$ included in the denominator. It is interesting to note that the quadratic term of the dimension-six operators are suppressed by the same $\Lambda^{-4}$ as the interference term of the dimension-eight operators with the Standard Model contribution. This motivates the construction of a linear-only model alongside the full model, where terms higher than order $\Lambda^{-2}$ are ignored. For the dimension-six model, the linear-only limit sets the third term of equation \ref{eq:SMEFTXS} to zero. 
+The Wilson coefficients here are written in their raw form with the power of $\Lambda$ included in the denominator. It is interesting to note that the quadratic term of the dimension-six operators are suppressed by the same $\Lambda^{-4}$ as the interference term of the dimension-eight operators with the Standard Model contribution. This motivates the construction of a linear-only model alongside the full model, where terms higher than order $\Lambda^{-2}$ are ignored. For the dimension-six model, the linear-only limit sets the third term of equation \ref{eq:SMEFTXS} to zero. 
 
 Considering the resulting limits set for the linear-only and the full EFT model, should the limits be largely compatible with one another then the implication is that the impact of possible higher-dimension operators is expected to be small. A difference in the two, however, indicates that sensitivity to the possibly neglected contributions could exist.
 
-Following equation \ref{eq:EFTamplitude}, the cross-section prediction can also be decomposed into a Standard Model term, an interference term, and a BSM term. 
+The new physics component considered in this section for SMEFT is described using only dimension-six operators. The energy cutoff scale for new physics is taken to be 1 TeV. Following equation \ref{eq:EFTamplitude}, the cross-section prediction can also be decomposed into a Standard Model term, an interference term, and a BSM term. 
 \begin{equation} \label{eq:SMEFTXS}
  \sigma(c_i)= \sigma_{\text{SM}} + \frac{\sigma_{\text{SM}}}{\sigma_{\text{SM(LO)}}}(c_i \sigma_{\text{INT}} + c^2_i \sigma_{d=6}).
 \end{equation}
@@ -112,42 +112,6 @@ A screening procedure is used to identify the subset of the EFT parameters which
 
 \subsubsection{Limits}
 Figure \ref{fig:EFTlinear} and Table \ref{tab:eft-linear} present the limits using the linear-only model, and Figure \ref{fig:EFTfull} and Table \ref{tab:eft} show the limits using the full model. Also shown in the tables is the most sensitive observable that is used to set the limit.
-
-With the two sets of results, a comparison is made to interpret the similarities and differences. Overall, the coefficients can be grouped into four categories:
-\begin{enumerate}
-    \item \chdd, \chwb, \che, \chlone, \chqthr{}, \chlthr{} and \cllone{} have very similar limits in the linear and full model. There is a negligible contribution from the quadratic term, and whether or not it's included does not affect the end result. 
-    \item \chqone{} and \clqthr{} which have slightly lower upper and lower limits  due to the small positive contributions from the quadratic term which enhances the linear contribution at positive values of the coefficient, and lessens at negative values.
-    \item \chg{} and \chu have a double maxima in the likelihood scan when using the full model with the quadratic term, thus resulting in a less stringent limit than the linear-only model.
-    \item the remaining eleven coefficients receive non-negligible contributions from the quadratic term, and therefore have more stringent limits when using the full-model. In particular, \chgtil{} receives zero contribution from the linear term.
-\end{enumerate}
-The improvement seen in the limits in the last category when using the full-model including quadratic terms of order $\Lambda^{-4}$ indicate that dimension-eight terms may have non-negligible effects.
-
-Overall the expected limits and observed limits are compatible, with the exception of the lower limit of \clqone{} in the linear-only case. The observed lower limit is significantly less stringent that the expected lower limit. This is thought to be an artifact of the simple model where the scale uncertainty is affecting the EFT prediction~\cite{m4l2021_paper}\footnote{The paper explains that for a large EFT signal that is incompatible with the data,
-the EFT scale uncertainty's nuisance parameter is pulled in order to
-bring the prediction closer to the observation. The nuisance parameter's constraint term 
-penalizes this behaviour in the likelihood.
-However, for large negative values of \clqone{} the size and shape of
-the scale uncertainty's effect on the signal prediction
-are related in a way that produces a prediction precisely imitating the
-statistical fluctuations in the measured cross-section, increasing the likelihood.
-This leads to a larger than expected observed lower limit on \clqone~\cite{m4l2021_paper}}.
-
-Limits have previously been placed on \chg, \chgtil{} and \chwb{}, in
-a measurement of the
-\HFourL{} cross-section~\cite{Aad:2020mkp}. The \HFourL{} cross-section analysis has more stringent limits for \chg{}, but for \chgtil{} the limits are very similar,
-with the \mFourL{} analysis providing slightly tighter constraints. For
-\chwb{} the constraints of this analysis are significantly more
-stringent
-with $[ -0.20, 0.21]$ expected and $[-0.29,0.13]$ observed compared
-to $[-1.09,0.99]$ expected and $[-1.06,0.99]$ observed in the
-\HFourL{} analysis.
-The improvement can be understood as being due to the fact that changes in
-\chwb{} affect the entire \mFourL{} spectrum, not just the region
-close to $m_H$~\cite{m4l2021_paper}. 
-Limits on the coefficients affecting the $Z\to \ell\ell$ vertex have been obtained 
-previously from a global fit to LEP and LHC data~\cite{Ellis:2018gqa}, and are generally 
-one or two orders of magnitude more stringent than the limits presented from Reference~\cite{m4l2021_paper}.
-%% ---------- END REWORD!!!! --------
 
 \begin{table}[htb!]
   \centering
@@ -234,17 +198,55 @@ one or two orders of magnitude more stringent than the limits presented from Ref
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/EFTLimits_linonly_MVozak.pdf}
-    \caption{Linear only EFT limits. This figure is from This table is from Ref.~\cite{m4l2021_paper}}
+    \includegraphics[width=0.99\textwidth]{Figures/m4l/Interpretations/EFTLimits_linonly_MVozak.pdf}
+    \caption{The expected and observed confidence intervals at 95\% CL for the SMEFT Wilson coefficients, which are in units of TeV$^{−2}$ for only the linear terms. The multiplicative number shown to the right of plotted points indicates a scaling factor that is applied to the limit for the purpose of the plot, in order to show all coefficients on the same scale. The most sensitive observable indicated for each coefficient is used for the constraints. Only one coefficient is fitted at a time, with all others set to zero. This figure is from Ref.~\cite{m4l2021_paper}}
     \label{fig:EFTlinear}
 \end{figure} 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\mediumfigwidth]{Figures/m4l/Interpretations/EFTLimits_MVozak.pdf}
-    \caption{Full EFT limits. This figure is from This table is from Ref.~\cite{m4l2021_paper}}
+    \includegraphics[width=0.99\textwidth]{Figures/m4l/Interpretations/EFTLimits_MVozak.pdf}
+    \caption{The expected and observed confidence intervals at 95\% CL for the SMEFT Wilson coefficients, which are in units of TeV$^{−2}$ for the full model. The multiplicative number shown to the right of plotted points indicates a scaling factor that is applied to the limit for the purpose of the plot, in order to show all coefficients on the same scale. The most sensitive observable indicated for each coefficient is used for the constraints. Only one coefficient is fitted at a time, with all others set to zero. . This figure is from Ref.~\cite{m4l2021_paper}}
     \label{fig:EFTfull}
 \end{figure}
+
+With the two sets of results, a comparison is made to interpret the similarities and differences. Overall, the coefficients can be grouped into four categories:
+\begin{enumerate}
+    \item \chdd, \chwb, \che, \chlone, \chqthr{}, \chlthr{} and \cllone{} have very similar limits in the linear and full model. There is a negligible contribution from the quadratic term, and whether or not it's included does not affect the end result. 
+    \item \chqone{} and \clqthr{} which have slightly lower upper and lower limits  due to the small positive contributions from the quadratic term which enhances the linear contribution at positive values of the coefficient, and lessens at negative values.
+    \item \chg{} and \chu have a double maxima in the likelihood scan when using the full model with the quadratic term, thus resulting in a less stringent limit than the linear-only model.
+    \item the remaining eleven coefficients receive non-negligible contributions from the quadratic term, and therefore have more stringent limits when using the full-model. In particular, \chgtil{} receives zero contribution from the linear term.
+\end{enumerate}
+The improvement seen in the limits in the last category when using the full-model including quadratic terms of order $\Lambda^{-4}$ indicate that dimension-eight terms may have non-negligible effects.
+
+Overall the expected limits and observed limits are compatible, with the exception of the lower limit of \clqone{} in the linear-only case. The observed lower limit is significantly less stringent that the expected lower limit. This is thought to be an artifact of the simple model where the scale uncertainty is affecting the EFT prediction~\cite{m4l2021_paper}\footnote{The paper explains that for a large EFT signal that is incompatible with the data,
+the EFT scale uncertainty's nuisance parameter is pulled in order to
+bring the prediction closer to the observation. The nuisance parameter's constraint term 
+penalizes this behaviour in the likelihood.
+However, for large negative values of \clqone{} the size and shape of
+the scale uncertainty's effect on the signal prediction
+are related in a way that produces a prediction precisely imitating the
+statistical fluctuations in the measured cross-section, increasing the likelihood.
+This leads to a larger than expected observed lower limit on \clqone~\cite{m4l2021_paper}}.
+
+Limits have previously been placed on \chg, \chgtil{} and \chwb{}, in
+a measurement of the
+\HFourL{} cross-section~\cite{Aad:2020mkp}. The \HFourL{} cross-section analysis has more stringent limits for \chg{}, but for \chgtil{} the limits are very similar,
+with the \mFourL{} analysis providing slightly tighter constraints. For
+\chwb{} the constraints of this analysis are significantly more
+stringent
+with $[ -0.20, 0.21]$ expected and $[-0.29,0.13]$ observed compared
+to $[-1.09,0.99]$ expected and $[-1.06,0.99]$ observed in the
+\HFourL{} analysis.
+The improvement can be understood as being due to the fact that changes in
+\chwb{} affect the entire \mFourL{} spectrum, not just the region
+close to $m_H$~\cite{m4l2021_paper}. 
+Limits on the coefficients affecting the $Z\to \ell\ell$ vertex have been obtained 
+previously from a global fit to LEP and LHC data~\cite{Ellis:2018gqa}, and are generally 
+one or two orders of magnitude more stringent than the limits presented from Reference~\cite{m4l2021_paper}.
+%% ---------- END REWORD!!!! --------
+
+
 
 % \subsection{Limits on B-L model}
 % \label{ssec:m4l:BL}
